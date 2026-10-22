@@ -30,7 +30,7 @@ export default function PrivacyPage() {
       <h2>Advertise checkout</h2>
       <p>
         If PayPal sandbox credentials are configured, checkout runs on PayPal in the sandbox. PayPal receives the
-        business name, city, state, and category you submit, plus the payment details you enter on PayPal. No listing
+        business name, city, state, and category you submit, plus the payment details you enter on PayPal. No placement
         is published from that payment until it is approved in the site repository. If the sandbox client id and secret
         are not both set, the advertise page does not start a payment.
       </p>

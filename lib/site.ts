@@ -50,7 +50,6 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
     "/",
     "/archive",
     "/advertise",
-    "/directory",
     "/privacy",
     "/disclosure",
     "/tools/net-proceeds",
@@ -94,7 +93,6 @@ ${stages}
 - Commission comparison. You enter the price, listing percent, buyer-agent percent, and any flat fees. It compares full service, FSBO paying a buyer agent, and FSBO paying neither.
 - What to fix first. You enter a cost and your own expected value. The list sorts by your value minus your cost. It does not supply a return rate.
 - Printable seller prep checklist.
-- Find a pro. City and state search for admin-approved paid listings only. Categories are agent, photographer, stager, inspector, attorney, mover, and handyman.
 
 ## Content
 

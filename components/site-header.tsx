@@ -4,7 +4,6 @@ const navLinks = [
   ["/", "Home"],
   ["/#stages", "Stages"],
   ["/#tools", "Tools"],
-  ["/directory", "Directory"],
   ["/advertise", "Advertise"],
 ] as const;
 

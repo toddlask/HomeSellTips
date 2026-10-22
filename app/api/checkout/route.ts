@@ -21,25 +21,8 @@ type CheckoutBody = {
 
 function needsCategory(productId: ProductId): boolean {
   switch (productId) {
-    case "featured-monthly":
-    case "featured-yearly":
     case "category-sponsor":
       return true;
-    case "header-sponsor":
-      return false;
-    default: {
-      const exhaustive: never = productId;
-      return exhaustive;
-    }
-  }
-}
-
-function needsPlace(productId: ProductId): boolean {
-  switch (productId) {
-    case "featured-monthly":
-    case "featured-yearly":
-      return true;
-    case "category-sponsor":
     case "header-sponsor":
       return false;
     default: {
@@ -76,7 +59,7 @@ export async function POST(request: Request): Promise<Response> {
 
   const businessName = String(body.businessName ?? "").trim();
   if (businessName.length < 2 || businessName.length > 80) {
-    return Response.json({ error: "Enter the business name you want on the listing." }, { status: 400 });
+    return Response.json({ error: "Enter the business name you want on the placement." }, { status: 400 });
   }
 
   if (productId === "header-sponsor" && headerSlotTaken(productionPlacements, todayIso())) {
@@ -94,9 +77,6 @@ export async function POST(request: Request): Promise<Response> {
 
   const state = parseStateCode(body.state);
   const city = String(body.city ?? "").trim();
-  if (needsPlace(productId) && (!city || !state)) {
-    return Response.json({ error: "Enter a city and state for a featured listing." }, { status: 400 });
-  }
 
   const offer = productOffer(productId, launchPromoEnabled(process.env.LAUNCH_PROMO));
   const siteUrl = getSiteUrl();

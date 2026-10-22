@@ -1,4 +1,4 @@
-import type { Listing, Placement } from "@/lib/types";
+import type { Placement } from "@/lib/types";
 
 export const FIXTURE_NAME = "Fixture Ridge Photography";
 
@@ -35,25 +35,4 @@ export const fixtureCategorySponsor: Placement = {
   approved: true,
   startsOn: "2026-10-21",
   expiresOn: "2026-10-28",
-};
-
-export const fixtureListing: Listing = {
-  id: "fixture-listing",
-  name: FIXTURE_NAME,
-  category: "photographer",
-  city: "Austin",
-  state: "TX",
-  approved: true,
-  paid: true,
-  startsOn: "2026-10-21",
-  expiresOn: "2027-10-21",
-};
-
-export const fixtureUnapprovedListing: Listing = {
-  ...fixtureListing,
-  id: "fixture-unapproved",
-  name: "Fixture Unapproved Movers",
-  category: "mover",
-  approved: false,
-  paid: true,
 };

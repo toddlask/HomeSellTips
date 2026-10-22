@@ -61,6 +61,7 @@ describe("published library", () => {
     expect(paths).toContain("/tips/deep-clean-after-the-dusty-work");
     expect(paths).not.toContain("/tips/replace-cracked-caulk-before-photos");
     expect(paths).not.toContain("/admin");
+    expect(paths).not.toContain("/directory");
   });
 });
 
@@ -89,11 +90,11 @@ describe("ads, affiliates, paypal, and email", () => {
 
   it("keeps the listed renewal price when the launch promo is on", () => {
     expect(launchPromoEnabled(undefined)).toBe(false);
-    const monthly = productOffer("featured-monthly", true);
-    expect(monthly.unitAmount).toBe(2900);
+    const monthly = productOffer("category-sponsor", true);
+    expect(monthly.unitAmount).toBe(9900);
     expect(monthly.firstMonthHalfOff).toBe(true);
-    expect(productOffer("featured-yearly", true).unitAmount).toBe(29000);
-    expect(productOffer("featured-yearly", true).firstMonthHalfOff).toBe(false);
+    expect(productOffer("header-sponsor", true).unitAmount).toBe(24900);
+    expect(productOffer("header-sponsor", true).firstMonthHalfOff).toBe(true);
     expect(productOffer("category-sponsor", false).unitAmount).toBe(9900);
     expect(productOffer("header-sponsor", false).unitAmount).toBe(24900);
   });

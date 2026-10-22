@@ -41,20 +41,19 @@ describe("PayPal sandbox checkout", () => {
   });
 
   it("charges half of the first month during the launch promo and leaves the renewal price unchanged", () => {
-    const monthly = productOffer("featured-monthly", true);
-    expect(monthly.unitAmount).toBe(2900);
-    expect(chargeCents(monthly)).toBe(1450);
-    expect(formatUsd(chargeCents(monthly))).toBe("14.50");
-    expect(chargeCents(productOffer("featured-yearly", true))).toBe(29000);
-    expect(formatUsd(chargeCents(productOffer("category-sponsor", true)))).toBe("49.50");
+    const monthly = productOffer("category-sponsor", true);
+    expect(monthly.unitAmount).toBe(9900);
+    expect(chargeCents(monthly)).toBe(4950);
+    expect(formatUsd(chargeCents(monthly))).toBe("49.50");
+    expect(chargeCents(productOffer("header-sponsor", true))).toBe(12450);
     expect(formatUsd(chargeCents(productOffer("header-sponsor", false)))).toBe("249.00");
-    expect(formatUsd(chargeCents(productOffer("featured-monthly", false)))).toBe("29.00");
+    expect(formatUsd(chargeCents(productOffer("category-sponsor", false)))).toBe("99.00");
   });
 
   it("builds a sandbox capture order and ignores non-sandbox approval links", () => {
     const body = paypalOrderBody({
-      productId: "featured-monthly",
-      offer: productOffer("featured-monthly", false),
+      productId: "category-sponsor",
+      offer: productOffer("category-sponsor", false),
       businessName: "North Lamp Photography",
       category: "photography",
       city: "Austin",
@@ -63,8 +62,8 @@ describe("PayPal sandbox checkout", () => {
       cancelUrl: "https://homeselltips.example/advertise?checkout=cancel",
     });
     expect(body.intent).toBe("CAPTURE");
-    expect(body.purchase_units[0]?.amount.value).toBe("29.00");
-    expect(body.purchase_units[0]?.custom_id).toBe("featured-monthly");
+    expect(body.purchase_units[0]?.amount.value).toBe("99.00");
+    expect(body.purchase_units[0]?.custom_id).toBe("category-sponsor");
     expect(body.purchase_units[0]?.items[0]?.description).toContain("North Lamp Photography");
     expect(body.purchase_units[0]?.items[0]?.description).toContain("Austin, TX");
     expect(body.purchase_units[0]?.items[0]?.description).toContain("photography");

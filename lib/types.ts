@@ -52,7 +52,7 @@ export const PRO_CATEGORIES = [
 
 export type ProCategory = (typeof PRO_CATEGORIES)[number];
 
-export const PLACEMENT_PRODUCTS = ["featured-pro", "category-sponsor", "sitewide-header"] as const;
+export const PLACEMENT_PRODUCTS = ["category-sponsor", "sitewide-header"] as const;
 
 export type PlacementProduct = (typeof PLACEMENT_PRODUCTS)[number];
 
@@ -66,18 +66,6 @@ export type Placement = {
   state: string;
   category: ProCategory | "";
   approved: boolean;
-  startsOn: string;
-  expiresOn: string;
-};
-
-export type Listing = {
-  id: string;
-  name: string;
-  category: ProCategory;
-  city: string;
-  state: string;
-  approved: boolean;
-  paid: boolean;
   startsOn: string;
   expiresOn: string;
 };
@@ -113,12 +101,7 @@ export type RoiItem = {
   expectedValue: number;
 };
 
-export const PRODUCT_IDS = [
-  "featured-monthly",
-  "featured-yearly",
-  "category-sponsor",
-  "header-sponsor",
-] as const;
+export const PRODUCT_IDS = ["category-sponsor", "header-sponsor"] as const;
 
 export type ProductId = (typeof PRODUCT_IDS)[number];
 

@@ -1,10 +1,8 @@
 import { isIsoDate } from "@/lib/dates";
 import {
   PLACEMENT_PRODUCTS,
-  PRO_CATEGORIES,
   STAGE_IDS,
   TIP_STATUSES,
-  type Listing,
   type OutboxDraft,
   type OutboxFile,
   type Placement,
@@ -117,30 +115,11 @@ export function parseProCategory(value: unknown): ProCategory {
   }
 }
 
-export function parseCategoryQuery(value: string | undefined): ProCategory | null {
-  if (!value) {
-    return null;
-  }
-  switch (value) {
-    case "agent":
-    case "photographer":
-    case "stager":
-    case "inspector":
-    case "attorney":
-    case "mover":
-    case "handyman":
-      return value;
-    default:
-      return null;
-  }
-}
-
 function parsePlacementProduct(value: unknown): PlacementProduct {
   if (typeof value !== "string") {
     throw new Error("Placement product must be a string.");
   }
   switch (value) {
-    case "featured-pro":
     case "category-sponsor":
     case "sitewide-header":
       return value;
@@ -233,32 +212,6 @@ export function parsePlacements(value: unknown): Placement[] {
     throw new Error("Placements must be a list.");
   }
   return value.map((entry) => parsePlacement(entry));
-}
-
-function parseListing(value: unknown): Listing {
-  const record = asRecord(value, "Listing");
-  const category = parseProCategory(record.category);
-  if (!PRO_CATEGORIES.includes(category)) {
-    throw new Error("Listing category failed checks.");
-  }
-  return {
-    id: asString(record.id, "Listing id"),
-    name: asString(record.name, "Listing name"),
-    category,
-    city: asString(record.city, "Listing city"),
-    state: asString(record.state, "Listing state"),
-    approved: asBoolean(record.approved, "Listing approved"),
-    paid: asBoolean(record.paid, "Listing paid"),
-    startsOn: asDate(record.startsOn, "Listing startsOn"),
-    expiresOn: asDate(record.expiresOn, "Listing expiresOn"),
-  };
-}
-
-export function parseListings(value: unknown): Listing[] {
-  if (!Array.isArray(value)) {
-    throw new Error("Listings must be a list.");
-  }
-  return value.map((entry) => parseListing(entry));
 }
 
 function parseDraft(value: unknown): OutboxDraft {

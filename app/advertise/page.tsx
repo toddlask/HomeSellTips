@@ -4,10 +4,10 @@ import { launchPromoEnabled, paypalReadiness } from "@/lib/paypal-config";
 
 export const metadata: Metadata = {
   title: "Advertise with us",
-  description: "Featured pro listings and sponsor placements. Checkout stays in the PayPal sandbox.",
+  description: "Category sponsor and sitewide header placements. Checkout stays in the PayPal sandbox.",
   openGraph: {
     title: "Advertise with us",
-    description: "Featured pro listings and sponsor placements for HomeSellTips.",
+    description: "Category sponsor and sitewide header placements. Checkout stays in the PayPal sandbox.",
     url: "/advertise",
   },
 };
@@ -28,17 +28,13 @@ export default async function AdvertisePage({
     <>
       <h1>Advertise with us</h1>
       <p className="lede">
-        Three placements. Each one is labeled Sponsored, stays hidden until an admin approves it in git, and drops off
+        Two placements. Each one is labeled Sponsored, stays hidden until an admin approves it in git, and drops off
         on its end date. Payments stay in the PayPal sandbox. Live charges are not available.
       </p>
       <ul className="card-grid">
         <li className="card">
-          <h2>Featured pro listing</h2>
-          <p>$29 per month or $290 per year, by city and state, in one service category.</p>
-        </li>
-        <li className="card">
           <h2>Category sponsor</h2>
-          <p>$99 per month for a banner on one service category in the directory.</p>
+          <p>$99 per month for a banner on one service category. It stays hidden until an admin approves it.</p>
         </li>
         <li className="card">
           <h2>Sitewide header</h2>

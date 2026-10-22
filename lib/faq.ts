@@ -22,7 +22,7 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
   {
     question: "Do you rank areas?",
     answer:
-      "No. Tips talk about the property and the transaction. The directory filters by the city and state a business says it serves.",
+      "No. Tips talk about the property and the transaction.",
   },
   {
     question: "How do sponsors and ads work?",

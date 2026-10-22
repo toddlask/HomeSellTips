@@ -99,6 +99,8 @@ const bathroom = photo({
   sourcePage: "https://www.pexels.com/photo/the-interior-of-a-bathroom-7710006/",
 });
 
+export const heroSlides: readonly HomePhoto[] = [heroPhoto, livingRoom, exteriorWhite, kitchen, diningRoom];
+
 const movingBoxes = photo({
   id: "moving-boxes",
   src: "/photos/moving-boxes.webp",

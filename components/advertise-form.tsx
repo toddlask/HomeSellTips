@@ -1,21 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { categoryLabel } from "@/lib/listings";
+import { categoryLabel } from "@/lib/categories";
 import type { PaypalReadiness } from "@/lib/paypal-config";
 import { paypalStatusMessage } from "@/lib/paypal-config";
 import { PRO_CATEGORIES, type ProductId } from "@/lib/types";
 import { US_STATES } from "@/lib/us-states";
 
 const products: Array<{ id: ProductId; label: string; price: string }> = [
-  { id: "featured-monthly", label: "Featured pro listing", price: "$29 per month" },
-  { id: "featured-yearly", label: "Featured pro listing, yearly", price: "$290 per year" },
   { id: "category-sponsor", label: "Category sponsor banner", price: "$99 per month" },
   { id: "header-sponsor", label: "Sitewide header sponsor", price: "$249 per month" },
 ];
 
 export function AdvertiseForm({ readiness, launchPromo }: { readiness: PaypalReadiness; launchPromo: boolean }) {
-  const [productId, setProductId] = useState<ProductId>("featured-monthly");
+  const [productId, setProductId] = useState<ProductId>("category-sponsor");
   const [businessName, setBusinessName] = useState("");
   const [category, setCategory] = useState("");
   const [city, setCity] = useState("");

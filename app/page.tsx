@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { FaqList } from "@/components/faq-list";
+import { HeroSlideshow } from "@/components/hero-slideshow";
 import { HomePhotoView } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
-import { heroPhoto, stagePhoto } from "@/lib/photos";
+import { heroSlides, stagePhoto } from "@/lib/photos";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { CALCULATOR_NOTE, publishedTips, SITE_NAME } from "@/lib/site";
 import { STAGE_IDS } from "@/lib/types";
@@ -27,9 +28,8 @@ const tools = [
 ];
 
 const features = [
-  ["Your numbers", "Tools use only what you type."],
   ["By stage", "From prep through moving."],
-  ["Approved listings", "Paid placements stay hidden until approved."],
+  ["Your numbers", "Tools use only what you type."],
   ["Rules vary", "This is not legal or real-estate advice."],
 ] as const;
 
@@ -41,7 +41,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero bleed" aria-labelledby="home-heading">
-        <HomePhotoView photo={heroPhoto} className="hero-photo" priority />
+        <HeroSlideshow photos={heroSlides} />
         <div className="hero-scrim" />
         <div className="wrap hero-copy">
           <h1 id="home-heading">Practical tips for selling your home</h1>
@@ -96,19 +96,6 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
-      </section>
-      <section className="band bleed" aria-labelledby="directory-heading">
-        <HomePhotoView photo={stagePhoto("pricing")} className="band-photo" />
-        <div className="band-scrim" />
-        <div className="wrap band-copy">
-          <h2 id="directory-heading">Find a pro</h2>
-          <p className="lede">By city and state. Only approved paid listings appear.</p>
-          <p>
-            <a className="button" href="/directory">
-              Open the directory
-            </a>
-          </p>
-        </div>
       </section>
       <InContentAd />
       <section className="section-gap" aria-labelledby="latest-heading">

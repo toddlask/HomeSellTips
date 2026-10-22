@@ -78,7 +78,7 @@ export default async function AdminPage({
           <section className="section-gap">
             <h2>Placements</h2>
             {productionPlacements.length === 0 ? (
-              <p>No placements in the repository. Unapproved and unpaid listings stay off the public directory.</p>
+              <p>No placements in the repository. A placement stays hidden until an admin approves it.</p>
             ) : (
               <ul>
                 {productionPlacements.map((placement) => (

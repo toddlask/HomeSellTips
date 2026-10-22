@@ -4,8 +4,6 @@ export const SPONSORED_LABEL = "Sponsored";
 
 export function placementProductLabel(product: PlacementProduct): string {
   switch (product) {
-    case "featured-pro":
-      return "Featured pro listing";
     case "category-sponsor":
       return "Category sponsor banner";
     case "sitewide-header":

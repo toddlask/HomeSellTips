@@ -16,8 +16,8 @@ export default function DisclosurePage() {
       <h1>Ad and affiliate disclosure</h1>
       <h2>Sponsored placements</h2>
       <p>
-        Featured listings, category banners, and the sitewide header are paid placements. Each one shows a Sponsored
-        label. They appear only after admin approval and disappear on the end date stored with the placement.
+        Category banners and the sitewide header are paid placements. Each one shows a Sponsored label. They appear
+        only after admin approval and disappear on the end date stored with the placement.
       </p>
       <h2>Display ads</h2>
       <p>

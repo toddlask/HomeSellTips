@@ -69,8 +69,6 @@ export function paypalStatusMessage(status: PaypalReadiness): string {
 
 export function parseProductId(value: string): ProductId | null {
   switch (value) {
-    case "featured-monthly":
-    case "featured-yearly":
     case "category-sponsor":
     case "header-sponsor":
       return value;
@@ -81,20 +79,6 @@ export function parseProductId(value: string): ProductId | null {
 
 export function productOffer(id: ProductId, launchPromo: boolean): ProductOffer {
   switch (id) {
-    case "featured-monthly":
-      return {
-        name: "Featured pro listing",
-        unitAmount: 2900,
-        interval: "month",
-        firstMonthHalfOff: launchPromo,
-      };
-    case "featured-yearly":
-      return {
-        name: "Featured pro listing, yearly",
-        unitAmount: 29000,
-        interval: "year",
-        firstMonthHalfOff: false,
-      };
     case "category-sponsor":
       return {
         name: "Category sponsor banner",
