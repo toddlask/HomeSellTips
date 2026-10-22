@@ -1,10 +1,16 @@
 import { isAffirmative } from "@/lib/flags";
 import type { ProductId } from "@/lib/types";
 
-export type StripeReadiness =
+export type PaypalReadiness =
   | { state: "missing" }
   | { state: "refused"; reason: string }
   | { state: "ready" };
+
+export type PaypalEnv = {
+  clientId: string | undefined;
+  clientSecret: string | undefined;
+  mode: string | undefined;
+};
 
 export type ProductOffer = {
   name: string;
@@ -13,31 +19,47 @@ export type ProductOffer = {
   firstMonthHalfOff: boolean;
 };
 
-export function stripeReadiness(secret: string | undefined): StripeReadiness {
-  const key = secret?.trim() ?? "";
-  if (!key) {
-    return { state: "missing" };
-  }
-  if (key.startsWith("sk_test_")) {
-    return { state: "ready" };
-  }
-  if (key.startsWith("sk_live_")) {
-    return {
-      state: "refused",
-      reason: "Live Stripe keys are refused. HomeSellTips stays in test mode until pricing is approved.",
-    };
-  }
-  return { state: "refused", reason: "The Stripe secret must be a test key that starts with sk_test_." };
+function normalizedMode(mode: string | undefined): string {
+  return mode?.trim().toLowerCase() ?? "";
 }
 
-export function stripeStatusMessage(status: StripeReadiness): string {
+export function paypalReadiness(env: PaypalEnv): PaypalReadiness {
+  const mode = normalizedMode(env.mode);
+  const clientId = env.clientId?.trim() ?? "";
+  const clientSecret = env.clientSecret?.trim() ?? "";
+
+  if (mode === "live" || mode === "production") {
+    return {
+      state: "refused",
+      reason: "Live PayPal mode is refused. HomeSellTips stays in the PayPal sandbox.",
+    };
+  }
+  if (mode !== "" && mode !== "sandbox") {
+    return {
+      state: "refused",
+      reason: "PayPal mode must be sandbox. Live charges are not available.",
+    };
+  }
+  if (!clientId || !clientSecret) {
+    return { state: "missing" };
+  }
+  if (mode !== "sandbox") {
+    return {
+      state: "refused",
+      reason: "PayPal mode must be sandbox. Live charges are not available.",
+    };
+  }
+  return { state: "ready" };
+}
+
+export function paypalStatusMessage(status: PaypalReadiness): string {
   switch (status.state) {
     case "missing":
-      return "Payments are not configured. Checkout stays off until a Stripe test key is set.";
+      return "Payments are not configured. Checkout stays off until a PayPal sandbox client id and secret are set.";
     case "refused":
       return status.reason;
     case "ready":
-      return "Checkout uses Stripe test mode. Cards are not charged as live payments.";
+      return "Checkout uses the PayPal sandbox. These payments are not live charges.";
     default: {
       const exhaustive: never = status;
       return exhaustive;
@@ -96,4 +118,17 @@ export function productOffer(id: ProductId, launchPromo: boolean): ProductOffer 
 
 export function launchPromoEnabled(value: string | undefined): boolean {
   return isAffirmative(value);
+}
+
+export function chargeCents(offer: ProductOffer): number {
+  if (offer.firstMonthHalfOff) {
+    return Math.round(offer.unitAmount / 2);
+  }
+  return offer.unitAmount;
+}
+
+export function formatUsd(cents: number): string {
+  const dollars = Math.trunc(cents / 100);
+  const remainder = Math.abs(cents % 100);
+  return `${dollars}.${remainder.toString().padStart(2, "0")}`;
 }

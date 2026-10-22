@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { AdvertiseForm } from "@/components/advertise-form";
-import { launchPromoEnabled, stripeReadiness } from "@/lib/stripe-config";
+import { launchPromoEnabled, paypalReadiness } from "@/lib/paypal-config";
 
 export const metadata: Metadata = {
   title: "Advertise with us",
-  description: "Featured pro listings and sponsor placements. Checkout stays in Stripe test mode until pricing is approved.",
+  description: "Featured pro listings and sponsor placements. Checkout stays in the PayPal sandbox.",
   openGraph: {
     title: "Advertise with us",
     description: "Featured pro listings and sponsor placements for HomeSellTips.",
@@ -18,14 +18,18 @@ export default async function AdvertisePage({
   searchParams: Promise<{ checkout?: string }>;
 }) {
   const query = await searchParams;
-  const readiness = stripeReadiness(process.env.STRIPE_SECRET_KEY);
+  const readiness = paypalReadiness({
+    clientId: process.env.PAYPAL_CLIENT_ID,
+    clientSecret: process.env.PAYPAL_CLIENT_SECRET,
+    mode: process.env.PAYPAL_MODE,
+  });
   const launchPromo = launchPromoEnabled(process.env.LAUNCH_PROMO);
   return (
     <>
       <h1>Advertise with us</h1>
       <p className="lede">
         Three placements. Each one is labeled Sponsored, stays hidden until an admin approves it in git, and drops off
-        on its end date. Payments stay in Stripe test mode. Live charges are not available.
+        on its end date. Payments stay in the PayPal sandbox. Live charges are not available.
       </p>
       <ul className="card-grid">
         <li className="card">
@@ -43,12 +47,17 @@ export default async function AdvertisePage({
       </ul>
       {query.checkout === "success" ? (
         <p className="panel" role="status">
-          Stripe sent you back from test checkout. A placement is not live until it is approved in the repository.
+          PayPal sent you back from sandbox checkout. A placement is not live until it is approved in the repository.
         </p>
       ) : null}
       {query.checkout === "cancel" ? (
         <p className="panel" role="status">
           Checkout was canceled. No placement was created.
+        </p>
+      ) : null}
+      {query.checkout === "error" ? (
+        <p className="panel" role="alert">
+          Sandbox checkout did not finish. No placement was created.
         </p>
       ) : null}
       <AdvertiseForm readiness={readiness} launchPromo={launchPromo} />

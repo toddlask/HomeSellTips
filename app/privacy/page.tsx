@@ -3,10 +3,10 @@ import { CONSENT_STORAGE_KEY } from "@/lib/consent";
 
 export const metadata: Metadata = {
   title: "Privacy",
-  description: "How HomeSellTips uses a consent cookie, optional ads, and Stripe test checkout. No accounts.",
+  description: "How HomeSellTips uses a consent cookie, optional ads, and PayPal sandbox checkout. No accounts.",
   openGraph: {
     title: "Privacy",
-    description: "How HomeSellTips uses a consent cookie, optional ads, and Stripe test checkout.",
+    description: "How HomeSellTips uses a consent cookie, optional ads, and PayPal sandbox checkout.",
     url: "/privacy",
   },
 };
@@ -29,10 +29,10 @@ export default function PrivacyPage() {
       </p>
       <h2>Advertise checkout</h2>
       <p>
-        If a Stripe test key is configured, checkout runs on Stripe in test mode. Stripe receives the business name,
-        city, state, and category you submit, plus the payment details you enter on Stripe. No listing is published from
-        that payment until it is approved in the site repository. If no test key is set, the advertise page does not
-        start a payment.
+        If PayPal sandbox credentials are configured, checkout runs on PayPal in the sandbox. PayPal receives the
+        business name, city, state, and category you submit, plus the payment details you enter on PayPal. No listing
+        is published from that payment until it is approved in the site repository. If the sandbox client id and secret
+        are not both set, the advertise page does not start a payment.
       </p>
       <h2>Email</h2>
       <p>The site does not send email. Renewal notes, when drafted, stay in an admin outbox in the repository.</p>

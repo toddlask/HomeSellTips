@@ -9,7 +9,7 @@ import { STAGE_IDS } from "@/lib/types";
 import { publicPaths } from "@/lib/site";
 import { deliverEmail, EMAIL_DELIVERY_ENABLED, planRenewalDrafts } from "@/lib/outbox";
 import { digestsMatch, tokenDigest } from "@/lib/admin-token";
-import { launchPromoEnabled, productOffer, stripeReadiness, stripeStatusMessage } from "@/lib/stripe-config";
+import { launchPromoEnabled, productOffer } from "@/lib/paypal-config";
 import { fixtureCategorySponsor } from "./fixtures";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -23,7 +23,7 @@ function walk(dir: string): string[] {
   const files: string[] = [];
   for (const entry of entries) {
     const path = join(dir, entry);
-    if (entry === "node_modules" || entry === ".next" || entry === "test") {
+    if (entry === "node_modules" || entry === ".next" || entry === ".netlify" || entry === "test") {
       continue;
     }
     const stat = statSync(path);
@@ -64,7 +64,7 @@ describe("published library", () => {
   });
 });
 
-describe("ads, affiliates, stripe, and email", () => {
+describe("ads, affiliates, paypal, and email", () => {
   it("omits the ads.txt publisher line until a real publisher id is set", () => {
     expect(adsTxtBody(undefined)).toBe("");
     expect(adsTxtBody("")).toBe("");
@@ -87,11 +87,7 @@ describe("ads, affiliates, stripe, and email", () => {
     expect(renderToStaticMarkup(createElement(AffiliateList, { offers: [] }))).toBe("");
   });
 
-  it("refuses live Stripe keys and keeps promo pricing off the renewal amount", () => {
-    expect(stripeReadiness(undefined).state).toBe("missing");
-    expect(stripeStatusMessage(stripeReadiness(undefined))).toMatch(/not configured/i);
-    expect(stripeReadiness("sk_live_abc").state).toBe("refused");
-    expect(stripeReadiness("sk_test_abc").state).toBe("ready");
+  it("keeps the listed renewal price when the launch promo is on", () => {
     expect(launchPromoEnabled(undefined)).toBe(false);
     const monthly = productOffer("featured-monthly", true);
     expect(monthly.unitAmount).toBe(2900);
@@ -123,6 +119,9 @@ describe("ads, affiliates, stripe, and email", () => {
       .map((file) => readFileSync(file, "utf8"))
       .join("\n");
     expect(source).not.toMatch(/nodemailer|@sendgrid|resend\.com|postmarkapp|mailgun/i);
+    expect(source).not.toMatch(/\bstripe\b/i);
+    expect(source).not.toMatch(/STRIPE_/);
+    expect(source).not.toMatch(/https:\/\/api-m\.paypal\.com/);
   });
 
   it("compares admin token digests without treating a different length as a match", () => {

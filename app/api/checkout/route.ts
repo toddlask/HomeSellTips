@@ -1,10 +1,10 @@
-import Stripe from "stripe";
 import { productionPlacements } from "@/lib/catalog";
 import { todayIso } from "@/lib/dates";
 import { headerSlotTaken } from "@/lib/placements";
 import { parseProCategory } from "@/lib/parse";
+import { createPaypalOrder, paypalOrderBody } from "@/lib/paypal-checkout";
+import { launchPromoEnabled, parseProductId, paypalReadiness, productOffer } from "@/lib/paypal-config";
 import { getSiteUrl } from "@/lib/site";
-import { launchPromoEnabled, parseProductId, productOffer, stripeReadiness } from "@/lib/stripe-config";
 import type { ProductId } from "@/lib/types";
 import { parseStateCode } from "@/lib/us-states";
 
@@ -50,10 +50,16 @@ function needsPlace(productId: ProductId): boolean {
 }
 
 export async function POST(request: Request): Promise<Response> {
-  const readiness = stripeReadiness(process.env.STRIPE_SECRET_KEY);
-  const secret = process.env.STRIPE_SECRET_KEY?.trim() ?? "";
-  if (readiness.state !== "ready" || !secret.startsWith("sk_test_")) {
-    return Response.json({ error: "Payments are not configured." }, { status: 503 });
+  const readiness = paypalReadiness({
+    clientId: process.env.PAYPAL_CLIENT_ID,
+    clientSecret: process.env.PAYPAL_CLIENT_SECRET,
+    mode: process.env.PAYPAL_MODE,
+  });
+  const clientId = process.env.PAYPAL_CLIENT_ID?.trim() ?? "";
+  const clientSecret = process.env.PAYPAL_CLIENT_SECRET?.trim() ?? "";
+  if (readiness.state !== "ready" || !clientId || !clientSecret) {
+    const error = readiness.state === "refused" ? readiness.reason : "Payments are not configured.";
+    return Response.json({ error }, { status: 503 });
   }
 
   let body: CheckoutBody;
@@ -93,50 +99,23 @@ export async function POST(request: Request): Promise<Response> {
   }
 
   const offer = productOffer(productId, launchPromoEnabled(process.env.LAUNCH_PROMO));
-  const stripe = new Stripe(secret);
+  const siteUrl = getSiteUrl();
   try {
-    let couponId = "";
-    if (offer.firstMonthHalfOff) {
-      const coupon = await stripe.coupons.create({
-        percent_off: 50,
-        duration: "once",
-        max_redemptions: 1,
-        name: "HomeSellTips first month",
-      });
-      couponId = coupon.id;
-    }
-    const params: Stripe.Checkout.SessionCreateParams = {
-      mode: "subscription",
-      line_items: [
-        {
-          quantity: 1,
-          price_data: {
-            currency: "usd",
-            unit_amount: offer.unitAmount,
-            recurring: { interval: offer.interval },
-            product_data: { name: offer.name },
-          },
-        },
-      ],
-      success_url: `${getSiteUrl()}/advertise?checkout=success`,
-      cancel_url: `${getSiteUrl()}/advertise?checkout=cancel`,
-      metadata: {
+    const url = await createPaypalOrder({
+      clientId,
+      clientSecret,
+      order: paypalOrderBody({
         productId,
+        offer,
         businessName,
         category,
         city,
-        state,
-        approval: "required",
-      },
-    };
-    if (couponId) {
-      params.discounts = [{ coupon: couponId }];
-    }
-    const session = await stripe.checkout.sessions.create(params);
-    if (!session.url) {
-      return Response.json({ error: "Checkout could not be started." }, { status: 502 });
-    }
-    return Response.json({ url: session.url });
+        state: state ?? "",
+        returnUrl: `${siteUrl}/api/checkout/return`,
+        cancelUrl: `${siteUrl}/advertise?checkout=cancel`,
+      }),
+    });
+    return Response.json({ url });
   } catch {
     return Response.json({ error: "Checkout could not be started." }, { status: 502 });
   }

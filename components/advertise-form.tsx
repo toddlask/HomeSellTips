@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { categoryLabel } from "@/lib/listings";
-import type { StripeReadiness } from "@/lib/stripe-config";
-import { stripeStatusMessage } from "@/lib/stripe-config";
+import type { PaypalReadiness } from "@/lib/paypal-config";
+import { paypalStatusMessage } from "@/lib/paypal-config";
 import { PRO_CATEGORIES, type ProductId } from "@/lib/types";
 import { US_STATES } from "@/lib/us-states";
 
@@ -14,7 +14,7 @@ const products: Array<{ id: ProductId; label: string; price: string }> = [
   { id: "header-sponsor", label: "Sitewide header sponsor", price: "$249 per month" },
 ];
 
-export function AdvertiseForm({ readiness, launchPromo }: { readiness: StripeReadiness; launchPromo: boolean }) {
+export function AdvertiseForm({ readiness, launchPromo }: { readiness: PaypalReadiness; launchPromo: boolean }) {
   const [productId, setProductId] = useState<ProductId>("featured-monthly");
   const [businessName, setBusinessName] = useState("");
   const [category, setCategory] = useState("");
@@ -48,7 +48,7 @@ export function AdvertiseForm({ readiness, launchPromo }: { readiness: StripeRea
 
   return (
     <div className="panel">
-      <p>{stripeStatusMessage(readiness)}</p>
+      <p>{paypalStatusMessage(readiness)}</p>
       {launchPromo ? (
         <p>Launch promo is on. The first month of a monthly plan is half off. The renewal price stays the listed price.</p>
       ) : (
@@ -107,7 +107,7 @@ export function AdvertiseForm({ readiness, launchPromo }: { readiness: StripeRea
       <p className="note">The sitewide header has one slot. A second active header is refused. Nothing displays until it is approved in git.</p>
       {paymentsReady ? (
         <button type="button" onClick={startCheckout} disabled={pending}>
-          {pending ? "Starting test checkout…" : "Continue in Stripe test mode"}
+          {pending ? "Starting sandbox checkout…" : "Continue in the PayPal sandbox"}
         </button>
       ) : (
         <p>

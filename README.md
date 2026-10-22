@@ -39,7 +39,7 @@ Do not add a Vercel cron for publishing. The GitHub Action is the only publisher
 
 ## Payments and ads
 
-Stripe checkout runs only with an `sk_test_` secret. Live keys are refused. With no key, the advertise page says payments are not configured.
+PayPal checkout uses the Orders API in the sandbox only. `PAYPAL_MODE` must be `sandbox`. Live mode is refused. With no client id or secret, the advertise page says payments are not configured.
 
 Ad slots and the publisher line in `ads.txt` appear only when `ADSENSE_PUBLISHER_ID` is set. Ad scripts load after cookie consent.
 
