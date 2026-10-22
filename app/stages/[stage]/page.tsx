@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AffiliateList } from "@/components/affiliate-list";
+import { StagePhoto } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
 import { UpdatedOn } from "@/components/updated-on";
 import { affiliateOffers, offersForStage } from "@/lib/affiliates";
@@ -47,6 +48,7 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
     <>
       <h1>{stageTitle(stage)}</h1>
       <p className="lede">{stageSummary(stage)}</p>
+      <StagePhoto stage={stage} />
       {stageTips.length === 0 ? (
         <p className="panel">No published tips in this stage yet.</p>
       ) : (

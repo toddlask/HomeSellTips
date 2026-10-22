@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { InContentAd } from "@/components/ad-regions";
+import { StagePhoto } from "@/components/home-photo";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { stagePath, stageTitle } from "@/lib/stages";
@@ -47,6 +48,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
         <a href={stagePath(tip.stage)}>{stageTitle(tip.stage)}</a>
       </p>
       {tip.status === "archived" ? <p className="archive-flag">{tipStatusLabel(tip.status)}</p> : null}
+      <StagePhoto stage={tip.stage} />
       <h1>{tip.title}</h1>
       <UpdatedOn iso={tip.updatedOn} />
       <p className="lede">{tip.summary}</p>
