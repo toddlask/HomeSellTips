@@ -1,0 +1,30 @@
+{
+  "name": "homeselltips",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "content:publish": "tsx scripts/publish-next-tip.ts",
+    "content:approve": "tsx scripts/approve-review.ts",
+    "outbox:draft": "tsx scripts/draft-renewals.ts"
+  },
+  "dependencies": {
+    "next": "^15.5.28",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "stripe": "^23.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tsx": "^4.23.15",
+    "typescript": "5.9",
+    "vitest": "^5.0.5"
+  }
+}
