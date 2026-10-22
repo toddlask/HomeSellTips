@@ -1,9 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import type { HomePhoto } from "@/lib/photos";
 
 const INTERVAL_MS = 5000;
+
+const HERO_FOCUS: Record<string, string> = {
+  "hero-house": "50% 58%",
+  "living-room": "50% 62%",
+  "exterior-white": "40% 45%",
+  kitchen: "52% 48%",
+  "dining-room": "50% 60%",
+};
 
 export function HeroSlideshow({ photos }: { photos: readonly HomePhoto[] }) {
   const [index, setIndex] = useState(0);
@@ -41,7 +49,12 @@ export function HeroSlideshow({ photos }: { photos: readonly HomePhoto[] }) {
       {photos.map((photo, photoIndex) => {
         const active = photoIndex === index;
         return (
-          <div key={photo.id} className={active ? "hero-slide is-active" : "hero-slide"} aria-hidden={active ? undefined : true}>
+          <div
+            key={photo.id}
+            className={active ? "hero-slide is-active" : "hero-slide"}
+            style={{ "--hero-focus": HERO_FOCUS[photo.id] ?? "50% 50%" } as CSSProperties}
+            aria-hidden={active ? undefined : true}
+          >
             <img
               src={photo.src}
               alt={photo.alt}

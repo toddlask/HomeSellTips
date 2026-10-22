@@ -146,9 +146,10 @@ a:hover { color: #3f2618; }
 }
 
 .hero {
-  min-height: 92vh;
   display: grid;
   align-items: end;
+  aspect-ratio: 5 / 6;
+  min-height: 28rem;
   background: #efe4d6;
   overflow: hidden;
 }
@@ -158,7 +159,10 @@ a:hover { color: #3f2618; }
   inset: 0;
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
+  object-position: var(--hero-focus, 50% 50%);
+  transform-origin: var(--hero-focus, 50% 50%);
 }
 
 .hero-slideshow {
@@ -198,8 +202,10 @@ a:hover { color: #3f2618; }
 }
 
 .hero-dots button {
-  width: 0.62rem;
-  height: 0.62rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  min-width: 0.7rem;
+  min-height: 0.7rem;
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -213,34 +219,47 @@ a:hover { color: #3f2618; }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgb(255 248 242 / 0.12) 0%, rgb(255 248 242 / 0.55) 48%, rgb(255 248 242 / 0.94) 78%);
+  background: linear-gradient(180deg, rgb(255 248 242 / 0) 0%, rgb(255 248 242 / 0.2) 36%, rgb(255 248 242 / 0.9) 64%, rgb(255 248 242 / 0.97) 100%);
 }
 
 .hero-copy {
   position: relative;
   z-index: 1;
-  padding: 2.5rem 0 2.75rem;
+  padding: 1.25rem 0 1.4rem;
   text-align: center;
+  color: var(--ink);
 }
 
 .hero h1 {
-  font-size: clamp(3.2rem, 6.4vw, 5.6rem);
-  max-width: 9em;
+  font-size: clamp(1.85rem, 2.4vw + 1.05rem, 4.25rem);
+  max-width: 11em;
   margin-inline: auto;
+  color: var(--ink);
 }
 
-.hero-copy .lede { margin-inline: auto; max-width: 28rem; }
+.hero-copy .lede {
+  margin-inline: auto;
+  max-width: 28rem;
+  color: var(--ink);
+}
 
-.script {
+.hero .button {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.hero .script {
   display: block;
-  margin: 0 auto 0.7rem;
-  max-width: 16em;
+  margin: 0 auto 0.55rem;
+  max-width: 14em;
   font-family: var(--font-script), "Great Vibes", cursive;
   font-style: normal;
   font-weight: 400;
-  font-size: clamp(2.4rem, 4.4vw, 3.7rem);
+  font-size: clamp(1.55rem, 1.2vw + 1.1rem, 3rem);
   line-height: 1.15;
   letter-spacing: 0;
+  color: var(--ink);
 }
 
 .feature-row {
@@ -290,12 +309,16 @@ a:hover { color: #3f2618; }
 @media (min-width: 40rem) {
   .card-grid, .photo-grid { grid-template-columns: 1fr 1fr; }
   .tool-grid { grid-template-columns: 1fr 1fr; }
-  .hero { align-items: end; min-height: 92vh; }
+  .hero { aspect-ratio: 16 / 10; min-height: 0; }
   .hero-scrim {
-    background: linear-gradient(100deg, rgb(255 248 242 / 0.94) 0%, rgb(255 248 242 / 0.78) 26%, rgb(255 248 242 / 0.22) 48%, rgb(255 248 242 / 0) 64%);
+    background: linear-gradient(100deg, rgb(255 248 242 / 0.97) 0%, rgb(255 248 242 / 0.92) 28%, rgb(255 248 242 / 0.55) 46%, rgb(255 248 242 / 0) 64%);
   }
-  .hero-copy { text-align: left; padding: 0 0 4.25rem; }
+  .hero-copy { max-width: 34rem; text-align: left; padding: 0 0 2.4rem; }
   .hero h1, .hero .script, .hero-copy .lede { margin-inline: 0; }
+}
+
+@media (min-width: 64rem) {
+  .hero { aspect-ratio: 16 / 9; min-height: 32rem; }
 }
 
 @media (min-width: 64rem) {

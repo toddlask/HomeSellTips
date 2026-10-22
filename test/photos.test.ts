@@ -39,5 +39,6 @@ describe("home photos", () => {
     expect(html).toContain('data-interval="5000"');
     expect(html).toContain("hero-slide is-active");
     expect(html).toContain(heroSlides[0]?.src);
+    expect(html).toContain("--hero-focus:50% 58%");
   });
 });
