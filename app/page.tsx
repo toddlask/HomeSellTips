@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { FaqList } from "@/components/faq-list";
-import { HeroSlideshow } from "@/components/hero-slideshow";
 import { HomePhotoView } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
-import { heroSlides, stagePhoto } from "@/lib/photos";
+import { heroPhoto, stagePhoto } from "@/lib/photos";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { CALCULATOR_NOTE, publishedTips, SITE_NAME } from "@/lib/site";
 import { STAGE_IDS } from "@/lib/types";
@@ -45,7 +44,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero bleed" aria-labelledby="home-heading">
-        <HeroSlideshow photos={heroSlides} />
+        <HomePhotoView photo={heroPhoto} className="hero-photo" priority />
         <div className="hero-scrim" />
         <div className="wrap hero-copy">
           <h1 id="home-heading">Practical tips for selling your home</h1>

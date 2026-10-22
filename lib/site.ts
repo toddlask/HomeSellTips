@@ -2,7 +2,7 @@ import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import type { StageId, Tip } from "@/lib/types";
 import { STAGE_IDS } from "@/lib/types";
 
-export const SITE_NAME = "Helpful Ideas and Tips for Selling Your Home";
+export const SITE_NAME = "Helpful Ideas for Selling Your Home";
 
 export const ANNOUNCEMENT = "Selling your home is a chance to get ready for a new chapter.";
 
