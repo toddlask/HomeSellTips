@@ -7,7 +7,7 @@ import { UpdatedOn } from "@/components/updated-on";
 import { affiliateOffers, offersForStage } from "@/lib/affiliates";
 import { tips } from "@/lib/catalog";
 import { parseStageId } from "@/lib/parse";
-import { stageSummary, stageTitle } from "@/lib/stages";
+import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { tipsForStage } from "@/lib/site";
 import { STAGE_IDS, type StageId } from "@/lib/types";
 
@@ -48,6 +48,9 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
     <>
       <h1>{stageTitle(stage)}</h1>
       <p className="lede">{stageSummary(stage)}</p>
+      <p className="no-print">
+        <a href={`${stagePath(stage)}/checklist`}>Print the one-page checklist</a>
+      </p>
       <StagePhoto stage={stage} />
       {stageTips.length === 0 ? (
         <p className="panel">No published tips in this stage yet.</p>

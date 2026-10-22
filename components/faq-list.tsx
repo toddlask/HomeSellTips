@@ -7,7 +7,7 @@ export function FaqList() {
       <h2 id="faq-heading">Questions</h2>
       <div className="faq-list">
         {FAQ_ITEMS.map((item) => (
-          <details key={item.question}>
+          <details key={item.question} name="questions">
             <summary>{item.question}</summary>
             <p>{item.answer}</p>
           </details>

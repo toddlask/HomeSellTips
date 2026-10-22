@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { InContentAd } from "@/components/ad-regions";
+import { GlossText } from "@/components/gloss-text";
 import { StagePhoto } from "@/components/home-photo";
+import { SaleWords } from "@/components/sale-words";
+import { BackToTop, TipJump } from "@/components/tip-jump";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { stagePath, stageTitle } from "@/lib/stages";
@@ -44,6 +47,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   }
   return (
     <article>
+      <TipJump />
       <p>
         <a href={stagePath(tip.stage)}>{stageTitle(tip.stage)}</a>
       </p>
@@ -53,15 +57,21 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <UpdatedOn iso={tip.updatedOn} />
       <p className="lede">{tip.summary}</p>
       {tip.body.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
+        <p key={paragraph}>
+          <GlossText text={paragraph} />
+        </p>
       ))}
       <h2>What to do</h2>
       <ol className="steps">
         {tip.steps.map((step) => (
-          <li key={step}>{step}</li>
+          <li key={step}>
+            <GlossText text={step} />
+          </li>
         ))}
       </ol>
+      <SaleWords />
       <InContentAd />
+      <BackToTop />
     </article>
   );
 }

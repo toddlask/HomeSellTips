@@ -56,6 +56,10 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
     "/tools/commission",
     "/tools/what-to-fix",
     "/tools/checklist",
+    "/tools/rooms",
+    "/tools/curb-appeal",
+    "/tools/when-to-sell",
+    "/tools/myths",
   ];
   const entries: SitemapEntry[] = staticPaths.map((path) => ({
     path,
@@ -65,6 +69,7 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
     const stageTips = tipsForStage(tips, stage);
     const lastModified = stageTips.map((tip) => tip.updatedOn).toSorted().at(-1) ?? "2026-10-21";
     entries.push({ path: stagePath(stage), lastModified });
+    entries.push({ path: `${stagePath(stage)}/checklist`, lastModified });
   }
   for (const tip of publishedTips(tips)) {
     entries.push({ path: `/tips/${tip.slug}`, lastModified: tip.updatedOn });

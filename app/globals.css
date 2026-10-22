@@ -499,6 +499,139 @@ caption { text-align: left; font-weight: 700; margin-bottom: 0.4rem; }
 
 .center-link { text-align: center; }
 
+button.room-toggle, button.term-word {
+  min-height: 44px;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  border: 0;
+  padding: 0.35rem 0;
+  font: inherit;
+  letter-spacing: 0;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button.term-word {
+  width: auto;
+  min-height: 0;
+  display: inline;
+  padding: 0 0.1rem;
+  border-bottom: 1px dotted var(--ink);
+  text-align: inherit;
+}
+
+.room-list, .curb-grid, .myth-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.8rem; }
+
+.room-card, .curb-card, .myth {
+  background: var(--cream);
+  padding: 0.9rem 1rem 1rem;
+}
+
+.room-progress { color: var(--ink); }
+
+.curb-grid { grid-template-columns: 1fr; }
+@media (min-width: 40rem) { .curb-grid, .myth-grid { grid-template-columns: 1fr 1fr; } }
+
+.curb-card img { width: 100%; height: 11rem; object-fit: cover; display: block; }
+
+.curb-tags { display: flex; gap: 0.8rem; align-items: center; color: var(--ink); }
+
+.cost-tag {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--ink);
+}
+
+.photo-credit { color: var(--ink); font-size: 0.92rem; }
+
+.season-chart table { width: 100%; border-collapse: collapse; }
+.season-chart th, .season-chart td { text-align: left; padding: 0.35rem 0.4rem; vertical-align: middle; color: var(--ink); }
+.season-chart th[scope="row"] { width: 6.5rem; font-weight: 600; }
+.season-count { display: inline-block; min-width: 5.5rem; }
+.season-track { display: inline-block; width: min(100%, 16rem); height: 0.7rem; background: var(--announce); vertical-align: middle; }
+.season-bar { display: block; height: 100%; background: var(--ink); }
+
+.myth-inner { position: relative; min-height: 7.5rem; transform-style: preserve-3d; transition: transform 0.45s ease; }
+.myth.is-flipped .myth-inner { transform: rotateY(180deg); }
+.myth-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  color: var(--ink);
+}
+.myth-back { transform: rotateY(180deg); }
+.myth-kicker { margin: 0 0 0.25rem; font-weight: 700; }
+.myth button { margin-top: 0.6rem; background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.term { position: relative; display: inline; }
+.term-bubble {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: calc(100% + 0.35rem);
+  width: min(18rem, 70vw);
+  padding: 0.55rem 0.7rem;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.term:hover .term-bubble, .term:focus-within .term-bubble, .term.is-open .term-bubble { display: block; }
+
+.sale-words p { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; }
+
+.jump-nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  gap: 0.35rem 0.9rem;
+  overflow-x: auto;
+  background: var(--cream);
+  padding: 0.2rem 0.4rem;
+  margin: 0 0 1rem;
+}
+.jump-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 4;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  min-height: 44px;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .myth-inner, .myth.is-flipped .myth-inner, .myth-back { transform: none; transition: none; }
+  .myth-face { position: static; }
+  .myth-back { display: none; }
+  .myth.is-flipped .myth-face:not(.myth-back) { display: none; }
+  .myth.is-flipped .myth-back { display: block; }
+}
+
+@media print {
+  body:has(.checklist-sheet) .site-footer { display: none !important; }
+  .checklist-sheet { max-width: 7.5in; }
+  .checklist-sheet h1 { font-size: 22pt; }
+  .checklist-sheet .lede, .checklist-sheet li { font-size: 12pt; }
+  .checklist-sheet li { break-inside: avoid; }
+}
+
 @media print {
   .no-print, .site-header, .announce, .cookie-banner, .ad-slot, .placement, .hero, .band, .feature-row { display: none !important; }
   body { background: white; color: black; }
