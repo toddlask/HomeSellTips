@@ -120,11 +120,17 @@ a:hover { color: #3f2618; }
 .nav-links a {
   color: var(--ink);
   text-decoration: none;
-  font-size: 0.92rem;
-  letter-spacing: 0.04em;
+  padding-inline: 0.15rem;
+  font-size: clamp(1.15rem, 1rem + 0.4vw, 1.3rem);
+  letter-spacing: 0.015em;
+  white-space: nowrap;
 }
 
-.nav-links a:hover { color: var(--tan-deep); }
+@media (min-width: 48rem) {
+  .nav-links { flex-wrap: nowrap; }
+}
+
+.nav-links a:hover { color: #3f2618; }
 
 .page-shell { padding: 0 0 3rem; overflow-x: clip; }
 
