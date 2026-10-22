@@ -1,6 +1,10 @@
 [build]
   command = "npm run build"
 
+# Git production builds use this runtime to publish the Next.js server.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [build.environment]
   NODE_VERSION = "22"
 
