@@ -102,9 +102,11 @@ a:hover { color: #3f2618; }
 .brand {
   color: var(--ink);
   text-decoration: none;
-  font-size: 1.7rem;
-  letter-spacing: 0.04em;
-  line-height: 1;
+  display: block;
+  max-width: 16rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
 }
 
 .nav-links, .footer-links, .credit-list, .feature-row {

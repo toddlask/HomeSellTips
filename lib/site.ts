@@ -2,10 +2,10 @@ import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import type { StageId, Tip } from "@/lib/types";
 import { STAGE_IDS } from "@/lib/types";
 
-export const SITE_NAME = "HomeSellTips";
+export const SITE_NAME = "Helpful Ideas and Tips for Selling Your Home";
 
 export const DISCLAIMER =
-  "HomeSellTips is not legal, financial, tax, or real-estate advice. Rules vary by state. Consult a licensed real-estate agent, an attorney, or a tax advisor.";
+  `${SITE_NAME} is not legal, financial, tax, or real-estate advice. Rules vary by state. Consult a licensed real-estate agent, an attorney, or a tax advisor.`;
 
 export function getSiteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
