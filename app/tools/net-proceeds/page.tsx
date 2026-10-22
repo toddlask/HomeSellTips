@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { NetProceedsForm } from "@/components/net-proceeds-form";
+import { CALCULATOR_NOTE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Net proceeds calculator",
@@ -19,6 +20,7 @@ export default function NetProceedsPage() {
         Proceeds equal sale price minus mortgage payoff, listing commission, buyer agent commission, closing costs,
         seller credits, and repair costs.
       </p>
+      <p className="note">{CALCULATOR_NOTE}</p>
       <NetProceedsForm />
     </>
   );

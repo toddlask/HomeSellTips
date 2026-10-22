@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RoiForm } from "@/components/roi-form";
+import { CALCULATOR_NOTE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "What to fix first",
@@ -19,6 +20,7 @@ export default function WhatToFixPage() {
         The groups are safety and function, curb and entry, kitchen and baths, paint and floors, and work you may leave
         for the buyer. You supply the cost and the value.
       </p>
+      <p className="note">{CALCULATOR_NOTE}</p>
       <RoiForm />
     </>
   );

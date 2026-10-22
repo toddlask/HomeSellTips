@@ -4,6 +4,10 @@ import { STAGE_IDS } from "@/lib/types";
 
 export const SITE_NAME = "Helpful Ideas and Tips for Selling Your Home";
 
+export const ANNOUNCEMENT = "Selling your home is a chance to get ready for a new chapter.";
+
+export const CALCULATOR_NOTE = "Calculators use only the numbers you enter.";
+
 export const DISCLAIMER =
   `${SITE_NAME} is not legal, financial, tax, or real-estate advice. Rules vary by state. Consult a licensed real-estate agent, an attorney, or a tax advisor.`;
 

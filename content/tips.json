@@ -435,5 +435,765 @@
       "Clean from the top of the room toward the floor.",
       "Schedule photos after the floors are dry."
     ]
+  },
+  {
+    "slug": "test-alarms-before-you-list",
+    "title": "Test the alarms before you list",
+    "stage": "prep-and-repairs",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Press each smoke and carbon-monoxide alarm, and replace any battery that fails.",
+    "body": [
+      "Walk every floor and press the test button on each alarm. Write down the room if one stays quiet or chirps.",
+      "Replace the battery, then test again. If it still fails, replace the alarm and note the date on your repair list.",
+      "Keep the receipt with your other repair papers. A working alarm is a function item, not a decorating project."
+    ],
+    "steps": [
+      "Press every alarm and write down the quiet ones.",
+      "Replace the battery or the alarm, then test again.",
+      "File the receipt with your repair papers."
+    ]
+  },
+  {
+    "slug": "clear-gutters-before-showings",
+    "title": "Clear the gutters before showings",
+    "stage": "prep-and-repairs",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Empty the gutters and check that downspouts send water away from the foundation.",
+    "body": [
+      "Look along the roof edge after a dry day. Leaves and grit in a gutter spill over the siding in the next rain.",
+      "Scoop the debris, then run a hose at the high end. Water should travel to the downspout and land several feet from the wall.",
+      "If water pools at the foundation, add an extension. Write the fix on your repair list before you spend on paint."
+    ],
+    "steps": [
+      "Scoop leaves and grit from the gutters.",
+      "Run a hose and watch where the water lands.",
+      "Add a downspout extension if water sits by the wall."
+    ]
+  },
+  {
+    "slug": "tighten-loose-hardware",
+    "title": "Tighten loose hardware before the first visit",
+    "stage": "prep-and-repairs",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Snug the hinges, handles, and cabinet pulls that rattle when someone opens a door.",
+    "body": [
+      "Open every door and drawer once. A loose hinge or a wobbly pull is a small job that shows up in a walk-through.",
+      "Tighten the screws you can reach. If a screw spins in the hole, move it slightly or use a longer screw so it bites.",
+      "Skip new hardware unless a piece is broken. Function comes before a matching set."
+    ],
+    "steps": [
+      "Open every door and drawer.",
+      "Tighten screws that move.",
+      "Replace only pieces that are broken."
+    ]
+  },
+  {
+    "slug": "trace-a-stain-to-its-source",
+    "title": "Trace a stain to its source",
+    "stage": "prep-and-repairs",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Find the leak that made the stain, then repair that before you paint over the mark.",
+    "body": [
+      "A ceiling spot or a bubbled patch of paint usually means water was there. Painting the mark hides it for a week.",
+      "Check the fixture, the roof above, and the supply line. If you cannot find the source, hire someone who can and get the cause in writing.",
+      "After the source is dry and repaired, then patch and paint. Keep the invoice so you can tell a buyer what was fixed."
+    ],
+    "steps": [
+      "Mark each stain on your walk-through list.",
+      "Repair the leak before you paint.",
+      "Save the invoice with your other receipts."
+    ]
+  },
+  {
+    "slug": "run-heat-and-cooling-before-showings",
+    "title": "Run the heat and the cooling before showings",
+    "stage": "prep-and-repairs",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Turn each system on, listen for a short cycle, and change a dirty filter.",
+    "body": [
+      "Set the heat and let it run until the air at a vent is warm. Then switch to cooling if the house has it, and wait for cool air.",
+      "A filter clogged with dust makes the system short-cycle. Slide in a clean filter and write the size on the filter frame for next time.",
+      "If a system will not start, put that on the repair list before photo day. A quiet system is easier to explain than a dead one."
+    ],
+    "steps": [
+      "Run heat until a vent is warm.",
+      "Run cooling until a vent is cool, if you have it.",
+      "Replace a dirty filter and note any system that will not start."
+    ]
+  },
+  {
+    "slug": "leave-a-clear-path-through-each-room",
+    "title": "Leave a clear path through each room",
+    "stage": "staging",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Move chairs and baskets so a visitor can walk in, turn around, and see the floor.",
+    "body": [
+      "Stand in each doorway. If you have to step sideways to enter, the room reads as smaller than it is.",
+      "Slide extra chairs, hampers, and floor baskets out for showings. You can put them back when the day is over.",
+      "Leave one comfortable seat if the room is a living room. The goal is a path, not an empty box."
+    ],
+    "steps": [
+      "Stand in each doorway and look for a straight path.",
+      "Move pieces that block the walk.",
+      "Keep one seat where people actually sit."
+    ]
+  },
+  {
+    "slug": "open-the-window-coverings-the-same-way",
+    "title": "Open the window coverings the same way",
+    "stage": "staging",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Raise every shade to the same height so the light looks even from room to room.",
+    "body": [
+      "Walk the house and set each shade, blind, or curtain the same way. One closed room next to a bright one looks accidental.",
+      "If a covering is broken, take it down for showings rather than leaving it crooked. A bare window is easier to read than a stuck blind.",
+      "Do this before photos and again the morning of a showing. It takes a few minutes and it is one of the first things people notice."
+    ],
+    "steps": [
+      "Set every covering to the same height.",
+      "Remove a covering that will not hang straight.",
+      "Check them again the morning of a showing."
+    ]
+  },
+  {
+    "slug": "put-pet-gear-away-before-showings",
+    "title": "Put pet gear away before showings",
+    "stage": "staging",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Move bowls, beds, and litter out of sight, and air the rooms they sat in.",
+    "body": [
+      "Pet gear tells a visitor about your routine, not about the room. Box the bowls, beds, and toys before the first appointment.",
+      "Wash the floor where bowls sat. Open a window for a few minutes if a litter area has a smell.",
+      "If the pet will be home, plan a quiet room or a sitter for showing hours so doors can stay open."
+    ],
+    "steps": [
+      "Box bowls, beds, and toys.",
+      "Clean the floor where they sat.",
+      "Plan where the pet will be during showings."
+    ]
+  },
+  {
+    "slug": "stop-after-one-simple-table-setting",
+    "title": "Stop after one simple table setting",
+    "stage": "staging",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "A plain setting on the table is enough. Extra decor on every surface works against you.",
+    "body": [
+      "If you set the dining table, use plates you already own and leave the center clear. Then stop.",
+      "Do not add pillows, throws, and new art in the same week you are clearing clutter. The rooms should look lived-in and open.",
+      "Take a photo of the table from the doorway. If the setting is the first thing you see, remove it."
+    ],
+    "steps": [
+      "Use dishes you already own.",
+      "Leave the center of the table clear.",
+      "Remove the setting if it dominates the photo."
+    ]
+  },
+  {
+    "slug": "leave-closets-partly-empty",
+    "title": "Leave closets partly empty",
+    "stage": "staging",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Take out enough clothes and boxes that a visitor can see the rod and the floor.",
+    "body": [
+      "A closet packed to the ceiling hides the storage you are selling. Move out-of-season clothes to boxes you will take with you.",
+      "Leave a gap on the rod and a clear patch of floor. Do the same for a linen shelf: fold a few stacks, not a wall of towels.",
+      "You do not need to show an empty closet. Half full reads as usable."
+    ],
+    "steps": [
+      "Box what you will not wear during showings.",
+      "Leave a gap on the rod and a clear patch of floor.",
+      "Fold linen into a few stacks."
+    ]
+  },
+  {
+    "slug": "write-three-numbers-before-you-list",
+    "title": "Write three numbers before you list",
+    "stage": "pricing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Write the list price, the net you hope for, and the net that would make you walk away.",
+    "body": [
+      "Use the proceeds calculator with numbers you choose. Run it once at the price you might list, and once at a lower price.",
+      "Write both nets on one page, plus the net where you would rather stay put. Those three numbers are yours.",
+      "Do this before you talk with an agent or a buyer. A conversation is easier when the page already exists."
+    ],
+    "steps": [
+      "Run the calculator at two prices you might list.",
+      "Write the net you hope for and the net where you would stop.",
+      "Keep that page with your offer notes."
+    ]
+  },
+  {
+    "slug": "list-credits-before-you-pick-a-price",
+    "title": "List credits before you pick a price",
+    "stage": "pricing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Write the repairs and concessions you already expect, then see what they do to your net.",
+    "body": [
+      "A list price that ignores a likely credit is a guess. Write the items a buyer might ask you to pay: a repair you already know about, a closing cost you are willing to cover, or a credit for something you will not fix.",
+      "Type those amounts into the calculator as seller credits or repairs. The net that remains is closer to a decision.",
+      "You can change the list later. You cannot change it wisely if the credits were never written down."
+    ],
+    "steps": [
+      "Write the credits you already expect.",
+      "Enter them in the calculator.",
+      "Read the net before you choose a list price."
+    ]
+  },
+  {
+    "slug": "match-what-was-included-in-a-sale",
+    "title": "Match what was included in a sold home",
+    "stage": "pricing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Before you compare a sold price, write what that sale included and what yours includes.",
+    "body": [
+      "Two houses can sell for different amounts because one included appliances, a credit, or a repair. The headline price does not say which.",
+      "For each sold home you are using, note the date, the price, and anything the listing said was included or credited. Then note the same items for your house.",
+      "If you cannot find those facts, do not treat that sale as a match. Use the ones you can describe."
+    ],
+    "steps": [
+      "Pick sold homes that are actually similar.",
+      "Write what each sale included or credited.",
+      "Drop a sale you cannot describe."
+    ]
+  },
+  {
+    "slug": "rerun-the-net-after-each-bid",
+    "title": "Rerun the net after each repair bid",
+    "stage": "pricing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "When a written bid arrives, put that number in the calculator before you agree to the work.",
+    "body": [
+      "A bid is a fact. A guess about what the work will cost is not. Type the bid into repair costs and read the new net.",
+      "If the net falls below the number you said you would walk away from, skip that project or change the list price on purpose.",
+      "Keep the bid with the calculator printout. Later, an offer credit is easier to judge against a number you already accepted."
+    ],
+    "steps": [
+      "Enter the bid as a repair cost.",
+      "Compare the new net with your walk-away number.",
+      "Save the bid and the printout together."
+    ]
+  },
+  {
+    "slug": "keep-price-notes-in-writing",
+    "title": "Keep price notes in writing",
+    "stage": "pricing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "After each pricing talk, write the price, the net, and what you decided.",
+    "body": [
+      "A phone call is easy to remember wrong. When you finish a talk about price, write three lines: the price discussed, the net you calculated, and what you agreed to do next.",
+      "Store those notes with your offer page. If a later conversation drifts, you can read what you already decided.",
+      "This is your record. It is not a promise to a buyer until you sign something that says so."
+    ],
+    "steps": [
+      "Write the price and the net after each talk.",
+      "Add the next step you agreed to.",
+      "File the note with your offer papers."
+    ]
+  },
+  {
+    "slug": "shoot-in-the-order-a-visitor-walks",
+    "title": "Shoot in the order a visitor walks",
+    "stage": "listing-photos",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Start at the street, then move through the house in the order someone would walk it.",
+    "body": [
+      "Take the front of the house first, from the sidewalk if you can do that without standing in the road. Then the entry, then each main room in walking order.",
+      "That order helps you notice a closet door left open or a light still off. It also gives you a set that tells a simple story.",
+      "Save the detail shots for the end: a finished repair, a fireplace, a view from a window. Lead with the rooms."
+    ],
+    "steps": [
+      "Photograph the front before you go inside.",
+      "Move room to room in walking order.",
+      "Add detail shots after the wide shots."
+    ]
+  },
+  {
+    "slug": "move-cars-before-the-photo-appointment",
+    "title": "Move cars before the photo appointment",
+    "stage": "listing-photos",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Clear the driveway and the curb in front of the house so the photo shows the property.",
+    "body": [
+      "A car in the driveway hides the garage and the walk. Move vehicles off the driveway before the photographer arrives, or before you take the shots yourself.",
+      "Ask a neighbor only if you need a place to park for an hour. Do not block their drive.",
+      "Check the curb for bins. Roll them out of the frame, then bring them back when you are done."
+    ],
+    "steps": [
+      "Move vehicles off the driveway.",
+      "Roll bins out of the frame.",
+      "Look once from the sidewalk before you shoot."
+    ]
+  },
+  {
+    "slug": "close-lids-and-hide-trash-cans",
+    "title": "Close lids and hide trash cans",
+    "stage": "listing-photos",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Shut toilet lids, tuck trash cans into cabinets, and clear the edge of every tub.",
+    "body": [
+      "Bath photos pick up small clutter first. Close the lid, put the trash can inside a cabinet, and move bottles off the tub edge.",
+      "Hang towels straight or remove them. A heap of used towels is not a styling choice.",
+      "Do the same in a kitchen: close the dishwasher and put the sponge out of the frame."
+    ],
+    "steps": [
+      "Close toilet lids.",
+      "Put trash cans in a cabinet.",
+      "Clear bottles off the tub and sponges off the sink."
+    ]
+  },
+  {
+    "slug": "take-one-wide-shot-and-one-detail",
+    "title": "Take one wide shot and one detail",
+    "stage": "listing-photos",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "For each main room, keep one photo that shows the whole room and one that shows a finished feature.",
+    "body": [
+      "Stand in a corner and fit the room in one frame with the camera level. That is the wide shot.",
+      "Then move closer to one thing you finished: a repaired window, a clear counter, a made bed. That is the detail.",
+      "Delete extra frames that repeat the same angle. A short set is easier to sort than a full roll of near-duplicates."
+    ],
+    "steps": [
+      "Take one level wide shot of each main room.",
+      "Take one closer shot of something you finished.",
+      "Delete frames that repeat the same angle."
+    ]
+  },
+  {
+    "slug": "delete-blurry-frames-the-same-day",
+    "title": "Delete blurry frames the same day",
+    "stage": "listing-photos",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Review the set before you upload it, and drop any frame that is dark, tilted, or soft.",
+    "body": [
+      "Look at each photo on a larger screen than the camera. A frame that looks fine on a phone can be soft on a listing page.",
+      "Delete shots with a tilted line, a dark corner you did not mean, or a reflection of the photographer. Retake the room if you have no clean wide shot.",
+      "Name the keepers by room so you can find them later. Do this the same day, while you can still reopen a shade and try again."
+    ],
+    "steps": [
+      "Review every frame on a large screen.",
+      "Delete soft, dark, or tilted shots.",
+      "Retake a room if the wide shot is not clean."
+    ]
+  },
+  {
+    "slug": "price-the-hours-you-will-spend",
+    "title": "Price the hours you will spend",
+    "stage": "agent-vs-fsbo",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Write the tasks you would take on, then estimate the hours before you decide to sell it yourself.",
+    "body": [
+      "List showings, calls, form review, and offer replies as separate lines. Next to each line, write the hours you can actually give it in a normal week.",
+      "If the hours are more than you have, that task is a reason to hire help or to pay someone for that piece only.",
+      "This is a schedule, not a judgment. The commission calculator can show the money. The hour list shows the time."
+    ],
+    "steps": [
+      "List each task you would keep.",
+      "Write the hours you can give it.",
+      "Hire out a task that does not fit the week."
+    ]
+  },
+  {
+    "slug": "decide-who-answers-buyer-questions",
+    "title": "Decide who answers buyer questions",
+    "stage": "agent-vs-fsbo",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Name the person who will reply, and decide that replies go in writing.",
+    "body": [
+      "Buyers ask about inclusions, repairs, and timing. Pick one person to answer so two people do not give two versions.",
+      "Reply in writing, even when the question arrived by phone. A short note is enough: what you were asked, and what you said.",
+      "If you hire an agent, ask how those questions will be logged. If you do not, the log is yours."
+    ],
+    "steps": [
+      "Name one person to answer.",
+      "Put each reply in writing.",
+      "Keep the notes with the offer file."
+    ]
+  },
+  {
+    "slug": "learn-which-forms-you-must-use",
+    "title": "Learn which forms you must use",
+    "stage": "agent-vs-fsbo",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Before you advertise, ask which seller forms your state expects and where to get them.",
+    "body": [
+      "Rules vary by state. A form that worked for a friend in another state may not be the one you need.",
+      "Ask a local real-estate attorney or the office that handles closings which seller disclosures you must complete. Write the list down.",
+      "Do this before the listing goes live. Filling out a form after a buyer asks is slower, and it is easier to miss a page."
+    ],
+    "steps": [
+      "Ask which seller forms your state expects.",
+      "Write the list and where to get each form.",
+      "Complete them before you start showings."
+    ]
+  },
+  {
+    "slug": "plan-showing-hours-before-you-advertise",
+    "title": "Plan showing hours before you advertise",
+    "stage": "agent-vs-fsbo",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Choose the days and hours you can leave the house, and write them down before the first call.",
+    "body": [
+      "Showings need an empty-enough house and someone to lock up. Pick hours you can keep for the next few weeks.",
+      "Decide how a visitor gets in: you meet them, an agent uses a lockbox, or you hire a sitter for the door. Write that choice next to the hours.",
+      "If you cannot offer those hours, that is a reason to hire help rather than a reason to guess."
+    ],
+    "steps": [
+      "Write the days and hours you can offer.",
+      "Decide how a visitor gets in.",
+      "Share that plan before the first request."
+    ]
+  },
+  {
+    "slug": "write-what-you-will-not-negotiate",
+    "title": "Write what you will not negotiate",
+    "stage": "agent-vs-fsbo",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Before the first call, list the terms you will discuss and the ones you will not.",
+    "body": [
+      "Price is not the only term. Closing date, credits, and what stays with the house all move. Write which of those you will talk about.",
+      "Write one or two items you will not trade, such as a move-out date you already booked. Read that list before you answer a caller.",
+      "You can change the list later. You should not invent it while you are on the phone."
+    ],
+    "steps": [
+      "List the terms you will discuss.",
+      "List the terms you will not trade.",
+      "Read the list before you answer a call."
+    ]
+  },
+  {
+    "slug": "answer-an-offer-in-writing",
+    "title": "Answer an offer in writing",
+    "stage": "offers-and-negotiation",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Send a written yes, no, or counter, even when you already talked it through.",
+    "body": [
+      "A spoken answer is easy to remember two different ways. After you decide, write the decision in a sentence and send it the way your forms require.",
+      "Include the price, the credits, and the dates you are accepting or changing. Leave out anything you have not decided.",
+      "Save a copy in the offer file the same day. If a second offer arrives, you will want the first answer on paper."
+    ],
+    "steps": [
+      "Write the decision in a sentence.",
+      "Include price, credits, and dates.",
+      "Save a copy in the offer file."
+    ]
+  },
+  {
+    "slug": "split-price-from-the-closing-date",
+    "title": "Split price from the closing date",
+    "stage": "offers-and-negotiation",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "When you counter, change the price on one line and the closing date on another.",
+    "body": [
+      "A counter that changes price and date in one breath is hard to compare. Write the price you want on its own line.",
+      "Write the closing date you can actually meet on the next line. If you need a few more days to move, say that as a date, not as a feeling.",
+      "Then read both lines against your net page. A higher price with a date you cannot keep is not a better offer."
+    ],
+    "steps": [
+      "Put the price on one line.",
+      "Put the closing date on the next line.",
+      "Check both against the net you already wrote."
+    ]
+  },
+  {
+    "slug": "list-what-stays-before-you-sign",
+    "title": "List what stays before you sign",
+    "stage": "offers-and-negotiation",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Write the appliances, fixtures, and window coverings that stay, and the items you will take.",
+    "body": [
+      "Offers often assume the appliances stay. If you plan to take a refrigerator, a curtain rod, or a mirror, write that down before you sign.",
+      "Walk the house with the list. Point at each item and mark stay or goes. Do this in daylight so you do not forget a shelf in the garage.",
+      "Attach the list to your counter or your acceptance. A list you only remember is not part of the deal."
+    ],
+    "steps": [
+      "Walk the house and mark stay or goes.",
+      "Include the garage and the shed.",
+      "Attach the list to the paper you sign."
+    ]
+  },
+  {
+    "slug": "ask-who-pays-for-requested-repairs",
+    "title": "Ask who pays for requested repairs",
+    "stage": "offers-and-negotiation",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "When a buyer asks for a repair, write the cost and who pays it before you agree.",
+    "body": [
+      "A request to fix something is a money question. Get a bid or write a credit amount before you say yes.",
+      "Note who orders the work and who pays. A credit you give at closing is different from a repair you finish before the final walk.",
+      "Put the choice in the written response. Then rerun your net with that amount filled in."
+    ],
+    "steps": [
+      "Get a bid or name a credit.",
+      "Write who orders the work and who pays.",
+      "Rerun your net with that amount."
+    ]
+  },
+  {
+    "slug": "save-every-counter-you-send",
+    "title": "Save every counter you send",
+    "stage": "offers-and-negotiation",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Keep a copy of each counter in one folder, in the order you sent them.",
+    "body": [
+      "Counters pile up. Number them by date and keep the signed or sent copy, not only the draft.",
+      "When a new version arrives, read it next to the one you sent. Highlight only the lines that changed.",
+      "If you have an agent, ask for the same set in your folder. If you do not, you are the one who files it."
+    ],
+    "steps": [
+      "Save each counter the day you send it.",
+      "Number them by date.",
+      "Compare each new paper with the one before it."
+    ]
+  },
+  {
+    "slug": "read-the-settlement-statement-when-it-arrives",
+    "title": "Read the settlement statement when it arrives",
+    "stage": "closing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Check the price, credits, and payoff on the statement the day you receive it.",
+    "body": [
+      "The statement is the math of the sale. Read the sale price, the payoff, the credits you agreed to, and the amount you are supposed to receive.",
+      "Compare those lines with your net page and the signed offer. Circle anything that does not match.",
+      "Call the closing office about a mismatch before the appointment, not in the lobby. Bring the circled page with you."
+    ],
+    "steps": [
+      "Read price, payoff, credits, and your proceeds.",
+      "Circle lines that do not match the contract.",
+      "Ask about those lines before closing day."
+    ]
+  },
+  {
+    "slug": "match-the-move-out-date-to-the-contract",
+    "title": "Match the move-out date to the contract",
+    "stage": "closing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Read the date you must be out, and book the move to finish before that day.",
+    "body": [
+      "The contract date and the date you hoped for can differ. Find the possession line and write it on your calendar.",
+      "Book the truck so the house is empty before that day, with a spare hour for keys and a last look.",
+      "If you need to stay longer, that is a written change, not a favor you mention at the table."
+    ],
+    "steps": [
+      "Find the possession date in the contract.",
+      "Put it on your calendar.",
+      "Book the move to finish before that day."
+    ]
+  },
+  {
+    "slug": "gather-keys-and-openers-in-one-envelope",
+    "title": "Gather keys and openers in one envelope",
+    "stage": "closing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Put every key, garage opener, and gate code in one labeled envelope before closing day.",
+    "body": [
+      "Search the hooks, the car, and the junk drawer. Buyers expect the keys that operate the house you sold.",
+      "Label the envelope with the property address. Write gate or alarm codes on a card inside, and keep a copy for yourself until the sale is recorded.",
+      "Do not pack the envelope in a moving box. Carry it to closing."
+    ],
+    "steps": [
+      "Collect keys, openers, and codes.",
+      "Label one envelope with the address.",
+      "Carry it to closing instead of packing it."
+    ]
+  },
+  {
+    "slug": "check-your-name-against-your-id",
+    "title": "Check your name against your ID",
+    "stage": "closing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Read the name on the deed papers and make sure it matches the identification you will bring.",
+    "body": [
+      "A missing middle initial or a former name can stall a signing. Compare the papers with the identification you plan to bring.",
+      "If the names differ, tell the closing office as soon as you notice. Bring the document that connects the two names if you have one.",
+      "Put that identification with the envelope of keys so it is not still in a drawer on closing morning."
+    ],
+    "steps": [
+      "Read the name on the deed papers.",
+      "Compare it with the identification you will bring.",
+      "Tell the closing office if the names differ."
+    ]
+  },
+  {
+    "slug": "leave-utility-numbers-for-the-final-reading",
+    "title": "Leave utility numbers for the final reading",
+    "stage": "closing",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Write the account numbers and schedule the final readings for the possession date.",
+    "body": [
+      "Call each utility and ask for a final reading on the day you give up possession. Write the confirmation number.",
+      "Keep the account numbers on one card in your closing folder. You will want them if a bill arrives after you leave.",
+      "Do not shut a service off early if the contract says the house stays heated or lit until possession. Match the shutoff to the date you already signed."
+    ],
+    "steps": [
+      "Schedule a final reading for the possession date.",
+      "Write the account and confirmation numbers.",
+      "Match any shutoff to the date in the contract."
+    ]
+  },
+  {
+    "slug": "measure-doors-before-you-book-a-truck",
+    "title": "Measure doors before you book a truck",
+    "stage": "moving",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Measure the sofa, the mattress, and the narrowest doorway before you reserve a truck.",
+    "body": [
+      "A piece that fit on the way in may not fit if you have added a railing or if the truck plan skips a turn.",
+      "Write the height and width of the largest pieces and of the smallest doorway they must pass. Share those numbers with the mover or use them yourself.",
+      "If a piece will not pass, decide now whether it stays, gets sold, or needs a different door. Do not decide that on the truck ramp."
+    ],
+    "steps": [
+      "Measure the largest furniture and the narrowest door.",
+      "Write the numbers down.",
+      "Decide the plan for anything that will not pass."
+    ]
+  },
+  {
+    "slug": "pack-a-first-week-kitchen-box",
+    "title": "Pack a first-week kitchen box",
+    "stage": "moving",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Fill one box with the pan, mugs, soap, and towels you will want before the rest is unpacked.",
+    "body": [
+      "Choose one sturdy box and mark it OPEN FIRST on two sides. Put in a pan, a knife, mugs, soap, towels, and any medicine you take daily.",
+      "Load that box in your own car, not in the back of the truck. If the truck is late, you can still cook and wash.",
+      "Tape a short list to the top so you do not reopen it to check what you packed."
+    ],
+    "steps": [
+      "Pack one box with the first week's kitchen basics.",
+      "Mark it OPEN FIRST on two sides.",
+      "Carry it in your car."
+    ]
+  },
+  {
+    "slug": "forward-the-mail-before-you-leave",
+    "title": "Forward the mail before you leave",
+    "stage": "moving",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "File the mail forward in time for it to start on your possession date.",
+    "body": [
+      "Submit the forward with the post office before moving week, and write the start date to match the day you give up the house.",
+      "Tell the closing office, your insurer, and anyone you pay on a bill. A forward does not update those accounts by itself.",
+      "Keep the confirmation with your closing folder. Check it once after you arrive."
+    ],
+    "steps": [
+      "File the mail forward before moving week.",
+      "Update accounts that will not follow the forward.",
+      "Save the confirmation with your closing papers."
+    ]
+  },
+  {
+    "slug": "photograph-empty-rooms-on-the-last-day",
+    "title": "Photograph the empty rooms on the last day",
+    "stage": "moving",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Take a photo of each empty room, plus the meter readings, before you lock the door.",
+    "body": [
+      "After the furniture is out, walk the house once. Photograph each room, the inside of the refrigerator, and any scratch you want to remember.",
+      "Photograph the meter readings the same hour if you can. Those frames answer questions later without a debate about memory.",
+      "Store the photos with your settlement papers, not only on a camera roll you might clear."
+    ],
+    "steps": [
+      "Photograph each empty room.",
+      "Photograph meter readings.",
+      "Save the set with your settlement papers."
+    ]
+  },
+  {
+    "slug": "carry-the-closing-papers-with-you",
+    "title": "Carry the closing papers with you",
+    "stage": "moving",
+    "status": "published",
+    "updatedOn": "2026-10-22",
+    "queueOrder": 0,
+    "summary": "Keep the signed settlement set in your car, not in a box on the truck.",
+    "body": [
+      "Put the signed papers, the key envelope copy, and your identification in one folder. That folder rides with you.",
+      "If you need a page while the truck is in transit, you still have it. A box labeled OFFICE is not the same as a folder in the front seat.",
+      "When you arrive, file the folder before you unpack the kitchen. You will not want to hunt for it later."
+    ],
+    "steps": [
+      "Put signed papers in one folder.",
+      "Carry the folder in your car.",
+      "File it before you unpack."
+    ]
   }
 ]

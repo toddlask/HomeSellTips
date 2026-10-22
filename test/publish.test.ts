@@ -25,20 +25,20 @@ describe("every-other-day publisher", () => {
     const plan = planContentUpdate({
       tips: cloneTips(),
       reviews: emptyReviews,
-      today: "2026-10-23",
+      today: "2026-10-24",
       reviewRequired: false,
     });
     expect(plan.action).toBe("publish");
     const published = plan.tips.find((tip) => tip.slug === "replace-cracked-caulk-before-photos");
     expect(published?.status).toBe("published");
-    expect(published?.updatedOn).toBe("2026-10-23");
+    expect(published?.updatedOn).toBe("2026-10-24");
   });
 
   it("opens a review item instead of publishing when review is required", () => {
     const plan = planContentUpdate({
       tips: cloneTips(),
       reviews: emptyReviews,
-      today: "2026-10-23",
+      today: "2026-10-24",
       reviewRequired: true,
     });
     expect(plan.action).toBe("queue-review");
@@ -49,7 +49,7 @@ describe("every-other-day publisher", () => {
       {
         id: "review-replace-cracked-caulk-before-photos",
         tipSlug: "replace-cracked-caulk-before-photos",
-        openedOn: "2026-10-23",
+        openedOn: "2026-10-24",
         status: "open",
       },
     ]);
@@ -59,13 +59,13 @@ describe("every-other-day publisher", () => {
     const first = planContentUpdate({
       tips: cloneTips(),
       reviews: emptyReviews,
-      today: "2026-10-23",
+      today: "2026-10-24",
       reviewRequired: true,
     });
     const second = planContentUpdate({
       tips: first.tips,
       reviews: first.reviews,
-      today: "2026-10-23",
+      today: "2026-10-24",
       reviewRequired: true,
     });
     expect(second.action).toBe("skip");
@@ -76,13 +76,13 @@ describe("every-other-day publisher", () => {
     const queued = planContentUpdate({
       tips: cloneTips(),
       reviews: emptyReviews,
-      today: "2026-10-23",
+      today: "2026-10-24",
       reviewRequired: true,
     });
-    const approved = approveReview(queued.tips, queued.reviews, "review-replace-cracked-caulk-before-photos", "2026-10-24");
+    const approved = approveReview(queued.tips, queued.reviews, "review-replace-cracked-caulk-before-photos", "2026-10-25");
     const tip = approved.tips.find((entry) => entry.slug === "replace-cracked-caulk-before-photos");
     expect(tip?.status).toBe("published");
-    expect(tip?.updatedOn).toBe("2026-10-24");
+    expect(tip?.updatedOn).toBe("2026-10-25");
     expect(approved.reviews.items[0]?.status).toBe("approved");
   });
 });

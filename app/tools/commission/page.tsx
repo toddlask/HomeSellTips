@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CommissionForm } from "@/components/commission-form";
+import { CALCULATOR_NOTE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Commission comparison",
@@ -19,6 +20,7 @@ export default function CommissionPage() {
         Compare full service (listing and buyer agent), a FSBO sale that pays the buyer agent, and a FSBO sale that pays
         neither. Every figure starts from your inputs. Rates can be zero.
       </p>
+      <p className="note">{CALCULATOR_NOTE}</p>
       <CommissionForm />
     </>
   );

@@ -1,4 +1,4 @@
-import { SITE_NAME } from "@/lib/site";
+import { ANNOUNCEMENT, SITE_NAME } from "@/lib/site";
 
 const navLinks = [
   ["/", "Home"],
@@ -11,7 +11,7 @@ const navLinks = [
 export function SiteHeader() {
   return (
     <header className="site-header no-print">
-      <p className="announce">Calculators use only the numbers you enter.</p>
+      <p className="announce">{ANNOUNCEMENT}</p>
       <div className="wrap header-bar">
         <a className="brand" href="/">
           {SITE_NAME}

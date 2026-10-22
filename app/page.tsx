@@ -6,7 +6,7 @@ import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { heroPhoto, stagePhoto } from "@/lib/photos";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
-import { publishedTips, SITE_NAME } from "@/lib/site";
+import { CALCULATOR_NOTE, publishedTips, SITE_NAME } from "@/lib/site";
 import { STAGE_IDS } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -85,6 +85,7 @@ export default function HomePage() {
         <h2 id="tools-heading" className="section-heading">
           Tools
         </h2>
+        <p className="section-note">{CALCULATOR_NOTE}</p>
         <ul className="tool-grid">
           {tools.map((tool) => (
             <li key={tool.href}>
