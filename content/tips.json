@@ -307,8 +307,8 @@
     "slug": "replace-cracked-caulk-before-photos",
     "title": "Replace cracked caulk before photo day",
     "stage": "prep-and-repairs",
-    "status": "queued",
-    "updatedOn": "2026-10-21",
+    "status": "published",
+    "updatedOn": "2026-10-24",
     "queueOrder": 1,
     "summary": "Cracked caulk shows up in close photos. Replace it while the repair list is still short.",
     "body": [
@@ -326,8 +326,8 @@
     "slug": "finish-the-entry-first",
     "title": "Finish the entry before the rest of the house",
     "stage": "staging",
-    "status": "queued",
-    "updatedOn": "2026-10-21",
+    "status": "published",
+    "updatedOn": "2026-10-26",
     "queueOrder": 2,
     "summary": "The front door and entry are the first rooms a visitor stands in. Finish those before the back closets.",
     "body": [
