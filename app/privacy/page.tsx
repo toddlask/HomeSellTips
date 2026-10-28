@@ -32,6 +32,8 @@ export default function PrivacyPage() {
         optional budget, and message to FormSubmit (formsubmit.co) from your browser. FormSubmit delivers that inquiry by
         email. The page checks the fields before sending them. It does not create an account from the form.
       </p>
+      <h2>Analytics</h2>
+      <p>HomeSellTips uses Vercel Web Analytics. It is cookieless and collects anonymous page views.</p>
       <h2>Email</h2>
       <p>
         Renewal notes, when drafted, stay in an admin outbox in the repository. Those notes are not emailed. The only
