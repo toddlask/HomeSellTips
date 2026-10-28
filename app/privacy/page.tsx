@@ -27,8 +27,8 @@ export default function PrivacyPage() {
       <h2>Advertise form</h2>
       <p>
         The form at <a href="/advertise">/advertise</a> sends your name, email, company, what you want to advertise,
-        optional budget, and message to FormSubmit (formsubmit.co). FormSubmit delivers that inquiry by email. The site
-        checks the fields on its own server before forwarding them. It does not create an account from the form.
+        optional budget, and message to FormSubmit (formsubmit.co) from your browser. FormSubmit delivers that inquiry by
+        email. The page checks the fields before sending them. It does not create an account from the form.
       </p>
       <h2>Email</h2>
       <p>

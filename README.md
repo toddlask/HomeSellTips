@@ -39,7 +39,7 @@ Do not add a Vercel cron for publishing. The GitHub Action is the only publisher
 
 ## Advertising
 
-The advertise page posts to `/api/advertise`. That route checks the fields, then forwards the inquiry to FormSubmit. The browser does not call FormSubmit itself.
+The advertise page checks the fields in the browser, then the browser posts them to FormSubmit.
 
 Ad slots appear only when `ADSENSE_PUBLISHER_ID` and a slot id are set. Ad scripts load after cookie consent. `/ads.txt` responds with 404 until that publisher id is set, and then it serves the publisher line.
 

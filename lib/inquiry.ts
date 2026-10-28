@@ -1,3 +1,5 @@
+export const INQUIRY_ENDPOINT = "https://formsubmit.co/ajax/4b67484cb46ea9e59ce9af67ffb8c591";
+
 const MIN_WAIT_MS = 2000;
 const MAX_WAIT_MS = 24 * 60 * 60 * 1000;
 

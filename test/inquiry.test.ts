@@ -4,8 +4,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { AdvertiseForm } from "@/components/advertise-form";
-import { INQUIRY_LIMITS, inquiryError, inquiryProblem, readInquiry } from "@/lib/inquiry";
-import { INQUIRY_ENDPOINT, forwardInquiry, inquiryDeliveryBody, respondToInquiry } from "@/lib/inquiry-forward";
+import { INQUIRY_ENDPOINT, INQUIRY_LIMITS, inquiryError, inquiryProblem, readInquiry } from "@/lib/inquiry";
 
 const now = Date.parse("2026-10-23T16:00:00Z");
 
@@ -45,7 +44,7 @@ describe("advertise inquiry", () => {
     expect(inquiryProblem(valid, now)).toBeNull();
   });
 
-  it("reads only known fields and lets the server forward to FormSubmit", async () => {
+  it("reads only known fields and posts to FormSubmit from the browser", () => {
     expect(readInquiry({ name: " Ada ", budget: 12, honey: "" }).name).toBe("Ada");
     expect(readInquiry(null).email).toBe("");
     expect(INQUIRY_ENDPOINT).toBe("https://formsubmit.co/ajax/4b67484cb46ea9e59ce9af67ffb8c591");
@@ -59,40 +58,13 @@ describe("advertise inquiry", () => {
     expect(html).toContain('maxLength="4000"');
     expect(html).toContain("Send inquiry");
     const formSource = readFileSync(resolve(process.cwd(), "components/advertise-form.tsx"), "utf8");
-    expect(formSource).toContain("/api/advertise");
+    expect(formSource).toContain("INQUIRY_ENDPOINT");
+    expect(formSource).toContain("_captcha");
     expect(formSource).toContain("aria-describedby");
     expect(formSource).toContain(".focus()");
-    expect(formSource).not.toContain("formsubmit.co");
-    expect(formSource).not.toContain("INQUIRY_ENDPOINT");
-    expect(formSource).not.toContain("_captcha");
+    expect(formSource).not.toContain("/api/advertise");
     expect(formSource).not.toContain("mail.grokbot.com");
     const pageSource = readFileSync(resolve(process.cwd(), "app/advertise/page.tsx"), "utf8");
     expect(pageSource).not.toMatch(/\$99|\$249|paypal/i);
-    const routeSource = readFileSync(resolve(process.cwd(), "app/api/advertise/route.ts"), "utf8");
-    expect(routeSource).toContain("respondToInquiry");
-    expect(routeSource).not.toContain("INQUIRY_ENDPOINT");
-
-    let requested = "";
-    let sentBody = "";
-    const fetchImpl: typeof fetch = async (input, init) => {
-      requested = String(input);
-      sentBody = String(init?.body ?? "");
-      return new Response(JSON.stringify({ success: "true" }), { status: 200 });
-    };
-    const delivered = inquiryDeliveryBody(valid);
-    expect(delivered._captcha).toBe("false");
-    expect(delivered._replyto).toBe(valid.email);
-    expect(JSON.stringify(delivered)).not.toMatch(/honey|mail\.grokbot\.com/i);
-    expect(await forwardInquiry(valid, fetchImpl)).toEqual({ ok: true });
-    expect(requested).toBe(INQUIRY_ENDPOINT);
-    expect(sentBody).toContain("\"_captcha\":\"false\"");
-    expect(sentBody).not.toMatch(/honey/i);
-
-    const rejected = await respondToInquiry({ ...valid, name: "" }, now, fetchImpl);
-    expect(rejected.status).toBe(400);
-    await expect(rejected.json()).resolves.toMatchObject({ field: "name" });
-    const failedFetch: typeof fetch = async () => new Response(JSON.stringify({ success: false }), { status: 200 });
-    const failed = await respondToInquiry(valid, now, failedFetch);
-    expect(failed.status).toBe(502);
   });
 });

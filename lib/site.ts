@@ -119,7 +119,7 @@ Tips are original and stored in the repository. A daily GitHub Action around 14:
 
 ## Advertising
 
-Paid placements are labeled Sponsored and stay hidden until an admin approves them in git. They expire on the date stored with the placement. The sitewide header has one slot. Ads load only after cookie consent and only when a publisher id is configured. Advertising inquiries from /advertise are checked on the server and then sent through FormSubmit. Affiliate links are off unless that flag is turned on, and they carry a disclosure beside the link.
+Paid placements are labeled Sponsored and stay hidden until an admin approves them in git. They expire on the date stored with the placement. The sitewide header has one slot. Ads load only after cookie consent and only when a publisher id is configured. Advertising inquiries from /advertise are checked in the browser and then sent through FormSubmit. Affiliate links are off unless that flag is turned on, and they carry a disclosure beside the link.
 
 ## Not included
 

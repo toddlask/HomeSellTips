@@ -2,13 +2,9 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { INQUIRY_LIMITS, type InquiryField } from "@/lib/inquiry";
+import { INQUIRY_ENDPOINT, INQUIRY_LIMITS, inquiryProblem, type InquiryField } from "@/lib/inquiry";
 
-const FIELD_ORDER: InquiryField[] = ["name", "email", "company", "offer", "budget", "message"];
-
-function isInquiryField(value: unknown): value is InquiryField {
-  return typeof value === "string" && FIELD_ORDER.some((field) => field === value);
-}
+type InquiryResult = { success?: string | boolean; message?: string };
 
 function fieldDescribed(field: InquiryField, active: InquiryField | null): {
   "aria-invalid"?: true;
@@ -38,25 +34,37 @@ export function AdvertiseForm() {
     event.preventDefault();
     setError("");
     setFieldError(null);
+    const problem = inquiryProblem({ name, email, company, offer, budget, message, honey, startedAt }, Date.now());
+    if (problem) {
+      setError(problem.message);
+      setFieldError(problem.field);
+      if (problem.field) {
+        document.getElementById(`inquiry-${problem.field}`)?.focus();
+      }
+      return;
+    }
     setPending(true);
     try {
-      const check = await fetch("/api/advertise", {
+      const sentResponse = await fetch(INQUIRY_ENDPOINT, {
         method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ name, email, company, offer, budget, message, honey, startedAt }),
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          _replyto: email.trim(),
+          company: company.trim(),
+          offer: offer.trim(),
+          budget: budget.trim(),
+          message: message.trim(),
+          _subject: "HomeSellTips advertising inquiry",
+          _template: "table",
+          _captcha: "false",
+          _honey: "",
+        }),
       });
-      const verdict = (await check.json().catch(() => null)) as {
-        ok?: boolean;
-        error?: string;
-        field?: unknown;
-      } | null;
-      if (!check.ok || !verdict?.ok) {
-        const field = isInquiryField(verdict?.field) ? verdict.field : null;
-        setError(verdict?.error ?? "Check the form and try again.");
-        setFieldError(field);
-        if (field) {
-          document.getElementById(`inquiry-${field}`)?.focus();
-        }
+      const payload = (await sentResponse.json().catch(() => null)) as InquiryResult | null;
+      if (payload?.success !== true && payload?.success !== "true") {
+        setError(payload?.message || "The inquiry was not sent.");
         return;
       }
       setSent(true);

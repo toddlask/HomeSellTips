@@ -170,7 +170,7 @@ describe("ads, affiliates, and email", () => {
     expect(CONTENT_SECURITY_POLICY).toContain("default-src 'self'");
     expect(CONTENT_SECURITY_POLICY).toContain("https://pagead2.googlesyndication.com");
     expect(CONTENT_SECURITY_POLICY).toContain("form-action 'self'");
-    expect(CONTENT_SECURITY_POLICY).not.toContain("formsubmit.co");
+    expect(CONTENT_SECURITY_POLICY).toMatch(/connect-src[^;]*https:\/\/formsubmit\.co/);
   });
 
   it("sets a canonical path from every page module", () => {
