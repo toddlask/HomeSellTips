@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE, TOOL_LINKS } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Tools",
-  description: "Calculators and checklists that use only the numbers you enter.",
+  description: HUB_DESCRIPTIONS.tools,
   path: "/tools",
 });
 

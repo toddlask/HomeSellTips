@@ -7,7 +7,7 @@ import { UpdatedOn } from "@/components/updated-on";
 import { affiliateOffers, offersForStage } from "@/lib/affiliates";
 import { tips } from "@/lib/catalog";
 import { parseStageId } from "@/lib/parse";
-import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
+import { stageDescription, stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { pageMetadata } from "@/lib/page-meta";
 import { tipsForStage } from "@/lib/site";
 import { STAGE_IDS, type StageId } from "@/lib/types";
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ stage: st
   }
   return pageMetadata({
     title: stageTitle(stage),
-    description: stageSummary(stage),
+    description: stageDescription(stage),
     path: `/stages/${stage}`,
   });
 }

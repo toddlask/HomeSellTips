@@ -67,7 +67,7 @@ describe("published library", () => {
     expectCurrentCopy(library, "2026-10-24");
     const paths = publicPaths(library).map((entry) => entry.path);
     expect(paths).toContain(`/tips/${FIXTURE_PUBLISHED_SLUG}`);
-    expect(paths).toContain(`/tips/${FIXTURE_ARCHIVED_SLUG}`);
+    expect(paths).not.toContain(`/tips/${FIXTURE_ARCHIVED_SLUG}`);
     expect(paths).not.toContain(`/tips/${FIXTURE_QUEUED_SLUG}`);
     expect(paths).toContain("/tips");
     expect(paths).toContain("/stages");
@@ -81,12 +81,9 @@ describe("published library", () => {
     expectCurrentCopy(tips, todayIso());
     const paths = new Set(publicPaths(tips).map((entry) => entry.path));
     for (const tip of tips) {
-      if (tip.status === "queued") {
-        expect(paths.has(`/tips/${tip.slug}`)).toBe(false);
-      } else {
-        expect(paths.has(`/tips/${tip.slug}`)).toBe(true);
-      }
+      expect(paths.has(`/tips/${tip.slug}`)).toBe(tip.status === "published");
     }
+    expect(paths.has("/tips/deep-clean-after-the-dusty-work")).toBe(false);
   });
 });
 

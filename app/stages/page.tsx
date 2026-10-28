@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { STAGE_IDS } from "@/lib/types";
 
 export const metadata: Metadata = pageMetadata({
   title: "Stages",
-  description: "Home-selling stages from prep and repairs through moving.",
+  description: HUB_DESCRIPTIONS.stages,
   path: "/stages",
 });
 

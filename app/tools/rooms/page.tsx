@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { RoomBoard } from "@/components/room-board";
+import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
   title: "Room-by-room prep",
-  description: "Check off prep tasks by room. Progress is saved in this browser. No account.",
-  ogDescription: "Check off prep tasks by room. Progress stays in this browser.",
+  description: TOOL_DESCRIPTIONS.rooms,
   path: "/tools/rooms",
 });
 

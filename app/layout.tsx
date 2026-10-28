@@ -6,6 +6,7 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { HeaderSponsor } from "@/components/placement-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { adsenseClientId } from "@/lib/ads";
 import { getSiteUrl, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
@@ -17,8 +18,7 @@ const bodyFont = Inter({
 
 const displayFont = Barlow_Condensed({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
+  weight: "600",
   display: "swap",
   variable: "--font-display",
 });
@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <SiteFooter />
-        <CookieConsent />
+        <CookieConsent enabled={adsenseClientId(process.env.ADSENSE_PUBLISHER_ID) !== null} />
       </body>
     </html>
   );

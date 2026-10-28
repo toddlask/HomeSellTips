@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { MythDeck } from "@/components/myth-deck";
+import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
   title: "Myth or fact",
-  description: "Common home-selling claims, and a plain-language fact for each one.",
+  description: TOOL_DESCRIPTIONS.myths,
   path: "/tools/myths",
 });
 

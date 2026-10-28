@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ANNOUNCEMENT, SITE_NAME } from "@/lib/site";
 
 const navLinks = [
@@ -12,9 +13,9 @@ export function SiteHeader() {
     <header className="site-header no-print">
       <p className="announce">{ANNOUNCEMENT}</p>
       <div className="wrap header-bar">
-        <a className="brand" href="/">
+        <Link className="brand" href="/">
           {SITE_NAME}
-        </a>
+        </Link>
         <nav className="primary-nav" aria-label="Primary">
           <ul className="nav-links">
             {navLinks.map(([href, label]) => (

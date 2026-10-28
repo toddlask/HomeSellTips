@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy",
-  description: "How HomeSellTips uses a consent cookie, optional ads, and the advertise form. No accounts.",
+  description: "How HomeSellTips saves a consent choice in this browser, optional ads, and the advertise form. No accounts.",
   path: "/privacy",
 });
 
@@ -13,10 +13,11 @@ export default function PrivacyPage() {
     <>
       <h1>Privacy</h1>
       <p className="lede">HomeSellTips does not offer accounts, comments, or a newsletter.</p>
-      <h2>Consent cookie</h2>
+      <h2>Consent choice</h2>
       <p>
-        If you accept or decline cookies, the choice is stored in this browser under the key {CONSENT_STORAGE_KEY}. That
-        is the only cookie the site itself writes. You can clear it in your browser settings.
+        If you accept or decline advertising scripts, the choice is saved in localStorage on this browser under the key{" "}
+        {CONSENT_STORAGE_KEY}. The site does not write its own cookie for that choice. You can clear the saved value in
+        your browser settings.
       </p>
       <h2>Advertising</h2>
       <p>

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
+import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { stageTitle } from "@/lib/stages";
 import { publishedTips } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Tips",
-  description: "Published home-selling tips, from the newest note in the library.",
+  description: HUB_DESCRIPTIONS.tips,
   path: "/tips",
 });
 

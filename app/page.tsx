@@ -2,17 +2,20 @@ import type { Metadata } from "next";
 import { FaqList } from "@/components/faq-list";
 import { HomePhotoView } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
+import { JsonLd } from "@/components/json-ld";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
+import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { heroPhoto, stagePhoto } from "@/lib/photos";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { pageMetadata } from "@/lib/page-meta";
-import { CALCULATOR_NOTE, publishedTips, SITE_NAME, TOOL_LINKS } from "@/lib/site";
+import { CALCULATOR_NOTE, getSiteUrl, publishedTips, SITE_NAME, TOOL_LINKS } from "@/lib/site";
 import { STAGE_IDS } from "@/lib/types";
 
 export const metadata: Metadata = pageMetadata({
   title: `${SITE_NAME} · Practical tips before you sell`,
-  description: "Practical US home-selling tips for the months before you list, with calculators that use only the numbers you enter.",
+  description: HUB_DESCRIPTIONS.home,
   path: "/",
   absoluteTitle: true,
 });
@@ -28,8 +31,11 @@ export default function HomePage() {
     .toSorted((left, right) => right.updatedOn.localeCompare(left.updatedOn) || left.title.localeCompare(right.title))
     .slice(0, 4);
 
+  const origin = getSiteUrl();
   return (
     <>
+      <JsonLd data={websiteJsonLd(origin, SITE_NAME)} />
+      <JsonLd data={organizationJsonLd(origin, SITE_NAME)} />
       <section className="hero bleed" aria-labelledby="home-heading">
         <HomePhotoView photo={heroPhoto} className="hero-photo" priority sizes="100vw" />
         <div className="hero-scrim" />

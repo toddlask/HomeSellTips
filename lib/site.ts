@@ -88,9 +88,6 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
   for (const tip of publishedTips(tips)) {
     entries.push({ path: `/tips/${tip.slug}`, lastModified: tip.updatedOn });
   }
-  for (const tip of archivedTips(tips)) {
-    entries.push({ path: `/tips/${tip.slug}`, lastModified: tip.updatedOn });
-  }
   return entries;
 }
 

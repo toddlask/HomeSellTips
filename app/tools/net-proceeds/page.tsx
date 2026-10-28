@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { NetProceedsForm } from "@/components/net-proceeds-form";
+import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Net proceeds calculator",
-  description: "Estimate what you keep from a sale. You enter the price, payoff, commissions, credits, and repairs.",
-  ogDescription: "Estimate what you keep from a sale using numbers you enter.",
+  description: TOOL_DESCRIPTIONS.proceeds,
   path: "/tools/net-proceeds",
 });
 

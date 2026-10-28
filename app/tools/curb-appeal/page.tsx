@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { CurbPhoto } from "@/components/home-photo";
 import { CURB_WINS } from "@/lib/curb";
+import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
   title: "Curb appeal quick wins",
-  description: "Small outside jobs with a cost tag and a time estimate. Photos are from Pexels.",
-  ogDescription: "Small outside jobs with a cost tag and a time estimate.",
+  description: TOOL_DESCRIPTIONS.curb,
   path: "/tools/curb-appeal",
 });
 

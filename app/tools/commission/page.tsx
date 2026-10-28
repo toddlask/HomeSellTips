@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { CommissionForm } from "@/components/commission-form";
+import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Commission comparison",
-  description: "Compare full-service and FSBO commission totals from the price, percents, and flat fees you enter.",
-  ogDescription: "Compare full-service and FSBO commission totals from your own rates.",
+  description: TOOL_DESCRIPTIONS.commission,
   path: "/tools/commission",
 });
 

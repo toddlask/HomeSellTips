@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { SEASON_MONTHS, SEASON_SOURCE, seasonMax } from "@/lib/season";
 
 export const metadata: Metadata = pageMetadata({
   title: "Best time to sell",
-  description: "Monthly US existing-home sales from the FRED series EXHOSLUSM495N. One published year, not a forecast.",
-  ogDescription: "Monthly US existing-home sales from a cited FRED series.",
+  description: TOOL_DESCRIPTIONS.season,
   path: "/tools/when-to-sell",
 });
 

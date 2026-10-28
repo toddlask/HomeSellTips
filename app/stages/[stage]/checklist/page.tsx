@@ -4,7 +4,7 @@ import { PrintButton } from "@/components/print-button";
 import { pageMetadata } from "@/lib/page-meta";
 import { parseStageId } from "@/lib/parse";
 import { STAGE_CHECKLISTS } from "@/lib/stage-checklists";
-import { stagePath, stageTitle } from "@/lib/stages";
+import { checklistDescription, stagePath, stageTitle } from "@/lib/stages";
 import { STAGE_IDS, type StageId } from "@/lib/types";
 
 export function generateStaticParams(): Array<{ stage: StageId }> {
@@ -24,8 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ stage: st
   const title = `${stageTitle(stage)} checklist`;
   return pageMetadata({
     title,
-    description: `A one-page printable checklist for ${stageTitle(stage).toLowerCase()}.`,
-    ogDescription: `Printable checklist for ${stageTitle(stage).toLowerCase()}.`,
+    description: checklistDescription(stage),
     path: `${stagePath(stage)}/checklist`,
   });
 }

@@ -5,7 +5,7 @@ import { CONSENT_EVENT, CONSENT_STORAGE_KEY } from "@/lib/consent";
 
 type Choice = "unknown" | "accepted" | "declined";
 
-export function CookieConsent() {
+export function CookieConsent({ enabled }: { enabled: boolean }) {
   const [choice, setChoice] = useState<Choice>("unknown");
   const [ready, setReady] = useState(false);
 
@@ -23,15 +23,15 @@ export function CookieConsent() {
     window.dispatchEvent(new Event(CONSENT_EVENT));
   }
 
-  if (!ready || choice !== "unknown") {
+  if (!enabled || !ready || choice !== "unknown") {
     return null;
   }
 
   return (
-    <div className="cookie-banner no-print" role="dialog" aria-label="Cookie consent">
+    <div className="cookie-banner no-print" role="dialog" aria-label="Advertising consent">
       <p>
-        We store one cookie on this browser to remember this choice. Advertising scripts load only if you accept,
-        and only when an ad publisher id is configured.
+        This choice is saved in localStorage on this browser. Advertising scripts load only if you accept, and only
+        when an ad publisher id is configured.
       </p>
       <div className="cookie-actions">
         <button type="button" onClick={() => choose("accepted")}>

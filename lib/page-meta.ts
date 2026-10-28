@@ -10,6 +10,13 @@ const SHARE_IMAGE = {
 
 type OpenGraphType = "website" | "article";
 
+type ShareImage = {
+  url: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
 type PageMetadataInput = {
   title: string;
   description: string;
@@ -20,10 +27,16 @@ type PageMetadataInput = {
   openGraphType?: OpenGraphType;
   publishedTime?: string;
   modifiedTime?: string;
+  image?: ShareImage;
 };
+
+export function tipPageTitle(title: string): string {
+  return `${title} · Tips`;
+}
 
 export function pageMetadata(input: PageMetadataInput): Metadata {
   const description = input.ogDescription ?? input.description;
+  const image = input.image ?? SHARE_IMAGE;
   const shared = {
     title: input.title,
     description,
@@ -38,11 +51,11 @@ export function pageMetadata(input: PageMetadataInput): Metadata {
         type: "article",
         publishedTime: input.publishedTime,
         modifiedTime: input.modifiedTime,
-        images: [SHARE_IMAGE],
+        images: [image],
       };
       break;
     case "website":
-      openGraph = { ...shared, type: "website", images: [SHARE_IMAGE] };
+      openGraph = { ...shared, type: "website", images: [image] };
       break;
     default: {
       const exhaustive: never = kind;
@@ -55,6 +68,12 @@ export function pageMetadata(input: PageMetadataInput): Metadata {
     description: input.description,
     alternates: { canonical: input.path },
     openGraph,
+    twitter: {
+      card: "summary_large_image",
+      title: input.title,
+      description,
+      images: [image.url],
+    },
   };
   if (input.robots) {
     metadata.robots = input.robots;

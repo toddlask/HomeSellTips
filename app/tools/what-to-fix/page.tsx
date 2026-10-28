@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { RoiForm } from "@/components/roi-form";
+import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "What to fix first",
-  description: "Rank repairs by the cost and the value you enter. HomeSellTips does not supply a return rate.",
-  ogDescription: "Rank repairs by the cost and the value you enter.",
+  description: TOOL_DESCRIPTIONS.fix,
   path: "/tools/what-to-fix",
 });
 
