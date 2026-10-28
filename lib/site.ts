@@ -8,6 +8,17 @@ export const ANNOUNCEMENT = "Selling your home is a chance to get ready for a ne
 
 export const CALCULATOR_NOTE = "Calculators use only the numbers you enter.";
 
+export const TOOL_LINKS = [
+  { href: "/tools/net-proceeds", title: "Net proceeds", text: "Price minus payoff, commissions, costs, credits, and repairs." },
+  { href: "/tools/commission", title: "Commission comparison", text: "Full service, FSBO with a buyer agent, and FSBO paying neither." },
+  { href: "/tools/what-to-fix", title: "What to fix first", text: "Rank projects by the cost and value you enter." },
+  { href: "/tools/checklist", title: "Prep checklist", text: "A list you can print and check off." },
+  { href: "/tools/rooms", title: "Room by room", text: "Tick off prep tasks. Progress stays in this browser." },
+  { href: "/tools/curb-appeal", title: "Curb appeal", text: "Small jobs outside, with a cost tag and a time guess." },
+  { href: "/tools/when-to-sell", title: "When sales closed", text: "A monthly chart of published US existing-home sales." },
+  { href: "/tools/myths", title: "Myth or fact", text: "Common selling claims, and the plain version." },
+] as const;
+
 export const DISCLAIMER =
   `${SITE_NAME} is not legal, financial, tax, or real-estate advice. Rules vary by state. Consult a licensed real-estate agent, an attorney, or a tax advisor.`;
 
@@ -48,6 +59,9 @@ export type SitemapEntry = {
 export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
   const staticPaths = [
     "/",
+    "/tips",
+    "/stages",
+    "/tools",
     "/archive",
     "/advertise",
     "/privacy",
@@ -105,7 +119,7 @@ Tips are original and stored in the repository. A daily GitHub Action around 14:
 
 ## Advertising
 
-Paid placements are labeled Sponsored and stay hidden until an admin approves them in git. They expire on the date stored with the placement. The sitewide header has one slot. Ads load only after cookie consent and only when a publisher id is configured. Affiliate links are off unless that flag is turned on, and they carry a disclosure beside the link.
+Paid placements are labeled Sponsored and stay hidden until an admin approves them in git. They expire on the date stored with the placement. The sitewide header has one slot. Ads load only after cookie consent and only when a publisher id is configured. Advertising inquiries from /advertise are checked on the server and then sent through FormSubmit. Affiliate links are off unless that flag is turned on, and they carry a disclosure beside the link.
 
 ## Not included
 

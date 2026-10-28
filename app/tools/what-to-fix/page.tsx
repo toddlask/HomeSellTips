@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import { RoiForm } from "@/components/roi-form";
+import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "What to fix first",
   description: "Rank repairs by the cost and the value you enter. HomeSellTips does not supply a return rate.",
-  openGraph: {
-    title: "What to fix first",
-    description: "Rank repairs by the cost and the value you enter.",
-    url: "/tools/what-to-fix",
-  },
-};
+  ogDescription: "Rank repairs by the cost and the value you enter.",
+  path: "/tools/what-to-fix",
+});
 
 export default function WhatToFixPage() {
   return (

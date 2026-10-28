@@ -101,10 +101,6 @@ export type RoiItem = {
   expectedValue: number;
 };
 
-export const PRODUCT_IDS = ["category-sponsor", "header-sponsor"] as const;
-
-export type ProductId = (typeof PRODUCT_IDS)[number];
-
 export const AD_SLOTS = ["header", "in-content", "sidebar"] as const;
 
 export type AdSlotName = (typeof AD_SLOTS)[number];

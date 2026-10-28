@@ -1,4 +1,4 @@
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { allPhotos, heroPhoto, PEXELS_LICENSE, PEXELS_LICENSE_URL, stagePhoto } from "@/lib/photos";
@@ -23,5 +23,9 @@ describe("home photos", () => {
     }
     expect(heroPhoto.src).toBe("/photos/hero-house.webp");
     expect(allPhotos()[0]?.id).toBe(heroPhoto.id);
+    const view = readFileSync(resolve(process.cwd(), "components/home-photo.tsx"), "utf8");
+    expect(view).toContain("next/image");
+    expect(view).toContain("sizes");
+    expect(view).toContain("priority");
   });
 });

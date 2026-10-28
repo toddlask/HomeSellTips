@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import { NetProceedsForm } from "@/components/net-proceeds-form";
+import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Net proceeds calculator",
   description: "Estimate what you keep from a sale. You enter the price, payoff, commissions, credits, and repairs.",
-  openGraph: {
-    title: "Net proceeds calculator",
-    description: "Estimate what you keep from a sale using numbers you enter.",
-    url: "/tools/net-proceeds",
-  },
-};
+  ogDescription: "Estimate what you keep from a sale using numbers you enter.",
+  path: "/tools/net-proceeds",
+});
 
 export default function NetProceedsPage() {
   return (

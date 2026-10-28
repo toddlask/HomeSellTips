@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { RoomBoard } from "@/components/room-board";
+import { pageMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Room-by-room prep",
   description: "Check off prep tasks by room. Progress is saved in this browser. No account.",
-  openGraph: {
-    title: "Room-by-room prep",
-    description: "Check off prep tasks by room. Progress stays in this browser.",
-    url: "/tools/rooms",
-  },
-};
+  ogDescription: "Check off prep tasks by room. Progress stays in this browser.",
+  path: "/tools/rooms",
+});
 
 export default function RoomsPage() {
   return (

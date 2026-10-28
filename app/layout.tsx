@@ -46,12 +46,25 @@ export const metadata: Metadata = {
   },
   description: "Plain-language tips for selling a home in the United States, plus calculators you fill in yourself.",
   applicationName: SITE_NAME,
-  icons: { icon: "/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     siteName: SITE_NAME,
     type: "website",
     title: SITE_NAME,
     description: "Plain-language tips for selling a home in the United States, plus calculators you fill in yourself.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: "Plain-language tips for selling a home in the United States, plus calculators you fill in yourself.",
+    images: ["/og.png"],
   },
 };
 

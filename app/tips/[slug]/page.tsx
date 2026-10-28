@@ -7,6 +7,7 @@ import { SaleWords } from "@/components/sale-words";
 import { BackToTop, TipJump } from "@/components/tip-jump";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
+import { pageMetadata } from "@/lib/page-meta";
 import { stagePath, stageTitle } from "@/lib/stages";
 import { tipStatusLabel } from "@/lib/site";
 
@@ -24,19 +25,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!tip) {
     return { title: "Tip" };
   }
-  return {
+  return pageMetadata({
     title: tip.title,
     description: tip.summary,
+    path: `/tips/${tip.slug}`,
     robots: tip.status === "archived" ? { index: false, follow: true } : { index: true, follow: true },
-    openGraph: {
-      title: tip.title,
-      description: tip.summary,
-      type: "article",
-      url: `/tips/${tip.slug}`,
-      publishedTime: `${tip.updatedOn}T00:00:00.000Z`,
-      modifiedTime: `${tip.updatedOn}T00:00:00.000Z`,
-    },
-  };
+    openGraphType: "article",
+    publishedTime: `${tip.updatedOn}T00:00:00.000Z`,
+    modifiedTime: `${tip.updatedOn}T00:00:00.000Z`,
+  });
 }
 
 export default async function TipPage({ params }: { params: Promise<{ slug: string }> }) {

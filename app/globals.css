@@ -10,7 +10,7 @@
   --accent: #633e28;
   --tan: #d5a674;
   --tan-deep: #c4925c;
-  --accent-ink: #ffffff;
+  --accent-ink: #3f2618;
   --focus: #633e28;
   --sponsored: #f6eee4;
   --shadow: 0 10px 30px rgb(99 62 40 / 0.08);
@@ -346,7 +346,7 @@ a:hover { color: #3f2618; }
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
   background: var(--tan);
-  color: #fff;
+  color: #3f2618;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;

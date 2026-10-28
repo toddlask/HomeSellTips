@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import { PrintButton } from "@/components/print-button";
 import { SELLER_CHECKLIST } from "@/lib/checklist";
+import { pageMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Seller prep checklist",
   description: "A printable checklist for photos, paperwork, showings, offers, closing, and the move.",
-  openGraph: {
-    title: "Seller prep checklist",
-    description: "A printable checklist for the weeks before you list and move.",
-    url: "/tools/checklist",
-  },
-};
+  ogDescription: "A printable checklist for the weeks before you list and move.",
+  path: "/tools/checklist",
+});
 
 export default function ChecklistPage() {
   return (

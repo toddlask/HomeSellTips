@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { HomePhotoView } from "@/components/home-photo";
+import { CurbPhoto } from "@/components/home-photo";
 import { CURB_WINS } from "@/lib/curb";
+import { pageMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Curb appeal quick wins",
   description: "Small outside jobs with a cost tag and a time estimate. Photos are from Pexels.",
-  openGraph: {
-    title: "Curb appeal quick wins",
-    description: "Small outside jobs with a cost tag and a time estimate.",
-    url: "/tools/curb-appeal",
-  },
-};
+  ogDescription: "Small outside jobs with a cost tag and a time estimate.",
+  path: "/tools/curb-appeal",
+});
 
 export default function CurbAppealPage() {
   return (
@@ -23,7 +21,7 @@ export default function CurbAppealPage() {
       <ul className="curb-grid">
         {CURB_WINS.map((win) => (
           <li key={win.id} className="curb-card">
-            <HomePhotoView photo={win.photo} />
+            <CurbPhoto photo={win.photo} />
             <h2>{win.title}</h2>
             <p className="curb-tags">
               <span className="cost-tag">{win.cost}</span>

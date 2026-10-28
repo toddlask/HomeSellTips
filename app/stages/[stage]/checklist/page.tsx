@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PrintButton } from "@/components/print-button";
+import { pageMetadata } from "@/lib/page-meta";
 import { parseStageId } from "@/lib/parse";
 import { STAGE_CHECKLISTS } from "@/lib/stage-checklists";
 import { stagePath, stageTitle } from "@/lib/stages";
@@ -21,11 +22,12 @@ export async function generateMetadata({ params }: { params: Promise<{ stage: st
     return { title: "Checklist" };
   }
   const title = `${stageTitle(stage)} checklist`;
-  return {
+  return pageMetadata({
     title,
     description: `A one-page printable checklist for ${stageTitle(stage).toLowerCase()}.`,
-    openGraph: { title, description: `Printable checklist for ${stageTitle(stage).toLowerCase()}.`, url: `${stagePath(stage)}/checklist` },
-  };
+    ogDescription: `Printable checklist for ${stageTitle(stage).toLowerCase()}.`,
+    path: `${stagePath(stage)}/checklist`,
+  });
 }
 
 export default async function StageChecklistPage({ params }: { params: Promise<{ stage: string }> }) {

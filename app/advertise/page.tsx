@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { AdvertiseForm } from "@/components/advertise-form";
+import { pageMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Advertise with us",
   description: "Send an advertising inquiry. We read it and reply by email.",
-  openGraph: {
-    title: "Advertise with us",
-    description: "Send an advertising inquiry. We read it and reply by email.",
-    url: "/advertise",
-  },
-};
+  path: "/advertise",
+});
 
 export default function AdvertisePage() {
   return (

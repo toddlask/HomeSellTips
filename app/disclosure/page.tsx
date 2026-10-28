@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Ad and affiliate disclosure",
   description: "How HomeSellTips labels sponsored placements, ads, and affiliate links.",
-  openGraph: {
-    title: "Ad and affiliate disclosure",
-    description: "How HomeSellTips labels sponsored placements, ads, and affiliate links.",
-    url: "/disclosure",
-  },
-};
+  path: "/disclosure",
+});
 
 export default function DisclosurePage() {
   return (

@@ -8,6 +8,7 @@ import { affiliateOffers, offersForStage } from "@/lib/affiliates";
 import { tips } from "@/lib/catalog";
 import { parseStageId } from "@/lib/parse";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
+import { pageMetadata } from "@/lib/page-meta";
 import { tipsForStage } from "@/lib/site";
 import { STAGE_IDS, type StageId } from "@/lib/types";
 
@@ -25,13 +26,11 @@ export async function generateMetadata({ params }: { params: Promise<{ stage: st
   } catch {
     return { title: "Stage" };
   }
-  const title = stageTitle(stage);
-  const description = stageSummary(stage);
-  return {
-    title,
-    description,
-    openGraph: { title, description, url: `/stages/${stage}` },
-  };
+  return pageMetadata({
+    title: stageTitle(stage),
+    description: stageSummary(stage),
+    path: `/stages/${stage}`,
+  });
 }
 
 export default async function StagePage({ params }: { params: Promise<{ stage: string }> }) {

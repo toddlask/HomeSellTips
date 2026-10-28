@@ -1,7 +1,16 @@
-export const INQUIRY_ENDPOINT = "https://formsubmit.co/ajax/4b67484cb46ea9e59ce9af67ffb8c591";
-
 const MIN_WAIT_MS = 2000;
 const MAX_WAIT_MS = 24 * 60 * 60 * 1000;
+
+export const INQUIRY_LIMITS = {
+  name: 80,
+  email: 120,
+  company: 120,
+  offer: 400,
+  budget: 80,
+  message: 4000,
+} as const;
+
+export type InquiryField = keyof typeof INQUIRY_LIMITS;
 
 export type InquiryInput = {
   name: string;
@@ -12,6 +21,11 @@ export type InquiryInput = {
   message: string;
   honey: string;
   startedAt: number;
+};
+
+export type InquiryProblem = {
+  field: InquiryField | null;
+  message: string;
 };
 
 function field(value: unknown): string {
@@ -32,7 +46,7 @@ export function readInquiry(body: unknown): InquiryInput {
   };
 }
 
-export function inquiryError(input: InquiryInput, now: number): string | null {
+export function inquiryProblem(input: InquiryInput, now: number): InquiryProblem | null {
   const name = input.name.trim();
   const email = input.email.trim();
   const company = input.company.trim();
@@ -40,29 +54,33 @@ export function inquiryError(input: InquiryInput, now: number): string | null {
   const budget = input.budget.trim();
   const message = input.message.trim();
   if (input.honey.trim()) {
-    return "That submission was rejected.";
+    return { field: null, message: "That submission was rejected." };
   }
-  if (!name || name.length > 80) {
-    return "Enter your name.";
+  if (!name || name.length > INQUIRY_LIMITS.name) {
+    return { field: "name", message: "Enter your name." };
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 120) {
-    return "Enter a valid email.";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > INQUIRY_LIMITS.email) {
+    return { field: "email", message: "Enter a valid email." };
   }
-  if (!company || company.length > 120) {
-    return "Enter the company or business.";
+  if (!company || company.length > INQUIRY_LIMITS.company) {
+    return { field: "company", message: "Enter the company or business." };
   }
-  if (!offer || offer.length > 400) {
-    return "Say what you want to advertise.";
+  if (!offer || offer.length > INQUIRY_LIMITS.offer) {
+    return { field: "offer", message: "Say what you want to advertise." };
   }
-  if (budget.length > 80) {
-    return "Shorten the budget and try again.";
+  if (budget.length > INQUIRY_LIMITS.budget) {
+    return { field: "budget", message: "Shorten the budget and try again." };
   }
-  if (!message || message.length > 4000) {
-    return "Enter a message.";
+  if (!message || message.length > INQUIRY_LIMITS.message) {
+    return { field: "message", message: "Enter a message." };
   }
   const waited = now - input.startedAt;
   if (!Number.isFinite(input.startedAt) || waited < MIN_WAIT_MS || waited > MAX_WAIT_MS) {
-    return "Wait a moment and send it again.";
+    return { field: null, message: "Wait a moment and send it again." };
   }
   return null;
+}
+
+export function inquiryError(input: InquiryInput, now: number): string | null {
+  return inquiryProblem(input, now)?.message ?? null;
 }

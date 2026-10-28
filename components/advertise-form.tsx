@@ -2,9 +2,23 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { INQUIRY_ENDPOINT } from "@/lib/inquiry";
+import { INQUIRY_LIMITS, type InquiryField } from "@/lib/inquiry";
 
-type InquiryResult = { success?: string | boolean; message?: string };
+const FIELD_ORDER: InquiryField[] = ["name", "email", "company", "offer", "budget", "message"];
+
+function isInquiryField(value: unknown): value is InquiryField {
+  return typeof value === "string" && FIELD_ORDER.some((field) => field === value);
+}
+
+function fieldDescribed(field: InquiryField, active: InquiryField | null): {
+  "aria-invalid"?: true;
+  "aria-describedby"?: string;
+} {
+  if (active !== field) {
+    return {};
+  }
+  return { "aria-invalid": true, "aria-describedby": "inquiry-error" };
+}
 
 export function AdvertiseForm() {
   const [startedAt] = useState(() => Date.now());
@@ -16,12 +30,14 @@ export function AdvertiseForm() {
   const [message, setMessage] = useState("");
   const [honey, setHoney] = useState("");
   const [error, setError] = useState("");
+  const [fieldError, setFieldError] = useState<InquiryField | null>(null);
   const [pending, setPending] = useState(false);
   const [sent, setSent] = useState(false);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
+    setFieldError(null);
     setPending(true);
     try {
       const check = await fetch("/api/advertise", {
@@ -29,36 +45,24 @@ export function AdvertiseForm() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ name, email, company, offer, budget, message, honey, startedAt }),
       });
-      const verdict = (await check.json()) as { ok?: boolean; error?: string };
-      if (!check.ok || !verdict.ok) {
-        setError(verdict.error ?? "Check the form and try again.");
-        return;
-      }
-      const sentResponse = await fetch(INQUIRY_ENDPOINT, {
-        method: "POST",
-        headers: { "content-type": "application/json", accept: "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          _replyto: email,
-          company,
-          offer,
-          budget,
-          message,
-          _subject: "HomeSellTips advertising inquiry",
-          _template: "table",
-          _captcha: "false",
-          _honey: "",
-        }),
-      });
-      const payload = (await sentResponse.json()) as InquiryResult;
-      if (payload.success !== true && payload.success !== "true") {
-        setError(payload.message || "The inquiry was not sent.");
+      const verdict = (await check.json().catch(() => null)) as {
+        ok?: boolean;
+        error?: string;
+        field?: unknown;
+      } | null;
+      if (!check.ok || !verdict?.ok) {
+        const field = isInquiryField(verdict?.field) ? verdict.field : null;
+        setError(verdict?.error ?? "Check the form and try again.");
+        setFieldError(field);
+        if (field) {
+          document.getElementById(`inquiry-${field}`)?.focus();
+        }
         return;
       }
       setSent(true);
     } catch {
       setError("The inquiry was not sent.");
+      setFieldError(null);
     } finally {
       setPending(false);
     }
@@ -73,7 +77,12 @@ export function AdvertiseForm() {
   }
 
   return (
-    <form className="inquiry-form" onSubmit={onSubmit} noValidate>
+    <form
+      className="inquiry-form"
+      onSubmit={onSubmit}
+      noValidate
+      aria-describedby={error && !fieldError ? "inquiry-error" : undefined}
+    >
       <label htmlFor="inquiry-name">
         Name
         <input
@@ -83,6 +92,8 @@ export function AdvertiseForm() {
           value={name}
           onChange={(event) => setName(event.target.value)}
           required
+          maxLength={INQUIRY_LIMITS.name}
+          {...fieldDescribed("name", fieldError)}
         />
       </label>
       <label htmlFor="inquiry-email">
@@ -95,6 +106,8 @@ export function AdvertiseForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           required
+          maxLength={INQUIRY_LIMITS.email}
+          {...fieldDescribed("email", fieldError)}
         />
       </label>
       <label htmlFor="inquiry-company">
@@ -106,6 +119,8 @@ export function AdvertiseForm() {
           value={company}
           onChange={(event) => setCompany(event.target.value)}
           required
+          maxLength={INQUIRY_LIMITS.company}
+          {...fieldDescribed("company", fieldError)}
         />
       </label>
       <label htmlFor="inquiry-offer">
@@ -116,11 +131,20 @@ export function AdvertiseForm() {
           value={offer}
           onChange={(event) => setOffer(event.target.value)}
           required
+          maxLength={INQUIRY_LIMITS.offer}
+          {...fieldDescribed("offer", fieldError)}
         />
       </label>
       <label htmlFor="inquiry-budget">
         Budget (optional)
-        <input id="inquiry-budget" name="budget" value={budget} onChange={(event) => setBudget(event.target.value)} />
+        <input
+          id="inquiry-budget"
+          name="budget"
+          value={budget}
+          onChange={(event) => setBudget(event.target.value)}
+          maxLength={INQUIRY_LIMITS.budget}
+          {...fieldDescribed("budget", fieldError)}
+        />
       </label>
       <label htmlFor="inquiry-message">
         Message
@@ -130,6 +154,8 @@ export function AdvertiseForm() {
           value={message}
           onChange={(event) => setMessage(event.target.value)}
           required
+          maxLength={INQUIRY_LIMITS.message}
+          {...fieldDescribed("message", fieldError)}
         />
       </label>
       <div className="inquiry-honey" aria-hidden="true">
@@ -146,7 +172,9 @@ export function AdvertiseForm() {
         </label>
       </div>
       {error ? (
-        <p role="alert">{error}</p>
+        <p id="inquiry-error" role="alert">
+          {error}
+        </p>
       ) : null}
       <button type="submit" disabled={pending}>
         {pending ? "Sending…" : "Send inquiry"}

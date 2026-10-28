@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { CONSENT_STORAGE_KEY } from "@/lib/consent";
+import { pageMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy",
-  description: "How HomeSellTips uses a consent cookie, optional ads, and PayPal sandbox checkout. No accounts.",
-  openGraph: {
-    title: "Privacy",
-    description: "How HomeSellTips uses a consent cookie, optional ads, and PayPal sandbox checkout.",
-    url: "/privacy",
-  },
-};
+  description: "How HomeSellTips uses a consent cookie, optional ads, and the advertise form. No accounts.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
@@ -27,15 +24,17 @@ export default function PrivacyPage() {
         server. If the id is missing, ad slots are not rendered. AdSense, when loaded, may set its own cookies. See the{" "}
         <a href="/disclosure">ad and affiliate disclosure</a>.
       </p>
-      <h2>Advertise checkout</h2>
+      <h2>Advertise form</h2>
       <p>
-        If PayPal sandbox credentials are configured, checkout runs on PayPal in the sandbox. PayPal receives the
-        business name, city, state, and category you submit, plus the payment details you enter on PayPal. No placement
-        is published from that payment until it is approved in the site repository. If the sandbox client id and secret
-        are not both set, the advertise page does not start a payment.
+        The form at <a href="/advertise">/advertise</a> sends your name, email, company, what you want to advertise,
+        optional budget, and message to FormSubmit (formsubmit.co). FormSubmit delivers that inquiry by email. The site
+        checks the fields on its own server before forwarding them. It does not create an account from the form.
       </p>
       <h2>Email</h2>
-      <p>The site does not send email. Renewal notes, when drafted, stay in an admin outbox in the repository.</p>
+      <p>
+        Renewal notes, when drafted, stay in an admin outbox in the repository. Those notes are not emailed. The only
+        message the site forwards is the advertise inquiry described above.
+      </p>
     </>
   );
 }

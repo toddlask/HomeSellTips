@@ -6,29 +6,16 @@ import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { heroPhoto, stagePhoto } from "@/lib/photos";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
-import { CALCULATOR_NOTE, publishedTips, SITE_NAME } from "@/lib/site";
+import { pageMetadata } from "@/lib/page-meta";
+import { CALCULATOR_NOTE, publishedTips, SITE_NAME, TOOL_LINKS } from "@/lib/site";
 import { STAGE_IDS } from "@/lib/types";
 
-export const metadata: Metadata = {
-  title: { absolute: `${SITE_NAME} · Practical tips before you sell` },
+export const metadata: Metadata = pageMetadata({
+  title: `${SITE_NAME} · Practical tips before you sell`,
   description: "Practical US home-selling tips for the months before you list, with calculators that use only the numbers you enter.",
-  openGraph: {
-    title: `${SITE_NAME} · Practical tips before you sell`,
-    description: "Practical US home-selling tips for the months before you list, with calculators that use only the numbers you enter.",
-    url: "/",
-  },
-};
-
-const tools = [
-  { href: "/tools/net-proceeds", title: "Net proceeds", text: "Price minus payoff, commissions, costs, credits, and repairs." },
-  { href: "/tools/commission", title: "Commission comparison", text: "Full service, FSBO with a buyer agent, and FSBO paying neither." },
-  { href: "/tools/what-to-fix", title: "What to fix first", text: "Rank projects by the cost and value you enter." },
-  { href: "/tools/checklist", title: "Prep checklist", text: "A list you can print and check off." },
-  { href: "/tools/rooms", title: "Room by room", text: "Tick off prep tasks. Progress stays in this browser." },
-  { href: "/tools/curb-appeal", title: "Curb appeal", text: "Small jobs outside, with a cost tag and a time guess." },
-  { href: "/tools/when-to-sell", title: "When sales closed", text: "A monthly chart of published US existing-home sales." },
-  { href: "/tools/myths", title: "Myth or fact", text: "Common selling claims, and the plain version." },
-];
+  path: "/",
+  absoluteTitle: true,
+});
 
 const features = [
   ["By stage", "From prep through moving."],
@@ -44,7 +31,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero bleed" aria-labelledby="home-heading">
-        <HomePhotoView photo={heroPhoto} className="hero-photo" priority />
+        <HomePhotoView photo={heroPhoto} className="hero-photo" priority sizes="100vw" />
         <div className="hero-scrim" />
         <div className="wrap hero-copy">
           <h1 id="home-heading">Practical tips for selling your home</h1>
@@ -90,7 +77,7 @@ export default function HomePage() {
         </h2>
         <p className="section-note">{CALCULATOR_NOTE}</p>
         <ul className="tool-grid">
-          {tools.map((tool) => (
+          {TOOL_LINKS.map((tool) => (
             <li key={tool.href}>
               <a className="card" href={tool.href}>
                 <h3>{tool.title}</h3>

@@ -5,12 +5,19 @@ import { tips } from "@/lib/catalog";
 import { CONTENT_EPOCH, isIsoDate, todayIso } from "@/lib/dates";
 import { affiliateOffers, AFFILIATE_DISCLOSURE } from "@/lib/affiliates";
 import { adsTxtBody, adsTxtLine } from "@/lib/ads";
-import { STAGE_IDS } from "@/lib/types";
+import { GET as adsTxtGet } from "@/app/ads.txt/route";
+import { STAGE_IDS, type Tip } from "@/lib/types";
 import { publicPaths } from "@/lib/site";
 import { deliverEmail, EMAIL_DELIVERY_ENABLED, planRenewalDrafts } from "@/lib/outbox";
 import { digestsMatch, tokenDigest } from "@/lib/admin-token";
-import { launchPromoEnabled, productOffer } from "@/lib/paypal-config";
-import { fixtureCategorySponsor } from "./fixtures";
+import { CONTENT_SECURITY_POLICY } from "@/lib/csp";
+import {
+  FIXTURE_ARCHIVED_SLUG,
+  FIXTURE_PUBLISHED_SLUG,
+  FIXTURE_QUEUED_SLUG,
+  fixtureCategorySponsor,
+  fixtureLibrary,
+} from "./fixtures";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { AffiliateList } from "@/components/affiliate-list";
@@ -36,36 +43,54 @@ function walk(dir: string): string[] {
   return files;
 }
 
+function tipText(tip: Tip): string {
+  return `${tip.title} ${tip.summary} ${tip.body.join(" ")} ${tip.steps.join(" ")}`;
+}
+
+function expectCurrentCopy(library: readonly Tip[], today: string) {
+  for (const tip of library) {
+    expect(isIsoDate(tip.updatedOn)).toBe(true);
+    expect(tip.updatedOn >= CONTENT_EPOCH).toBe(true);
+    expect(tip.updatedOn <= today).toBe(true);
+    expect(banned.test(tipText(tip))).toBe(false);
+  }
+}
+
 describe("published library", () => {
-  it("has two published tips per stage, six queued tips, and an archive", () => {
+  it("uses a fixed library for counts, dates, and sitemap membership", () => {
+    const library = fixtureLibrary();
     for (const stage of STAGE_IDS) {
-      const published = tips.filter((tip) => tip.stage === stage && tip.status === "published");
-      expect(published.length).toBeGreaterThanOrEqual(2);
+      expect(library.filter((tip) => tip.stage === stage && tip.status === "published")).toHaveLength(2);
     }
-    expect(tips.filter((tip) => tip.status === "queued").length).toBeGreaterThanOrEqual(6);
-    expect(tips.filter((tip) => tip.status === "archived").length).toBeGreaterThanOrEqual(1);
-  });
-
-  it("dates published content on the content epoch, not before it and not in the future", () => {
-    const today = todayIso();
-    for (const tip of tips) {
-      expect(isIsoDate(tip.updatedOn)).toBe(true);
-      expect(tip.updatedOn >= CONTENT_EPOCH).toBe(true);
-      expect(tip.updatedOn <= today).toBe(true);
-      expect(banned.test(`${tip.title} ${tip.summary} ${tip.body.join(" ")} ${tip.steps.join(" ")}`)).toBe(false);
-    }
-  });
-
-  it("keeps queued tips out of the public sitemap paths' published set and includes archive", () => {
-    const paths = publicPaths(tips).map((entry) => entry.path);
-    expect(paths).toContain("/tips/deep-clean-after-the-dusty-work");
-    expect(paths).not.toContain("/tips/replace-cracked-caulk-before-photos");
+    expect(library.filter((tip) => tip.status === "queued")).toHaveLength(6);
+    expect(library.filter((tip) => tip.status === "archived")).toHaveLength(1);
+    expectCurrentCopy(library, "2026-10-24");
+    const paths = publicPaths(library).map((entry) => entry.path);
+    expect(paths).toContain(`/tips/${FIXTURE_PUBLISHED_SLUG}`);
+    expect(paths).toContain(`/tips/${FIXTURE_ARCHIVED_SLUG}`);
+    expect(paths).not.toContain(`/tips/${FIXTURE_QUEUED_SLUG}`);
+    expect(paths).toContain("/tips");
+    expect(paths).toContain("/stages");
+    expect(paths).toContain("/tools");
     expect(paths).not.toContain("/admin");
     expect(paths).not.toContain("/directory");
   });
+
+  it("keeps the live library dated and leaves queued tips out of the sitemap", () => {
+    expect(tips.length).toBeGreaterThan(0);
+    expectCurrentCopy(tips, todayIso());
+    const paths = new Set(publicPaths(tips).map((entry) => entry.path));
+    for (const tip of tips) {
+      if (tip.status === "queued") {
+        expect(paths.has(`/tips/${tip.slug}`)).toBe(false);
+      } else {
+        expect(paths.has(`/tips/${tip.slug}`)).toBe(true);
+      }
+    }
+  });
 });
 
-describe("ads, affiliates, paypal, and email", () => {
+describe("ads, affiliates, and email", () => {
   it("omits the ads.txt publisher line until a real publisher id is set", () => {
     expect(adsTxtBody(undefined)).toBe("");
     expect(adsTxtBody("")).toBe("");
@@ -88,15 +113,23 @@ describe("ads, affiliates, paypal, and email", () => {
     expect(renderToStaticMarkup(createElement(AffiliateList, { offers: [] }))).toBe("");
   });
 
-  it("keeps the listed renewal price when the launch promo is on", () => {
-    expect(launchPromoEnabled(undefined)).toBe(false);
-    const monthly = productOffer("category-sponsor", true);
-    expect(monthly.unitAmount).toBe(9900);
-    expect(monthly.firstMonthHalfOff).toBe(true);
-    expect(productOffer("header-sponsor", true).unitAmount).toBe(24900);
-    expect(productOffer("header-sponsor", true).firstMonthHalfOff).toBe(true);
-    expect(productOffer("category-sponsor", false).unitAmount).toBe(9900);
-    expect(productOffer("header-sponsor", false).unitAmount).toBe(24900);
+  it("does not serve an empty ads.txt and returns the publisher line when configured", () => {
+    const previous = process.env.ADSENSE_PUBLISHER_ID;
+    try {
+      delete process.env.ADSENSE_PUBLISHER_ID;
+      expect(adsTxtGet().status).toBe(404);
+      process.env.ADSENSE_PUBLISHER_ID = "ca-pub-123";
+      const response = adsTxtGet();
+      expect(response.status).toBe(200);
+      expect(response.headers.get("content-type")).toContain("text/plain");
+      return expect(response.text()).resolves.toBe("google.com, pub-123, DIRECT, f08c47fec0942fa0\n");
+    } finally {
+      if (previous === undefined) {
+        delete process.env.ADSENSE_PUBLISHER_ID;
+      } else {
+        process.env.ADSENSE_PUBLISHER_ID = previous;
+      }
+    }
   });
 
   it("drafts renewal email and refuses to send it", () => {
@@ -122,7 +155,33 @@ describe("ads, affiliates, paypal, and email", () => {
     expect(source).not.toMatch(/nodemailer|@sendgrid|resend\.com|postmarkapp|mailgun/i);
     expect(source).not.toMatch(/\bstripe\b/i);
     expect(source).not.toMatch(/STRIPE_/);
+    expect(source).not.toMatch(/\bpaypal\b/i);
     expect(source).not.toMatch(/https:\/\/api-m\.paypal\.com/);
+  });
+
+  it("ships one content security policy on Vercel and Netlify", () => {
+    const vercel = JSON.parse(readFileSync(resolve(process.cwd(), "vercel.json"), "utf8")) as {
+      headers: Array<{ headers: Array<{ key: string; value: string }> }>;
+    };
+    const vercelPolicy = vercel.headers[0]?.headers.find((header) => header.key === "Content-Security-Policy")?.value;
+    expect(vercelPolicy).toBe(CONTENT_SECURITY_POLICY);
+    const netlify = readFileSync(resolve(process.cwd(), "netlify.toml"), "utf8");
+    expect(netlify).toContain(`Content-Security-Policy = "${CONTENT_SECURITY_POLICY}"`);
+    expect(CONTENT_SECURITY_POLICY).toContain("default-src 'self'");
+    expect(CONTENT_SECURITY_POLICY).toContain("https://pagead2.googlesyndication.com");
+    expect(CONTENT_SECURITY_POLICY).toContain("form-action 'self'");
+    expect(CONTENT_SECURITY_POLICY).not.toContain("formsubmit.co");
+  });
+
+  it("sets a canonical path from every page module", () => {
+    const pageModules = walk(resolve(process.cwd(), "app")).filter((file) => file.endsWith("page.tsx"));
+    expect(pageModules.length).toBeGreaterThan(10);
+    for (const file of pageModules) {
+      expect(readFileSync(file, "utf8")).toContain("pageMetadata");
+    }
+    const layout = readFileSync(resolve(process.cwd(), "app/layout.tsx"), "utf8");
+    expect(layout).toContain("/og.png");
+    expect(layout).toContain('width: 1200');
   });
 
   it("compares admin token digests without treating a different length as a match", () => {

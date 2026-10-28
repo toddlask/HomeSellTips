@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
+import { notFound } from "next/navigation";
 import { loginAdmin, logoutAdmin } from "@/app/admin/actions";
 import { ADMIN_COOKIE, adminConfigured, digestsMatch, tokenDigest } from "@/lib/admin-token";
 import { outbox, productionPlacements, reviews } from "@/lib/catalog";
 import { EMAIL_DELIVERY_ENABLED } from "@/lib/outbox";
+import { pageMetadata } from "@/lib/page-meta";
 import { placementProductLabel } from "@/lib/placements";
 import { reviewStatusLabel } from "@/lib/review-label";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Admin",
   description: "Admin gate for HomeSellTips review items and draft renewal notes.",
+  path: "/admin",
   robots: { index: false, follow: false },
-};
+});
 
 export default async function AdminPage({
   searchParams,
@@ -23,6 +26,9 @@ export default async function AdminPage({
   const query = await searchParams;
   const secret = process.env.ADMIN_TOKEN?.trim() ?? "";
   const configured = adminConfigured(secret);
+  if (!configured) {
+    notFound();
+  }
   const jar = await cookies();
   const session = jar.get(ADMIN_COOKIE)?.value ?? "";
   const signedIn = configured && session.length > 0 && digestsMatch(session, tokenDigest(secret));
@@ -34,12 +40,7 @@ export default async function AdminPage({
         Email sending is disabled. Renewal notes stay in this outbox. Nothing is emailed.
         {EMAIL_DELIVERY_ENABLED ? " Sending flag drifted." : ""}
       </p>
-      {!configured ? (
-        <p className="panel" role="status">
-          Admin is not configured on this host. Set ADMIN_TOKEN to open the gate.
-        </p>
-      ) : null}
-      {configured && !signedIn ? (
+      {!signedIn ? (
         <form className="panel" action={loginAdmin}>
           <label htmlFor="token">
             Admin token
@@ -47,7 +48,6 @@ export default async function AdminPage({
           </label>
           <button type="submit">Unlock</button>
           {query.error === "denied" ? <p role="alert">That token does not match.</p> : null}
-          {query.error === "unconfigured" ? <p role="alert">Admin is not configured on this host.</p> : null}
         </form>
       ) : null}
       {signedIn ? (

@@ -37,10 +37,10 @@ Renewal reminders are drafted into `content/outbox.json` only. Email sending is 
 
 Do not add a Vercel cron for publishing. The GitHub Action is the only publisher.
 
-## Payments and ads
+## Advertising
 
-PayPal checkout uses the Orders API in the sandbox only. `PAYPAL_MODE` must be `sandbox`. Live mode is refused. With no client id or secret, the advertise page says payments are not configured.
+The advertise page posts to `/api/advertise`. That route checks the fields, then forwards the inquiry to FormSubmit. The browser does not call FormSubmit itself.
 
-Ad slots and the publisher line in `ads.txt` appear only when `ADSENSE_PUBLISHER_ID` is set. Ad scripts load after cookie consent.
+Ad slots appear only when `ADSENSE_PUBLISHER_ID` and a slot id are set. Ad scripts load after cookie consent. `/ads.txt` responds with 404 until that publisher id is set, and then it serves the publisher line.
 
 Affiliate links stay off unless `AFFILIATES_ENABLED` is true and a URL is set.
