@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { ROOM_PREP, roomTaskIds } from "@/lib/rooms";
 
 const STORAGE_KEY = "homeselltips-room-prep";
+const STORAGE_EVENT = "homeselltips-room-prep";
 
-function readSaved(): Record<string, boolean> {
+function parseSaved(raw: string | null): Record<string, boolean> {
+  if (!raw) {
+    return {};
+  }
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) {
-      return {};
-    }
     const parsed = JSON.parse(raw) as unknown;
     if (typeof parsed !== "object" || parsed === null || Array.isArray(parsed)) {
       return {};
@@ -27,24 +27,41 @@ function readSaved(): Record<string, boolean> {
   }
 }
 
+const EMPTY_SAVED: Record<string, boolean> = {};
+let cachedRaw: string | null | undefined;
+let cachedSaved: Record<string, boolean> = EMPTY_SAVED;
+
+function readSaved(): Record<string, boolean> {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (raw === cachedRaw) {
+    return cachedSaved;
+  }
+  cachedRaw = raw;
+  cachedSaved = parseSaved(raw);
+  return cachedSaved;
+}
+
+function subscribe(onChange: () => void) {
+  window.addEventListener(STORAGE_EVENT, onChange);
+  return () => window.removeEventListener(STORAGE_EVENT, onChange);
+}
+
+function emptySaved(): Record<string, boolean> {
+  return EMPTY_SAVED;
+}
+
+function writeSaved(saved: Record<string, boolean>) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+  cachedRaw = localStorage.getItem(STORAGE_KEY);
+  cachedSaved = saved;
+  window.dispatchEvent(new Event(STORAGE_EVENT));
+}
+
 export function RoomBoard() {
-  const [saved, setSaved] = useState<Record<string, boolean>>({});
-  const [ready, setReady] = useState(false);
+  const saved = useSyncExternalStore(subscribe, readSaved, emptySaved);
   const [openId, setOpenId] = useState<string>(ROOM_PREP[0]?.id ?? "");
   const total = roomTaskIds().length;
   const done = roomTaskIds().filter((id) => saved[id]).length;
-
-  useEffect(() => {
-    setSaved(readSaved());
-    setReady(true);
-  }, []);
-
-  useEffect(() => {
-    if (!ready) {
-      return;
-    }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-  }, [ready, saved]);
 
   return (
     <div className="room-board">
@@ -78,7 +95,7 @@ export function RoomBoard() {
                           type="checkbox"
                           checked={saved[task.id] === true}
                           onChange={() =>
-                            setSaved((current) => ({ ...current, [task.id]: current[task.id] !== true }))
+                            writeSaved({ ...saved, [task.id]: saved[task.id] !== true })
                           }
                         />
                         <span>{task.label}</span>
