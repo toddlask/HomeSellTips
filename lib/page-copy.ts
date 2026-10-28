@@ -25,6 +25,8 @@ export const INFO_DESCRIPTIONS = {
     "How HomeSellTips saves a consent choice in this browser, when optional ad scripts can load, and what the advertise form sends. No accounts.",
   disclosure:
     "How HomeSellTips labels sponsored placements and display ads, when affiliate links stay off, and why a commission does not change your price.",
+  credits:
+    "Credits for every HomeSellTips picture: the home photo plus stage, tip, tool, and archive images, each with its photographer, source, and license.",
 } as const;
 
 export const ABOUT_TITLE = "About this site";

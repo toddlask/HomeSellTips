@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { tips } from "@/lib/catalog";
-import { archiveCrumbs, checklistCrumbs, stageCrumbs, stagesHubCrumbs, tipCrumbs, tipsHubCrumbs, toolCrumbs } from "@/lib/crumbs";
+import { archiveCrumbs, checklistCrumbs, photoCreditCrumbs, stageCrumbs, stagesHubCrumbs, tipCrumbs, tipsHubCrumbs, toolCrumbs } from "@/lib/crumbs";
 import { aboutPageJsonLd, articleJsonLd, breadcrumbJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { ABOUT_DESCRIPTION, aboutWordCount, HUB_DESCRIPTIONS, INFO_DESCRIPTIONS, TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { resolvedDocumentTitle, tipPageTitle } from "@/lib/page-meta";
@@ -195,6 +195,7 @@ describe("search metadata", () => {
     expect(tipsHubCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/tips"]);
     expect(stagesHubCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/stages"]);
     expect(archiveCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/archive"]);
+    expect(photoCreditCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/photo-credits"]);
     for (const file of ["app/tips/page.tsx", "app/stages/page.tsx", "app/archive/page.tsx", "app/tools/layout.tsx"]) {
       const page = readFileSync(resolve(process.cwd(), file), "utf8");
       expect(page).toContain("<Breadcrumbs");
@@ -208,7 +209,7 @@ describe("search metadata", () => {
     }
     const origin = getSiteUrl();
     const guide = llmsText();
-    for (const path of ["/", "/tips", "/stages", "/tools", "/about"]) {
+    for (const path of ["/", "/tips", "/stages", "/tools", "/about", "/photo-credits"]) {
       expect(guide).toContain(`${origin}${path}`);
     }
     for (const tool of TOOL_LINKS) {

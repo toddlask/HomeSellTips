@@ -30,10 +30,10 @@ export function HomePhotoView({
   );
 }
 
-export function PagePhoto({ photo }: { photo: HomePhoto }) {
+export function PagePhoto({ photo, priority = false }: { photo: HomePhoto; priority?: boolean }) {
   return (
     <figure className="stage-photo">
-      <HomePhotoView photo={photo} sizes={STAGE_SIZES} />
+      <HomePhotoView photo={photo} priority={priority} sizes={STAGE_SIZES} />
     </figure>
   );
 }

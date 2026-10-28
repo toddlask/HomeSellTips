@@ -16,7 +16,7 @@ export default function ToolsIndexPage() {
     <>
       <h1>Tools</h1>
       <p className="lede">{CALCULATOR_NOTE}</p>
-      <PagePhoto photo={pagePhoto("/tools")} />
+      <PagePhoto photo={pagePhoto("/tools")} priority />
       <ul className="tool-grid">
         {TOOL_LINKS.map((tool) => (
           <li key={tool.href}>

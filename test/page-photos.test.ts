@@ -16,11 +16,12 @@ function coveredPaths(): string[] {
     .map((tip) => `/tips/${tip.slug}`);
   const stagePaths = STAGE_IDS.map((stage) => `/stages/${stage}`);
   const toolPaths = ["/tools", ...TOOL_LINKS.map((tool) => tool.href)];
-  return [...tipPaths, ...stagePaths, ...toolPaths];
+  const hubPaths = ["/tips", "/stages", "/archive"];
+  return [...tipPaths, ...stagePaths, ...toolPaths, ...hubPaths];
 }
 
 describe("page photos", () => {
-  it("gives every tip, stage, and tool page a photo nobody else on that set uses", () => {
+  it("gives every tip, stage, tool, and hub page a photo nobody else on that set uses", () => {
     const paths = coveredPaths();
     const photos = paths.map((path) => pagePhoto(path));
     const srcs = photos.map((photo) => photo.src);

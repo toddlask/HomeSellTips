@@ -58,3 +58,10 @@ export function archiveCrumbs(): Crumb[] {
     { name: "Archive", path: "/archive" },
   ];
 }
+
+export function photoCreditCrumbs(): Crumb[] {
+  return [
+    { name: "Home", path: "/" },
+    { name: "Photo credits", path: "/photo-credits" },
+  ];
+}

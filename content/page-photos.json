@@ -798,5 +798,35 @@
     "photographer": "KATRIN BOLOVTSOVA",
     "sourcePage": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-paperwork-beside-a-pen-6077600/",
     "page": "/tips/carry-the-closing-papers-with-you"
+  },
+  {
+    "id": "hub-stages",
+    "src": "/photos/hub-stages.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Hallway with a wooden floor, white doors, and a staircase.",
+    "photographer": "The R.E Editor",
+    "sourcePage": "https://www.pexels.com/photo/a-hallway-with-wooden-floors-and-white-doors-28272314/",
+    "page": "/stages"
+  },
+  {
+    "id": "hub-tips",
+    "src": "/photos/hub-tips.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Open notebook and pens on a white desk.",
+    "photographer": "Ann poan",
+    "sourcePage": "https://www.pexels.com/photo/opened-notebook-with-pen-on-white-desk-5797900/",
+    "page": "/tips"
+  },
+  {
+    "id": "hub-archive",
+    "src": "/photos/hub-archive.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Rows of labeled archive boxes on shelves in a document room.",
+    "photographer": "Tima Miroshnichenko",
+    "sourcePage": "https://www.pexels.com/photo/a-gray-room-with-shelves-full-of-brown-drawers-6549926/",
+    "page": "/archive"
   }
 ]

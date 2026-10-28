@@ -101,7 +101,7 @@ a:hover { color: #3f2618; }
   .brand { white-space: nowrap; }
 }
 
-.nav-links, .footer-links, .credit-list, .feature-row {
+.nav-links, .footer-links, .feature-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 1rem;
@@ -495,14 +495,31 @@ caption { text-align: left; font-weight: 700; margin-bottom: 0.4rem; }
 
 .footer-links a { color: var(--ink); }
 
-.credit-title { font-size: 1.7rem; margin-bottom: 0.35rem; }
-
-.credit-list {
+.photo-credits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: grid;
-  gap: 0.35rem;
-  color: var(--muted);
-  font-size: 0.92rem;
+  gap: 1rem;
 }
+
+.photo-credits li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.75rem 1rem;
+  align-items: start;
+}
+
+.photo-credits img {
+  width: 7.5rem;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  background: var(--cream);
+}
+
+.photo-credits p { margin: 0.15rem 0; }
 
 .center-link { text-align: center; }
 

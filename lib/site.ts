@@ -80,6 +80,7 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
     "/advertise",
     "/privacy",
     "/disclosure",
+    "/photo-credits",
     "/tools/net-proceeds",
     "/tools/commission",
     "/tools/what-to-fix",
@@ -114,6 +115,7 @@ export function llmsText(): string {
     ["Stages", "/stages"],
     ["Tools", "/tools"],
     ["About", "/about"],
+    ["Photo credits", "/photo-credits"],
   ]
     .map(([name, path]) => `- ${name}: ${url(path)}`)
     .join("\n");

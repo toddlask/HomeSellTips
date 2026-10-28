@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { PagePhoto } from "@/components/home-photo";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { archiveCrumbs } from "@/lib/crumbs";
 import { INFO_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
+import { pagePhoto } from "@/lib/photos";
 import { parseStageId } from "@/lib/parse";
 import { stageTitle } from "@/lib/stages";
 import { archivedTips } from "@/lib/site";
@@ -33,6 +35,7 @@ export default async function ArchivePage({ searchParams }: { searchParams: Prom
       <Breadcrumbs crumbs={archiveCrumbs()} linkLast />
       <h1>Archived tips</h1>
       <p className="lede">These notes stayed useful, but the active library now covers the same job.</p>
+      <PagePhoto photo={pagePhoto("/archive")} priority />
       <form className="panel no-print" method="get" action="/archive">
         <label htmlFor="archive-stage">
           Stage
