@@ -1,0 +1,802 @@
+[
+  {
+    "id": "stage-prep",
+    "src": "/photos/stage-prep.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Open gray toolbox with screwdrivers and other hand tools in the compartments.",
+    "photographer": "Carlos Zael",
+    "sourcePage": "https://www.pexels.com/photo/hand-tools-in-gray-toolbox-11882650/",
+    "page": "/stages/prep-and-repairs"
+  },
+  {
+    "id": "stage-staging",
+    "src": "/photos/stage-staging.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Living room with a couch, a coffee table, and curtains beside a window.",
+    "photographer": "Max Vakhtbovych",
+    "sourcePage": "https://www.pexels.com/photo/living-room-with-couch-near-table-and-window-with-curtains-6782480/",
+    "page": "/stages/staging"
+  },
+  {
+    "id": "stage-pricing",
+    "src": "/photos/stage-pricing.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "House with a front lawn, a garden, and a path leading to the door.",
+    "photographer": "Svetlana Kravtsova",
+    "sourcePage": "https://www.pexels.com/photo/residential-house-with-a-garden-and-lawn-in-front-17589220/",
+    "page": "/stages/pricing"
+  },
+  {
+    "id": "stage-listing",
+    "src": "/photos/stage-listing.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Open photo album and a camera lying on a table.",
+    "photographer": "Alex Andrews",
+    "sourcePage": "https://www.pexels.com/photo/opened-photo-book-and-camera-on-table-4553502/",
+    "page": "/stages/listing-photos"
+  },
+  {
+    "id": "stage-agent",
+    "src": "/photos/stage-agent.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Hands holding a clipboard with a printed checklist.",
+    "photographer": "RDNE Stock project",
+    "sourcePage": "https://www.pexels.com/photo/checklist-on-a-clipboard-8293635/",
+    "page": "/stages/agent-vs-fsbo"
+  },
+  {
+    "id": "stage-offers",
+    "src": "/photos/stage-offers.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Black pen lying across a sheet of white paper.",
+    "photographer": "Pixabay",
+    "sourcePage": "https://www.pexels.com/photo/black-pen-placed-on-white-paper-261679/",
+    "page": "/stages/offers-and-negotiation"
+  },
+  {
+    "id": "stage-closing",
+    "src": "/photos/stage-closing.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Metal keys on a ring lying on a wooden surface.",
+    "photographer": "Ingo Joseph",
+    "sourcePage": "https://www.pexels.com/photo/gray-ikon-keys-on-brown-wooden-surface-14721/",
+    "page": "/stages/closing"
+  },
+  {
+    "id": "stage-moving",
+    "src": "/photos/stage-moving.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Cardboard moving boxes sitting in a living room.",
+    "photographer": "Mister Mister",
+    "sourcePage": "https://www.pexels.com/photo/cardboard-boxes-on-living-room-3434533/",
+    "page": "/stages/moving"
+  },
+  {
+    "id": "tool-index",
+    "src": "/photos/tool-index.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Calculator resting on white papers spread across a desk.",
+    "photographer": "Mikhail Nilov",
+    "sourcePage": "https://www.pexels.com/photo/a-calculator-over-the-white-papers-on-a-desk-8296988/",
+    "page": "/tools"
+  },
+  {
+    "id": "tool-proceeds",
+    "src": "/photos/tool-proceeds.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Architectural plan and a measuring tape on a wooden table.",
+    "photographer": "Anete Lusina",
+    "sourcePage": "https://www.pexels.com/photo/architecture-plan-on-wooden-surface-4792483/",
+    "page": "/tools/net-proceeds"
+  },
+  {
+    "id": "tool-commission",
+    "src": "/photos/tool-commission.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Close view of printed documents beside a pen.",
+    "photographer": "RDNE Stock project",
+    "sourcePage": "https://www.pexels.com/photo/close-up-shot-of-documents-beside-a-pen-7841409/",
+    "page": "/tools/commission"
+  },
+  {
+    "id": "tool-fix",
+    "src": "/photos/tool-fix.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Screwdriver turning a screw on a wall outlet.",
+    "photographer": "Ksenia Chernaya",
+    "sourcePage": "https://www.pexels.com/photo/an-electrician-using-screwdriver-to-repair-the-ac-power-plugs-and-sockets-5691589/",
+    "page": "/tools/what-to-fix"
+  },
+  {
+    "id": "tool-checklist",
+    "src": "/photos/tool-checklist.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Calendar page clipped to a board with a pencil beside it.",
+    "photographer": "KATRIN BOLOVTSOVA",
+    "sourcePage": "https://www.pexels.com/photo/calendar-on-clipboard-and-a-pencil-6193322/",
+    "page": "/tools/checklist"
+  },
+  {
+    "id": "tool-rooms",
+    "src": "/photos/tool-rooms.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Printed floor plan on a sheet of white paper.",
+    "photographer": "Antoni Shkraba",
+    "sourcePage": "https://www.pexels.com/photo/floor-plan-on-white-paper-8837511/",
+    "page": "/tools/rooms"
+  },
+  {
+    "id": "exterior-white",
+    "src": "/photos/exterior-white.webp",
+    "width": 1400,
+    "height": 900,
+    "alt": "White geometric house with a recessed front door, a small tree, and a lawn under a clear sky.",
+    "photographer": "Pixasquare Studio",
+    "sourcePage": "https://www.pexels.com/photo/white-2-storey-house-near-trees-1115804/",
+    "page": "/tools/curb-appeal"
+  },
+  {
+    "id": "tool-season",
+    "src": "/photos/tool-season.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Clipboard calendar lying next to an open laptop.",
+    "photographer": "Leeloo The First",
+    "sourcePage": "https://www.pexels.com/photo/clipboard-with-calendar-by-laptop-8970673/",
+    "page": "/tools/when-to-sell"
+  },
+  {
+    "id": "tool-myths",
+    "src": "/photos/tool-myths.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Small model houses and a set of keys on a desk.",
+    "photographer": "Jakub Zerdzicki",
+    "sourcePage": "https://www.pexels.com/photo/miniature-model-houses-with-keys-on-desk-33305177/",
+    "page": "/tools/myths"
+  },
+  {
+    "id": "curb-lights",
+    "src": "/photos/curb-lights.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Bungalow at night with lights on in the windows and along the porch.",
+    "photographer": "Aneesh Prodduturu",
+    "sourcePage": "https://www.pexels.com/photo/lights-in-a-bungalow-house-20081378/",
+    "curb": "lights"
+  },
+  {
+    "id": "curb-glass",
+    "src": "/photos/curb-glass.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Front door with glass panels and a small porch.",
+    "photographer": "Brett Sayles",
+    "sourcePage": "https://www.pexels.com/photo/the-front-door-of-a-house-8353355/",
+    "curb": "glass"
+  },
+  {
+    "id": "curb-paint",
+    "src": "/photos/curb-paint.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Closed front door with a light mounted on the wall above it.",
+    "photographer": "Erik Mclean",
+    "sourcePage": "https://www.pexels.com/photo/light-over-closed-door-12748725/",
+    "curb": "paint-door"
+  },
+  {
+    "id": "curb-step",
+    "src": "/photos/curb-step.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "House entrance with a door, a porch, and steps up from the walk.",
+    "photographer": "Erik Mclean",
+    "sourcePage": "https://www.pexels.com/photo/exterior-of-classic-residential-house-with-door-and-porch-7475550/",
+    "curb": "step"
+  },
+  {
+    "id": "walk-the-house-before-you-hire",
+    "src": "/photos/walk-the-house-before-you-hire.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Front yard of a house with a lawn and a path to the entrance.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/a-front-yard-of-a-house-4258282/",
+    "page": "/tips/walk-the-house-before-you-hire"
+  },
+  {
+    "id": "fix-function-before-finish",
+    "src": "/photos/fix-function-before-finish.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Hand turning the valve on a wall radiator.",
+    "photographer": "BOOM Photography",
+    "sourcePage": "https://www.pexels.com/photo/hand-of-a-person-turning-the-radiator-valve-12644994/",
+    "page": "/tips/fix-function-before-finish"
+  },
+  {
+    "id": "bathroom",
+    "src": "/photos/bathroom.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Double vanity with a gray counter, white cabinets, and a view into a bedroom.",
+    "photographer": "Get Lost Mike",
+    "sourcePage": "https://www.pexels.com/photo/the-interior-of-a-bathroom-7710006/",
+    "page": "/tips/replace-cracked-caulk-before-photos"
+  },
+  {
+    "id": "test-alarms-before-you-list",
+    "src": "/photos/test-alarms-before-you-list.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Fire alarm panel with a red pull station on a plain background.",
+    "photographer": "David Gierth",
+    "sourcePage": "https://www.pexels.com/photo/red-and-white-fire-alarm-3958649/",
+    "page": "/tips/test-alarms-before-you-list"
+  },
+  {
+    "id": "clear-gutters-before-showings",
+    "src": "/photos/clear-gutters-before-showings.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Rainwater drops falling from a house gutter.",
+    "photographer": "Zeynep Sude Emek",
+    "sourcePage": "https://www.pexels.com/photo/water-drops-in-gutter-20113440/",
+    "page": "/tips/clear-gutters-before-showings"
+  },
+  {
+    "id": "tighten-loose-hardware",
+    "src": "/photos/tighten-loose-hardware.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Close view of a metal handle on a cabinet door.",
+    "photographer": "ROMAN ODINTSOV",
+    "sourcePage": "https://www.pexels.com/photo/close-up-of-the-cabinet-handle-8356432/",
+    "page": "/tips/tighten-loose-hardware"
+  },
+  {
+    "id": "trace-a-stain-to-its-source",
+    "src": "/photos/trace-a-stain-to-its-source.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Brown stain on a bedroom ceiling beside a light fixture.",
+    "photographer": "Marina Leonova",
+    "sourcePage": "https://www.pexels.com/photo/stains-on-ceiling-in-bedroom-8624464/",
+    "page": "/tips/trace-a-stain-to-its-source"
+  },
+  {
+    "id": "run-heat-and-cooling-before-showings",
+    "src": "/photos/run-heat-and-cooling-before-showings.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "White thermostat mounted on a painted wall.",
+    "photographer": "Erik Mclean",
+    "sourcePage": "https://www.pexels.com/photo/white-thermostat-hanging-on-the-wall-7616651/",
+    "page": "/tips/run-heat-and-cooling-before-showings"
+  },
+  {
+    "id": "deep-clean-after-the-dusty-work",
+    "src": "/photos/deep-clean-after-the-dusty-work.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Orange bucket and a mop standing on a floor.",
+    "photographer": "BOOM Photography",
+    "sourcePage": "https://www.pexels.com/photo/orange-bucket-on-the-floor-12585524/",
+    "page": "/tips/deep-clean-after-the-dusty-work"
+  },
+  {
+    "id": "kitchen",
+    "src": "/photos/kitchen.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "White kitchen with black handles, a black tile backsplash, a stainless range hood, and a double sink by a window.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/modern-kitchen-interior-19227245/",
+    "page": "/tips/clear-surfaces-before-you-decorate"
+  },
+  {
+    "id": "pack-personal-items-early",
+    "src": "/photos/pack-personal-items-early.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Clothes hanging on a rack, ready to be packed away.",
+    "photographer": "Arina Krasnikova",
+    "sourcePage": "https://www.pexels.com/photo/photo-of-clothes-hanging-on-a-clothes-rack-5710713/",
+    "page": "/tips/pack-personal-items-early"
+  },
+  {
+    "id": "facade-glass",
+    "src": "/photos/facade-glass.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Cream gable wall with a tall wood-framed window, wood French doors, and a green side door.",
+    "photographer": "Mike Bird",
+    "sourcePage": "https://www.pexels.com/photo/white-2-storey-house-145661/",
+    "page": "/tips/finish-the-entry-first"
+  },
+  {
+    "id": "living-room",
+    "src": "/photos/living-room.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Living room with a white sofa, a fireplace, tall windows, and dark wood floors.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/bright-living-room-interior-design-5008385/",
+    "page": "/tips/leave-a-clear-path-through-each-room"
+  },
+  {
+    "id": "open-the-window-coverings-the-same-way",
+    "src": "/photos/open-the-window-coverings-the-same-way.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Window blinds beside a desk and a computer.",
+    "photographer": "Yusuf P",
+    "sourcePage": "https://www.pexels.com/photo/black-desk-with-computer-near-window-with-blinds-11163177/",
+    "page": "/tips/open-the-window-coverings-the-same-way"
+  },
+  {
+    "id": "put-pet-gear-away-before-showings",
+    "src": "/photos/put-pet-gear-away-before-showings.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Pet bowl filled with dry food on a wooden surface.",
+    "photographer": "Cup of Couple",
+    "sourcePage": "https://www.pexels.com/photo/dog-food-in-a-pet-bowl-on-a-wooden-surface-8473516/",
+    "page": "/tips/put-pet-gear-away-before-showings"
+  },
+  {
+    "id": "dining-room",
+    "src": "/photos/dining-room.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "White dining table and chairs in front of tall windows, with a brick wall to the left.",
+    "photographer": "Max Vakhtbovych",
+    "sourcePage": "https://www.pexels.com/photo/interior-of-light-dining-room-with-panoramic-balcony-doors-7061333/",
+    "page": "/tips/stop-after-one-simple-table-setting"
+  },
+  {
+    "id": "leave-closets-partly-empty",
+    "src": "/photos/leave-closets-partly-empty.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Empty walk-in closet with carpet and white shelving.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/a-carpeted-walk-in-empty-closet-with-white-theme-6835081/",
+    "page": "/tips/leave-closets-partly-empty"
+  },
+  {
+    "id": "price-the-property-you-have",
+    "src": "/photos/price-the-property-you-have.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Driveway leading up to the front of a house.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/driveway-and-house-10827225/",
+    "page": "/tips/price-the-property-you-have"
+  },
+  {
+    "id": "leave-room-to-negotiate",
+    "src": "/photos/leave-room-to-negotiate.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Hand signing a paper with a pen on a wooden desk.",
+    "photographer": "Pixabay",
+    "sourcePage": "https://www.pexels.com/photo/selective-focus-photography-of-person-signing-on-paper-261621/",
+    "page": "/tips/leave-room-to-negotiate"
+  },
+  {
+    "id": "write-three-numbers-before-you-list",
+    "src": "/photos/write-three-numbers-before-you-list.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Notebook, pen, and tape measure laid out on a table.",
+    "photographer": "DS stories",
+    "sourcePage": "https://www.pexels.com/photo/a-new-project-title-beside-a-tape-measure-and-a-pen-on-a-notebook-6991339/",
+    "page": "/tips/write-three-numbers-before-you-list"
+  },
+  {
+    "id": "list-credits-before-you-pick-a-price",
+    "src": "/photos/list-credits-before-you-pick-a-price.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Stack of papers on a wooden table.",
+    "photographer": "Thirdman",
+    "sourcePage": "https://www.pexels.com/photo/stack-of-papers-on-wooden-table-7265585/",
+    "page": "/tips/list-credits-before-you-pick-a-price"
+  },
+  {
+    "id": "match-what-was-included-in-a-sale",
+    "src": "/photos/match-what-was-included-in-a-sale.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Floor-plan sheets, a pen, and glasses on a table.",
+    "photographer": "Anete Lusina",
+    "sourcePage": "https://www.pexels.com/photo/set-of-scheme-and-pen-with-glasses-on-table-4792507/",
+    "page": "/tips/match-what-was-included-in-a-sale"
+  },
+  {
+    "id": "rerun-the-net-after-each-bid",
+    "src": "/photos/rerun-the-net-after-each-bid.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Paintbrushes and a sheet of paper on the floor.",
+    "photographer": "PNW Production",
+    "sourcePage": "https://www.pexels.com/photo/paintbrushes-and-paper-sheet-on-floor-8251145/",
+    "page": "/tips/rerun-the-net-after-each-bid"
+  },
+  {
+    "id": "keep-price-notes-in-writing",
+    "src": "/photos/keep-price-notes-in-writing.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Stack of envelopes beside a camera on a table.",
+    "photographer": "Eugenia Remark",
+    "sourcePage": "https://www.pexels.com/photo/stack-of-envelopes-a-camera-and-decorative-candles-20035173/",
+    "page": "/tips/keep-price-notes-in-writing"
+  },
+  {
+    "id": "bedroom",
+    "src": "/photos/bedroom.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "White bed with an iron headboard, two pillows, and matching lamps on a paneled wall.",
+    "photographer": "Erik Mclean",
+    "sourcePage": "https://www.pexels.com/photo/contemporary-white-bedroom-interior-in-a-cabin-8266829/",
+    "page": "/tips/daylight-and-lights"
+  },
+  {
+    "id": "show-the-repairs-you-finished",
+    "src": "/photos/show-the-repairs-you-finished.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Kitchen faucet mounted over a sink.",
+    "photographer": "Wallace Chuck",
+    "sourcePage": "https://www.pexels.com/photo/photo-of-faucet-3787025/",
+    "page": "/tips/show-the-repairs-you-finished"
+  },
+  {
+    "id": "shoot-in-the-order-a-visitor-walks",
+    "src": "/photos/shoot-in-the-order-a-visitor-walks.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Paved walk leading to the front door of a house.",
+    "photographer": "Clay Elliot",
+    "sourcePage": "https://www.pexels.com/photo/paved-walkway-leading-to-the-doorway-of-a-big-house-8894808/",
+    "page": "/tips/shoot-in-the-order-a-visitor-walks"
+  },
+  {
+    "id": "move-cars-before-the-photo-appointment",
+    "src": "/photos/move-cars-before-the-photo-appointment.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Silver car parked on a driveway in front of a house.",
+    "photographer": "Erik Mclean",
+    "sourcePage": "https://www.pexels.com/photo/silver-car-parked-on-the-driveway-9661487/",
+    "page": "/tips/move-cars-before-the-photo-appointment"
+  },
+  {
+    "id": "close-lids-and-hide-trash-cans",
+    "src": "/photos/close-lids-and-hide-trash-cans.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Crumpled paper next to a bin on a table.",
+    "photographer": "SHVETS production",
+    "sourcePage": "https://www.pexels.com/photo/folded-crumpled-paper-near-bin-on-table-7512791/",
+    "page": "/tips/close-lids-and-hide-trash-cans"
+  },
+  {
+    "id": "take-one-wide-shot-and-one-detail",
+    "src": "/photos/take-one-wide-shot-and-one-detail.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Bedroom interior with an open closet and a made bed.",
+    "photographer": "Andrea Davis",
+    "sourcePage": "https://www.pexels.com/photo/the-interior-of-a-bedroom-with-an-open-closet-11014066/",
+    "page": "/tips/take-one-wide-shot-and-one-detail"
+  },
+  {
+    "id": "delete-blurry-frames-the-same-day",
+    "src": "/photos/delete-blurry-frames-the-same-day.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Black camera sitting on a table.",
+    "photographer": "Tima Miroshnichenko",
+    "sourcePage": "https://www.pexels.com/photo/a-black-camera-on-the-table-7206564/",
+    "page": "/tips/delete-blurry-frames-the-same-day"
+  },
+  {
+    "id": "list-the-jobs-before-you-choose",
+    "src": "/photos/list-the-jobs-before-you-choose.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Printed checklist, a calculator, and a phone on a desk.",
+    "photographer": "Leeloo The First",
+    "sourcePage": "https://www.pexels.com/photo/a-documents-and-mobile-phone-on-the-table-8962448/",
+    "page": "/tips/list-the-jobs-before-you-choose"
+  },
+  {
+    "id": "questions-if-you-sell-it-yourself",
+    "src": "/photos/questions-if-you-sell-it-yourself.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "House with a green lawn and a driveway in front.",
+    "photographer": "Alexander F Ungerer",
+    "sourcePage": "https://www.pexels.com/photo/charming-suburban-home-with-green-lawn-and-driveway-31376756/",
+    "page": "/tips/questions-if-you-sell-it-yourself"
+  },
+  {
+    "id": "price-the-hours-you-will-spend",
+    "src": "/photos/price-the-hours-you-will-spend.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Clock hanging on the wall above a wooden door.",
+    "photographer": "Gülru Sude",
+    "sourcePage": "https://www.pexels.com/photo/view-of-a-clock-hanging-above-the-door-in-a-room-14538885/",
+    "page": "/tips/price-the-hours-you-will-spend"
+  },
+  {
+    "id": "decide-who-answers-buyer-questions",
+    "src": "/photos/decide-who-answers-buyer-questions.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Smartphone on a tripod and a laptop on a kitchen counter.",
+    "photographer": "Anna Shvets",
+    "sourcePage": "https://www.pexels.com/photo/smartphone-on-a-tripod-and-a-laptop-on-a-kitchen-counter-12674084/",
+    "page": "/tips/decide-who-answers-buyer-questions"
+  },
+  {
+    "id": "learn-which-forms-you-must-use",
+    "src": "/photos/learn-which-forms-you-must-use.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "White paper folders tied shut on a desk.",
+    "photographer": "Sam J",
+    "sourcePage": "https://www.pexels.com/photo/white-paper-folders-with-black-tie-1764956/",
+    "page": "/tips/learn-which-forms-you-must-use"
+  },
+  {
+    "id": "plan-showing-hours-before-you-advertise",
+    "src": "/photos/plan-showing-hours-before-you-advertise.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Pen lying on an open planner on a wooden desk.",
+    "photographer": "Ahmed",
+    "sourcePage": "https://www.pexels.com/photo/pen-on-calendar-on-desk-19905185/",
+    "page": "/tips/plan-showing-hours-before-you-advertise"
+  },
+  {
+    "id": "write-what-you-will-not-negotiate",
+    "src": "/photos/write-what-you-will-not-negotiate.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Close view of a hand signing documents with a pen.",
+    "photographer": "Kampus Production",
+    "sourcePage": "https://www.pexels.com/photo/a-person-signing-a-contract-8815849/",
+    "page": "/tips/write-what-you-will-not-negotiate"
+  },
+  {
+    "id": "read-the-whole-offer",
+    "src": "/photos/read-the-whole-offer.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Small wooden house, keys, and a contract on a table.",
+    "photographer": "Atlantic Ambience",
+    "sourcePage": "https://www.pexels.com/photo/wooden-house-moder-keys-and-contract-on-table-12955837/",
+    "page": "/tips/read-the-whole-offer"
+  },
+  {
+    "id": "compare-net-and-dates",
+    "src": "/photos/compare-net-and-dates.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Notebook, calculator, and tape on a wooden table.",
+    "photographer": "Skylar Kang",
+    "sourcePage": "https://www.pexels.com/photo/office-tools-on-wooden-table-6368835/",
+    "page": "/tips/compare-net-and-dates"
+  },
+  {
+    "id": "answer-an-offer-in-writing",
+    "src": "/photos/answer-an-offer-in-writing.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Stacks of white papers arranged on a wooden desk.",
+    "photographer": "Valentin Sarte",
+    "sourcePage": "https://www.pexels.com/photo/white-papers-on-wooden-table-12048264/",
+    "page": "/tips/answer-an-offer-in-writing"
+  },
+  {
+    "id": "split-price-from-the-closing-date",
+    "src": "/photos/split-price-from-the-closing-date.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Desk calendar standing on a white background.",
+    "photographer": "Matheus Bertelli",
+    "sourcePage": "https://www.pexels.com/photo/2025-desk-calendar-on-white-background-29509468/",
+    "page": "/tips/split-price-from-the-closing-date"
+  },
+  {
+    "id": "list-what-stays-before-you-sign",
+    "src": "/photos/list-what-stays-before-you-sign.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Dining table and chairs set beside glass windows.",
+    "photographer": "Rene Terp",
+    "sourcePage": "https://www.pexels.com/photo/a-dining-table-and-chairs-near-the-glass-windows-14183030/",
+    "page": "/tips/list-what-stays-before-you-sign"
+  },
+  {
+    "id": "ask-who-pays-for-requested-repairs",
+    "src": "/photos/ask-who-pays-for-requested-repairs.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Hands choosing a wrench from an open toolbox.",
+    "photographer": "Anastasia Shuraeva",
+    "sourcePage": "https://www.pexels.com/photo/person-placing-a-tool-in-a-case-9607010/",
+    "page": "/tips/ask-who-pays-for-requested-repairs"
+  },
+  {
+    "id": "save-every-counter-you-send",
+    "src": "/photos/save-every-counter-you-send.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Pile of paper files stacked in brown folders.",
+    "photographer": "Adil Khan Marwat",
+    "sourcePage": "https://www.pexels.com/photo/a-pile-of-old-paper-files-17846111/",
+    "page": "/tips/save-every-counter-you-send"
+  },
+  {
+    "id": "build-the-closing-folder-early",
+    "src": "/photos/build-the-closing-folder-early.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Close view of documents stacked in a file.",
+    "photographer": "Antoni Shkraba",
+    "sourcePage": "https://www.pexels.com/photo/pile-of-documents-in-close-up-photography-6620969/",
+    "page": "/tips/build-the-closing-folder-early"
+  },
+  {
+    "id": "walk-again-before-the-final-visit",
+    "src": "/photos/walk-again-before-the-final-visit.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Front porch of a house lit from the doorway.",
+    "photographer": "Billy Van Tran",
+    "sourcePage": "https://www.pexels.com/photo/a-front-porch-of-a-house-12582574/",
+    "page": "/tips/walk-again-before-the-final-visit"
+  },
+  {
+    "id": "read-the-settlement-statement-when-it-arrives",
+    "src": "/photos/read-the-settlement-statement-when-it-arrives.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Paper-clipped documents stacked on a desk beside glasses.",
+    "photographer": "Kindel Media",
+    "sourcePage": "https://www.pexels.com/photo/a-close-up-shot-of-paper-clipped-documents-7054757/",
+    "page": "/tips/read-the-settlement-statement-when-it-arrives"
+  },
+  {
+    "id": "match-the-move-out-date-to-the-contract",
+    "src": "/photos/match-the-move-out-date-to-the-contract.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Desk calendar standing next to a laptop.",
+    "photographer": "Matheus Bertelli",
+    "sourcePage": "https://www.pexels.com/photo/stylish-desk-setup-with-2025-calendar-and-laptop-29509501/",
+    "page": "/tips/match-the-move-out-date-to-the-contract"
+  },
+  {
+    "id": "gather-keys-and-openers-in-one-envelope",
+    "src": "/photos/gather-keys-and-openers-in-one-envelope.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "House key, a tape measure, and a calculator on a cardboard box.",
+    "photographer": "RDNE Stock project",
+    "sourcePage": "https://www.pexels.com/photo/a-home-key-over-a-carton-box-8292772/",
+    "page": "/tips/gather-keys-and-openers-in-one-envelope"
+  },
+  {
+    "id": "check-your-name-against-your-id",
+    "src": "/photos/check-your-name-against-your-id.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Alarm clock and a passport cover on a wooden table.",
+    "photographer": "Лев Рогожников",
+    "sourcePage": "https://www.pexels.com/photo/an-alarm-clock-on-a-wooden-table-10380840/",
+    "page": "/tips/check-your-name-against-your-id"
+  },
+  {
+    "id": "leave-utility-numbers-for-the-final-reading",
+    "src": "/photos/leave-utility-numbers-for-the-final-reading.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Electric meter and fuse box mounted on a white wall.",
+    "photographer": "Akashni Weimers",
+    "sourcePage": "https://www.pexels.com/photo/electricity-box-on-white-wall-13785838/",
+    "page": "/tips/leave-utility-numbers-for-the-final-reading"
+  },
+  {
+    "id": "book-the-move-after-the-date-is-real",
+    "src": "/photos/book-the-move-after-the-date-is-real.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Moving truck parked on a street beside a phone booth.",
+    "photographer": "Jean-Paul Wettstein",
+    "sourcePage": "https://www.pexels.com/photo/moving-truck-at-urban-swiss-venue-with-phone-booth-37614689/",
+    "page": "/tips/book-the-move-after-the-date-is-real"
+  },
+  {
+    "id": "moving-boxes",
+    "src": "/photos/moving-boxes.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Cardboard boxes stacked beside a window, with a plant on the sill and two pillows on a box.",
+    "photographer": "cottonbro studio",
+    "sourcePage": "https://www.pexels.com/photo/4569338/",
+    "page": "/tips/label-boxes-by-room"
+  },
+  {
+    "id": "measure-doors-before-you-book-a-truck",
+    "src": "/photos/measure-doors-before-you-book-a-truck.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Measuring tape and a pen on an architectural plan.",
+    "photographer": "Anete Lusina",
+    "sourcePage": "https://www.pexels.com/photo/instruments-prepared-for-measurements-in-house-4792479/",
+    "page": "/tips/measure-doors-before-you-book-a-truck"
+  },
+  {
+    "id": "pack-a-first-week-kitchen-box",
+    "src": "/photos/pack-a-first-week-kitchen-box.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Cardboard box labeled for a kitchen during a move.",
+    "photographer": "RDNE Stock project",
+    "sourcePage": "https://www.pexels.com/photo/couple-friends-glass-kitchen-7464492/",
+    "page": "/tips/pack-a-first-week-kitchen-box"
+  },
+  {
+    "id": "forward-the-mail-before-you-leave",
+    "src": "/photos/forward-the-mail-before-you-leave.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Row of numbered metal mailboxes.",
+    "photographer": "Nikita Nikitin",
+    "sourcePage": "https://www.pexels.com/photo/numbered-metal-mailboxes-10719779/",
+    "page": "/tips/forward-the-mail-before-you-leave"
+  },
+  {
+    "id": "photograph-empty-rooms-on-the-last-day",
+    "src": "/photos/photograph-empty-rooms-on-the-last-day.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Empty room with carpet, white walls, and a window.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/an-empty-room-with-carpet-and-white-ceiling-11018240/",
+    "page": "/tips/photograph-empty-rooms-on-the-last-day"
+  },
+  {
+    "id": "carry-the-closing-papers-with-you",
+    "src": "/photos/carry-the-closing-papers-with-you.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Close view of paperwork held beside a pen.",
+    "photographer": "KATRIN BOLOVTSOVA",
+    "sourcePage": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-paperwork-beside-a-pen-6077600/",
+    "page": "/tips/carry-the-closing-papers-with-you"
+  }
+]

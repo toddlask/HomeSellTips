@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { tips } from "@/lib/catalog";
-import { stagePhoto } from "@/lib/photos";
+import { tipPhoto } from "@/lib/photos";
 import { renderTipCard } from "@/lib/render-tip-card";
 import { tipCardPath } from "@/lib/tip-card";
 
@@ -18,7 +18,7 @@ async function main() {
       if (!tip) {
         return;
       }
-      const photo = stagePhoto(tip.stage);
+      const photo = tipPhoto(tip.slug);
       const card = await renderTipCard({
         title: tip.title,
         photoFile: resolve("public", photo.src.slice(1)),

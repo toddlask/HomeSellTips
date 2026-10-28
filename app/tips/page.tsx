@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
+import { tipsHubCrumbs } from "@/lib/crumbs";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { stageTitle } from "@/lib/stages";
@@ -18,6 +20,7 @@ export default function TipsIndexPage() {
   );
   return (
     <>
+      <Breadcrumbs crumbs={tipsHubCrumbs()} linkLast />
       <h1>Tips</h1>
       <p className="lede">Published notes from the library. Older notes that left the active set are in the archive.</p>
       {published.length === 0 ? (

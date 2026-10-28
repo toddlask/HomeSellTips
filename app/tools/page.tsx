@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { PagePhoto } from "@/components/home-photo";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
+import { pagePhoto } from "@/lib/photos";
 import { CALCULATOR_NOTE, TOOL_LINKS } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -14,6 +16,7 @@ export default function ToolsIndexPage() {
     <>
       <h1>Tools</h1>
       <p className="lede">{CALCULATOR_NOTE}</p>
+      <PagePhoto photo={pagePhoto("/tools")} />
       <ul className="tool-grid">
         {TOOL_LINKS.map((tool) => (
           <li key={tool.href}>

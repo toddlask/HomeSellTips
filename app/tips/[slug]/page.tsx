@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { InContentAd } from "@/components/ad-regions";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { GlossText } from "@/components/gloss-text";
-import { StagePhoto } from "@/components/home-photo";
+import { PagePhoto } from "@/components/home-photo";
 import { JsonLd } from "@/components/json-ld";
 import { SaleWords } from "@/components/sale-words";
 import { BackToTop, TipJump } from "@/components/tip-jump";
@@ -13,6 +13,7 @@ import { tipCrumbs } from "@/lib/crumbs";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 import { tipMetaDescription } from "@/lib/tip-meta";
 import { pageMetadata, tipPageTitle } from "@/lib/page-meta";
+import { tipPhoto } from "@/lib/photos";
 import { stageTitle } from "@/lib/stages";
 import { tipShareImage } from "@/lib/tip-card";
 import { getSiteUrl, relatedTips, SITE_NAME, tipPublishedOn, tipStatusLabel } from "@/lib/site";
@@ -77,10 +78,10 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <TipJump />
       <Breadcrumbs crumbs={crumbs} />
       {tip.status === "archived" ? <p className="archive-flag">{tipStatusLabel(tip.status)}</p> : null}
-      <StagePhoto stage={tip.stage} />
       <h1>{tip.title}</h1>
       <UpdatedOn iso={tip.updatedOn} />
       <p className="lede">{tip.summary}</p>
+      <PagePhoto photo={tipPhoto(tip.slug)} />
       {tip.body.map((paragraph) => (
         <p key={paragraph}>
           <GlossText text={paragraph} />

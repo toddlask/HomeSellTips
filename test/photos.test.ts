@@ -7,7 +7,7 @@ import { STAGE_IDS } from "@/lib/types";
 describe("home photos", () => {
   it("credits every photo with a Pexels source, photographer, license, and alt text", () => {
     const photos = allPhotos();
-    expect(photos.length).toBe(STAGE_IDS.length + 1);
+    expect(photos.length).toBeGreaterThan(STAGE_IDS.length + 1);
     const ids = new Set(photos.map((photo) => photo.id));
     expect(ids.size).toBe(photos.length);
     for (const photo of photos) {

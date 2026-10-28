@@ -1,4 +1,4 @@
-import { heroPhoto, stagePhoto, type HomePhoto } from "@/lib/photos";
+import { curbExtra, pagePhoto, type HomePhoto } from "@/lib/photos";
 
 export type CurbCost = "$" | "$$" | "$$$";
 
@@ -13,20 +13,20 @@ export type CurbWin = {
 
 export const CURB_WINS: readonly CurbWin[] = [
   {
-    id: "lights",
-    title: "Replace bulbs that are out",
-    detail: "Check the entry, the porch, and the garage lights before a showing.",
-    cost: "$",
-    time: "Under an hour",
-    photo: heroPhoto,
-  },
-  {
     id: "walk",
     title: "Edge the front walk",
     detail: "Sweep the walk and pull weeds that cross it. Coil the hose out of the way.",
     cost: "$",
     time: "One afternoon",
-    photo: stagePhoto("pricing"),
+    photo: pagePhoto("/tools/curb-appeal"),
+  },
+  {
+    id: "lights",
+    title: "Replace bulbs that are out",
+    detail: "Check the entry, the porch, and the garage lights before a showing.",
+    cost: "$",
+    time: "Under an hour",
+    photo: curbExtra("lights"),
   },
   {
     id: "glass",
@@ -34,7 +34,7 @@ export const CURB_WINS: readonly CurbWin[] = [
     detail: "Clean the glass a buyer sees from the street, then wipe the door and the hardware.",
     cost: "$",
     time: "A few hours",
-    photo: stagePhoto("agent-vs-fsbo"),
+    photo: curbExtra("glass"),
   },
   {
     id: "paint-door",
@@ -42,7 +42,7 @@ export const CURB_WINS: readonly CurbWin[] = [
     detail: "If the door finish is peeling, paint that door. Leave the rest of the house alone.",
     cost: "$$",
     time: "A weekend",
-    photo: stagePhoto("agent-vs-fsbo"),
+    photo: curbExtra("paint-door"),
   },
   {
     id: "step",
@@ -50,6 +50,6 @@ export const CURB_WINS: readonly CurbWin[] = [
     detail: "A loose step is a function repair. Hire it out if you will not do the work, and keep the bid.",
     cost: "$$$",
     time: "Ask for the time in the bid",
-    photo: heroPhoto,
+    photo: curbExtra("step"),
   },
 ];

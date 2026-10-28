@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
+import { archiveCrumbs } from "@/lib/crumbs";
 import { INFO_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { parseStageId } from "@/lib/parse";
@@ -28,6 +30,7 @@ export default async function ArchivePage({ searchParams }: { searchParams: Prom
   const archived = archivedTips(tips).filter((tip) => (stage ? tip.stage === stage : true));
   return (
     <>
+      <Breadcrumbs crumbs={archiveCrumbs()} linkLast />
       <h1>Archived tips</h1>
       <p className="lede">These notes stayed useful, but the active library now covers the same job.</p>
       <form className="panel no-print" method="get" action="/archive">

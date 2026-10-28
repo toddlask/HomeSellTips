@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { PagePhoto } from "@/components/home-photo";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
+import { pagePhoto } from "@/lib/photos";
 import { SEASON_MONTHS, SEASON_SOURCE, seasonMax } from "@/lib/season";
 
 export const metadata: Metadata = pageMetadata({
@@ -24,6 +26,7 @@ export default function WhenToSellPage() {
         2026. FRED publishes that span for this series. It is one year of closed sales, not a long-run seasonal index,
         and it does not say what your home will sell for.
       </p>
+      <PagePhoto photo={pagePhoto("/tools/when-to-sell")} />
       <figure className="season-chart">
         <figcaption>
           Existing-home sales, number of units. Source: National Association of Realtors, via{" "}

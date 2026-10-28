@@ -30,13 +30,16 @@ export function HomePhotoView({
   );
 }
 
-export function StagePhoto({ stage }: { stage: StageId }) {
-  const photo = stagePhoto(stage);
+export function PagePhoto({ photo }: { photo: HomePhoto }) {
   return (
     <figure className="stage-photo">
-      <HomePhotoView photo={photo} priority sizes={STAGE_SIZES} />
+      <HomePhotoView photo={photo} sizes={STAGE_SIZES} />
     </figure>
   );
+}
+
+export function StagePhoto({ stage }: { stage: StageId }) {
+  return <PagePhoto photo={stagePhoto(stage)} />;
 }
 
 export function CurbPhoto({ photo, priority = false }: { photo: HomePhoto; priority?: boolean }) {

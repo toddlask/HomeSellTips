@@ -37,3 +37,24 @@ export function toolCrumbs(): Crumb[] {
     { name: "Tools", path: "/tools" },
   ];
 }
+
+export function tipsHubCrumbs(): Crumb[] {
+  return [
+    { name: "Home", path: "/" },
+    { name: "Tips", path: "/tips" },
+  ];
+}
+
+export function stagesHubCrumbs(): Crumb[] {
+  return [
+    { name: "Home", path: "/" },
+    { name: "Stages", path: "/stages" },
+  ];
+}
+
+export function archiveCrumbs(): Crumb[] {
+  return [
+    { name: "Home", path: "/" },
+    { name: "Archive", path: "/archive" },
+  ];
+}

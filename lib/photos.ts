@@ -1,3 +1,4 @@
+import catalogJson from "@/content/page-photos.json";
 import type { StageId } from "@/lib/types";
 
 export const PEXELS_LICENSE = "Pexels License";
@@ -15,6 +16,21 @@ export type HomePhoto = {
   licenseUrl: typeof PEXELS_LICENSE_URL;
 };
 
+const CURB_PHOTO_IDS = ["lights", "glass", "paint-door", "step"] as const;
+export type CurbPhotoId = (typeof CURB_PHOTO_IDS)[number];
+
+type CatalogEntry = {
+  id: string;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  photographer: string;
+  sourcePage: string;
+  page?: string;
+  curb?: string;
+};
+
 function photo(entry: Omit<HomePhoto, "license" | "licenseUrl">): HomePhoto {
   return { ...entry, license: PEXELS_LICENSE, licenseUrl: PEXELS_LICENSE_URL };
 }
@@ -29,96 +45,55 @@ export const heroPhoto = photo({
   sourcePage: "https://www.pexels.com/photo/brown-and-gray-painted-house-in-front-of-road-106399/",
 });
 
-const kitchen = photo({
-  id: "kitchen",
-  src: "/photos/kitchen.webp",
-  width: 1200,
-  height: 800,
-  alt: "White kitchen with black handles, a black tile backsplash, a stainless range hood, and a double sink by a window.",
-  photographer: "Curtis Adams",
-  sourcePage: "https://www.pexels.com/photo/modern-kitchen-interior-19227245/",
-});
+function isCurbPhotoId(value: string): value is CurbPhotoId {
+  return (CURB_PHOTO_IDS as readonly string[]).includes(value);
+}
 
-const livingRoom = photo({
-  id: "living-room",
-  src: "/photos/living-room.webp",
-  width: 1200,
-  height: 800,
-  alt: "Living room with a white sofa, a fireplace, tall windows, and dark wood floors.",
-  photographer: "Curtis Adams",
-  sourcePage: "https://www.pexels.com/photo/bright-living-room-interior-design-5008385/",
-});
+const pagePhotos = new Map<string, HomePhoto>();
+const curbPhotos = new Map<CurbPhotoId, HomePhoto>();
+const catalogPhotos: HomePhoto[] = [];
+const seen = new Set<string>([heroPhoto.src]);
 
-const exteriorWhite = photo({
-  id: "exterior-white",
-  src: "/photos/exterior-white.webp",
-  width: 1400,
-  height: 900,
-  alt: "White geometric house with a recessed front door, a small tree, and a lawn under a clear sky.",
-  photographer: "Pixasquare Studio",
-  sourcePage: "https://www.pexels.com/photo/white-2-storey-house-near-trees-1115804/",
-});
+for (const entry of catalogJson as CatalogEntry[]) {
+  if (seen.has(entry.src) || catalogPhotos.some((item) => item.id === entry.id)) {
+    throw new Error(`Duplicate photo ${entry.id}`);
+  }
+  seen.add(entry.src);
+  const shot = photo({
+    id: entry.id,
+    src: entry.src,
+    width: entry.width,
+    height: entry.height,
+    alt: entry.alt,
+    photographer: entry.photographer,
+    sourcePage: entry.sourcePage,
+  });
+  catalogPhotos.push(shot);
+  if (entry.page) {
+    if (pagePhotos.has(entry.page)) {
+      throw new Error(`Duplicate page photo ${entry.page}`);
+    }
+    pagePhotos.set(entry.page, shot);
+  }
+  if (entry.curb) {
+    if (!isCurbPhotoId(entry.curb) || curbPhotos.has(entry.curb)) {
+      throw new Error(`Bad curb photo ${entry.id}`);
+    }
+    curbPhotos.set(entry.curb, shot);
+  }
+}
 
-const bedroom = photo({
-  id: "bedroom",
-  src: "/photos/bedroom.webp",
-  width: 1200,
-  height: 800,
-  alt: "White bed with an iron headboard, two pillows, and matching lamps on a paneled wall.",
-  photographer: "Erik Mclean",
-  sourcePage: "https://www.pexels.com/photo/contemporary-white-bedroom-interior-in-a-cabin-8266829/",
-});
+export function pagePhoto(path: string): HomePhoto {
+  const found = pagePhotos.get(path);
+  if (!found) {
+    throw new Error(`No photo for ${path}`);
+  }
+  return found;
+}
 
-const facade = photo({
-  id: "facade-glass",
-  src: "/photos/facade-glass.webp",
-  width: 1200,
-  height: 800,
-  alt: "Cream gable wall with a tall wood-framed window, wood French doors, and a green side door.",
-  photographer: "Mike Bird",
-  sourcePage: "https://www.pexels.com/photo/white-2-storey-house-145661/",
-});
-
-const diningRoom = photo({
-  id: "dining-room",
-  src: "/photos/dining-room.webp",
-  width: 1200,
-  height: 800,
-  alt: "White dining table and chairs in front of tall windows, with a brick wall to the left.",
-  photographer: "Max Vakhtbovych",
-  sourcePage: "https://www.pexels.com/photo/interior-of-light-dining-room-with-panoramic-balcony-doors-7061333/",
-});
-
-const bathroom = photo({
-  id: "bathroom",
-  src: "/photos/bathroom.webp",
-  width: 1200,
-  height: 800,
-  alt: "Double vanity with a gray counter, white cabinets, and a view into a bedroom.",
-  photographer: "Get Lost Mike",
-  sourcePage: "https://www.pexels.com/photo/the-interior-of-a-bathroom-7710006/",
-});
-
-const movingBoxes = photo({
-  id: "moving-boxes",
-  src: "/photos/moving-boxes.webp",
-  width: 1200,
-  height: 800,
-  alt: "Cardboard boxes stacked beside a window, with a plant on the sill and two pillows on a box.",
-  photographer: "cottonbro studio",
-  sourcePage: "https://www.pexels.com/photo/4569338/",
-});
-
-const stagePhotos: Record<StageId, HomePhoto> = {
-  "prep-and-repairs": kitchen,
-  staging: livingRoom,
-  pricing: exteriorWhite,
-  "listing-photos": bedroom,
-  "agent-vs-fsbo": facade,
-  "offers-and-negotiation": diningRoom,
-  closing: bathroom,
-  moving: movingBoxes,
-};
+export function tipPhoto(slug: string): HomePhoto {
+  return pagePhoto(`/tips/${slug}`);
+}
 
 export function stagePhoto(stage: StageId): HomePhoto {
   switch (stage) {
@@ -130,7 +105,7 @@ export function stagePhoto(stage: StageId): HomePhoto {
     case "offers-and-negotiation":
     case "closing":
     case "moving":
-      return stagePhotos[stage];
+      return pagePhoto(`/stages/${stage}`);
     default: {
       const exhaustive: never = stage;
       return exhaustive;
@@ -138,6 +113,25 @@ export function stagePhoto(stage: StageId): HomePhoto {
   }
 }
 
+export function curbExtra(id: CurbPhotoId): HomePhoto {
+  switch (id) {
+    case "lights":
+    case "glass":
+    case "paint-door":
+    case "step": {
+      const found = curbPhotos.get(id);
+      if (!found) {
+        throw new Error(`No curb photo ${id}`);
+      }
+      return found;
+    }
+    default: {
+      const exhaustive: never = id;
+      return exhaustive;
+    }
+  }
+}
+
 export function allPhotos(): HomePhoto[] {
-  return [heroPhoto, ...Object.values(stagePhotos)];
+  return [heroPhoto, ...catalogPhotos];
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { stagesHubCrumbs } from "@/lib/crumbs";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
@@ -13,6 +15,7 @@ export const metadata: Metadata = pageMetadata({
 export default function StagesIndexPage() {
   return (
     <>
+      <Breadcrumbs crumbs={stagesHubCrumbs()} linkLast />
       <h1>Stages</h1>
       <p className="lede">The sale, split into the jobs that come before the moving truck.</p>
       <ul className="card-grid">

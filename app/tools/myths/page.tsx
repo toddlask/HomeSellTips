@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { PagePhoto } from "@/components/home-photo";
 import { MythDeck } from "@/components/myth-deck";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
+import { pagePhoto } from "@/lib/photos";
 
 export const metadata: Metadata = pageMetadata({
   title: "Selling claims and the plain version",
@@ -14,6 +16,7 @@ export default function MythsPage() {
     <>
       <h1>Myth or fact</h1>
       <p className="lede">Flip a card. These are practical corrections, not a promise about your sale.</p>
+      <PagePhoto photo={pagePhoto("/tools/myths")} />
       <MythDeck />
     </>
   );
