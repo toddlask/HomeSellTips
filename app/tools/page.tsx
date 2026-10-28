@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE, TOOL_LINKS } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Tools",
+  title: "Seller calculators and checklists",
   description: HUB_DESCRIPTIONS.tools,
   path: "/tools",
 });

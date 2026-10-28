@@ -79,6 +79,19 @@ describe("search metadata", () => {
     expect(homeTitle.length).toBeLessThanOrEqual(60);
     expect(resolvedDocumentTitle({ title: "Ad and affiliate disclosure", path: "/disclosure" }).length).toBeLessThanOrEqual(60);
     expect(resolvedDocumentTitle({ title: "Net proceeds calculator", path: "/tools/net-proceeds" }).length).toBeLessThanOrEqual(60);
+    const toolsTitle = resolvedDocumentTitle({ title: "Seller calculators and checklists", path: "/tools" });
+    const mythsTitle = resolvedDocumentTitle({ title: "Selling claims and the plain version", path: "/tools/myths" });
+    expect(toolsTitle.length).toBeGreaterThanOrEqual(40);
+    expect(toolsTitle.length).toBeLessThanOrEqual(60);
+    expect(mythsTitle.length).toBeGreaterThanOrEqual(40);
+    expect(mythsTitle.length).toBeLessThanOrEqual(60);
+    expect(toolsTitle).not.toBe(mythsTitle);
+    expect(readFileSync(resolve(process.cwd(), "app/tools/page.tsx"), "utf8")).toContain(
+      'title: "Seller calculators and checklists"',
+    );
+    expect(readFileSync(resolve(process.cwd(), "app/tools/myths/page.tsx"), "utf8")).toContain(
+      'title: "Selling claims and the plain version"',
+    );
     for (const stage of STAGE_IDS) {
       const checklistTitle = resolvedDocumentTitle({
         title: `${stageTitle(stage)} checklist`,
@@ -208,30 +221,16 @@ describe("search metadata", () => {
     expect(readFileSync(resolve(process.cwd(), ".github/workflows/ci.yml"), "utf8")).toContain('node-version-file: ".nvmrc"');
   });
 
-  it("keeps the expanded tips in the word range and marks them revised", () => {
-    const expanded = [
-      "tighten-loose-hardware",
-      "photograph-empty-rooms-on-the-last-day",
-      "close-lids-and-hide-trash-cans",
-      "decide-who-answers-buyer-questions",
-      "gather-keys-and-openers-in-one-envelope",
-      "forward-the-mail-before-you-leave",
-      "put-pet-gear-away-before-showings",
-      "stop-after-one-simple-table-setting",
-      "save-every-counter-you-send",
-      "match-the-move-out-date-to-the-contract",
-      "test-alarms-before-you-list",
-      "leave-a-clear-path-through-each-room",
-    ];
-    for (const slug of expanded) {
-      const tip = tips.find((entry) => entry.slug === slug);
-      expect(tip?.status).toBe("published");
-      if (!tip?.publishedOn) {
-        throw new Error(slug);
+  it("keeps every published tip in range and marks it revised", () => {
+    const published = tips.filter((tip) => tip.status === "published");
+    expect(published).toHaveLength(58);
+    for (const tip of published) {
+      if (!tip.publishedOn) {
+        throw new Error(tip.slug);
       }
       const words = `${tip.summary} ${tip.body.join(" ")} ${tip.steps.join(" ")}`.trim().split(/\s+/).filter(Boolean).length;
       expect(words).toBeGreaterThanOrEqual(300);
-      expect(words).toBeLessThanOrEqual(600);
+      expect(words).toBeLessThanOrEqual(450);
       expect(tip.publishedOn < tip.updatedOn).toBe(true);
     }
   });

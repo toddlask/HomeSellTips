@@ -4,7 +4,7 @@ import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Myth or fact",
+  title: "Selling claims and the plain version",
   description: TOOL_DESCRIPTIONS.myths,
   path: "/tools/myths",
 });

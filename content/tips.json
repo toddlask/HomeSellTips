@@ -4,342 +4,396 @@
     "title": "Walk the house before you hire anyone",
     "stage": "prep-and-repairs",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "A slow walk with a notepad shows what to fix, what to tell buyers, and what to leave alone.",
     "body": [
-      "Start at the street. Look at the roof edge, the walkway, and the front door. Write down what you see before you explain it away.",
-      "Inside, run every faucet, flip every light, and open every window that should open. Note stains, soft floors, and doors that stick. One line per issue.",
-      "Sort the list into three piles: safety and function, things that will show up in photos, and projects you will not do. Ask for written bids on the jobs you cannot price yourself. A bid is a number you can type into the proceeds calculator. A hunch is not."
+      "Start at the curb and write what you can point at before you explain it away. Look at the roof edge, the walkway, and the front door as three separate lines. A cracked step, a gutter that spills onto the siding, and a door that scrapes are not one job called the front. Note the side of the house and what you can see from the ground. You are not calling anyone yet. You are making a list a later bid can answer without a second visit to guess what you meant.",
+      "Inside, work one room at a time with the lights on. Run each faucet, flip each switch, and open each window that should open. Write hall bath, tub faucet drips instead of bathroom needs work. Soft floors, stains, and doors that stick get their own lines. If a closet smells damp, write the closet and the smell. Then walk again in daylight. Bulbs hide scuffed sills, screens that sit crooked, and a latch you only notice when the sun hits it.",
+      "Sort every line into fix, disclose, or leave. Fix means the house needs it to work, or the problem will show in a photo. Disclose means you will say it in writing even if you do not repair it. Leave means you have decided not to spend, and you will not pretend the work was done. For a fix you cannot price, ask for a written bid in dollars that says what is included. Type that number into the proceeds calculator. A hunch you say out loud is not a number.",
+      "Keep the porch as a small example. A dead bulb is often a few dollars. A loose step may only need screws you already own, unless the wood is soft and the board has to be replaced. A scraping door may need a hinge adjustment rather than a new door. Those are three costs and maybe three people. Write them apart so you do not hire one crew for the whole entry when two lines are an afternoon. When the page is sorted, you know who to call and what you will not pay for."
     ],
     "steps": [
-      "Walk once with the lights on and once in daylight.",
-      "Write one line per issue.",
-      "Mark each line: fix, disclose, or leave."
-    ]
+      "Walk once in daylight and once with the lights on.",
+      "Write one line per issue, with the room or the side of the house.",
+      "Mark each line fix, disclose, or leave.",
+      "Get a written bid for any fix you cannot price, and type it into the proceeds calculator."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "fix-function-before-finish",
     "title": "Fix function before you spend on finish",
     "stage": "prep-and-repairs",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Repair leaks, heat, and latches before you buy paint.",
     "body": [
-      "Leaks, heat, cooling, loose steps, and dead outlets come before paint. A fresh coat on a damp wall does not hold, and buyers notice a door that will not latch.",
-      "If a system is near the end of its life, get it in writing and decide whether you will repair it or describe it in your disclosure. Do not hide it behind a rug.",
-      "Small function fixes are the ones people test on a first visit: a drain that clears, a garage door that reverses, a handrail that does not wobble."
+      "Stop the things that fail before you buy finish. A leak, a system that will not heat or cool, a loose step, and a dead outlet come before paint. A fresh coat on a damp wall does not hold, and a visitor will try the door that does not latch. Make the function list on paper and do not shop for paint until that list is done or you have a written plan for each line.",
+      "Work from water outward. If a faucet drips or a supply line weeps, shut it down and fix that joint before you touch the wall around it. A small plumbing repair can be a washer or a supply line, often a few dollars to about $20 at a hardware store if you are comfortable doing it. If the leak is inside a wall, stop and get a written cause before you close it up. Painting over a wet spot hides the stain for a short time and leaves the repair for the next person to find.",
+      "Then test what people touch on a first visit. Run the disposal or the drain and see if it clears. Run the garage door and confirm it reverses when it meets an object. Shake the handrail. Flip the outlet where a lamp would sit. These are small, and they are the tests a visitor actually does. A sticking latch is often a strike plate and two screws. A wobbling rail may be a bracket. Write the ones that fail and fix those before you talk about floors.",
+      "If a heater, a cooler, or a water heater is near the end of its life, get that in writing from the person who looked at it. Then decide whether you will repair it or describe it in your disclosure. Do not hide a tired system behind a rug or a fresh wall. The invoice, or the note that you will disclose it, goes in the same folder as the function list. Paint and floors are the last lines, and only after the function list is checked off."
     ],
     "steps": [
-      "Stop active leaks first.",
-      "Test smoke and carbon-monoxide alarms.",
+      "Stop active leaks before you buy paint.",
+      "Test drains, the garage door, handrails, and the outlets a lamp would use.",
+      "Get a failing system in writing, then repair it or plan to disclose it.",
       "Plan paint and floors only after the function list is done."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "clear-surfaces-before-you-decorate",
     "title": "Clear surfaces before you add anything",
     "stage": "staging",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Empty counters and floors do more for a showing than extra decor.",
     "body": [
-      "Buyers are trying to see the room. Pack until each room has one job: sleeping, cooking, eating, or sitting.",
-      "Leave a few useful pieces. A made bed, a table that fits, and a lamp that works are enough. Take extra chairs out if the path is tight.",
-      "Store packed boxes outside the photo frame. A dining room full of bins reads as a storage room."
+      "Pack until each room has one job: sleeping, cooking, eating, or sitting. Buyers are trying to see the floor, the counters, and the walls. Extra decor on top of a full counter makes that harder, not easier. Clear first. Add nothing until the room already reads as that one job.",
+      "On a kitchen counter, leave one or two useful things: a kettle you use, or a board, not a crowd of jars. A clear stretch of counter photographs as work space. Do the same on a dresser and a desk. In the bath, leave the soap you are using and put the rest in a bin under the sink. Floors get the same rule. Pull chairs, baskets, and small tables off the walking path. If two people cannot pass without turning sideways, one piece leaves the room.",
+      "Store packed boxes outside the photo frame. A dining room full of bins reads as storage, even if the table is pretty. The garage, a closet you will not open, or a room you will not photograph can hold the boxes for now. Label them by the room they came from so you are not opening every box on a showing morning. A roll of tape and a marker are the whole kit.",
+      "If you still want one added piece, make it useful and singular. A lamp that works on a side table is enough. A made bed is enough. Do not buy a tray, a new vase, and a set of pillows to solve a room you have not cleared. Those extras are often $20 to $60 you do not need, and they land on the surfaces you just emptied. Walk the path you want photographed and take one more thing off each surface before you call it done."
     ],
     "steps": [
-      "Clear counters down to one or two useful items.",
-      "Pull furniture off the main walking path.",
-      "Keep packed boxes out of the rooms you will photograph."
-    ]
+      "Give each room one job and clear it to that job.",
+      "Leave one or two useful items on a counter, and pull furniture off the walking path.",
+      "Keep packed boxes out of the rooms you will photograph.",
+      "Add nothing new until the cleared room already works."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "pack-personal-items-early",
     "title": "Pack personal items before the first showing",
     "stage": "staging",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Box photos, mail, and papers so the rooms show the house.",
     "body": [
-      "Personal photos, mail, and collections pull attention away from the property. Box them before the first photographer or visitor arrives.",
-      "Take names, notes, and calendars off the refrigerator. Close closets you do not want opened, and do not overstuff the ones you leave.",
-      "Leave a simple path from the front door through the main rooms. If you still live there, pick one cupboard for daily items and keep the rest clear on showing days."
+      "Box personal photos, mail, and papers before the first photographer or visitor. Those objects pull the eye off the room and onto your life. A frame on a mantle, a stack of mail by the door, and a calendar full of names are three boxes, not one vague tidy-up. Do this while you still have a week, not the hour before the appointment.",
+      "Start with paper. Tax folders, medical notes, and anything with an account number go in a box that rides with you later, not on the truck in a random stack. Mail comes off the counter and out of the basket by the door. Take names, notes, and calendars off the refrigerator. Wipe the door so the outline of a magnet is not the new focal point. A single clear fridge door does more than a new bowl of fruit.",
+      "Collections are the same job. If a shelf of figures or a wall of plates is the first thing someone sees, box enough that the shelf and the wall show. You do not have to empty the house of everything you love. You do have to keep the camera from stopping on it. Close closets you do not want opened, and do not overstuff the ones you leave. A closet that will not shut is an invitation.",
+      "If you still live there, pick one cupboard for daily items and keep the rest clear on showing days. The path from the front door through the main rooms should not dodge a backpack, a pair of shoes, or a project on the floor. Walk that path the night before and again in the morning. Anything that blocks it moves, even if you use it every day. Put it in the one cupboard or in the car."
     ],
     "steps": [
-      "Box personal papers and photos.",
-      "Clear the refrigerator door.",
-      "Walk from the front door to the back of the house and move anything that blocks the path."
-    ]
+      "Box photos, mail, and papers before the first visit.",
+      "Clear the refrigerator door and wipe it.",
+      "Leave closets you will not show shut, without overstuffing the ones that stay open.",
+      "Walk from the front door to the back and move anything in the path."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "price-the-property-you-have",
     "title": "Price the property you have",
     "stage": "pricing",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Compare sold homes that match this property, then write the net you will accept.",
     "body": [
-      "Pull recent sold listings that match this house on facts you can check: bedroom count, bathrooms, size, lot, garage, age, and the updates the listing described.",
-      "Active listings are asking prices. Sold listings are closed prices. Use the closed ones as your comparison set, then adjust for condition you can see in the photos and at the property.",
-      "Write three numbers before you pick a list price: the price you will advertise, the net you hope to clear, and the lowest net you will accept. The lowest net belongs in the proceeds calculator, using your payoff and your costs."
+      "Pull recent sold listings, not the ones still asking. A sold price is a closed number. An active price is a wish. Match this house on facts you can check: bedroom count, bathrooms, size, lot, garage, age, and the updates the listing actually described. Three sold homes you can describe beat ten you only glanced at. Write the address or the listing id, the sold date, and the sold price on one row each.",
+      "Then adjust for condition you can point at. If a sold house had a new roof and yours does not, say so in a line under that row. If yours has a garage and that one did not, say that too. Do not add a story about what a buyer might feel. If you cannot see the difference in the photos or at the property, do not invent a dollar gap. Drop a sale you cannot describe. It is not a match.",
+      "Write three numbers before you pick a list price: the price you will advertise, the net you hope to clear, and the lowest net you will accept. The lowest net goes into the proceeds calculator with your payoff and your costs, not with a round number you hope is close. Run the calculator once at the advertised price and once at a lower price so you can see the net move. The gap between those nets is the room you have for a later credit.",
+      "Keep this page with the offer notes. When someone suggests a list price, you can set it next to the three sold rows and the bottom net. If the suggestion ignores a difference you wrote down, ask about that difference before you agree. You can change the price later. You should not pick the first number without the sold rows and the net you already said you would accept."
     ],
     "steps": [
-      "Compare at least three sold properties with similar facts.",
-      "Adjust for condition you can point to, not for a story.",
-      "Write the bottom net before the first offer."
-    ]
+      "Compare at least three sold properties and write the date and price for each.",
+      "Adjust only for condition you can point to, and drop a sale you cannot describe.",
+      "Write the advertised price, the net you hope for, and the lowest net you will accept.",
+      "Run the proceeds calculator at the list price and at a lower price before the first offer."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "leave-room-to-negotiate",
     "title": "Leave room to answer a real offer",
     "stage": "pricing",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Set the list price with room for a credit and still hit your net.",
     "body": [
-      "A list price is the number on the ad. Your net is the decision. Price, credits, and timing move together.",
-      "If you set the list price at the exact dollar you need to walk away with, the first repair credit puts you under your line.",
-      "Decide in advance which givebacks you can live with: a repair credit, a closing-cost credit, or a later closing date. Write them down while you are calm."
+      "The list price is the number on the ad. The net is the decision. If you set the list price at the exact dollar you need to walk away with, the first repair credit puts you under your line. Price, credits, and timing move together. Write the list price on one line and the net you need on the next, and do not let those two numbers become the same sentence.",
+      "Decide in advance which givebacks you can live with. A repair credit, a closing-cost credit, and a later closing date are three different flexes. Pick two you will talk about and one you will not. A move-out date you have already booked may be the one you will not trade. Write that down while you are calm, before a caller is waiting. You can change the page later. You should not invent it on the phone.",
+      "Run a plain example on the calculator. Take the list price, subtract a credit of a few thousand dollars you might actually offer, and read the net. Then try a smaller credit. The point is not a magic figure. The point is that you have seen the net move before anyone asks. If the larger credit drops you under the walk-away net, that credit is not one of the two you can flex. Say so on the page.",
+      "Recalculate every time a real credit changes. A counter that feels close is not close until the proceeds line matches the net you wrote. Keep the flex list with the calculator printout. When you answer, you are choosing among terms you already priced, not discovering your limit out loud. If none of the flexes save the net, the answer is a different price or a no, and both of those can be written in one sentence."
     ],
     "steps": [
       "Keep the list price and the net you need on two separate lines.",
       "Pick two terms you can flex on and one you will not.",
-      "Recalculate proceeds every time a credit changes."
-    ]
+      "Run a sample credit through the calculator before anyone asks.",
+      "Recalculate proceeds every time a real credit changes."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "daylight-and-lights",
     "title": "Take listing photos in daylight with the lights on",
     "stage": "listing-photos",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Open the shades, turn on the lamps, and keep the camera level.",
     "body": [
-      "The camera needs light. Open the window coverings and turn on the overhead lights and the lamps you are leaving.",
-      "Shoot when you can see the corners of the room. Glare on bare glass can wash a wall out. Wait for the sun to move off that window, or shoot that room from a different corner.",
-      "Stand in a corner and keep the camera level. If the walls lean in the frame, the room looks smaller than it is. Close toilet lids, move trash cans, and coil the hose if it sits in the front photo."
+      "The camera needs more light than your eyes do. Open the window coverings and turn on the overhead lights and the lamps you are leaving before you frame a shot. Shoot when you can see the corners of the room. If a corner falls black, add the lamp or wait. Do not hope the listing page will brighten it. A dark corner is where people assume the room stops.",
+      "Glare on bare glass can wash a wall out. If the sun is hitting that window, wait for it to move or shoot the room from a different corner. Do not close only one shade to fight the glare if the rest of the house is open. Clean the glass you will shoot through first. Streaks show up once the light is even. A bottle of glass cleaner is a few dollars, and it belongs in the photo kit with the cloth.",
+      "Stand in a corner and keep the camera level. If the walls lean in the frame, the room looks smaller than it is. Use a doorway as the level check: the trim should run straight up the side of the photo. Take one wide photo and one detail photo in each main room, then stop. Extra tilted frames do not give you a better wide shot. They give you a pile to delete.",
+      "Before you leave a room, close toilet lids, move the trash can out of the frame, and coil a hose if it sits in the front photo. Turn the lights on even in the daytime. A lamp that is off reads as a dead lamp. If a bulb is out, replace it before the appointment. A bulb is a few dollars, and a dark fixture in an otherwise bright room is the thing people notice. Check the front of the house from the sidewalk with the entry light on if you are shooting late in the day."
     ],
     "steps": [
-      "Clean the windows you will shoot through.",
+      "Clean the windows you will shoot through and open the coverings.",
       "Turn on the lights before you frame the shot.",
-      "Take one wide photo and one detail photo in each main room."
-    ]
+      "Keep the camera level and take one wide photo and one detail in each main room.",
+      "Move trash, close lids, and replace a dead bulb before you call the set done."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "show-the-repairs-you-finished",
     "title": "Photograph the work you finished",
     "stage": "listing-photos",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Give finished repairs their own clear photo, and lead with the front of the house.",
     "body": [
-      "People scroll quickly. A clear photo of a repaired step, a new faucet, or the label on a replaced water heater answers a question before the showing.",
-      "Do not feature a project you have not finished. An open wall belongs in the disclosure conversation, not as the first image.",
-      "Lead the set with the best daylight photo of the front. Then show the kitchen, each bathroom, and the main living space before the extra rooms."
+      "People scroll quickly. A clear photo of a repaired step, a new faucet, or the label on a replaced water heater answers a question before the showing. Give each finished repair its own frame, with enough light to read the work. Do not bury it in a wide shot where the repair is a speck. If you cannot tell what was fixed, the photo is not done.",
+      "Do not feature a project you have not finished. An open wall, a missing fixture, or a taped joint belongs in the disclosure conversation, not as the first image. If the work is half done, finish it or leave it out of the set and say so in writing. A photo of an unfinished repair invites a credit request you have not priced. The repair folder should hold the invoice next to the photo so you can show what was done and when.",
+      "Lead the set with the best daylight photo of the front. Then the kitchen, each bathroom, and the main living space, before the extra rooms. A buyer who never gets past the first five images should still have seen the front and the rooms they will use every day. Retake any shot where the repair is blurry or dark. A soft photo of a new faucet is worse than no photo, because it looks like you are hiding the finish.",
+      "Keep the repair set short. One photo per finished item is enough. Name the file by the room and the item so you can find it when someone asks. If a repair is behind a panel, photograph the label or the access panel with the door open and the light on. You are not decorating the set. You are answering the question a careful visitor will ask with a picture you already took."
     ],
     "steps": [
-      "Put the front of the house first.",
-      "Include one clear photo of each bathroom and the kitchen.",
-      "Retake any shot where the repair is blurry or dark."
-    ]
+      "Put the best daylight photo of the front first.",
+      "Include one clear photo of the kitchen, each bathroom, and the main living space.",
+      "Give each finished repair its own lit frame, and leave unfinished work out.",
+      "Retake any repair shot that is blurry or dark, and keep the invoice with the photo."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "list-the-jobs-before-you-choose",
     "title": "List the jobs before you pick who does them",
     "stage": "agent-vs-fsbo",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Write every job in a sale, then decide who will do it and what it costs you.",
     "body": [
-      "Hiring an agent and selling it yourself are two ways to cover the same work: pricing, photos, showings, disclosure forms, offer review, negotiation, and closing coordination.",
-      "Next to each job, write the name of the person who will do it and what it will cost you in hours or dollars. Use your own rates in the commission comparison. This site does not fill in a rate for you.",
-      "If you sell it yourself, you can still offer to pay a buyer’s agent. That choice is a line you enter. It is not a requirement and it is not a default."
+      "Hiring an agent and selling it yourself are two ways to cover the same work. The jobs do not disappear because you picked a path. Write them down: pricing, photos, showings, disclosure forms, offer review, negotiation, and closing coordination. One line each. Next to each line, write the name of the person who will do it and what it will cost you in hours or dollars.",
+      "Use your own rates in the commission comparison. This site does not fill in a rate for you. If you do not know an agent's fee, leave the dollar cell blank and ask for it in writing before you compare. A blank is allowed. A made-up percent is not a plan. Hours count too. A showing you will host is an hour cell, not a free cell. Add those hours so the money column is not the only cost.",
+      "If you sell it yourself, you can still offer to pay a buyer's agent. That choice is a line you enter. It is not a requirement and it is not a default. Write yes or no, and if yes, write the amount you would offer so it can go in the calculator. Do not leave it as we will see. The same is true of photos. If you will hire a photographer, ask the fee and put it on the line. A photo fee of a few hundred dollars is a real cost next to a commission, and it belongs on the page before you order a sign.",
+      "Ask any agent you interview for a written list of what they will do, and set it beside your list. Gaps are the jobs you would still own. Decide who owns each job before you order a sign or book photos. If a line has no name, you are not ready to advertise. The sign can wait a day. A missing owner on offer review cannot."
     ],
     "steps": [
-      "Make two columns: the job, and who owns it.",
-      "Ask any agent you interview for a written list of what they will do.",
-      "Decide who owns each job before you order a sign."
-    ]
+      "Make two columns: the job, and who owns it, with hours or dollars.",
+      "Leave a fee blank until you have it in writing, and enter your own numbers in the calculator.",
+      "Decide whether you will offer to pay a buyer's agent, and write the amount or a no.",
+      "Ask any agent you interview for a written list before you order a sign."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "questions-if-you-sell-it-yourself",
     "title": "Questions to answer if you sell it yourself",
     "stage": "agent-vs-fsbo",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Forms, showings, and offer review are still yours if you sell without an agent.",
     "body": [
-      "Find out which disclosure forms your state expects. A local attorney or the closing company can tell you which forms apply. This site cannot.",
-      "Decide how a buyer books a showing, where you will be during the visit, and what you will put away first. Set hours you can actually keep.",
-      "Plan the offer path before the first one arrives: who receives the contract, who reads it with you, and how quickly you will answer."
+      "Selling without an agent does not remove the forms, the showings, or the offer review. It assigns them to you. Start with the forms. Ask a local real-estate attorney or the closing company which seller disclosures your state expects. This site cannot tell you. Write the form names and where to get them. Do that before you advertise, because a missing page is slower to fix after a buyer asks.",
+      "Then decide the showing path in sentences you can keep. How does a buyer book a time. Where will you be during the visit. What gets put away first. Set hours you can actually keep for the next few weeks, and write them down. If you cannot be there, write who locks up. A plan you cannot perform is not a plan. Share the hours before the first call so you are not inventing them while someone is in the driveway.",
+      "Plan the offer path before the first contract arrives. Who receives it. Who reads it with you. How quickly you will answer. Have an attorney or an agent review the first contract before you sign it, and ask what that review costs before you need it at night. The fee is whatever they quote you. Put the phone number on the same card as the showing hours. A contract you sign because you did not know who to call is an expensive way to save a call.",
+      "Read those three answers out loud: forms, showings, offer review. If one of them is still someone will handle it, stop and name the person. You can still hire help for a single job. You should not start showings with the offer path blank. The questions are the work. Answering them on paper is how you find out whether you are ready to sell it yourself."
     ],
     "steps": [
-      "Ask a closing company what they need from a seller who has no agent.",
-      "Write your showing hours down.",
-      "Have an attorney or agent review the first contract before you sign it."
-    ]
+      "Ask a closing company or attorney which seller forms apply, and write the list.",
+      "Write showing hours you can keep, and who locks up.",
+      "Name who receives the first contract and who reads it with you.",
+      "Have an attorney or agent review that contract before you sign it."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "read-the-whole-offer",
     "title": "Read the whole offer before you answer the price",
     "stage": "offers-and-negotiation",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Credits, dates, and contingencies change the money more than the headline price.",
     "body": [
-      "Find the purchase price, seller credits, earnest money, financing terms, and every date. Read those before you react to the price alone.",
-      "A higher price with a large credit can leave you with less than a lower price with no credit. Run both sets of numbers through the proceeds calculator before you reply.",
-      "A repair request is a request. It is not a promise you already made. List what you will do, what you will credit, and what you will decline."
+      "Find the purchase price, the seller credits, the earnest money, the financing terms, and every date before you react to the price. Credits, dates, and contingencies change the money more than the headline. Read with a pen. Highlight every dollar that leaves your side and every deadline. If a number is in an addendum and not on the first page, it still counts. The first page is not the offer.",
+      "A higher price with a large credit can leave you with less than a lower price with no credit. Type both sets into the proceeds calculator before you reply. Use your payoff and the costs you already listed. Write the two nets under the two headlines. The better-looking price may lose. Do this even when you like the buyer. Liking the buyer is not a line on the statement.",
+      "A repair request is a request. It is not a promise you already made. List what you will do, what you will credit, and what you will decline. If the request has no dollar amount, do not answer yes. Ask for the amount or get a bid, then rerun the net. Ask your agent or attorney what each contingency lets the buyer do, and write that answer in the margin. A word you do not understand is a reason to ask, not a reason to sign.",
+      "Check the expiration before you finish the reading. If the offer dies tonight, you still read the credits first. A fast yes to a number you did not run is more expensive than a written request for another day, if the form allows you to ask. Save a copy of what you received, with your highlights, in the offer file. The reply you send later should match the margins, not a version of the deal you remember."
     ],
     "steps": [
-      "Highlight every dollar that leaves your side.",
-      "Highlight every deadline.",
-      "Ask your agent or attorney what each contingency lets the buyer do."
-    ]
+      "Highlight every dollar that leaves your side and every deadline, including addenda.",
+      "Run the high price with its credit and the lower price without one through the calculator.",
+      "List what you will repair, credit, or decline, and ask what each contingency allows.",
+      "Save the marked copy in the offer file before you answer."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "compare-net-and-dates",
     "title": "Compare net and dates before you counter",
     "stage": "offers-and-negotiation",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Put each offer on one row and counter the gap in your net.",
     "body": [
-      "Make one row per offer: price, credits, closing date, and what has to happen first, such as an inspection, an appraisal, or a loan approval.",
-      "Choose the row that meets the net you wrote down and a timeline you can move on. If none do, counter the specific gap in plain numbers.",
-      "Answer before the offer expires. If you need more time, ask for it in writing. Do not let a deadline pass in silence if you still want that offer."
+      "Make one row per offer before you counter anything. The columns are the price, the credits, the closing date, and what has to happen first, such as an inspection, an appraisal, or a loan approval. A row that is missing a date is not ready to compare. Go back to the offer and fill it in. If two offers arrive the same day, they still get two rows. Do not merge them into a blend.",
+      "Run the proceeds calculator for each row and write the net in the last column. Use the same payoff and the same costs on every row so the difference is the offer, not a change in your assumptions. A date you cannot move on is a no even when the net is higher. Circle the row that meets the net you wrote down and a timeline you can actually meet. If none do, the counter is the specific gap: the credit, the date, or the net. Write that gap in plain numbers.",
+      "Answer before the offer expires. If you need more time, ask for it in writing. Do not let a deadline pass in silence if you still want that offer. Silence is an answer you may not mean. Put the expiration time at the top of the row so you see it before you refine the wording. A counter that arrives late is a new offer, and you should not assume the other terms survived.",
+      "Recalculate after every counter, including your own. A concession you add in the last sentence can drop the net under your line. Read the row out loud once before you send it: net, date, and what still has to happen. Send the answer in writing the way the form requires, and file the row with the copy. If a third offer shows up, it gets a row too. You do not throw out the page because the stack got thicker."
     ],
     "steps": [
-      "Build one comparison row per offer.",
-      "Recalculate proceeds after every counter.",
-      "Send your answer in writing."
-    ]
+      "Build one comparison row per offer, with price, credits, date, and what has to happen first.",
+      "Calculate the net on each row with the same payoff and costs.",
+      "Counter the specific gap, or ask for more time in writing before the deadline.",
+      "Recalculate after every counter and send the answer in writing."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "build-the-closing-folder-early",
     "title": "Build the closing folder before you have a buyer",
     "stage": "closing",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Collect payoff contacts, receipts, and a wire-check plan before you are under contract.",
     "body": [
-      "Start a folder, paper or digital, for the mortgage servicer’s payoff phone number, the association contact if you have one, warranty paperwork you plan to transfer, and receipts for repairs you are disclosing.",
-      "Keep your disclosure draft in that folder and update it when a repair is finished. The version you sign should match the house on signing day.",
-      "Ask the closing company how they send wire instructions. Plan to confirm those instructions by calling a phone number you look up yourself, not a number that arrived only in an email."
+      "Start the folder before you have a buyer. Paper or digital, pick one home for it and do not split the documents across a counter and an inbox. Label each piece: payoff contact, association contact if you have one, warranty paperwork you plan to transfer, and receipts for repairs you are disclosing. A folder you can hand to someone is the point. A search through email is not a folder.",
+      "Keep the disclosure draft in that folder and update it when a repair is finished. The version you sign should match the house on signing day. When you replace a page, date it and pull the old page out so you do not sign the stale one. The repair invoices sit behind the draft. If a buyer asks what you fixed, you are holding the answer instead of promising to send it later.",
+      "Ask the closing company how they send wire instructions, and write that answer in the folder. Plan to confirm any wiring instructions by calling a phone number you look up yourself, not a number that arrived only in an email. Read the amount and the account name back. This is a phone call, not a courtesy. Do it before you send money, including an earnest-money wire if that money is yours to send.",
+      "When you have a contract and a closing date, request the payoff and put the quote in the folder with the good-through date. A payoff that expires before closing needs a refresh. Set a reminder a few days ahead. The same folder should hold the inclusion list, the photo of the finished repairs, and the utility card once you make it. One home means that on closing morning you pick up one thing, not five."
     ],
     "steps": [
-      "Give the folder one home and label each document.",
-      "Request the payoff when you have a contract and a closing date.",
-      "Call the closing office to confirm wiring instructions before you send money."
-    ]
+      "Give the folder one home and label the payoff contact, warranties, and repair receipts.",
+      "Update the disclosure draft when a repair is finished and remove the stale page.",
+      "Call a number you look up yourself to confirm wiring instructions before you send money.",
+      "Request the payoff when you have a contract and a closing date, and note when the quote expires."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "walk-again-before-the-final-visit",
     "title": "Walk the house again before the buyer’s final visit",
     "stage": "closing",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Check the fixtures you promised to leave, and report anything that broke.",
     "body": [
-      "Test the lights, the appliances you are leaving, and the faucets. Replace bulbs that are out. The final walkthrough is easier when you have already done this.",
-      "Remove trash, leftover paint, and hardware you are not including. The contract says what stays. Do not remove a fixture you agreed to leave.",
-      "If something broke after you signed, tell the buyer in writing before they find it. A surprise at the walkthrough is harder to solve than a note sent the day before."
+      "Use the same room list you used for showings and walk it again before the buyer's final visit. Test the lights, the appliances you are leaving, and the faucets. Replace bulbs that are out. A bulb is a few dollars, and a dark fixture at the walkthrough becomes a debate you could have skipped. The walk is easier when you have already done the tests they are about to do.",
+      "Read the inclusion list while you walk, not after. The contract says what stays. Do not remove a fixture, a rod, or an appliance you agreed to leave. If you are taking something, it should already be on the goes list and it should be gone or clearly labeled before they arrive. Remove trash, leftover paint, and hardware you are not including. A can of paint in the garage reads as a project you did not finish.",
+      "If something broke after you signed, tell the buyer in writing before they find it. A note the day before is easier to solve than a surprise at the walkthrough. Say what broke, whether you will repair it or credit it, and the amount if you know it. Rerun the net if the answer is money. Do not wait in the hallway to explain a leak you discovered yesterday.",
+      "Do a last pass for personal papers in drawers, including the kitchen and the office. Leave remotes, keys, codes, and garage openers where the contract says they go. If the contract is silent, put them in one labeled envelope on the counter and mention it in the note. Walk out and come back in through the front door once. Anything you would not want found in the next hour gets resolved now, on paper or in the truck, not during their visit."
     ],
     "steps": [
-      "Use the same room list you used for showings.",
-      "Leave remotes, keys, and codes where the contract says they go.",
-      "Do a last pass for personal papers in drawers."
-    ]
+      "Walk the same room list and test the lights, appliances, and faucets you are leaving.",
+      "Check the inclusion list in each room and do not remove an item you agreed to leave.",
+      "Report anything that broke, in writing, before the visit.",
+      "Leave remotes, keys, and codes where the contract says, and clear personal papers from the drawers."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "book-the-move-after-the-date-is-real",
     "title": "Book the move after the closing date is real",
     "stage": "moving",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Wait for a contract date, then book the truck with a written backup plan.",
     "body": [
-      "A target date can move. Put a deposit on a mover when the closing date is in the contract, and ask what happens if that date shifts by a day or two. Get the answer in writing.",
-      "Measure sofas, mattresses, and tables that might not fit through the next door. Do this before the truck is in the driveway.",
-      "If you are packing yourself, start with rooms you do not use every day. Keep a first-night box in your car: chargers, a change of clothes, basic tools, and anything you need before the truck is unpacked."
+      "A target date can move. Put a deposit on a mover or a truck when the closing date is in the contract, and not before, unless the cancellation terms are cheap and written down. Confirm the date with the closing company before you pay. Then ask what happens if that date shifts by a day or two. Get the answer in writing: the fee, the notice they want, and whether the truck is still available.",
+      "Measure sofas, mattresses, and tables that might not fit through the next door before the truck is in the driveway. Write the numbers and share them with the mover, or use them yourself if you are loading. A piece that will not pass should be sold, left, or routed through a different door now. The ramp is a bad place to decide. If the written estimate excludes stairs or a long carry, ask what those cost and add the figure to the move budget on your net page.",
+      "If you are packing yourself, start with rooms you do not use every day. Keep a first-night box in your car: chargers, a change of clothes, basic tools, and anything you need before the truck is unpacked. That box does not go on the truck. Label it and put it in the seat, not in the garage where it can be loaded by mistake. The closing folder rides in the same car.",
+      "Read the cancellation line again the week of closing. If the date slips, you already know the phone number and the fee. Call before the window closes. A move booked on a real contract date, with a written backup and a box that stays with you, survives a one-day shift. A move booked on a hope, with your papers on the truck, does not."
     ],
     "steps": [
       "Confirm the closing date with the closing company before you book.",
-      "Get the mover’s cancellation terms in writing.",
-      "Pack the first-night box and keep it with you."
-    ]
+      "Get the mover's cancellation terms in writing, including a shift of a day or two.",
+      "Measure the large pieces and price any carry the estimate leaves out.",
+      "Pack a first-night box and keep it with you, along with the closing folder."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "label-boxes-by-room",
     "title": "Label boxes by the room they go to",
     "stage": "moving",
     "status": "published",
-    "updatedOn": "2026-10-21",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Name the room on two sides of every box and keep a first-night box with you.",
     "body": [
-      "Write the room and a short contents line. “Kitchen — pans” is enough. Write it on two sides so a stack does not hide the label.",
-      "Number the boxes and keep a simple list on your phone or on paper. When a box is missing, the number tells you what to ask about.",
-      "Carry documents, jewelry, and spare keys in the car. Do not put them on the truck."
+      "Write the room and a short contents line on every box. Kitchen, pans is enough. Bedroom, linens is enough. Write it on two sides so a stack does not hide the label. A label on the top only disappears as soon as another box lands on it. Use a thick marker. A pen looks neat in the kitchen and vanishes in the truck.",
+      "Number the boxes and keep a simple list on paper or on your phone. Box 14, kitchen, pans. When a box is missing, the number tells you what to ask about. The list rides with you, not in box 14. Update it when you add a box, not at the end of the day when you are guessing. A list you trust is the whole system. A list you stopped keeping is decoration.",
+      "Carry documents, spare keys, and the closing folder in the car. Do not put them on the truck. Jewelry and any small thing you cannot replace go in the same car. The truck is for boxes you can wait a day to open. Load the first-night box last so it comes off first, and keep it out of the truck entirely if there is room in the car. First off only works if nobody stacks a mattress on it.",
+      "At the new place, call the room as you unload and check the number off the list. A box marked kitchen that arrives in the garage is still a win if the list says it arrived. Do not retape labels at the destination unless a label tore. The name you wrote at the old house is the name on the list. Finish the check-off before you start unpacking, so a missing number is obvious while the truck is still there."
     ],
     "steps": [
-      "Label at least two sides of each box.",
-      "Number the boxes and keep the list.",
-      "Load the first-night box last so it comes off first."
-    ]
+      "Label at least two sides of each box with the room and a short contents line.",
+      "Number the boxes and keep the list with you.",
+      "Carry documents, keys, and the closing folder in the car, not on the truck.",
+      "Check the numbers off as you unload, before the truck leaves."
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "replace-cracked-caulk-before-photos",
     "title": "Replace cracked caulk before photo day",
     "stage": "prep-and-repairs",
     "status": "published",
-    "updatedOn": "2026-10-24",
+    "updatedOn": "2026-10-28",
     "queueOrder": 1,
     "summary": "Cracked caulk shows up in close photos. Replace it while the repair list is still short.",
     "body": [
-      "Look along tubs, showers, and the kitchen sink. Cracked or missing caulk reads as a leak even when the wall behind it is dry.",
-      "Remove the old bead, let the joint dry, and lay a new one. A thin, smooth line photographs better than a thick smear.",
-      "If you find soft drywall while you are there, stop and treat that as a leak repair, not a caulk job. Put it on the function list."
+      "Walk the wet joints with the lights on before photo day. Look along the tub, the shower, the kitchen sink, and the backsplash where the counter meets the wall. Cracked or missing caulk reads as a leak in a close photo even when the wall behind it is dry. Put each joint on one line: sound, cracked, or missing. You only recaulk the lines that fail.",
+      "Pull the old bead out instead of smearing new caulk over it. A plastic scraper or an old card lifts most of it. Wipe the joint and let it dry. If the gap is still damp the next morning, you do not have a caulk job. You have a leak, and it belongs on the function list. Soft drywall or a stain that keeps returning is the same stop. Do not photograph a fresh bead over a wet wall.",
+      "Lay a thin line, not a thick smear. Tape both edges if your hand wanders, run the bead, then smooth it with a damp finger and pull the tape. A tube of kitchen and bath caulk is often under $10, and a tube is enough for a tub and a sink if you are not filling a wide gap. A thick ridge photographs as a repair. A thin line photographs as a finished joint. Let it cure before anyone runs that shower.",
+      "When the joint is dry, take one close photo for the repair folder and one wider photo the way the listing will show the room. If the old caulk was stained but the new line is clean, you do not need a new surround. If the pan or the tile is soft, stop and price that repair before you spend the afternoon on a bead. Write the finished joints on the photo list so you remember to shoot them in daylight."
     ],
     "steps": [
-      "Check every wet joint with the lights on.",
-      "Recaulk only after the joint is dry.",
-      "Photograph the finished joint for your repair folder."
-    ]
+      "Check every wet joint with the lights on and mark the ones that are cracked or missing.",
+      "Remove the old bead and let the joint dry before you recaulk.",
+      "Lay a thin line, and stop if the wall behind it is soft.",
+      "Photograph the finished joint for the repair folder."
+    ],
+    "publishedOn": "2026-10-24"
   },
   {
     "slug": "finish-the-entry-first",
     "title": "Finish the entry before the rest of the house",
     "stage": "staging",
     "status": "published",
-    "updatedOn": "2026-10-26",
+    "updatedOn": "2026-10-28",
     "queueOrder": 2,
     "summary": "The front door and entry are the first rooms a visitor stands in. Finish those before the back closets.",
     "body": [
-      "Wash the door, polish or replace tired hardware, and make sure the house numbers can be read from the street. A stuck storm door is a first impression you can fix in an afternoon.",
-      "Clear shoes, mail, and coats down to what you use this week. One mat and a working light are enough.",
-      "If you only have one day before photos, spend it on the entry, the kitchen counters, and the main bathroom. Leave the deep closet for later."
+      "The front door is the first room a visitor stands in. Finish it before you reorganize a back closet. Wash the door, the glass, and the hardware. If the handle is loose, tighten it. If it is broken, replace that piece. A single handle set is often about $20 to $60 at a hardware store, which is a different job from refinishing the whole door. Make sure the house numbers can be read from the street. A set of numbers is often under $20. A visitor who cannot find the house is already late.",
+      "Open and close the storm door or the screen if you have one. A stuck closer or a torn screen is an afternoon, not a remodel. A storm-door closer is often about $15 to $30. Adjust it so the door shuts on its own and latches. Then check the entry light. Replace a dead bulb, and confirm the switch by the door actually controls that light. People arrive in the evening. A dark step is a function problem, not a style problem.",
+      "Clear shoes, mail, and coats down to what you use this week. One mat and a working light are enough. A plain mat is often $15 to $40. Extra benches and a pile of shoes make the entry look smaller than it is. If the floor is the first thing in the photo, sweep it after you have moved the pile, not before. The pile sheds.",
+      "If you only have one day before photos, spend it on the entry, the kitchen counters, and the main bathroom. Leave the deep closet for another day. The order matters because the first thirty seconds happen at the door. Before every showing, not only before the photo shoot, do the same five-minute pass: clear the mat, turn on the light, and shut the closet. Write that pass on the showing list so it is not a memory."
     ],
     "steps": [
-      "Clean the door and the hardware.",
-      "Check that the entry light works.",
-      "Remove the daily clutter before every showing, not only before the photo shoot."
-    ]
+      "Clean the door, tighten or replace the hardware, and make the house numbers readable.",
+      "Fix a stuck storm door and confirm the entry light works.",
+      "Leave one mat, and clear the daily pile.",
+      "Repeat that clear-out before every showing, not only before photos."
+    ],
+    "publishedOn": "2026-10-26"
   },
   {
     "slug": "write-your-bottom-line-early",
@@ -463,19 +517,22 @@
     "title": "Clear the gutters before showings",
     "stage": "prep-and-repairs",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Empty the gutters and check that downspouts send water away from the foundation.",
     "body": [
-      "Look along the roof edge after a dry day. Leaves and grit in a gutter spill over the siding in the next rain.",
-      "Scoop the debris, then run a hose at the high end. Water should travel to the downspout and land several feet from the wall.",
-      "If water pools at the foundation, add an extension. Write the fix on your repair list before you spend on paint."
+      "Look along the roof edge on a dry day, from the ground and from a stable ladder if you are comfortable using one. Leaves and grit in a gutter spill over the siding in the next rain, and that streak shows up in the front photo. Write which run is full: front, back, or a side. You do not need to clean a gutter that is already empty.",
+      "Scoop the debris into a bucket, not onto the bed below if you can help it. Gloves are enough for a light season. A small gutter scoop is often under $15 if your hands will not fit. Work from the downspout back toward the high end so you are not pushing a pile into the outlet. Bag the debris with the rest of the yard waste when you are done.",
+      "Then prove the water moves. Run a hose at the high end and watch. Water should travel to the downspout and land several feet from the wall. If it pours over the front lip, the gutter is still clogged or it is pitched the wrong way. If it pools at the foundation, add an extension. A plastic downspout extension is often about $10 to $20. Aim it so the water does not dump onto the walk someone will use.",
+      "Write the result on the repair list before you buy paint for the siding. A clean gutter does not fix a seam that leaks or a spike that has pulled out. Those are separate lines, and a handyman bid for a rehang is a number you can compare with the paint. If you will not get on a ladder, hire the cleaning and ask for a note that says the downspouts ran. Do this before showings, and again after a heavy drop of leaves if the house sits under trees."
     ],
     "steps": [
-      "Scoop leaves and grit from the gutters.",
-      "Run a hose and watch where the water lands.",
-      "Add a downspout extension if water sits by the wall."
-    ]
+      "Scoop leaves and grit from the gutters that are actually full.",
+      "Run a hose at the high end and watch where the water lands.",
+      "Add a downspout extension if water sits by the wall.",
+      "Write any leak or loose hanger on the repair list before you paint."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "tighten-loose-hardware",
@@ -504,38 +561,44 @@
     "title": "Trace a stain to its source",
     "stage": "prep-and-repairs",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Find the leak that made the stain, then repair that before you paint over the mark.",
     "body": [
-      "A ceiling spot or a bubbled patch of paint usually means water was there. Painting the mark hides it for a week.",
-      "Check the fixture, the roof above, and the supply line. If you cannot find the source, hire someone who can and get the cause in writing.",
-      "After the source is dry and repaired, then patch and paint. Keep the invoice so you can tell a buyer what was fixed."
+      "A ceiling spot or a bubbled patch of paint means water was there. Painting the mark hides it for a week and then the spot returns, often larger. Mark each stain on the walk-through list with the room and whether it is on the ceiling, the wall, or the floor. One mark per stain. Do not group them into the house has a few spots.",
+      "Look for the source before you open a can of paint. Above a ceiling stain, check the bath or the supply line on the floor over it, then the roof if there is no room above. At a wall, check the window above the spot and the pipe in that bay. Press the surface. Soft drywall or a hollow sound means the water was not a one-time drip you can cover. If you cannot find the source, hire someone who can and ask them to write the cause, not only the price.",
+      "Repair and dry the source first. A supply line under a sink is often a hardware-store part, from a few dollars for a washer to about $20 for a braided line, if that is truly the leak. A roof or a hidden pipe is a bid. Save the invoice with your other receipts so you can tell a buyer what was fixed, when, and by whom. The invoice is the sentence you will wish you had if someone asks about the patch.",
+      "Only then patch and paint the stain. Match the sheen you already have so the patch does not flash in a photo. If the source is repaired and dry, one photo of the finished ceiling is enough for the folder. If you decide not to repair it, the stain stays on the disclose list in plain words: where it is, and that you do not know the cause or that you do. Do not describe a painted spot as a finished repair."
     ],
     "steps": [
-      "Mark each stain on your walk-through list.",
-      "Repair the leak before you paint.",
-      "Save the invoice with your other receipts."
-    ]
+      "Mark each stain on the walk-through list with the room and the surface.",
+      "Find the leak, or get the cause in writing, before you paint.",
+      "Repair and dry the source, and save the invoice.",
+      "Patch only after the source is dry, or disclose the stain instead."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "run-heat-and-cooling-before-showings",
     "title": "Run the heat and the cooling before showings",
     "stage": "prep-and-repairs",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Turn each system on, listen for a short cycle, and change a dirty filter.",
     "body": [
-      "Set the heat and let it run until the air at a vent is warm. Then switch to cooling if the house has it, and wait for cool air.",
-      "A filter clogged with dust makes the system short-cycle. Slide in a clean filter and write the size on the filter frame for next time.",
-      "If a system will not start, put that on the repair list before photo day. A quiet system is easier to explain than a dead one."
+      "Turn the heat on and wait. Stand at a supply vent until the air is actually warm, not merely until the thermostat clicks. Write the time it took and whether every vent you can reach did the same. A system that blows cold at one room and warm at another is a line on the repair list, not a story you tell at the showing.",
+      "If the house has cooling, switch to it after the heat test and wait again until a vent is cool. Do not run both claims on the same minute. Listen for a short cycle: the blower starts, stops, and starts again before the room has changed. A short cycle can be a clogged filter. Slide the old filter out, read the size printed on the frame, and write that size down. A common one-inch filter is often about $10 to $30 depending on the size. Write the size on the new frame or on a card in the closing folder so the next change is not a guess.",
+      "Replace the filter before photo day if it is grey and packed. A clean filter does not fix a system that will not start. If the heat or the cooling refuses to run, stop and put that on the repair list before you schedule photos. A quiet system is easier to explain than a dead one, and a technician's written note is what you want in the folder. Ask what they found and what it will cost before you approve the work.",
+      "On showing day, set the temperature to something ordinary and leave it. Do not shut the system off to hide a noise. If a bedroom vent is closed, open it so the room is not stale. Check the condensate line or the pan if you know where it is and you have seen a drip there before. A small drip goes on the function list. Do not wipe it and hope. The test you already wrote down is the one you repeat the morning of the first visit."
     ],
     "steps": [
-      "Run heat until a vent is warm.",
-      "Run cooling until a vent is cool, if you have it.",
-      "Replace a dirty filter and note any system that will not start."
-    ]
+      "Run the heat until a vent is warm, and note any room that stays cold.",
+      "Run the cooling until a vent is cool, if the house has it.",
+      "Replace a dirty filter and write the size down.",
+      "Put any system that will not start on the repair list before photo day."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "leave-a-clear-path-through-each-room",
@@ -564,19 +627,22 @@
     "title": "Open the window coverings the same way",
     "stage": "staging",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Raise every shade to the same height so the light looks even from room to room.",
     "body": [
-      "Walk the house and set each shade, blind, or curtain the same way. One closed room next to a bright one looks accidental.",
-      "If a covering is broken, take it down for showings rather than leaving it crooked. A bare window is easier to read than a stuck blind.",
-      "Do this before photos and again the morning of a showing. It takes a few minutes and it is one of the first things people notice."
+      "Walk the house and set each shade, blind, or curtain the same way before you take a photo or open the door. One closed room beside a bright one looks accidental, and it makes the dark room look smaller. Pick one height you can repeat: shades just above the midpoint, or fully up. Write it on a card by the door so the morning of a showing is not a new decision.",
+      "Work room by room, including the ones down the hall. A blind that hangs crooked is worse than no blind. If a covering is broken, take it down for showings rather than leaving it slumped. A bare, clean window is easier to read. Replacing a single vinyl blind is often about $15 to $40 if you want it back up before photos. Measure the width inside the frame before you buy, and write the inches on the list so you do not come home with the wrong one.",
+      "Open the coverings before you turn the camera on, and look for glare. If a bare window washes the wall out, shoot that room from the other corner or wait until the sun moves. Do not close one shade to fight the glare and leave the others up. The set should still match. Dust the sill while the covering is open. A bright sill full of grit shows up once the light is even.",
+      "Do this again the morning of a showing. It takes a few minutes, and it is one of the first things people notice when they look from the doorway into the next room. If you live in the house, the bedrooms will have been closed overnight. The card by the door is the reminder. Check the street-facing windows last, from the sidewalk, so the front of the house matches the rooms inside."
     ],
     "steps": [
-      "Set every covering to the same height.",
-      "Remove a covering that will not hang straight.",
-      "Check them again the morning of a showing."
-    ]
+      "Pick one height and set every covering to it.",
+      "Remove a covering that will not hang straight, or replace it after you measure.",
+      "Look for glare and dust the sills while the windows are open.",
+      "Check the coverings again the morning of a showing, including from the sidewalk."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "put-pet-gear-away-before-showings",
@@ -627,152 +693,176 @@
     "title": "Leave closets partly empty",
     "stage": "staging",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Take out enough clothes and boxes that a visitor can see the rod and the floor.",
     "body": [
-      "A closet packed to the ceiling hides the storage you are selling. Move out-of-season clothes to boxes you will take with you.",
-      "Leave a gap on the rod and a clear patch of floor. Do the same for a linen shelf: fold a few stacks, not a wall of towels.",
-      "You do not need to show an empty closet. Half full reads as usable."
+      "A closet packed to the ceiling hides the storage you are selling. Open each closet you will leave unlocked and look at the rod and the floor. If you cannot see both, it is too full. You do not need an empty closet. Half full reads as usable. The goal is a gap, not a staging trick.",
+      "Box what you will not wear during the weeks of showings. Out-of-season clothes and extra linens can live in a labeled bin in the garage or in a closet you will keep shut. Leave a gap on the rod about the width of a jacket, and a clear patch of floor you could set a pair of shoes on. Do the same for a linen shelf: a few folded stacks, not a wall of towels. If a shelf is bowed, that is a repair line, not a folding problem.",
+      "Do this in the coat closet, the bedroom closets you will open, and the utility closet if the water heater or the panel is in there. People look. A utility closet with a path to the panel is more useful than one stuffed with bags. Slide stored paint and loose hardware into one bin so the floor is visible. Keep chemicals upright and closed. You are not hiding the closet. You are letting someone see its size.",
+      "Check the doors after you remove the bulk. A door that would not latch because of the pile should latch now. If it still will not, the latch belongs on the function list. On photo day, shoot one closet only if it is genuinely easy to read. A dark, jammed closet is better left shut than featured. The morning of a showing, open the ones you planned to show and confirm the gap is still there."
     ],
     "steps": [
-      "Box what you will not wear during showings.",
-      "Leave a gap on the rod and a clear patch of floor.",
-      "Fold linen into a few stacks."
-    ]
+      "Open each closet you will leave unlocked and find the rod and the floor.",
+      "Box what you will not use during showings and leave a gap.",
+      "Fold linen into a few stacks, and clear a path in a utility closet.",
+      "Confirm the door latches, and only photograph a closet you can read clearly."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "write-three-numbers-before-you-list",
     "title": "Write three numbers before you list",
     "stage": "pricing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Write the list price, the net you hope for, and the net that would make you walk away.",
     "body": [
-      "Use the proceeds calculator with numbers you choose. Run it once at the price you might list, and once at a lower price.",
-      "Write both nets on one page, plus the net where you would rather stay put. Those three numbers are yours.",
-      "Do this before you talk with an agent or a buyer. A conversation is easier when the page already exists."
+      "Before you talk with an agent or a buyer, write three numbers on one page. The first is a price you might list. The second is the net you hope to clear at that price. The third is the net where you would rather stay put. Those numbers are yours. A conversation is easier when the page already exists.",
+      "Use the proceeds calculator with figures you choose. Run it at the price you might list, and run it again at a lower price you would still consider. Write both nets under the prices. Include the payoff and the costs you already know. If you do not know a cost, leave a blank and go find it. A blank is more honest than a zero you typed to make the page look finished.",
+      "The walk-away net is the useful one. It is not a wish and it is not a dare. It is the line under which you stop and rethink the sale. Circle it. If a later offer, after credits, lands above that line and on a date you can meet, you have a real decision. If it lands below, you are not required to talk yourself into it because the headline price looked familiar.",
+      "Keep the page with your offer notes, not in a message thread. After any pricing talk, add a line: the price discussed, the net you calculated, and what you agreed to do next. If a later conversation drifts, you can read what you already decided. Update the three numbers when a real bid or a real payoff changes them. Do not update them because a conversation was enthusiastic."
     ],
     "steps": [
       "Run the calculator at two prices you might list.",
       "Write the net you hope for and the net where you would stop.",
-      "Keep that page with your offer notes."
-    ]
+      "Leave a blank for any cost you do not know yet.",
+      "Keep that page with your offer notes and update it when a real number changes."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "list-credits-before-you-pick-a-price",
     "title": "List credits before you pick a price",
     "stage": "pricing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Write the repairs and concessions you already expect, then see what they do to your net.",
     "body": [
-      "A list price that ignores a likely credit is a guess. Write the items a buyer might ask you to pay: a repair you already know about, a closing cost you are willing to cover, or a credit for something you will not fix.",
-      "Type those amounts into the calculator as seller credits or repairs. The net that remains is closer to a decision.",
-      "You can change the list later. You cannot change it wisely if the credits were never written down."
+      "A list price that ignores a likely credit is a guess. Before you choose the number on the ad, write the credits you already expect. That might be a repair you know about, a closing cost you are willing to cover, or a credit for something you will not fix. One line each, with a dollar amount you did not round into the air.",
+      "Get the amounts from something you can point at. A written repair bid is better than a feeling that the deck will cost something. If you have no bid yet, write a placeholder and label it as a placeholder, then replace it when the bid arrives. Type the real amounts into the calculator as seller credits or repairs. The net that remains is closer to a decision than the list price alone.",
+      "Read that net before you fall in love with a list price. If the credits you already expect push the net under your walk-away number, the list price is too low or the credit is too large. Change one of them on purpose. Do not discover this after you have told someone the price. The order is credits, then net, then the number you advertise.",
+      "You can change the list later. You cannot change it wisely if the credits were never written down. When an offer arrives with its own credit, set it next to the credit you already expected. If the offer's credit is the one you planned for, you are comparing like with like. If it is a new item, add a line and rerun the net before you answer. Keep the credit list on the same page as the three numbers."
     ],
     "steps": [
-      "Write the credits you already expect.",
-      "Enter them in the calculator.",
-      "Read the net before you choose a list price."
-    ]
+      "Write the credits you already expect, each with an amount.",
+      "Mark any amount that is still a placeholder until a bid arrives.",
+      "Enter the credits in the calculator and read the net.",
+      "Choose the list price only after that net is one you can accept."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "match-what-was-included-in-a-sale",
     "title": "Match what was included in a sold home",
     "stage": "pricing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Before you compare a sold price, write what that sale included and what yours includes.",
     "body": [
-      "Two houses can sell for different amounts because one included appliances, a credit, or a repair. The headline price does not say which.",
-      "For each sold home you are using, note the date, the price, and anything the listing said was included or credited. Then note the same items for your house.",
-      "If you cannot find those facts, do not treat that sale as a match. Use the ones you can describe."
+      "Two houses can close at different prices because one included the appliances, a repair credit, or a roof, and the other did not. The headline price does not say which. Before you treat a sold price as a match for yours, write what that sale included and what yours includes. If you cannot find those facts, that sale is not a comparison. Drop it.",
+      "For each sold home, make one row: the date, the sold price, and the items the listing said were included or credited. Look for appliances, a closing credit, and repairs the seller agreed to finish. Then make the same row for your house. A refrigerator you plan to take is a difference. A water heater you replaced is a difference. Write both in plain words. Do not convert them into a mood.",
+      "Use only sales you can describe this way. Three thin rows you understand are more useful than a long list of prices. If the listing is silent on what stayed, do not guess that it matched yours. Silence is a reason to drop the sale, not a reason to assume the best. Ask your agent, if you have one, to pull the concession line from the closed file when that line is available to them. If it is not available, say so on the row.",
+      "When you set your list price, read your row next to theirs. If your house is missing something theirs included, your price should reflect that on purpose, or your credit list should. If yours includes something theirs did not, that belongs in the photo set and in the inclusion list, not only in your head. Attach this page to the pricing notes so the first offer is compared with the same facts."
     ],
     "steps": [
-      "Pick sold homes that are actually similar.",
-      "Write what each sale included or credited.",
-      "Drop a sale you cannot describe."
-    ]
+      "Pick sold homes that are similar on facts you can check.",
+      "Write what each sale included or credited, and write the same items for your house.",
+      "Drop a sale you cannot describe.",
+      "Use those rows when you set the list price and when you read the first offer."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "rerun-the-net-after-each-bid",
     "title": "Rerun the net after each repair bid",
     "stage": "pricing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "When a written bid arrives, put that number in the calculator before you agree to the work.",
     "body": [
-      "A bid is a fact. A guess about what the work will cost is not. Type the bid into repair costs and read the new net.",
-      "If the net falls below the number you said you would walk away from, skip that project or change the list price on purpose.",
-      "Keep the bid with the calculator printout. Later, an offer credit is easier to judge against a number you already accepted."
+      "A bid is a fact. A guess about what the work will cost is not. When a written bid arrives, type that number into repair costs on the calculator before you agree to the work. Read the new net out loud and write it under the bid. If you skip this, you are approving a project without knowing what it does to the money you planned to walk away with.",
+      "Compare that net with the walk-away number you wrote before you listed. If the net falls below that line, you have three honest choices: skip the project, raise the list price on purpose, or accept a lower net and change the page. Do not do the work and hope an offer will cover it. The bid will not shrink because the kitchen looks better in a photo.",
+      "Keep the bid with the calculator printout. Later, a buyer who asks for a credit is easier to judge against a number you already accepted or refused. If you declined a $1,800 bid, you should not be surprised by an $1,800 credit request for the same item. Write on the bid whether you approved it, and the date. One page, not a text you cannot find.",
+      "Ask the bidder what is included before you type the number. A price that excludes haul-away or a permit is not the full cost. If the bid is a range, use the high end for the calculator and label it. You can be glad if the invoice comes in lower. You do not want the net to depend on the low end. Rerun the calculator again when the invoice arrives if it differs from the bid you approved."
     ],
     "steps": [
-      "Enter the bid as a repair cost.",
+      "Enter the written bid as a repair cost before you agree to the work.",
       "Compare the new net with your walk-away number.",
-      "Save the bid and the printout together."
-    ]
+      "Skip the project, change the price, or change the walk-away number on purpose.",
+      "Save the bid, what it includes, and the printout together."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "keep-price-notes-in-writing",
     "title": "Keep price notes in writing",
     "stage": "pricing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "After each pricing talk, write the price, the net, and what you decided.",
     "body": [
-      "A phone call is easy to remember wrong. When you finish a talk about price, write three lines: the price discussed, the net you calculated, and what you agreed to do next.",
-      "Store those notes with your offer page. If a later conversation drifts, you can read what you already decided.",
-      "This is your record. It is not a promise to a buyer until you sign something that says so."
+      "A phone call is easy to remember two different ways. When you finish a talk about price, write three lines before you do anything else: the price discussed, the net you calculated, and what you agreed to do next. Date the note. If you wait until evening, you will smooth the conversation into the version you prefer.",
+      "Store the note with your offer page, not only in a text thread. A thread is hard to read next to the calculator. One page in the pricing folder can hold a month of these notes, each a few lines. If a later conversation drifts, you can read what you already decided instead of debating a memory. This record is yours. It is not a promise to a buyer until you sign something that says so.",
+      "Write the net from the calculator, not from the headline. If someone said the price works, ask which costs they included and write those down. A price that works before a credit and a price that works after a credit are different notes. Label them. If you did not run the numbers during the call, say in the note that the net is still blank and run it before you agree to the next step.",
+      "At the end of the week, read the notes in order. You should be able to see whether your list price, your hoped-for net, and your walk-away net are still the ones on the original page. If a note changed one of them, update the original page and initial the change. Do not let the latest call silently replace the decision you made when you were calm. The next step you wrote is the thing you do, or the thing you cross off with a reason."
     ],
     "steps": [
-      "Write the price and the net after each talk.",
-      "Add the next step you agreed to.",
-      "File the note with your offer papers."
-    ]
+      "Write the price, the net, and the next step after each pricing talk.",
+      "Date the note and file it with your offer papers.",
+      "Leave the net blank if you have not calculated it yet, then calculate it.",
+      "Update your three numbers only when a note actually changes them."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "shoot-in-the-order-a-visitor-walks",
     "title": "Shoot in the order a visitor walks",
     "stage": "listing-photos",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Start at the street, then move through the house in the order someone would walk it.",
     "body": [
-      "Take the front of the house first, from the sidewalk if you can do that without standing in the road. Then the entry, then each main room in walking order.",
-      "That order helps you notice a closet door left open or a light still off. It also gives you a set that tells a simple story.",
-      "Save the detail shots for the end: a finished repair, a fireplace, a view from a window. Lead with the rooms."
+      "Start at the street, then move through the house in the order someone would walk it. Take the front first, from the sidewalk if you can do that without standing in the road. Then the entry, then each main room. That order shows you a closet door left open or a light still off before you are done, and it gives you a set that tells a simple path instead of a pile of rooms.",
+      "Do not start in the prettiest bedroom because the light is good there. You will forget the front, and the front is the photo people see first. If the sidewalk view includes a car or a bin, move those before this pass, then shoot. Write the room names in walking order on a card and check them off. A missed bath is easier to see on a card than in a camera roll of forty frames.",
+      "Save detail shots for the end: a finished repair, a fireplace, a view from a window. Lead with the rooms. If you mix details into the walk, you will spend the best light on a faucet and run out of even light for the wide shots. One wide frame per room while you walk. Details after you have a wide shot you would actually use.",
+      "When you reach the back door, turn around and walk out the way you came, looking for what the first pass missed. A lamp you turned on should still be on. A shade you set should still match the others. If a room failed, reshoot it before you pack the camera. The walk order is also the order you will sort the files later, so name them as you go or sort them the same day."
     ],
     "steps": [
-      "Photograph the front before you go inside.",
-      "Move room to room in walking order.",
-      "Add detail shots after the wide shots."
-    ]
+      "Photograph the front from the sidewalk before you go inside.",
+      "Move room to room in walking order and check each room off a card.",
+      "Take the wide shot while you walk, and add detail shots after.",
+      "Walk back out and reshoot any room that failed before you pack up."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "move-cars-before-the-photo-appointment",
     "title": "Move cars before the photo appointment",
     "stage": "listing-photos",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Clear the driveway and the curb in front of the house so the photo shows the property.",
     "body": [
-      "A car in the driveway hides the garage and the walk. Move vehicles off the driveway before the photographer arrives, or before you take the shots yourself.",
-      "Ask a neighbor only if you need a place to park for an hour. Do not block their drive.",
-      "Check the curb for bins. Roll them out of the frame, then bring them back when you are done."
+      "A car in the driveway hides the garage and the walk. Move vehicles off the driveway before the photographer arrives, or before you take the shots yourself. That includes a car you think is beside the frame. Look through the camera, or stand where the photo will be taken, and check the edges. A mirror or a bumper in the corner still reads as a parked car.",
+      "Plan the parking before the appointment, not when the photographer is in the street. If you need an hour somewhere else, ask a neighbor only for that hour and do not block their drive. Write down where each vehicle went so you are not hunting for keys when it is time to bring them back. Bins belong in the same pass. Roll them out of the frame, then bring them back when you are done so they are not left at the curb overnight.",
+      "Look once from the sidewalk before you shoot. The hose, a trash can, and a pile of pots count as clutter in the front photo even when the cars are gone. Coil the hose and set the can in the garage for the hour. This is a staging pass, not a cleaning day. Five minutes at the curb saves a reshoot. If you are hiring a photographer, tell them the driveway will be empty so they do not schedule around a car you forgot.",
+      "Put the cars back when the front photos are done if you need the driveway, and keep them off it if more exterior shots are coming. The same rule applies on a showing day when you expect someone to pull up. A clear drive lets them see the house they came to see. Write move the cars on the photo checklist above turn on the lights, because a lit entry behind a truck is still a photo of the truck."
     ],
     "steps": [
-      "Move vehicles off the driveway.",
-      "Roll bins out of the frame.",
-      "Look once from the sidewalk before you shoot."
-    ]
+      "Move vehicles off the driveway and check the edges of the frame.",
+      "Park them where they will not block someone else's drive.",
+      "Roll bins out of the frame and coil the hose.",
+      "Look once from the sidewalk before you shoot, then bring the bins back."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "close-lids-and-hide-trash-cans",
@@ -801,57 +891,66 @@
     "title": "Take one wide shot and one detail",
     "stage": "listing-photos",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "For each main room, keep one photo that shows the whole room and one that shows a finished feature.",
     "body": [
-      "Stand in a corner and fit the room in one frame with the camera level. That is the wide shot.",
-      "Then move closer to one thing you finished: a repaired window, a clear counter, a made bed. That is the detail.",
-      "Delete extra frames that repeat the same angle. A short set is easier to sort than a full roll of near-duplicates."
+      "For each main room, keep two frames and be willing to delete the rest. The wide shot shows the whole room from a corner, with the camera level, so the walls do not lean. If you cannot fit the room in one frame, step back into the doorway rather than tilting up. A tilted wide shot makes a large room look like a hallway. Take that frame before you move a lamp into a prettier spot that blocks the corner.",
+      "The detail shot is one thing you finished, closer in: a repaired window, a clear counter, a made bed. It is not a second wide shot from the other corner. Pick the feature you would mention if someone asked what you did in that room. If you did not finish anything there, skip the detail rather than photographing a random object. One honest wide shot is better than a detail of clutter.",
+      "Delete frames that repeat the same angle. A short set is easier to sort than a roll of near-duplicates, and duplicates hide the one frame that was level. On a larger screen, keep the wide shot where the corners are visible and the detail where the finished work is sharp. Name them room-wide and room-detail so you do not upload five versions of the kitchen.",
+      "Do this for the main rooms only. A hallway does not need a pair. The front of the house still leads the set, and it can have its own wide shot plus one detail of something you fixed outside, such as the step or the numbers. When a room has no clean wide shot, go back and take one. Do not promote a detail to the wide slot. People need to see the size of the room before they see the faucet."
     ],
     "steps": [
-      "Take one level wide shot of each main room.",
-      "Take one closer shot of something you finished.",
-      "Delete frames that repeat the same angle."
-    ]
+      "Take one level wide shot of each main room from a corner or the doorway.",
+      "Take one closer shot of something you finished, or skip the detail.",
+      "Delete frames that repeat the same angle.",
+      "Do not use a detail shot as a substitute for the wide shot."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "delete-blurry-frames-the-same-day",
     "title": "Delete blurry frames the same day",
     "stage": "listing-photos",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Review the set before you upload it, and drop any frame that is dark, tilted, or soft.",
     "body": [
-      "Look at each photo on a larger screen than the camera. A frame that looks fine on a phone can be soft on a listing page.",
-      "Delete shots with a tilted line, a dark corner you did not mean, or a reflection of the photographer. Retake the room if you have no clean wide shot.",
-      "Name the keepers by room so you can find them later. Do this the same day, while you can still reopen a shade and try again."
+      "Review the set before you upload it, on a larger screen than the phone you shot with. A frame that looks fine on a small screen can be soft, dark, or tilted on a listing page. Do this the same day, while you can still reopen a shade and try again. Tomorrow the light will be different and you will talk yourself into keeping a bad frame.",
+      "Delete shots with a tilted line, a dark corner you did not mean, or a reflection of the person taking the photo. Soft focus on a wide shot of a main room means that room has no wide shot yet. Retake it. Do not keep a blurry frame as a backup. Backups are how the wrong photo gets uploaded. If the only front photo has a car in it, that is not a keeper either. Reshoot the front.",
+      "Name the keepers by room as you delete. Kitchen wide, kitchen sink, primary bed wide. A named set of a dozen frames is a listing. An unnamed roll of eighty is a chore you will postpone. The postpone is how a dark photo goes live. Put the keepers in one folder and the rejects in another only if you need them for a repair record. Otherwise delete the rejects so you cannot pick them by mistake.",
+      "If a room still has no clean wide shot at the end of the review, it goes back on the photo list for the next daylight, not into the upload. Tell anyone helping you which folder is the one to send. One sentence in a message, with the folder name, prevents a second person from attaching the camera roll. The same-day rule is the whole tip: sort while the house is still set the way you shot it."
     ],
     "steps": [
-      "Review every frame on a large screen.",
-      "Delete soft, dark, or tilted shots.",
-      "Retake a room if the wide shot is not clean."
-    ]
+      "Review every frame on a large screen the same day.",
+      "Delete soft, dark, tilted, or reflected shots.",
+      "Retake a room if the wide shot is not clean.",
+      "Name the keepers by room and upload only that folder."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "price-the-hours-you-will-spend",
     "title": "Price the hours you will spend",
     "stage": "agent-vs-fsbo",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Write the tasks you would take on, then estimate the hours before you decide to sell it yourself.",
     "body": [
-      "List showings, calls, form review, and offer replies as separate lines. Next to each line, write the hours you can actually give it in a normal week.",
-      "If the hours are more than you have, that task is a reason to hire help or to pay someone for that piece only.",
-      "This is a schedule, not a judgment. The commission calculator can show the money. The hour list shows the time."
+      "Write the tasks you would take on if you sell it yourself, each on its own line: showings, calls, form review, and offer replies. Next to each line, write the hours you can actually give it in a normal week. A showing block of two hours is not the same as being on call all day. Be specific. Tuesday and Thursday, four to six, is an hour number. Whenever they want is not.",
+      "Add the hidden hours. A call to book a showing, the time to clear the house, the time to lock up, and the time to write the answer are four lines that people fold into the showing. If you write only the visit, you will undercount. Forms have hours too. Reading a disclosure packet and filling it in is not free because you are not paying a commission on that hour.",
+      "If the hours are more than you have, that task is a reason to hire help or to pay someone for that piece only. This is a schedule, not a judgment. The commission calculator can show the money. The hour list shows the time. Put both on the table before you decide. A task you cannot staff is a task you should price out, even if the quote is simply ask a photographer or ask an attorney what a review costs.",
+      "Look at one sample week on paper. If three showings, two offer reads, and the calls already fill the hours you wrote, you do not have a spare evening for a new repair bid. Hire that piece out or move the list date. Redo the hour list when your week changes. The decision to sell it yourself can stay. The decision to personally do every line does not have to."
     ],
     "steps": [
-      "List each task you would keep.",
-      "Write the hours you can give it.",
-      "Hire out a task that does not fit the week."
-    ]
+      "List each task you would keep, including calls and lock-up time.",
+      "Write the hours you can give it in a normal week.",
+      "Hire out a task that does not fit the week.",
+      "Read the hour list next to the commission calculator before you decide."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "decide-who-answers-buyer-questions",
@@ -880,133 +979,154 @@
     "title": "Learn which forms you must use",
     "stage": "agent-vs-fsbo",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Before you advertise, ask which seller forms your state expects and where to get them.",
     "body": [
-      "Rules vary by state. A form that worked for a friend in another state may not be the one you need.",
-      "Ask a local real-estate attorney or the office that handles closings which seller disclosures you must complete. Write the list down.",
-      "Do this before the listing goes live. Filling out a form after a buyer asks is slower, and it is easier to miss a page."
+      "Rules vary by state. A form that worked for a friend somewhere else may not be the one you need, and a form you found online may be the wrong year. Before you advertise, ask which seller forms your state expects and where to get the current copies. A local real-estate attorney or the office that handles closings can answer that. Write the names they give you. Do not rely on memory for a list of papers.",
+      "Ask two practical questions with the list. Which pages does the seller complete. Which pages does someone else prepare. Write the answers in the margin. A disclosure you must sign is a different task from a report you only receive. If they tell you a form is required only in some cases, write the case in the margin so you do not skip it because you forgot the condition. Bring the questions in writing so the answer comes back in writing.",
+      "Do this before the listing goes live. Filling out a form after a buyer asks is slower, and it is easier to miss a page. Set aside a block of time to complete the seller pages while the house is quiet. If a question on the form does not match something you know, leave it blank and ask, rather than guessing a fact about a repair. The repair folder you already built is the place you look before you answer.",
+      "Keep a clean copy and the filled copy in the closing folder. When a page is updated because a repair finished, replace the old page and date the new one. Showings can start when the required seller pages are complete, not when you meant to finish them. If the closing office named a fee for preparing their part, write that fee on the job list so it is in the calculator before you decide you are saving every cost."
     ],
     "steps": [
-      "Ask which seller forms your state expects.",
-      "Write the list and where to get each form.",
-      "Complete them before you start showings."
-    ]
+      "Ask which seller forms your state expects, and where to get the current copies.",
+      "Write who completes each page, and any case where a form applies.",
+      "Complete the seller pages before you start showings.",
+      "File the filled set in the closing folder and replace a page when a repair changes the answer."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "plan-showing-hours-before-you-advertise",
     "title": "Plan showing hours before you advertise",
     "stage": "agent-vs-fsbo",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Choose the days and hours you can leave the house, and write them down before the first call.",
     "body": [
-      "Showings need an empty-enough house and someone to lock up. Pick hours you can keep for the next few weeks.",
-      "Decide how a visitor gets in: you meet them, an agent uses a lockbox, or you hire a sitter for the door. Write that choice next to the hours.",
-      "If you cannot offer those hours, that is a reason to hire help rather than a reason to guess."
+      "Showings need an empty-enough house and someone to lock up. Pick the days and hours you can keep for the next few weeks and write them down before the first call. A window you can repeat, such as weekdays from four to six and one weekend morning, is a plan. Call us anytime is not. If you advertise hours you will not keep, the first week will be a string of apologies.",
+      "Decide how a visitor gets in, and write that next to the hours. You meet them, an agent uses a lockbox, or someone you hired stands at the door and locks up after. If a lockbox is part of the plan, ask what it costs and who controls the code before you count on it. The cost is the number they quote, not a number you invent. Write who can change the code and when the box comes off the door.",
+      "Pair the hours with the clearing routine. The entry, the counters, and the path have to be ready at the start of each window, not sometime during it. If you cannot clear the house and leave it, those hours are not real. That is a reason to hire help rather than a reason to guess. Put the clearing time inside the hour count you already wrote for the week so you do not double-book yourself.",
+      "Share the plan before the first request. Put the hours in the listing notes and on a card by your phone. When a request falls outside the window, you can say the next open time instead of inventing one. Review the card each Sunday and change it if your week changed. A plan you update is still a plan. A plan you ignore is how strangers arrive while you are in the shower."
     ],
     "steps": [
-      "Write the days and hours you can offer.",
-      "Decide how a visitor gets in.",
-      "Share that plan before the first request."
-    ]
+      "Write the days and hours you can actually offer for the next few weeks.",
+      "Decide how a visitor gets in and who locks up.",
+      "Put the clearing time inside those hours.",
+      "Share the plan before the first request, and update it when your week changes."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "write-what-you-will-not-negotiate",
     "title": "Write what you will not negotiate",
     "stage": "agent-vs-fsbo",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Before the first call, list the terms you will discuss and the ones you will not.",
     "body": [
-      "Price is not the only term. Closing date, credits, and what stays with the house all move. Write which of those you will talk about.",
-      "Write one or two items you will not trade, such as a move-out date you already booked. Read that list before you answer a caller.",
-      "You can change the list later. You should not invent it while you are on the phone."
+      "Price is not the only term that moves. Closing date, credits, and what stays with the house all move too. Before the first call, list the terms you will discuss and the ones you will not. One page, two short lists. You can change it later. You should not invent it while you are on the phone.",
+      "The will-not list should be short. One or two items is enough. A move-out date you have already booked is a clean example. A fixture you already promised to a buyer in a signed inclusion list is another. If everything is negotiable, say that, and still write the net you will not go under. A list that says nothing is negotiable is not serious. A list that says nothing is off limits will get decided by whoever talks fastest.",
+      "Read the page before you answer a caller. If they ask for the one date you will not trade, you already have the sentence. Offer a term you will discuss instead, such as a credit you already priced, if that is still true. Do not trade the fixed item because the conversation is friendly. Write the request and your answer in the offer file the same day, even when the answer is no.",
+      "After the first real offer, look at the page again. If you want to move something from one list to the other, do it in writing with the reason, not in the middle of the call. Then rerun the net if the change has a dollar figure. The page is a tool for a calm decision. It is not a script you have to follow once the facts have changed, and it is not a secret. Anyone helping you answer should have the same two lists."
     ],
     "steps": [
-      "List the terms you will discuss.",
-      "List the terms you will not trade.",
-      "Read the list before you answer a call."
-    ]
+      "List the terms you will discuss and the terms you will not trade.",
+      "Keep the will-not list to one or two items, or to the net you will not go under.",
+      "Read the list before you answer a call.",
+      "Change a list only on purpose, then rerun the net if money moved."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "answer-an-offer-in-writing",
     "title": "Answer an offer in writing",
     "stage": "offers-and-negotiation",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Send a written yes, no, or counter, even when you already talked it through.",
     "body": [
-      "A spoken answer is easy to remember two different ways. After you decide, write the decision in a sentence and send it the way your forms require.",
-      "Include the price, the credits, and the dates you are accepting or changing. Leave out anything you have not decided.",
-      "Save a copy in the offer file the same day. If a second offer arrives, you will want the first answer on paper."
+      "A spoken yes is easy to remember two different ways by the next morning. After you decide, write the decision in a sentence and send it the way your forms require. The sentence should say accepted, rejected, or countered, and it should name the offer you mean, including the date on it. A text that says we are good is not that sentence.",
+      "Include the price, the credits, and the dates you are accepting or changing. If you change only the closing date, say the price is unchanged so nobody fills the silence with a different number. Leave out anything you have not decided. A maybe on the refrigerator does not belong in the counter. Finish the inclusion list first, then answer. An answer with a blank you meant to settle later is an invitation to argue.",
+      "Have the person who is reviewing the contract read the sentence before it goes, if that is the plan you wrote down. Ask them to check that the written answer matches the row on your comparison page. A counter that drifts from the row is how the net changes without a new calculation. If they mark a correction, rerun the net before you send it. Speed is not a reason to skip the row.",
+      "Save a copy in the offer file the same day, next to the offer you received. If a second offer arrives, you will want the first answer on paper so you do not accept two deals or contradict yourself. Note the time you sent it. When the other side replies, the reply goes in the same file, and the row gets updated. The conversation can be pleasant. The file is what you will have at the closing table."
     ],
     "steps": [
-      "Write the decision in a sentence.",
-      "Include price, credits, and dates.",
-      "Save a copy in the offer file."
-    ]
+      "Write the decision in one sentence: yes, no, or counter, naming the offer.",
+      "Include price, credits, and dates, and leave out anything you have not decided.",
+      "Check the sentence against your comparison row and rerun the net if it changed.",
+      "Save a copy in the offer file the same day."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "split-price-from-the-closing-date",
     "title": "Split price from the closing date",
     "stage": "offers-and-negotiation",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "When you counter, change the price on one line and the closing date on another.",
     "body": [
-      "A counter that changes price and date in one breath is hard to compare. Write the price you want on its own line.",
-      "Write the closing date you can actually meet on the next line. If you need a few more days to move, say that as a date, not as a feeling.",
-      "Then read both lines against your net page. A higher price with a date you cannot keep is not a better offer."
+      "A counter that changes the price and the date in one breath is hard to compare. Write the price you want on its own line. Write the closing date you can actually meet on the next line. If you need more days to move, say that as a date, not as a feeling. Around the end of the month is not a date. The 28th is a date. Use a calendar when you pick it.",
+      "Check each line against a different page. The price line has to survive the proceeds calculator with the credits you are also offering. The date line has to survive the mover, the possession terms, and the walk-away schedule you already wrote. A higher price with a date you cannot keep is not a better offer. You would be paying for that price with a broken move.",
+      "If you can give on one line and not the other, say so. You can accept their price and counter only the date, or the reverse. Put the unchanged item in words so it does not get renegotiated by accident. Then read both lines against your net page one more time. A date that adds a week of costs you have not typed in, such as an extra mortgage payment you know you will owe, belongs in the calculator before you call the date easy.",
+      "Send the two lines in the written counter, not only in a phone call that explains them. File a copy with the comparison row. If they come back on only one line, you can answer that line without reopening the other. That is the point of splitting them. You can see which term moved. When both lines are acceptable, the acceptance should repeat both so the final paper matches the two lines you meant."
     ],
     "steps": [
-      "Put the price on one line.",
-      "Put the closing date on the next line.",
-      "Check both against the net you already wrote."
-    ]
+      "Put the price on one line and the closing date on the next.",
+      "Pick a real date from a calendar, not a feeling about the month.",
+      "Check the price against your net and the date against the move.",
+      "Repeat both lines in the written counter or the acceptance."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "list-what-stays-before-you-sign",
     "title": "List what stays before you sign",
     "stage": "offers-and-negotiation",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Write the appliances, fixtures, and window coverings that stay, and the items you will take.",
     "body": [
-      "Offers often assume the appliances stay. If you plan to take a refrigerator, a curtain rod, or a mirror, write that down before you sign.",
-      "Walk the house with the list. Point at each item and mark stay or goes. Do this in daylight so you do not forget a shelf in the garage.",
-      "Attach the list to your counter or your acceptance. A list you only remember is not part of the deal."
+      "Offers often assume the appliances and the attached fixtures stay. If you plan to take a refrigerator, a curtain rod, a mirror, or a shelf in the garage, write that down before you sign. A list you only remember is not part of the deal. Walk the house with a pen and mark stay or goes on each item you might argue about later. Do it in daylight so you do not skip the back of the garage.",
+      "Include the rooms people forget: the laundry, the shed, the attic pull-down if a fixture is mounted there, and the yard if a bench is bolted down. Window coverings are a common miss. If the drapes stay and the rods go, say both. If a television mount stays and the television goes, say both. The more ordinary the item, the more likely someone assumes the opposite of what you meant.",
+      "Attach the list to your counter or your acceptance. Handing it over later, after the papers are signed, is how you discover it was never part of the contract. If the form has a section for inclusions and exclusions, copy your marks into that section and keep your walk list behind it in the file. Read the form's section out loud against the walk list once. An item on the walk list that never made it onto the form is not in the deal.",
+      "If you are replacing an item before closing, write the replacement on the list too. A tired washer you will swap for the one from the apartment should be described, or you should leave the one that was there. Do not swap after signing and hope nobody notices. The final walk is easier when the list, the house, and the form all name the same things. Take the goes items out before that walk, or label them so nobody thinks they were stolen."
     ],
     "steps": [
-      "Walk the house and mark stay or goes.",
-      "Include the garage and the shed.",
-      "Attach the list to the paper you sign."
-    ]
+      "Walk the house in daylight and mark stay or goes, including the garage and the shed.",
+      "Write window coverings, rods, and mounts as their own lines.",
+      "Copy the list into the form and attach it to the paper you sign.",
+      "Remove the goes items before the final walk, or label them."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "ask-who-pays-for-requested-repairs",
     "title": "Ask who pays for requested repairs",
     "stage": "offers-and-negotiation",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "When a buyer asks for a repair, write the cost and who pays it before you agree.",
     "body": [
-      "A request to fix something is a money question. Get a bid or write a credit amount before you say yes.",
-      "Note who orders the work and who pays. A credit you give at closing is different from a repair you finish before the final walk.",
-      "Put the choice in the written response. Then rerun your net with that amount filled in."
+      "A request to fix something is a money question. Before you say yes, get a bid or name a credit amount. A yes without a number is a blank check. Ask who orders the work and who pays. A credit you give at closing is different from a repair you finish before the final walk. One changes the net on the statement. The other changes your week and still might not satisfy the request if the work runs long.",
+      "Write the choice in three lines: the item, the amount, and who does the work. If you will credit $1,500 and do nothing, say that. If you will hire the plumber and pay the invoice up to a number you name, say the number. If the bid is not in yet, the written response can say you will answer when the bid arrives, if the deadline allows. Do not fill the wait with a spoken promise.",
+      "Rerun the proceeds calculator with that amount filled in before you send the answer. If the credit drops you under the walk-away net, reduce the credit, decline the item, or change your net on purpose. Compare the request with bids you already refused or accepted. You may already have a number for this exact repair in the folder. Use it. A new request does not erase the old bid.",
+      "Put the three lines in the written response and save them with the offer row. At the final walk, the house should match what you agreed to finish, and the statement should match what you agreed to credit. If a repair will not be done in time, say so before the walk, not during it. Who pays is a sentence you can write today. It is a poor surprise on the last afternoon."
     ],
     "steps": [
-      "Get a bid or name a credit.",
-      "Write who orders the work and who pays.",
-      "Rerun your net with that amount."
-    ]
+      "Get a bid or name a credit before you agree to a repair request.",
+      "Write who orders the work, who pays, and the amount.",
+      "Rerun your net with that amount, and stop if it crosses your walk-away line.",
+      "Put the choice in the written response and match the walk and the statement to it."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "save-every-counter-you-send",
@@ -1035,19 +1155,22 @@
     "title": "Read the settlement statement when it arrives",
     "stage": "closing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Check the price, credits, and payoff on the statement the day you receive it.",
     "body": [
-      "The statement is the math of the sale. Read the sale price, the payoff, the credits you agreed to, and the amount you are supposed to receive.",
-      "Compare those lines with your net page and the signed offer. Circle anything that does not match.",
-      "Call the closing office about a mismatch before the appointment, not in the lobby. Bring the circled page with you."
+      "The statement is the math of the sale. Read it the day it arrives, not in the lobby. Start with four lines: the sale price, the payoff, the credits you agreed to, and the amount you are supposed to receive. If any of those is missing, ask the closing office which page it is on before you assume the deal got simpler. A missing credit is not a gift. It may be on another page.",
+      "Compare those lines with your net page and the signed offer. Circle anything that does not match. A credit you never agreed to, a payoff that does not match the quote in your folder, or a proceeds number you cannot rebuild from the lines above it all get a circle. Do the arithmetic on paper. If you cannot get from the price to the proceeds with the lines they printed, you are not ready to sign.",
+      "Call the closing office about a mismatch before the appointment. Bring the circled page and the signed page that disagrees with it. Ask them to explain the line in a sentence you can write down, and ask for a revised statement if the line was wrong. A correction in the lobby is harder, and it is easier to initial something you do not understand when people are waiting. The phone call is the appointment that matters.",
+      "Check the prorations and the dates while you have the file open. A tax or association line should match the dates in the contract closely enough that you can see why it is that amount. If you cannot see why, circle it too. File the final statement in the closing folder when it matches, and carry that copy with you. The version on your screen the night before is not a substitute for the pages you will initial."
     ],
     "steps": [
-      "Read price, payoff, credits, and your proceeds.",
-      "Circle lines that do not match the contract.",
-      "Ask about those lines before closing day."
-    ]
+      "Read the price, payoff, credits, and your proceeds the day the statement arrives.",
+      "Circle lines that do not match the contract or that you cannot rebuild.",
+      "Ask about those lines before closing day, with the signed page in hand.",
+      "Carry the matching statement to the appointment."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "match-the-move-out-date-to-the-contract",
@@ -1098,76 +1221,88 @@
     "title": "Check your name against your ID",
     "stage": "closing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Read the name on the deed papers and make sure it matches the identification you will bring.",
     "body": [
-      "A missing middle initial or a former name can stall a signing. Compare the papers with the identification you plan to bring.",
-      "If the names differ, tell the closing office as soon as you notice. Bring the document that connects the two names if you have one.",
-      "Put that identification with the envelope of keys so it is not still in a drawer on closing morning."
+      "Read the name on the deed papers and compare it with the identification you will bring. A missing middle initial, an old last name, or a shortened first name can stall a signing. Look at the early pages, not only the signature line. The name has to match the identification, and it has to match the way you have been named in the contract if the contract named you. Write down every version you find.",
+      "If the names differ, tell the closing office as soon as you notice. Do not wait for the appointment to see if anyone mentions it. Ask what they need in order to sign. If you have a document that connects the two names, such as a court paper or a prior recorded deed, ask whether to bring it. Bring what they ask for, and bring the identification itself, not a photo of it, unless they have told you a copy is enough.",
+      "Put that identification with the envelope of keys and the closing folder so it is not still in a drawer on closing morning. If two people are signing, each person checks their own name and packs their own identification. One person being ready does not clear the other. Read both names even if only one of you has been on the phone with the closing office.",
+      "Check the statement and the deed against each other once the statement arrives. A name corrected on one document and not the other is still a mismatch. If you have recently changed how you sign, practice is not the issue. The printed name is the issue. Arrive with the papers, the identification, and the note of what the office told you to bring. A stall at the table is a poor time to learn the requirement."
     ],
     "steps": [
-      "Read the name on the deed papers.",
+      "Read the name on the deed papers and on the contract.",
       "Compare it with the identification you will bring.",
-      "Tell the closing office if the names differ."
-    ]
+      "Tell the closing office if the names differ, and bring what they ask for.",
+      "Pack that identification with the closing folder, for each person who will sign."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "leave-utility-numbers-for-the-final-reading",
     "title": "Leave utility numbers for the final reading",
     "stage": "closing",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Write the account numbers and schedule the final readings for the possession date.",
     "body": [
-      "Call each utility and ask for a final reading on the day you give up possession. Write the confirmation number.",
-      "Keep the account numbers on one card in your closing folder. You will want them if a bill arrives after you leave.",
-      "Do not shut a service off early if the contract says the house stays heated or lit until possession. Match the shutoff to the date you already signed."
+      "Call each utility and ask for a final reading on the day you give up possession. Write the confirmation number, the date, and the phone number you called. Electric, gas, water, and trash may be four calls, not one. Do them from the account card you are about to make, so you are reading the account number instead of guessing it from a bill in a drawer.",
+      "Keep the account numbers on one card in the closing folder. You will want them if a bill arrives after you leave. Include the service address and the last four digits if the full number feels sensitive, but keep enough that you can identify the account when you call. A card in the folder beats a portal login you cannot remember from the new house.",
+      "Do not shut a service off early if the contract says the house stays heated or lit until possession. Match the shutoff to the date you already signed. A winter possession with the heat off is a broken pipe you may still be discussing. If the buyer is supposed to start service the same day, ask the utility what happens if there is a gap, and write the answer on the card. You want a handoff, not a dark house.",
+      "Leave the card copy, or the confirmation numbers, where the closing file can find them, and take a photo of the card for yourself. If a final bill is wrong, the confirmation number is the first thing the utility will ask for. Schedule the calls a few days before possession so a missed hold time does not land on moving morning. The readings are part of closing, not an errand you do after the truck is loaded."
     ],
     "steps": [
-      "Schedule a final reading for the possession date.",
-      "Write the account and confirmation numbers.",
-      "Match any shutoff to the date in the contract."
-    ]
+      "Call each utility and schedule a final reading for the possession date.",
+      "Write the account numbers and the confirmation numbers on one card.",
+      "Match any shutoff to the date in the contract, and do not cut heat or lights early.",
+      "Keep the card in the closing folder and a copy with you."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "measure-doors-before-you-book-a-truck",
     "title": "Measure doors before you book a truck",
     "stage": "moving",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Measure the sofa, the mattress, and the narrowest doorway before you reserve a truck.",
     "body": [
-      "A piece that fit on the way in may not fit if you have added a railing or if the truck plan skips a turn.",
-      "Write the height and width of the largest pieces and of the smallest doorway they must pass. Share those numbers with the mover or use them yourself.",
-      "If a piece will not pass, decide now whether it stays, gets sold, or needs a different door. Do not decide that on the truck ramp."
+      "A piece that fit on the way in may not fit on the way out if you have added a railing, a new door, or a turn the truck plan skips. Measure before you reserve the truck. Write the height and the width of the largest pieces and of the smallest doorway they must pass, including the landing and the turn, not only the door slab. A sofa that clears the door and dies at the corner still does not leave.",
+      "Measure the sofa, the mattress, the table that does not collapse, and any appliance you are taking. Write inches, not about three feet. Then measure the narrowest door, the stair rail, and the path to the truck. Share those numbers with the mover or use them yourself. If the mover asks whether it will fit and you answer it always has, you have skipped the tip. Read them the inches.",
+      "If a piece will not pass, decide now whether it stays, gets sold, or needs a different door. Taking a door off the hinges is a plan only if you have the tools and the time, and if the opening without the door is actually wide enough. A screwdriver and a helper are cheaper than a gouge in a jamb you no longer own, or in one you still do. Do not decide on the ramp.",
+      "Put the measurements on the same page as the truck reservation. If you are renting by the hour, a piece that has to be winched or left behind changes the hour count. Ask the rental desk what the truck's ramp can take, and write that down too. A reservation without the inches is a guess with a deposit. The inches are the part you can know today, with a tape you already own."
     ],
     "steps": [
-      "Measure the largest furniture and the narrowest door.",
-      "Write the numbers down.",
-      "Decide the plan for anything that will not pass."
-    ]
+      "Measure the largest furniture and the narrowest door, including the turn.",
+      "Write the inches down and share them with the mover or use them yourself.",
+      "Decide now what happens to anything that will not pass.",
+      "Put the measurements on the same page as the truck reservation."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "pack-a-first-week-kitchen-box",
     "title": "Pack a first-week kitchen box",
     "stage": "moving",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Fill one box with the pan, mugs, soap, and towels you will want before the rest is unpacked.",
     "body": [
-      "Choose one sturdy box and mark it OPEN FIRST on two sides. Put in a pan, a knife, mugs, soap, towels, and any medicine you take daily.",
-      "Load that box in your own car, not in the back of the truck. If the truck is late, you can still cook and wash.",
-      "Tape a short list to the top so you do not reopen it to check what you packed."
+      "Choose one sturdy box and mark it OPEN FIRST on two sides, in the same thick marker you use for the room labels. This box is the one you can live out of before the rest is unpacked. Put in a pan, a knife, mugs, soap, towels, a sponge, and any medicine you take daily. Add a roll of paper towels and a trash bag. The first night fails on small things, not on furniture.",
+      "Tape a short list to the top so you do not reopen the box to check what you packed. If it is not on the list, it is not in the box. That rule keeps you from slicing the tape six times. Pack the box the day before, when you can still grab a missing mug from the cupboard. A box packed at midnight is how the can opener stays in a random kitchen box on the truck.",
+      "Load that box in your own car, not in the back of the truck. If the truck is late, you can still cook and wash. Set it on the seat or in the trunk where it will not be grabbed by a helper who is trying to be useful. Tell the people loading: this one stays. The closing folder and your identification can sit beside it. You are building the car as the place the essentials live.",
+      "At the new place, open this box first and only this box until you have washed, eaten, and found the medicine. Then start on the room labels. If you packed a second open-first box for the bath, mark it the same way and keep it in the car too. Two labeled boxes you can carry are a plan. A dozen boxes marked open me first are the same as none. The list on the lid is what makes this one different."
     ],
     "steps": [
-      "Pack one box with the first week's kitchen basics.",
-      "Mark it OPEN FIRST on two sides.",
-      "Carry it in your car."
-    ]
+      "Pack one sturdy box with a pan, a knife, mugs, soap, towels, and daily medicine.",
+      "Tape a list to the lid and mark OPEN FIRST on two sides.",
+      "Carry the box in your car, and tell the loaders it stays there.",
+      "Open that box first, and leave the other boxes until you have used it."
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "forward-the-mail-before-you-leave",
@@ -1218,18 +1353,21 @@
     "title": "Carry the closing papers with you",
     "stage": "moving",
     "status": "published",
-    "updatedOn": "2026-10-22",
+    "updatedOn": "2026-10-28",
     "queueOrder": 0,
     "summary": "Keep the signed settlement set in your car, not in a box on the truck.",
     "body": [
-      "Put the signed papers, the key envelope copy, and your identification in one folder. That folder rides with you.",
-      "If you need a page while the truck is in transit, you still have it. A box labeled OFFICE is not the same as a folder in the front seat.",
-      "When you arrive, file the folder before you unpack the kitchen. You will not want to hunt for it later."
+      "Put the signed settlement set, a copy of the key envelope list, and your identification in one folder. That folder rides with you. It does not go in a box labeled office, and it does not go on the truck. If you need a page while the truck is in transit, you still have it. A box you cannot reach until tonight is not a file.",
+      "Build the folder the night before, from the closing folder you have been keeping all along. Pull the signed statement, the deed copies you were given, the inclusion list, the utility card, and the identification. If the office handed you a packet, the packet is the core. Add a pen and the phone number of the closing office on the inside cover. You are not packing the whole history of the house. You are packing the pages you might be asked to show.",
+      "Put the folder in the front seat, not under a first-night box you will forget to move. If two people are traveling separately, decide whose car holds it and write that on the top. One folder, one car. A split set is how a page goes missing between driveways. The keys you are not handing over, and any garage remote you still need tonight, can live in the same bag so you are not unlocking the new place with a search.",
+      "When you arrive, file the folder before you unpack the kitchen. A drawer or a shelf you name out loud is enough. You will not want to hunt for it under towels after a long day, and you may need the utility card sooner than you think. The first-week box can wait ten minutes. The folder should not. If a page is missing when you file it, you still have time to call while the day is fresh. A week later, the truck is gone and so is the easy answer."
     ],
     "steps": [
-      "Put signed papers in one folder.",
-      "Carry the folder in your car.",
-      "File it before you unpack."
-    ]
+      "Put the signed papers, the key list, and your identification in one folder.",
+      "Add the utility card, the inclusion list, and the closing office number.",
+      "Carry the folder in the front seat of one car, not on the truck.",
+      "File it before you unpack, and call the same day if a page is missing."
+    ],
+    "publishedOn": "2026-10-22"
   }
 ]

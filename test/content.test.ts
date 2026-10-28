@@ -10,7 +10,14 @@ import { STAGE_IDS, type Tip } from "@/lib/types";
 import { publicPaths } from "@/lib/site";
 import { deliverEmail, EMAIL_DELIVERY_ENABLED, planRenewalDrafts } from "@/lib/outbox";
 import { digestsMatch, tokenDigest } from "@/lib/admin-token";
-import { CONTENT_SECURITY_POLICY } from "@/lib/csp";
+import {
+  CONTENT_SECURITY_POLICY,
+  GENERATED_OG_CACHE_CONTROL,
+  NETLIFY_GENERATED_OG_PATH,
+  NETLIFY_STATIC_IMAGE_PATHS,
+  RESPONSE_HEADERS,
+  STATIC_IMAGE_CACHE_CONTROL,
+} from "@/lib/csp";
 import {
   FIXTURE_ARCHIVED_SLUG,
   FIXTURE_PUBLISHED_SLUG,
@@ -174,6 +181,16 @@ describe("ads, affiliates, and email", () => {
     expect(netlify).toContain('X-Robots-Tag = "noindex"');
     const vercelKeys = vercel.headers.flatMap((group) => group.headers.map((header) => header.key));
     expect(vercelKeys).not.toContain("X-Robots-Tag");
+    expect(vercel.headers).toEqual(RESPONSE_HEADERS);
+    for (const path of NETLIFY_STATIC_IMAGE_PATHS) {
+      expect(netlify).toContain(`for = "${path}"`);
+    }
+    expect(netlify).toContain(`for = "${NETLIFY_GENERATED_OG_PATH}"`);
+    expect(netlify).toContain(`Cache-Control = "${STATIC_IMAGE_CACHE_CONTROL}"`);
+    expect(netlify).toContain(`Cache-Control = "${GENERATED_OG_CACHE_CONTROL}"`);
+    expect(STATIC_IMAGE_CACHE_CONTROL).toBe("public, max-age=31536000, immutable");
+    expect(GENERATED_OG_CACHE_CONTROL).toContain("s-maxage=2592000");
+    expect(GENERATED_OG_CACHE_CONTROL).toContain("stale-while-revalidate=604800");
     const robots = readFileSync(resolve(process.cwd(), "app/robots.ts"), "utf8");
     expect(robots).toContain('allow: "/"');
     expect(robots).not.toContain("noindex");
