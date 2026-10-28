@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Great_Vibes, Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { HeaderAd, SidebarAd } from "@/components/ad-regions";
 import { CookieConsent } from "@/components/cookie-consent";
 import { HeaderSponsor } from "@/components/placement-banner";
@@ -88,6 +89,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <SiteFooter />
         <CookieConsent enabled={adsenseClientId(process.env.ADSENSE_PUBLISHER_ID) !== null} />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

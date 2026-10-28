@@ -33,7 +33,10 @@ export default function PrivacyPage() {
         email. The page checks the fields before sending them. It does not create an account from the form.
       </p>
       <h2>Analytics</h2>
-      <p>HomeSellTips uses Vercel Web Analytics. It is cookieless and collects anonymous page views.</p>
+      <p>
+        HomeSellTips uses Vercel Web Analytics. It is cookieless and collects anonymous page views. Vercel Speed
+        Insights is cookieless and measures page performance.
+      </p>
       <h2>Email</h2>
       <p>
         Renewal notes, when drafted, stay in an admin outbox in the repository. Those notes are not emailed. The only

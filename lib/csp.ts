@@ -1,4 +1,4 @@
-// 'self' allows the Vercel Web Analytics script and page-view request at /_vercel/insights/*.
+// 'self' allows /_vercel/insights/* and /_vercel/speed-insights/* for the script and its request.
 export const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "base-uri 'self'",
