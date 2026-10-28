@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { PrintButton } from "@/components/print-button";
+import { checklistCrumbs } from "@/lib/crumbs";
 import { pageMetadata } from "@/lib/page-meta";
 import { parseStageId } from "@/lib/parse";
 import { STAGE_CHECKLISTS } from "@/lib/stage-checklists";
@@ -40,9 +42,7 @@ export default async function StageChecklistPage({ params }: { params: Promise<{
   const items = STAGE_CHECKLISTS[stage];
   return (
     <article className="checklist-sheet">
-      <p className="no-print">
-        <a href={stagePath(stage)}>{stageTitle(stage)}</a>
-      </p>
+      <Breadcrumbs crumbs={checklistCrumbs(stage)} />
       <h1>{stageTitle(stage)} checklist</h1>
       <p className="lede">One page. Check a box, or print it and use a pen.</p>
       <PrintButton />

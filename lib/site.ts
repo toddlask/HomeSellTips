@@ -43,6 +43,10 @@ export function publishedTips(tips: readonly Tip[]): Tip[] {
   return tips.filter((tip) => tip.status === "published");
 }
 
+export function tipPublishedOn(tip: Pick<Tip, "publishedOn" | "updatedOn">): string {
+  return tip.publishedOn ?? tip.updatedOn;
+}
+
 export function archivedTips(tips: readonly Tip[]): Tip[] {
   return tips.filter((tip) => tip.status === "archived");
 }
@@ -102,12 +106,30 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
 }
 
 export function llmsText(): string {
-  const stages = STAGE_IDS.map((stage) => `- ${stageTitle(stage)}: ${stageSummary(stage)}`).join("\n");
+  const origin = getSiteUrl();
+  const url = (path: string) => `${origin}${path}`;
+  const hubs = [
+    ["Home", "/"],
+    ["Tips", "/tips"],
+    ["Stages", "/stages"],
+    ["Tools", "/tools"],
+    ["About", "/about"],
+  ]
+    .map(([name, path]) => `- ${name}: ${url(path)}`)
+    .join("\n");
+  const stages = STAGE_IDS.map((stage) => `- ${stageTitle(stage)}: ${url(stagePath(stage))} ${stageSummary(stage)}`).join(
+    "\n",
+  );
+  const tools = TOOL_LINKS.map((tool) => `- ${tool.title}: ${url(tool.href)} ${tool.text}`).join("\n");
   return `# HomeSellTips
 
 HomeSellTips is a public website of practical tips for people in the United States who expect to sell a home in about one to six months, including people considering a first sale or a for-sale-by-owner sale.
 
 ${DISCLAIMER}
+
+## Hubs
+
+${hubs}
 
 ## Stages
 
@@ -115,10 +137,7 @@ ${stages}
 
 ## Tools
 
-- Net proceeds calculator. You enter the sale price, mortgage payoff, commissions, closing costs, seller credits, and repair costs.
-- Commission comparison. You enter the price, listing percent, buyer-agent percent, and any flat fees. It compares full service, FSBO paying a buyer agent, and FSBO paying neither.
-- What to fix first. You enter a cost and your own expected value. The list sorts by your value minus your cost. It does not supply a return rate.
-- Printable seller prep checklist.
+${tools}
 
 ## Content
 

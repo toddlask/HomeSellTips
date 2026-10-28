@@ -19,9 +19,9 @@ export default function CurbAppealPage() {
         materials for a weekend you do yourself. $$$ is a hired repair.
       </p>
       <ul className="curb-grid">
-        {CURB_WINS.map((win) => (
+        {CURB_WINS.map((win, index) => (
           <li key={win.id} className="curb-card">
-            <CurbPhoto photo={win.photo} />
+            <CurbPhoto photo={win.photo} priority={index === 0} />
             <h2>{win.title}</h2>
             <p className="curb-tags">
               <span className="cost-tag">{win.cost}</span>

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { CONSENT_STORAGE_KEY } from "@/lib/consent";
+import { INFO_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy",
-  description: "How HomeSellTips saves a consent choice in this browser, optional ads, and the advertise form. No accounts.",
+  description: INFO_DESCRIPTIONS.privacy,
   path: "/privacy",
 });
 

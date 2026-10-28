@@ -14,7 +14,7 @@ import { CALCULATOR_NOTE, getSiteUrl, publishedTips, SITE_NAME, TOOL_LINKS } fro
 import { STAGE_IDS } from "@/lib/types";
 
 export const metadata: Metadata = pageMetadata({
-  title: `${SITE_NAME} · Practical tips before you sell`,
+  title: `${SITE_NAME} · Before you list`,
   description: HUB_DESCRIPTIONS.home,
   path: "/",
   absoluteTitle: true,

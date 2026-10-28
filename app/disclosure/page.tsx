@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { INFO_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
   title: "Ad and affiliate disclosure",
-  description: "How HomeSellTips labels sponsored placements, ads, and affiliate links.",
+  description: INFO_DESCRIPTIONS.disclosure,
   path: "/disclosure",
 });
 

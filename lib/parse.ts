@@ -145,6 +145,9 @@ function parseTip(value: unknown): Tip {
     stage,
     status,
     updatedOn: asDate(record.updatedOn, "Tip updatedOn"),
+    ...(record.publishedOn === undefined
+      ? {}
+      : { publishedOn: asDate(record.publishedOn, "Tip publishedOn") }),
     queueOrder,
     summary: asString(record.summary, "Tip summary"),
     body: asStringList(record.body, "Tip body"),

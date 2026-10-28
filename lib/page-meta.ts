@@ -30,8 +30,22 @@ type PageMetadataInput = {
   image?: ShareImage;
 };
 
+export const SHORT_SITE_NAME = "HomeSellTips";
+
 export function tipPageTitle(title: string): string {
   return `${title} · Tips`;
+}
+
+export function usesShortTitle(path: string): boolean {
+  return path.startsWith("/tools") || path.endsWith("/checklist") || path === "/disclosure";
+}
+
+export function resolvedDocumentTitle(input: { title: string; path: string; absoluteTitle?: boolean }): string {
+  if (input.absoluteTitle) {
+    return input.title;
+  }
+  const suffix = usesShortTitle(input.path) ? SHORT_SITE_NAME : SITE_NAME;
+  return `${input.title} · ${suffix}`;
 }
 
 export function pageMetadata(input: PageMetadataInput): Metadata {
@@ -64,7 +78,11 @@ export function pageMetadata(input: PageMetadataInput): Metadata {
   }
 
   const metadata: Metadata = {
-    title: input.absoluteTitle ? { absolute: input.title } : input.title,
+    title: input.absoluteTitle
+      ? { absolute: input.title }
+      : usesShortTitle(input.path)
+        ? { absolute: resolvedDocumentTitle(input) }
+        : input.title,
     description: input.description,
     alternates: { canonical: input.path },
     openGraph,

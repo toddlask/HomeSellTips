@@ -16,6 +16,17 @@ export const TOOL_DESCRIPTIONS = {
   season: "A chart of monthly US existing-home sales from FRED series EXHOSLUSM495N. It shows one published year, not a forecast of your sale.",
 } as const;
 
+export const INFO_DESCRIPTIONS = {
+  archive:
+    "Archived seller notes that left the active HomeSellTips library. Each page stays readable, is marked archived, and is left out of search.",
+  advertise:
+    "Send an advertising inquiry from your browser. HomeSellTips reads the note and replies by email. The form does not create an account.",
+  privacy:
+    "How HomeSellTips saves a consent choice in this browser, when optional ad scripts can load, and what the advertise form sends. No accounts.",
+  disclosure:
+    "How HomeSellTips labels sponsored placements and display ads, when affiliate links stay off, and why a commission does not change your price.",
+} as const;
+
 export const ABOUT_TITLE = "About this site";
 
 export const ABOUT_DESCRIPTION =

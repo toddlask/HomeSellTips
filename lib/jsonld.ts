@@ -47,19 +47,27 @@ export function aboutPageJsonLd(origin: string, name: string, description: strin
 export function articleJsonLd(input: {
   headline: string;
   datePublished: string;
-  dateModified: string;
+  dateModified?: string;
   image: string;
   url: string;
+  authorName: string;
+  publisherUrl: string;
 }): JsonLdNode {
-  return {
+  const organization = organizationFields(input.publisherUrl, input.authorName);
+  const article: JsonLdNode = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: input.headline,
     datePublished: input.datePublished,
-    dateModified: input.dateModified,
     image: input.image,
     mainEntityOfPage: input.url,
+    author: organization,
+    publisher: organization,
   };
+  if (input.dateModified && input.dateModified !== input.datePublished) {
+    article.dateModified = input.dateModified;
+  }
+  return article;
 }
 
 export function breadcrumbJsonLd(

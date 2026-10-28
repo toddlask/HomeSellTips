@@ -21,6 +21,7 @@ export type Tip = {
   stage: StageId;
   status: TipStatus;
   updatedOn: string;
+  publishedOn?: string;
   queueOrder: number;
   summary: string;
   body: string[];

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { InContentAd } from "@/components/ad-regions";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { GlossText } from "@/components/gloss-text";
 import { StagePhoto } from "@/components/home-photo";
 import { JsonLd } from "@/components/json-ld";
@@ -8,11 +9,13 @@ import { SaleWords } from "@/components/sale-words";
 import { BackToTop, TipJump } from "@/components/tip-jump";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
+import { tipCrumbs } from "@/lib/crumbs";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
+import { tipMetaDescription } from "@/lib/tip-meta";
 import { pageMetadata, tipPageTitle } from "@/lib/page-meta";
-import { stagePhoto } from "@/lib/photos";
-import { stagePath, stageTitle } from "@/lib/stages";
-import { getSiteUrl, relatedTips, tipStatusLabel } from "@/lib/site";
+import { stageTitle } from "@/lib/stages";
+import { tipShareImage } from "@/lib/tip-card";
+import { getSiteUrl, relatedTips, SITE_NAME, tipPublishedOn, tipStatusLabel } from "@/lib/site";
 
 export function generateStaticParams(): Array<{ slug: string }> {
   return tips
@@ -28,18 +31,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!tip) {
     return { title: "Tip" };
   }
-  const photo = stagePhoto(tip.stage);
-  const updated = `${tip.updatedOn}T00:00:00.000Z`;
+  const publishedOn = tipPublishedOn(tip);
+  const published = `${publishedOn}T00:00:00.000Z`;
+  const share = tipShareImage(tip);
   return pageMetadata({
     title: tipPageTitle(tip.title),
-    description: tip.summary,
+    description: tipMetaDescription(tip),
     path: `/tips/${tip.slug}`,
     absoluteTitle: true,
     robots: tip.status === "archived" ? { index: false, follow: true } : { index: true, follow: true },
     openGraphType: "article",
-    publishedTime: updated,
-    modifiedTime: updated,
-    image: { url: photo.src, width: photo.width, height: photo.height, alt: photo.alt },
+    publishedTime: published,
+    modifiedTime: tip.updatedOn === publishedOn ? undefined : `${tip.updatedOn}T00:00:00.000Z`,
+    image: share,
   });
 }
 
@@ -49,33 +53,29 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   if (!tip || (tip.status !== "published" && tip.status !== "archived")) {
     notFound();
   }
-  const photo = stagePhoto(tip.stage);
   const related = relatedTips(tips, tip);
   const origin = getSiteUrl();
-  const updated = `${tip.updatedOn}T00:00:00.000Z`;
+  const publishedOn = tipPublishedOn(tip);
+  const published = `${publishedOn}T00:00:00.000Z`;
   const pageUrl = `${origin}/tips/${tip.slug}`;
+  const share = tipShareImage(tip);
+  const crumbs = tipCrumbs(tip);
   return (
     <article>
       <JsonLd
         data={articleJsonLd({
           headline: tip.title,
-          datePublished: updated,
-          dateModified: updated,
-          image: `${origin}${photo.src}`,
+          datePublished: published,
+          dateModified: tip.updatedOn === publishedOn ? undefined : `${tip.updatedOn}T00:00:00.000Z`,
+          image: `${origin}${share.url}`,
           url: pageUrl,
+          authorName: SITE_NAME,
+          publisherUrl: origin,
         })}
       />
-      <JsonLd
-        data={breadcrumbJsonLd(origin, [
-          { name: "Home", path: "/" },
-          { name: stageTitle(tip.stage), path: stagePath(tip.stage) },
-          { name: tip.title, path: `/tips/${tip.slug}` },
-        ])}
-      />
+      <JsonLd data={breadcrumbJsonLd(origin, crumbs)} />
       <TipJump />
-      <p>
-        <a href={stagePath(tip.stage)}>{stageTitle(tip.stage)}</a>
-      </p>
+      <Breadcrumbs crumbs={crumbs} />
       {tip.status === "archived" ? <p className="archive-flag">{tipStatusLabel(tip.status)}</p> : null}
       <StagePhoto stage={tip.stage} />
       <h1>{tip.title}</h1>

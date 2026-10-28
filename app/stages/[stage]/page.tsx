@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AffiliateList } from "@/components/affiliate-list";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { StagePhoto } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
 import { UpdatedOn } from "@/components/updated-on";
 import { affiliateOffers, offersForStage } from "@/lib/affiliates";
 import { tips } from "@/lib/catalog";
+import { stageCrumbs } from "@/lib/crumbs";
 import { parseStageId } from "@/lib/parse";
 import { stageDescription, stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { pageMetadata } from "@/lib/page-meta";
@@ -45,6 +47,7 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
   const offers = offersForStage(stage, affiliateOffers());
   return (
     <>
+      <Breadcrumbs crumbs={stageCrumbs(stage)} />
       <h1>{stageTitle(stage)}</h1>
       <p className="lede">{stageSummary(stage)}</p>
       <p className="no-print">

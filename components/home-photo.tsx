@@ -39,6 +39,6 @@ export function StagePhoto({ stage }: { stage: StageId }) {
   );
 }
 
-export function CurbPhoto({ photo }: { photo: HomePhoto }) {
-  return <HomePhotoView photo={photo} sizes={CURB_SIZES} />;
+export function CurbPhoto({ photo, priority = false }: { photo: HomePhoto; priority?: boolean }) {
+  return <HomePhotoView photo={photo} priority={priority} sizes={CURB_SIZES} />;
 }

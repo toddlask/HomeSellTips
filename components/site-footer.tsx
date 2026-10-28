@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { allPhotos } from "@/lib/photos";
 import { DISCLAIMER } from "@/lib/site";
 
@@ -19,6 +20,15 @@ export function SiteFooter() {
           ))}
         </ul>
         <ul className="footer-links no-print">
+          <li>
+            <Link href="/tips">Tips</Link>
+          </li>
+          <li>
+            <Link href="/stages">Stages</Link>
+          </li>
+          <li>
+            <Link href="/tools">Tools</Link>
+          </li>
           <li>
             <a href="/about">About</a>
           </li>

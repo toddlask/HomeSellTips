@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { AdvertiseForm } from "@/components/advertise-form";
+import { INFO_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 
 export const metadata: Metadata = pageMetadata({
   title: "Advertise with us",
-  description: "Send an advertising inquiry. We read it and reply by email.",
+  description: INFO_DESCRIPTIONS.advertise,
   path: "/advertise",
 });
 

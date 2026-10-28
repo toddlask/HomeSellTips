@@ -2,8 +2,12 @@
   "name": "homeselltips",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+  },
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx scripts/write-tip-cards.ts",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -26,6 +30,7 @@
     "@vitejs/plugin-react": "^6.1.2",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.3",
+    "sharp": "^0.35.5",
     "tsx": "^4.23.15",
     "typescript": "5.9",
     "vitest": "^5.0.5"

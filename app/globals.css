@@ -462,6 +462,17 @@ caption { text-align: left; font-weight: 700; margin-bottom: 0.4rem; }
 .steps, .related-list { padding-left: 1.2rem; }
 .steps li, .related-list li { margin: 0.3rem 0; }
 
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.45rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem;
+}
+.crumbs li { display: inline-flex; gap: 0.45rem; align-items: center; }
+.crumbs li:not(:last-child)::after { content: "/"; color: var(--muted); }
+
 .archive-flag {
   display: inline-block;
   margin-bottom: 0.6rem;

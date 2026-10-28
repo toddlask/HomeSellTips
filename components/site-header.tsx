@@ -3,8 +3,9 @@ import { ANNOUNCEMENT, SITE_NAME } from "@/lib/site";
 
 const navLinks = [
   ["/", "Home"],
-  ["/#stages", "Stages"],
-  ["/#tools", "Tools"],
+  ["/tips", "Tips"],
+  ["/stages", "Stages"],
+  ["/tools", "Tools"],
   ["/advertise", "Advertise"],
 ] as const;
 

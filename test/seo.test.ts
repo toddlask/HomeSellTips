@@ -2,12 +2,15 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { tips } from "@/lib/catalog";
+import { checklistCrumbs, stageCrumbs, tipCrumbs, toolCrumbs } from "@/lib/crumbs";
 import { aboutPageJsonLd, articleJsonLd, breadcrumbJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
-import { ABOUT_DESCRIPTION, aboutWordCount, HUB_DESCRIPTIONS, TOOL_DESCRIPTIONS } from "@/lib/page-copy";
-import { tipPageTitle } from "@/lib/page-meta";
+import { ABOUT_DESCRIPTION, aboutWordCount, HUB_DESCRIPTIONS, INFO_DESCRIPTIONS, TOOL_DESCRIPTIONS } from "@/lib/page-copy";
+import { resolvedDocumentTitle, tipPageTitle } from "@/lib/page-meta";
 import { stagePhoto } from "@/lib/photos";
 import { checklistDescription, stageDescription, stagePath, stageTitle } from "@/lib/stages";
-import { SITE_NAME } from "@/lib/site";
+import { getSiteUrl, llmsText, SITE_NAME, TOOL_LINKS } from "@/lib/site";
+import { tipKeyPhrase, tipMetaDescription } from "@/lib/tip-meta";
+import { tipShareImage } from "@/lib/tip-card";
 import { STAGE_IDS } from "@/lib/types";
 
 function expectMetaLength(text: string) {
@@ -17,8 +20,24 @@ function expectMetaLength(text: string) {
 
 describe("search metadata", () => {
   it("keeps hub, tool, stage, and checklist descriptions in range", () => {
-    for (const text of [...Object.values(HUB_DESCRIPTIONS), ...Object.values(TOOL_DESCRIPTIONS), ABOUT_DESCRIPTION]) {
+    for (const text of [
+      ...Object.values(HUB_DESCRIPTIONS),
+      ...Object.values(TOOL_DESCRIPTIONS),
+      ...Object.values(INFO_DESCRIPTIONS),
+      ABOUT_DESCRIPTION,
+    ]) {
       expectMetaLength(text);
+    }
+    const seen = new Set<string>();
+    for (const tip of tips) {
+      if (tip.status !== "published") {
+        continue;
+      }
+      const description = tipMetaDescription(tip);
+      expectMetaLength(description);
+      expect(description).toContain(tipKeyPhrase(tip.title));
+      expect(seen.has(description)).toBe(false);
+      seen.add(description);
     }
     expect(aboutWordCount()).toBeGreaterThanOrEqual(200);
     expect(aboutWordCount()).toBeLessThanOrEqual(350);
@@ -49,7 +68,25 @@ describe("search metadata", () => {
     expect(layout).toContain("adsenseClientId");
     const home = readFileSync(resolve(process.cwd(), "app/page.tsx"), "utf8");
     expect(home).toContain("SITE_NAME");
+    expect(home).toContain("Before you list");
     expect(home).toContain("absoluteTitle: true");
+    const homeTitle = resolvedDocumentTitle({
+      title: `${SITE_NAME} · Before you list`,
+      path: "/",
+      absoluteTitle: true,
+    });
+    expect(homeTitle).toContain(SITE_NAME);
+    expect(homeTitle.length).toBeLessThanOrEqual(60);
+    expect(resolvedDocumentTitle({ title: "Ad and affiliate disclosure", path: "/disclosure" }).length).toBeLessThanOrEqual(60);
+    expect(resolvedDocumentTitle({ title: "Net proceeds calculator", path: "/tools/net-proceeds" }).length).toBeLessThanOrEqual(60);
+    for (const stage of STAGE_IDS) {
+      const checklistTitle = resolvedDocumentTitle({
+        title: `${stageTitle(stage)} checklist`,
+        path: `${stagePath(stage)}/checklist`,
+      });
+      expect(checklistTitle.length).toBeLessThanOrEqual(60);
+      expect(checklistTitle.endsWith(" · HomeSellTips")).toBe(true);
+    }
     const consent = readFileSync(resolve(process.cwd(), "components/cookie-consent.tsx"), "utf8");
     expect(consent).toContain("localStorage");
     expect(consent).not.toMatch(/one cookie/i);
@@ -63,8 +100,10 @@ describe("search metadata", () => {
           headline: "Read the whole offer",
           datePublished: "2026-10-22T00:00:00.000Z",
           dateModified: "2026-10-22T00:00:00.000Z",
-          image: `${origin}/photos/dining-room.webp`,
+          image: `${origin}/og/tips/read-the-whole-offer.jpg`,
           url: `${origin}/tips/read-the-whole-offer`,
+          authorName: SITE_NAME,
+          publisherUrl: origin,
         }),
       ),
     ) as Record<string, unknown>;
@@ -72,8 +111,20 @@ describe("search metadata", () => {
     expect(article["@type"]).toBe("Article");
     expect(article.headline).toBe("Read the whole offer");
     expect(article.datePublished).toBe("2026-10-22T00:00:00.000Z");
-    expect(article.dateModified).toBe("2026-10-22T00:00:00.000Z");
-    expect(article.image).toBe(`${origin}/photos/dining-room.webp`);
+    expect(article.dateModified).toBeUndefined();
+    expect(article.image).toBe(`${origin}/og/tips/read-the-whole-offer.jpg`);
+    expect(article.author).toEqual({ "@type": "Organization", name: SITE_NAME, url: origin });
+    expect(article.publisher).toEqual(article.author);
+    const revised = articleJsonLd({
+      headline: "Read the whole offer",
+      datePublished: "2026-10-22T00:00:00.000Z",
+      dateModified: "2026-10-28T00:00:00.000Z",
+      image: `${origin}/og/tips/read-the-whole-offer.jpg`,
+      url: `${origin}/tips/read-the-whole-offer`,
+      authorName: SITE_NAME,
+      publisherUrl: origin,
+    });
+    expect(revised.dateModified).toBe("2026-10-28T00:00:00.000Z");
 
     const crumbs = JSON.parse(
       JSON.stringify(
@@ -111,5 +162,77 @@ describe("search metadata", () => {
       name: organization.name,
       url: organization.url,
     });
+  });
+
+  it("links the hubs from breadcrumbs, the header, and llms.txt", () => {
+    const tip = tips.find((entry) => entry.slug === "read-the-whole-offer");
+    expect(tip).toBeDefined();
+    if (!tip) {
+      return;
+    }
+    expect(tipCrumbs(tip).map((crumb) => crumb.path)).toEqual([
+      "/",
+      "/tips",
+      stagePath(tip.stage),
+      `/tips/${tip.slug}`,
+    ]);
+    expect(stageCrumbs("pricing").map((crumb) => crumb.path)).toEqual(["/", "/stages", "/stages/pricing"]);
+    expect(checklistCrumbs("pricing").some((crumb) => crumb.path === "/stages")).toBe(true);
+    expect(toolCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/tools"]);
+    const header = readFileSync(resolve(process.cwd(), "components/site-header.tsx"), "utf8");
+    const footer = readFileSync(resolve(process.cwd(), "components/site-footer.tsx"), "utf8");
+    const nav = `${header}\n${footer}`;
+    for (const path of ["/tips", "/stages", "/tools"]) {
+      expect(nav).toContain(`"${path}"`);
+    }
+    const origin = getSiteUrl();
+    const guide = llmsText();
+    for (const path of ["/", "/tips", "/stages", "/tools", "/about"]) {
+      expect(guide).toContain(`${origin}${path}`);
+    }
+    for (const tool of TOOL_LINKS) {
+      expect(guide).toContain(`${origin}${tool.href}`);
+    }
+    const share = tipShareImage(tip);
+    expect(share).toEqual({
+      url: `/og/tips/${tip.slug}.jpg`,
+      width: 1200,
+      height: 630,
+      alt: tip.title,
+    });
+    const curb = readFileSync(resolve(process.cwd(), "app/tools/curb-appeal/page.tsx"), "utf8");
+    expect(curb).toContain("priority={index === 0}");
+    const engines = readFileSync(resolve(process.cwd(), "package.json"), "utf8");
+    expect(engines).toContain('"node": "^22.12.0 || ^24.0.0 || >=26.0.0"');
+    expect(readFileSync(resolve(process.cwd(), ".nvmrc"), "utf8").trim()).toBe("22");
+    expect(readFileSync(resolve(process.cwd(), ".github/workflows/ci.yml"), "utf8")).toContain('node-version-file: ".nvmrc"');
+  });
+
+  it("keeps the expanded tips in the word range and marks them revised", () => {
+    const expanded = [
+      "tighten-loose-hardware",
+      "photograph-empty-rooms-on-the-last-day",
+      "close-lids-and-hide-trash-cans",
+      "decide-who-answers-buyer-questions",
+      "gather-keys-and-openers-in-one-envelope",
+      "forward-the-mail-before-you-leave",
+      "put-pet-gear-away-before-showings",
+      "stop-after-one-simple-table-setting",
+      "save-every-counter-you-send",
+      "match-the-move-out-date-to-the-contract",
+      "test-alarms-before-you-list",
+      "leave-a-clear-path-through-each-room",
+    ];
+    for (const slug of expanded) {
+      const tip = tips.find((entry) => entry.slug === slug);
+      expect(tip?.status).toBe("published");
+      if (!tip?.publishedOn) {
+        throw new Error(slug);
+      }
+      const words = `${tip.summary} ${tip.body.join(" ")} ${tip.steps.join(" ")}`.trim().split(/\s+/).filter(Boolean).length;
+      expect(words).toBeGreaterThanOrEqual(300);
+      expect(words).toBeLessThanOrEqual(600);
+      expect(tip.publishedOn < tip.updatedOn).toBe(true);
+    }
   });
 });

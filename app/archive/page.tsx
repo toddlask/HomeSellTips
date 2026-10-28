@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
+import { INFO_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { parseStageId } from "@/lib/parse";
 import { stageTitle } from "@/lib/stages";
@@ -10,7 +11,7 @@ import { STAGE_IDS, type StageId } from "@/lib/types";
 
 export const metadata: Metadata = pageMetadata({
   title: "Archived tips",
-  description: "Seller tips that are no longer in the active HomeSellTips library.",
+  description: INFO_DESCRIPTIONS.archive,
   path: "/archive",
 });
 
