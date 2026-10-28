@@ -20,6 +20,9 @@ export function SiteFooter() {
         </ul>
         <ul className="footer-links no-print">
           <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
             <a href="/archive">Archive</a>
           </li>
           <li>

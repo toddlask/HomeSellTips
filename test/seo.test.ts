@@ -2,11 +2,12 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { tips } from "@/lib/catalog";
-import { articleJsonLd, breadcrumbJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
-import { HUB_DESCRIPTIONS, TOOL_DESCRIPTIONS } from "@/lib/page-copy";
+import { aboutPageJsonLd, articleJsonLd, breadcrumbJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
+import { ABOUT_DESCRIPTION, aboutWordCount, HUB_DESCRIPTIONS, TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { tipPageTitle } from "@/lib/page-meta";
 import { stagePhoto } from "@/lib/photos";
 import { checklistDescription, stageDescription, stagePath, stageTitle } from "@/lib/stages";
+import { SITE_NAME } from "@/lib/site";
 import { STAGE_IDS } from "@/lib/types";
 
 function expectMetaLength(text: string) {
@@ -16,9 +17,11 @@ function expectMetaLength(text: string) {
 
 describe("search metadata", () => {
   it("keeps hub, tool, stage, and checklist descriptions in range", () => {
-    for (const text of [...Object.values(HUB_DESCRIPTIONS), ...Object.values(TOOL_DESCRIPTIONS)]) {
+    for (const text of [...Object.values(HUB_DESCRIPTIONS), ...Object.values(TOOL_DESCRIPTIONS), ABOUT_DESCRIPTION]) {
       expectMetaLength(text);
     }
+    expect(aboutWordCount()).toBeGreaterThanOrEqual(200);
+    expect(aboutWordCount()).toBeLessThanOrEqual(350);
     const stages = new Set<string>();
     const lists = new Set<string>();
     for (const stage of STAGE_IDS) {
@@ -91,6 +94,22 @@ describe("search metadata", () => {
     expect(crumbs.itemListElement[2]?.item).toBe(`${origin}/tips/read-the-whole-offer`);
 
     expect(websiteJsonLd(origin, "Helpful Ideas for Selling Your Home")["@type"]).toBe("WebSite");
-    expect(organizationJsonLd(origin, "Helpful Ideas for Selling Your Home")["@type"]).toBe("Organization");
+    const organization = organizationJsonLd(origin, SITE_NAME);
+    expect(organization["@type"]).toBe("Organization");
+
+    const about = JSON.parse(JSON.stringify(aboutPageJsonLd(origin, SITE_NAME, ABOUT_DESCRIPTION))) as {
+      "@type": string;
+      url: string;
+      description: string;
+      mainEntity: { "@type": string; name: string; url: string };
+    };
+    expect(about["@type"]).toBe("AboutPage");
+    expect(about.url).toBe(`${origin}/about`);
+    expect(about.description).toBe(ABOUT_DESCRIPTION);
+    expect(about.mainEntity).toEqual({
+      "@type": "Organization",
+      name: organization.name,
+      url: organization.url,
+    });
   });
 });

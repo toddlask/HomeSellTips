@@ -70,6 +70,7 @@ describe("published library", () => {
     expect(paths).not.toContain(`/tips/${FIXTURE_ARCHIVED_SLUG}`);
     expect(paths).not.toContain(`/tips/${FIXTURE_QUEUED_SLUG}`);
     expect(paths).toContain("/tips");
+    expect(paths).toContain("/about");
     expect(paths).toContain("/stages");
     expect(paths).toContain("/tools");
     expect(paths).not.toContain("/admin");
@@ -84,6 +85,7 @@ describe("published library", () => {
       expect(paths.has(`/tips/${tip.slug}`)).toBe(tip.status === "published");
     }
     expect(paths.has("/tips/deep-clean-after-the-dusty-work")).toBe(false);
+    expect(paths.has("/about")).toBe(true);
   });
 });
 
@@ -168,6 +170,17 @@ describe("ads, affiliates, and email", () => {
     expect(CONTENT_SECURITY_POLICY).toContain("https://pagead2.googlesyndication.com");
     expect(CONTENT_SECURITY_POLICY).toContain("form-action 'self'");
     expect(CONTENT_SECURITY_POLICY).toMatch(/connect-src[^;]*https:\/\/formsubmit\.co/);
+    expect(netlify).toContain('NEXT_PUBLIC_SITE_URL = "https://homeselltips.vercel.app"');
+    expect(netlify).toContain('X-Robots-Tag = "noindex"');
+    const vercelKeys = vercel.headers.flatMap((group) => group.headers.map((header) => header.key));
+    expect(vercelKeys).not.toContain("X-Robots-Tag");
+    const robots = readFileSync(resolve(process.cwd(), "app/robots.ts"), "utf8");
+    expect(robots).toContain('allow: "/"');
+    expect(robots).not.toContain("noindex");
+    const footer = readFileSync(resolve(process.cwd(), "components/site-footer.tsx"), "utf8");
+    expect(footer).toContain('href="/about"');
+    const about = readFileSync(resolve(process.cwd(), "app/about/page.tsx"), "utf8");
+    expect(about).toContain('href="/advertise"');
   });
 
   it("sets a canonical path from every page module", () => {

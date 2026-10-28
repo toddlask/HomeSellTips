@@ -12,7 +12,7 @@ import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 import { pageMetadata, tipPageTitle } from "@/lib/page-meta";
 import { stagePhoto } from "@/lib/photos";
 import { stagePath, stageTitle } from "@/lib/stages";
-import { getSiteUrl, tipStatusLabel } from "@/lib/site";
+import { getSiteUrl, relatedTips, tipStatusLabel } from "@/lib/site";
 
 export function generateStaticParams(): Array<{ slug: string }> {
   return tips
@@ -50,6 +50,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
     notFound();
   }
   const photo = stagePhoto(tip.stage);
+  const related = relatedTips(tips, tip);
   const origin = getSiteUrl();
   const updated = `${tip.updatedOn}T00:00:00.000Z`;
   const pageUrl = `${origin}/tips/${tip.slug}`;
@@ -94,6 +95,18 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
         ))}
       </ol>
       <SaleWords />
+      {related.length > 0 ? (
+        <section aria-labelledby="related-tips">
+          <h2 id="related-tips">More from {stageTitle(tip.stage)}</h2>
+          <ul className="related-list">
+            {related.map((entry) => (
+              <li key={entry.slug}>
+                <a href={`/tips/${entry.slug}`}>{entry.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
       <InContentAd />
       <BackToTop />
     </article>

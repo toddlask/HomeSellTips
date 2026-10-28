@@ -13,12 +13,34 @@ export function websiteJsonLd(origin: string, name: string): JsonLdNode {
   };
 }
 
+function organizationFields(origin: string, name: string) {
+  return {
+    "@type": "Organization" as const,
+    name,
+    url: origin,
+  };
+}
+
 export function organizationJsonLd(origin: string, name: string): JsonLdNode {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    ...organizationFields(origin, name),
+  };
+}
+
+export function aboutPageJsonLd(origin: string, name: string, description: string): JsonLdNode {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
     name,
-    url: origin,
+    url: `${origin}/about`,
+    description,
+    isPartOf: {
+      "@type": "WebSite",
+      name,
+      url: origin,
+    },
+    mainEntity: organizationFields(origin, name),
   };
 }
 

@@ -15,3 +15,52 @@ export const TOOL_DESCRIPTIONS = {
   fix: "Rank repair projects by the cost and the value you expect. HomeSellTips does not supply a return rate or a typical project cost.",
   season: "A chart of monthly US existing-home sales from FRED series EXHOSLUSM495N. It shows one published year, not a forecast of your sale.",
 } as const;
+
+export const ABOUT_TITLE = "About this site";
+
+export const ABOUT_DESCRIPTION =
+  "A free site of practical ideas for selling a home, arranged by stage. HomeSellTips is general information, not legal, financial, or real-estate advice.";
+
+export const ABOUT_LEDE =
+  "HomeSellTips is a free website of practical ideas for people who are getting a home ready to sell. You can use it if you plan to hire an agent, and you can use it if you plan to sell the house yourself.";
+
+export const ABOUT_SECTIONS = [
+  {
+    heading: "Who it is for",
+    paragraphs: [
+      "The site is for people in the United States who expect to list in the next few months, including someone selling a first home. There is no account to create, no fee to pay, and no newsletter to join. Read a page, use a calculator, and leave when you are done.",
+    ],
+  },
+  {
+    heading: "Tips by stage",
+    paragraphs: [
+      "The tips follow the stages of a sale, in the order you are likely to meet them. Prep and repairs come first. Then come staging, pricing, and the photos for the listing. After that, the notes turn to hiring an agent or selling on your own, reading an offer, closing, and moving day.",
+      "Each tip is a short list of steps for that stage. The tools beside the tips are calculators and checklists. A calculator uses only the numbers you type. It does not fill in a commission, a repair cost, or a price for your house.",
+    ],
+  },
+  {
+    heading: "General information",
+    paragraphs: [
+      "Everything here is general information. It is not legal advice, financial advice, tax advice, or real-estate advice. Rules, forms, and taxes differ by state, and they also depend on the contract for your sale. A licensed real-estate agent, an attorney, or a tax advisor can talk through your own case. HomeSellTips cannot. The same disclaimer is in the footer of every page.",
+    ],
+  },
+] as const;
+
+export const ABOUT_ADVERTISE_BEFORE = "If you want to ask about a labeled ad on the site, use the";
+
+export const ABOUT_ADVERTISE_LINK = "advertise page";
+
+export const ABOUT_ADVERTISE_AFTER =
+  "The form checks your note and then sends it from your browser. That inquiry is not added to a mailing list, and the site does not ask you to create an account.";
+
+export function aboutWordCount(): number {
+  const parts = [
+    ABOUT_TITLE,
+    ABOUT_LEDE,
+    ...ABOUT_SECTIONS.flatMap((section) => [section.heading, ...section.paragraphs]),
+    ABOUT_ADVERTISE_BEFORE,
+    ABOUT_ADVERTISE_LINK,
+    ABOUT_ADVERTISE_AFTER,
+  ];
+  return parts.join(" ").split(/\s+/).filter(Boolean).length;
+}

@@ -7,11 +7,13 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  NEXT_PUBLIC_SITE_URL = "https://homeselltips.vercel.app"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
+    X-Robots-Tag = "noindex"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "DENY"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"

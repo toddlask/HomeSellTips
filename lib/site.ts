@@ -51,6 +51,15 @@ export function tipsForStage(tips: readonly Tip[], stage: StageId): Tip[] {
   return publishedTips(tips).filter((tip) => tip.stage === stage);
 }
 
+const RELATED_TIP_COUNT = 4;
+
+export function relatedTips(tips: readonly Tip[], current: Pick<Tip, "slug" | "stage">): Tip[] {
+  return tipsForStage(tips, current.stage)
+    .filter((tip) => tip.slug !== current.slug)
+    .toSorted((left, right) => right.updatedOn.localeCompare(left.updatedOn) || left.title.localeCompare(right.title))
+    .slice(0, RELATED_TIP_COUNT);
+}
+
 export type SitemapEntry = {
   path: string;
   lastModified: string;
@@ -63,6 +72,7 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
     "/stages",
     "/tools",
     "/archive",
+    "/about",
     "/advertise",
     "/privacy",
     "/disclosure",
