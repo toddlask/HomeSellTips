@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { PagePhoto } from "@/components/home-photo";
-import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { tipsHubCrumbs } from "@/lib/crumbs";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
@@ -24,7 +23,7 @@ export default function TipsIndexPage() {
     <>
       <Breadcrumbs crumbs={tipsHubCrumbs()} linkLast />
       <h1>Tips</h1>
-      <p className="lede">Published notes from the library. Older notes that left the active set are in the archive.</p>
+      <p className="lede">Notes from the library.</p>
       <PagePhoto photo={pagePhoto("/tips")} priority />
       {published.length === 0 ? (
         <p className="panel">No published tips yet.</p>
@@ -34,7 +33,6 @@ export default function TipsIndexPage() {
             <li key={tip.slug}>
               <a className="card" href={`/tips/${tip.slug}`}>
                 <h2>{tip.title}</h2>
-                <UpdatedOn iso={tip.updatedOn} />
                 <p>
                   {stageTitle(tip.stage)}. {tip.summary}
                 </p>

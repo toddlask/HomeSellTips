@@ -43,14 +43,6 @@ export function publishedTips(tips: readonly Tip[]): Tip[] {
   return tips.filter((tip) => tip.status === "published");
 }
 
-export function tipPublishedOn(tip: Pick<Tip, "publishedOn" | "updatedOn">): string {
-  return tip.publishedOn ?? tip.updatedOn;
-}
-
-export function archivedTips(tips: readonly Tip[]): Tip[] {
-  return tips.filter((tip) => tip.status === "archived");
-}
-
 export function tipsForStage(tips: readonly Tip[], stage: StageId): Tip[] {
   return publishedTips(tips).filter((tip) => tip.stage === stage);
 }
@@ -75,7 +67,6 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
     "/tips",
     "/stages",
     "/tools",
-    "/archive",
     "/about",
     "/advertise",
     "/privacy",
@@ -155,17 +146,3 @@ No accounts, no comments, and no newsletter.
 `;
 }
 
-export function tipStatusLabel(status: Tip["status"]): string {
-  switch (status) {
-    case "published":
-      return "Published";
-    case "queued":
-      return "Queued";
-    case "archived":
-      return "Archived";
-    default: {
-      const exhaustive: never = status;
-      return exhaustive;
-    }
-  }
-}

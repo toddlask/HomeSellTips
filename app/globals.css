@@ -338,8 +338,6 @@ a:hover { color: #3f2618; }
 .band-copy h2, .band-copy p, .band-copy a { color: #fff; }
 .band-copy p { margin-inline: auto; }
 
-.updated { color: var(--muted); font-size: 0.95rem; }
-
 .sponsored-label {
   display: inline-block;
   margin: 0 0 0.35rem;
@@ -472,15 +470,6 @@ caption { text-align: left; font-weight: 700; margin-bottom: 0.4rem; }
 }
 .crumbs li { display: inline-flex; gap: 0.45rem; align-items: center; }
 .crumbs li:not(:last-child)::after { content: "/"; color: var(--muted); }
-
-.archive-flag {
-  display: inline-block;
-  margin-bottom: 0.6rem;
-  color: var(--ink);
-  background: var(--announce);
-  border-radius: 999px;
-  padding: 0.15rem 0.55rem;
-}
 
 .site-footer {
   background: var(--cream);

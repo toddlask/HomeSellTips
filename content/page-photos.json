@@ -818,15 +818,5 @@
     "photographer": "Ann poan",
     "sourcePage": "https://www.pexels.com/photo/opened-notebook-with-pen-on-white-desk-5797900/",
     "page": "/tips"
-  },
-  {
-    "id": "hub-archive",
-    "src": "/photos/hub-archive.webp",
-    "width": 1200,
-    "height": 800,
-    "alt": "Rows of labeled archive boxes on shelves in a document room.",
-    "photographer": "Tima Miroshnichenko",
-    "sourcePage": "https://www.pexels.com/photo/a-gray-room-with-shelves-full-of-brown-drawers-6549926/",
-    "page": "/archive"
   }
 ]

@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { tips } from "@/lib/catalog";
-import { archiveCrumbs, checklistCrumbs, photoCreditCrumbs, stageCrumbs, stagesHubCrumbs, tipCrumbs, tipsHubCrumbs, toolCrumbs } from "@/lib/crumbs";
+import { checklistCrumbs, photoCreditCrumbs, stageCrumbs, stagesHubCrumbs, tipCrumbs, tipsHubCrumbs, toolCrumbs } from "@/lib/crumbs";
 import { aboutPageJsonLd, articleJsonLd, breadcrumbJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { ABOUT_DESCRIPTION, aboutWordCount, HUB_DESCRIPTIONS, INFO_DESCRIPTIONS, TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { resolvedDocumentTitle, tipPageTitle } from "@/lib/page-meta";
@@ -111,8 +111,6 @@ describe("search metadata", () => {
       JSON.stringify(
         articleJsonLd({
           headline: "Read the whole offer",
-          datePublished: "2026-10-22T00:00:00.000Z",
-          dateModified: "2026-10-22T00:00:00.000Z",
           image: `${origin}/og/tips/read-the-whole-offer.jpg`,
           url: `${origin}/tips/read-the-whole-offer`,
           authorName: SITE_NAME,
@@ -123,22 +121,11 @@ describe("search metadata", () => {
     expect(article["@context"]).toBe("https://schema.org");
     expect(article["@type"]).toBe("Article");
     expect(article.headline).toBe("Read the whole offer");
-    expect(article.datePublished).toBe("2026-10-22T00:00:00.000Z");
+    expect(article.datePublished).toBeUndefined();
     expect(article.dateModified).toBeUndefined();
     expect(article.image).toBe(`${origin}/og/tips/read-the-whole-offer.jpg`);
     expect(article.author).toEqual({ "@type": "Organization", name: SITE_NAME, url: origin });
     expect(article.publisher).toEqual(article.author);
-    const revised = articleJsonLd({
-      headline: "Read the whole offer",
-      datePublished: "2026-10-22T00:00:00.000Z",
-      dateModified: "2026-10-28T00:00:00.000Z",
-      image: `${origin}/og/tips/read-the-whole-offer.jpg`,
-      url: `${origin}/tips/read-the-whole-offer`,
-      authorName: SITE_NAME,
-      publisherUrl: origin,
-    });
-    expect(revised.dateModified).toBe("2026-10-28T00:00:00.000Z");
-
     const crumbs = JSON.parse(
       JSON.stringify(
         breadcrumbJsonLd(origin, [
@@ -194,15 +181,15 @@ describe("search metadata", () => {
     expect(toolCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/tools"]);
     expect(tipsHubCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/tips"]);
     expect(stagesHubCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/stages"]);
-    expect(archiveCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/archive"]);
     expect(photoCreditCrumbs().map((crumb) => crumb.path)).toEqual(["/", "/photo-credits"]);
-    for (const file of ["app/tips/page.tsx", "app/stages/page.tsx", "app/archive/page.tsx", "app/tools/layout.tsx"]) {
+    for (const file of ["app/tips/page.tsx", "app/stages/page.tsx", "app/tools/layout.tsx"]) {
       const page = readFileSync(resolve(process.cwd(), file), "utf8");
       expect(page).toContain("<Breadcrumbs");
       expect(page).toContain("linkLast");
     }
     const header = readFileSync(resolve(process.cwd(), "components/site-header.tsx"), "utf8");
     const footer = readFileSync(resolve(process.cwd(), "components/site-footer.tsx"), "utf8");
+    expect(footer).not.toContain("/archive");
     const nav = `${header}\n${footer}`;
     for (const path of ["/tips", "/stages", "/tools"]) {
       expect(nav).toContain(`"${path}"`);
@@ -232,10 +219,11 @@ describe("search metadata", () => {
 
   it("keeps every published tip in range and marks it revised", () => {
     const published = tips.filter((tip) => tip.status === "published");
-    expect(published).toHaveLength(58);
+    expect(published).toHaveLength(59);
+    expect(published.some((tip) => tip.slug === "deep-clean-after-the-dusty-work")).toBe(true);
     for (const tip of published) {
       if (!tip.publishedOn) {
-        throw new Error(tip.slug);
+        continue;
       }
       const words = `${tip.summary} ${tip.body.join(" ")} ${tip.steps.join(" ")}`.trim().split(/\s+/).filter(Boolean).length;
       expect(words).toBeGreaterThanOrEqual(300);

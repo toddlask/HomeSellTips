@@ -3,7 +3,6 @@ import { FaqList } from "@/components/faq-list";
 import { HomePhotoView } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
 import { JsonLd } from "@/components/json-ld";
-import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
@@ -103,7 +102,6 @@ export default function HomePage() {
             <li key={tip.slug}>
               <a className="card" href={`/tips/${tip.slug}`}>
                 <h3>{tip.title}</h3>
-                <UpdatedOn iso={tip.updatedOn} />
                 <p>{tip.summary}</p>
               </a>
             </li>

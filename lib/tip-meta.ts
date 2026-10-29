@@ -17,6 +17,8 @@ const TIP_META = {
     "Walk the house with a notepad before you hire anyone, so fixes, disclosures, and jobs you will skip are written down before the first bid.",
   "fix-function-before-finish":
     "Fix function before you buy paint. Leaks, heat, latches, and dead outlets show up on a first visit, and a fresh coat will not hide them.",
+  "deep-clean-after-the-dusty-work":
+    "Deep-clean after the dusty work, not before. Finish the dusty repairs, let the dust settle, then clean from the lights down to the floors.",
   "clear-surfaces-before-you-decorate":
     "Clear surfaces before you add decor, so a buyer can see the room. One useful item on a counter does more than a pile of extras.",
   "pack-personal-items-early":

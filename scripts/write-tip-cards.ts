@@ -6,7 +6,7 @@ import { renderTipCard } from "@/lib/render-tip-card";
 import { tipCardPath } from "@/lib/tip-card";
 
 async function main() {
-  const visible = tips.filter((tip) => tip.status === "published" || tip.status === "archived");
+  const visible = tips.filter((tip) => tip.status === "published");
   const directory = resolve("public/og/tips");
   await mkdir(directory, { recursive: true });
 

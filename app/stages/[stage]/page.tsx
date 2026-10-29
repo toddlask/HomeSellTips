@@ -4,7 +4,6 @@ import { AffiliateList } from "@/components/affiliate-list";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { StagePhoto } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
-import { UpdatedOn } from "@/components/updated-on";
 import { affiliateOffers, offersForStage } from "@/lib/affiliates";
 import { tips } from "@/lib/catalog";
 import { stageCrumbs } from "@/lib/crumbs";
@@ -62,7 +61,6 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
             <li key={tip.slug}>
               <a className="card" href={`/tips/${tip.slug}`}>
                 <h2>{tip.title}</h2>
-                <UpdatedOn iso={tip.updatedOn} />
                 <p>{tip.summary}</p>
               </a>
             </li>

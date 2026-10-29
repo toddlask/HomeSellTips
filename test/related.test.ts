@@ -26,7 +26,6 @@ describe("related tips", () => {
       sampleTip({ slug: "keep-d", stage: "staging", status: "published", updatedOn: "2026-10-04" }),
       sampleTip({ slug: "keep-e", stage: "staging", status: "published", updatedOn: "2026-10-05" }),
       sampleTip({ slug: "current", stage: "staging", status: "published", updatedOn: "2026-10-06" }),
-      sampleTip({ slug: "archived-one", stage: "staging", status: "archived", updatedOn: "2026-10-07" }),
       sampleTip({ slug: "queued-one", stage: "staging", status: "queued", updatedOn: "2026-10-08" }),
       sampleTip({ slug: "other-stage", stage: "moving", status: "published", updatedOn: "2026-10-09" }),
     ];
@@ -38,9 +37,9 @@ describe("related tips", () => {
     expect(relatedTips(library, current).map((tip) => tip.slug)).toEqual(["keep-e", "keep-d", "keep-c", "keep-b"]);
   });
 
-  it("never offers the archived prep tip on a live page", () => {
-    const visible = tips.filter((tip) => tip.status === "published" || tip.status === "archived");
-    expect(visible.length).toBeGreaterThan(0);
+  it("offers published tips from the same stage", () => {
+    const visible = tips.filter((tip) => tip.status === "published");
+    expect(visible.some((tip) => tip.slug === "deep-clean-after-the-dusty-work")).toBe(true);
     for (const tip of visible) {
       const related = relatedTips(tips, tip);
       expect(related.length).toBeGreaterThanOrEqual(3);
@@ -48,7 +47,6 @@ describe("related tips", () => {
       expect(related.every((entry) => entry.stage === tip.stage && entry.status === "published" && entry.slug !== tip.slug)).toBe(
         true,
       );
-      expect(related.some((entry) => entry.slug === "deep-clean-after-the-dusty-work")).toBe(false);
     }
   });
 });

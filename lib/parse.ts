@@ -77,7 +77,6 @@ function parseTipStatus(value: unknown): TipStatus {
   switch (value) {
     case "published":
     case "queued":
-    case "archived":
       return value;
     default:
       throw new Error(`Unknown tip status: ${value}`);

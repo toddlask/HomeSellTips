@@ -9,6 +9,11 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/archive",
+        destination: "/tips",
+        permanent: true,
+      },
     ];
   },
 };

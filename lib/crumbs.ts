@@ -52,13 +52,6 @@ export function stagesHubCrumbs(): Crumb[] {
   ];
 }
 
-export function archiveCrumbs(): Crumb[] {
-  return [
-    { name: "Home", path: "/" },
-    { name: "Archive", path: "/archive" },
-  ];
-}
-
 export function photoCreditCrumbs(): Crumb[] {
   return [
     { name: "Home", path: "/" },

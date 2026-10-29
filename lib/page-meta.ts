@@ -25,8 +25,6 @@ type PageMetadataInput = {
   ogDescription?: string;
   robots?: Metadata["robots"];
   openGraphType?: OpenGraphType;
-  publishedTime?: string;
-  modifiedTime?: string;
   image?: ShareImage;
 };
 
@@ -63,8 +61,6 @@ export function pageMetadata(input: PageMetadataInput): Metadata {
       openGraph = {
         ...shared,
         type: "article",
-        publishedTime: input.publishedTime,
-        modifiedTime: input.modifiedTime,
         images: [image],
       };
       break;

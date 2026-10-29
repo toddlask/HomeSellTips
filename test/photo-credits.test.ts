@@ -25,8 +25,7 @@ describe("photo credits", () => {
     const at = (id: string) => order.indexOf(id);
     expect(order[0]).toBe(heroPhoto.id);
     expect(at("hub-stages")).toBeLessThan(at("hub-tips"));
-    expect(at("hub-tips")).toBeLessThan(at("hub-archive"));
-    expect(at("hub-archive")).toBeLessThan(at(pagePhoto("/tools").id));
+    expect(at("hub-tips")).toBeLessThan(at(pagePhoto("/tools").id));
 
     const footer = readFileSync(resolve(process.cwd(), "components/site-footer.tsx"), "utf8");
     const homeAt = footer.indexOf('href="/"');
@@ -39,7 +38,7 @@ describe("photo credits", () => {
     expect(footer).not.toContain("allPhotos");
     expect(footer).not.toContain("Photograph by");
 
-    for (const file of ["app/tips/page.tsx", "app/stages/page.tsx", "app/archive/page.tsx", "app/tools/page.tsx"]) {
+    for (const file of ["app/tips/page.tsx", "app/stages/page.tsx", "app/tools/page.tsx"]) {
       const source = readFileSync(resolve(process.cwd(), file), "utf8");
       expect(source).toContain("<PagePhoto");
       expect(source).toContain("priority");

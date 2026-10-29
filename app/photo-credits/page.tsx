@@ -28,9 +28,6 @@ function pageLabel(path: string): string {
   if (path === "/tools") {
     return "Tools";
   }
-  if (path === "/archive") {
-    return "Archive";
-  }
   if (path.startsWith("/stages/")) {
     return stageTitle(parseStageId(path.slice("/stages/".length)));
   }

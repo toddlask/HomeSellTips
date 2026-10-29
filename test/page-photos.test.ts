@@ -12,11 +12,11 @@ const banned =
 
 function coveredPaths(): string[] {
   const tipPaths = tips
-    .filter((tip) => tip.status === "published" || tip.status === "archived")
+    .filter((tip) => tip.status === "published")
     .map((tip) => `/tips/${tip.slug}`);
   const stagePaths = STAGE_IDS.map((stage) => `/stages/${stage}`);
   const toolPaths = ["/tools", ...TOOL_LINKS.map((tool) => tool.href)];
-  const hubPaths = ["/tips", "/stages", "/archive"];
+  const hubPaths = ["/tips", "/stages"];
   return [...tipPaths, ...stagePaths, ...toolPaths, ...hubPaths];
 }
 

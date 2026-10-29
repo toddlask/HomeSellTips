@@ -7,7 +7,6 @@ import { PagePhoto } from "@/components/home-photo";
 import { JsonLd } from "@/components/json-ld";
 import { SaleWords } from "@/components/sale-words";
 import { BackToTop, TipJump } from "@/components/tip-jump";
-import { UpdatedOn } from "@/components/updated-on";
 import { tips } from "@/lib/catalog";
 import { tipCrumbs } from "@/lib/crumbs";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
@@ -16,48 +15,38 @@ import { pageMetadata, tipPageTitle } from "@/lib/page-meta";
 import { tipPhoto } from "@/lib/photos";
 import { stageTitle } from "@/lib/stages";
 import { tipShareImage } from "@/lib/tip-card";
-import { getSiteUrl, relatedTips, SITE_NAME, tipPublishedOn, tipStatusLabel } from "@/lib/site";
+import { getSiteUrl, publishedTips, relatedTips, SITE_NAME } from "@/lib/site";
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return tips
-    .filter((tip) => tip.status === "published" || tip.status === "archived")
-    .map((tip) => ({ slug: tip.slug }));
+  return publishedTips(tips).map((tip) => ({ slug: tip.slug }));
 }
 
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const tip = tips.find((entry) => entry.slug === slug && (entry.status === "published" || entry.status === "archived"));
+  const tip = publishedTips(tips).find((entry) => entry.slug === slug);
   if (!tip) {
     return { title: "Tip" };
   }
-  const publishedOn = tipPublishedOn(tip);
-  const published = `${publishedOn}T00:00:00.000Z`;
-  const share = tipShareImage(tip);
   return pageMetadata({
     title: tipPageTitle(tip.title),
     description: tipMetaDescription(tip),
     path: `/tips/${tip.slug}`,
     absoluteTitle: true,
-    robots: tip.status === "archived" ? { index: false, follow: true } : { index: true, follow: true },
     openGraphType: "article",
-    publishedTime: published,
-    modifiedTime: tip.updatedOn === publishedOn ? undefined : `${tip.updatedOn}T00:00:00.000Z`,
-    image: share,
+    image: tipShareImage(tip),
   });
 }
 
 export default async function TipPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tip = tips.find((entry) => entry.slug === slug);
-  if (!tip || (tip.status !== "published" && tip.status !== "archived")) {
+  const tip = publishedTips(tips).find((entry) => entry.slug === slug);
+  if (!tip) {
     notFound();
   }
   const related = relatedTips(tips, tip);
   const origin = getSiteUrl();
-  const publishedOn = tipPublishedOn(tip);
-  const published = `${publishedOn}T00:00:00.000Z`;
   const pageUrl = `${origin}/tips/${tip.slug}`;
   const share = tipShareImage(tip);
   const crumbs = tipCrumbs(tip);
@@ -66,8 +55,6 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <JsonLd
         data={articleJsonLd({
           headline: tip.title,
-          datePublished: published,
-          dateModified: tip.updatedOn === publishedOn ? undefined : `${tip.updatedOn}T00:00:00.000Z`,
           image: `${origin}${share.url}`,
           url: pageUrl,
           authorName: SITE_NAME,
@@ -77,9 +64,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <JsonLd data={breadcrumbJsonLd(origin, crumbs)} />
       <TipJump />
       <Breadcrumbs crumbs={crumbs} />
-      {tip.status === "archived" ? <p className="archive-flag">{tipStatusLabel(tip.status)}</p> : null}
       <h1>{tip.title}</h1>
-      <UpdatedOn iso={tip.updatedOn} />
       <p className="lede">{tip.summary}</p>
       <PagePhoto photo={tipPhoto(tip.slug)} />
       {tip.body.map((paragraph) => (

@@ -165,9 +165,6 @@ function placementKey(pages: readonly string[]): string {
   if (path === "/tips" || path.startsWith("/tips/")) {
     return `2:${path}`;
   }
-  if (path === "/archive") {
-    return `3:${path}`;
-  }
   if (path === "/tools" || path.startsWith("/tools/")) {
     return `4:${path}`;
   }

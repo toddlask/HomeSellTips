@@ -19,7 +19,6 @@ import {
   STATIC_IMAGE_CACHE_CONTROL,
 } from "@/lib/csp";
 import {
-  FIXTURE_ARCHIVED_SLUG,
   FIXTURE_PUBLISHED_SLUG,
   FIXTURE_QUEUED_SLUG,
   fixtureCategorySponsor,
@@ -70,12 +69,11 @@ describe("published library", () => {
       expect(library.filter((tip) => tip.stage === stage && tip.status === "published")).toHaveLength(2);
     }
     expect(library.filter((tip) => tip.status === "queued")).toHaveLength(6);
-    expect(library.filter((tip) => tip.status === "archived")).toHaveLength(1);
     expectCurrentCopy(library, "2026-10-24");
     const paths = publicPaths(library).map((entry) => entry.path);
     expect(paths).toContain(`/tips/${FIXTURE_PUBLISHED_SLUG}`);
-    expect(paths).not.toContain(`/tips/${FIXTURE_ARCHIVED_SLUG}`);
     expect(paths).not.toContain(`/tips/${FIXTURE_QUEUED_SLUG}`);
+    expect(paths).not.toContain("/archive");
     expect(paths).toContain("/tips");
     expect(paths).toContain("/about");
     expect(paths).toContain("/stages");
@@ -91,7 +89,8 @@ describe("published library", () => {
     for (const tip of tips) {
       expect(paths.has(`/tips/${tip.slug}`)).toBe(tip.status === "published");
     }
-    expect(paths.has("/tips/deep-clean-after-the-dusty-work")).toBe(false);
+    expect(paths.has("/tips/deep-clean-after-the-dusty-work")).toBe(true);
+    expect(paths.has("/archive")).toBe(false);
     expect(paths.has("/about")).toBe(true);
   });
 });

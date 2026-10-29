@@ -21,14 +21,3 @@ export function daysBetweenIso(earlier: string, later: string): number {
   const end = Date.parse(`${later}T00:00:00Z`);
   return Math.round((end - start) / 86_400_000);
 }
-
-export function formatUpdatedOn(iso: string): string {
-  const [yearText, monthText, dayText] = iso.split("-");
-  const date = new Date(Date.UTC(Number(yearText), Number(monthText) - 1, Number(dayText)));
-  return new Intl.DateTimeFormat("en-US", {
-    timeZone: "UTC",
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  }).format(date);
-}

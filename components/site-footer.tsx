@@ -28,9 +28,6 @@ export function SiteFooter() {
             <a href="/photo-credits">Photo credits</a>
           </li>
           <li>
-            <a href="/archive">Archive</a>
-          </li>
-          <li>
             <a href="/privacy">Privacy</a>
           </li>
           <li>

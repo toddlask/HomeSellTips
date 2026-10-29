@@ -11,7 +11,7 @@ export const STAGE_IDS = [
 
 export type StageId = (typeof STAGE_IDS)[number];
 
-export const TIP_STATUSES = ["published", "queued", "archived"] as const;
+export const TIP_STATUSES = ["published", "queued"] as const;
 
 export type TipStatus = (typeof TIP_STATUSES)[number];
 

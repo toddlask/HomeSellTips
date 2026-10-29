@@ -17,8 +17,6 @@ export const TOOL_DESCRIPTIONS = {
 } as const;
 
 export const INFO_DESCRIPTIONS = {
-  archive:
-    "Archived seller notes that left the active HomeSellTips library. Each page stays readable, is marked archived, and is left out of search.",
   advertise:
     "Send an advertising inquiry from your browser. HomeSellTips reads the note and replies by email. The form does not create an account.",
   privacy:
@@ -26,7 +24,7 @@ export const INFO_DESCRIPTIONS = {
   disclosure:
     "How HomeSellTips labels sponsored placements and display ads, when affiliate links stay off, and why a commission does not change your price.",
   credits:
-    "Credits for every HomeSellTips picture: the home photo plus stage, tip, tool, and archive images, each with its photographer, source, and license.",
+    "Credits for every HomeSellTips picture: the home photo plus stage, tip, and tool images, each with its photographer, source, and license.",
 } as const;
 
 export const ABOUT_TITLE = "About this site";

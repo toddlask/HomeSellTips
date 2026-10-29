@@ -39,7 +39,6 @@ export const fixtureCategorySponsor: Placement = {
 
 export const FIXTURE_PUBLISHED_SLUG = "fixture-deep-clean";
 export const FIXTURE_QUEUED_SLUG = "fixture-replace-caulk";
-export const FIXTURE_ARCHIVED_SLUG = "fixture-archived-note";
 export const FIXTURE_NEWEST_PUBLISHED_ON = "2026-10-22";
 
 function fixtureTip(input: {
@@ -95,14 +94,5 @@ export function fixtureLibrary(): Tip[] {
       }),
     );
   }
-  tips.push(
-    fixtureTip({
-      slug: FIXTURE_ARCHIVED_SLUG,
-      stage: "moving",
-      status: "archived",
-      updatedOn: "2026-10-21",
-      queueOrder: 0,
-    }),
-  );
   return tips;
 }
