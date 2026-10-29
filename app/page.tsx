@@ -39,7 +39,7 @@ export default function HomePage() {
         <HomePhotoView photo={heroPhoto} className="hero-photo" priority sizes="100vw" />
         <div className="hero-scrim" />
         <div className="wrap hero-copy">
-          <h1 id="home-heading">Practical tips for selling your home</h1>
+          <h1 id="home-heading">Helpful Ideas for Selling Your Home</h1>
           <p className="script">for the months before you list</p>
           <p className="lede">
             Plain steps for the months before you list, whether you hire an agent or sell the house yourself. The
