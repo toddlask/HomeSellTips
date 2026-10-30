@@ -5,7 +5,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "A slow walk with a notepad shows what to fix, what to tell buyers, and what to leave alone.",
     "body": [
@@ -19,7 +18,8 @@
       "Write one line per issue, with the room or the side of the house.",
       "Mark each line fix, disclose, or leave.",
       "Get a written bid for any fix you cannot price, and type it into the proceeds calculator."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "fix-function-before-finish",
@@ -27,7 +27,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Repair leaks, heat, and latches before you buy paint.",
     "body": [
@@ -41,7 +40,8 @@
       "Test drains, the garage door, handrails, and the outlets a lamp would use.",
       "Get a failing system in writing, then repair it or plan to disclose it.",
       "Plan paint and floors only after the function list is done."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "clear-surfaces-before-you-decorate",
@@ -49,7 +49,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Empty counters and floors do more for a showing than extra decor.",
     "body": [
@@ -63,7 +62,8 @@
       "Leave one or two useful items on a counter, and pull furniture off the walking path.",
       "Keep packed boxes out of the rooms you will photograph.",
       "Add nothing new until the cleared room already works."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "pack-personal-items-early",
@@ -71,7 +71,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Box photos, mail, and papers so the rooms show the house.",
     "body": [
@@ -85,7 +84,8 @@
       "Clear the refrigerator door and wipe it.",
       "Leave closets you will not show shut, without overstuffing the ones that stay open.",
       "Walk from the front door to the back and move anything in the path."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "price-the-property-you-have",
@@ -93,7 +93,6 @@
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Compare sold homes that match this property, then write the net you will accept.",
     "body": [
@@ -107,7 +106,8 @@
       "Adjust only for condition you can point to, and drop a sale you cannot describe.",
       "Write the advertised price, the net you hope for, and the lowest net you will accept.",
       "Run the proceeds calculator at the list price and at a lower price before the first offer."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "leave-room-to-negotiate",
@@ -115,7 +115,6 @@
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Set the list price with room for a credit and still hit your net.",
     "body": [
@@ -129,7 +128,8 @@
       "Pick two terms you can flex on and one you will not.",
       "Run a sample credit through the calculator before anyone asks.",
       "Recalculate proceeds every time a real credit changes."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "daylight-and-lights",
@@ -137,7 +137,6 @@
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Open the shades, turn on the lamps, and keep the camera level.",
     "body": [
@@ -151,7 +150,8 @@
       "Turn on the lights before you frame the shot.",
       "Keep the camera level and take one wide photo and one detail in each main room.",
       "Move trash, close lids, and replace a dead bulb before you call the set done."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "show-the-repairs-you-finished",
@@ -159,7 +159,6 @@
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Give finished repairs their own clear photo, and lead with the front of the house.",
     "body": [
@@ -173,7 +172,8 @@
       "Include one clear photo of the kitchen, each bathroom, and the main living space.",
       "Give each finished repair its own lit frame, and leave unfinished work out.",
       "Retake any repair shot that is blurry or dark, and keep the invoice with the photo."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "list-the-jobs-before-you-choose",
@@ -181,7 +181,6 @@
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Write every job in a sale, then decide who will do it and what it costs you.",
     "body": [
@@ -195,7 +194,8 @@
       "Leave a fee blank until you have it in writing, and enter your own numbers in the calculator.",
       "Decide whether you will offer to pay a buyer's agent, and write the amount or a no.",
       "Ask any agent you interview for a written list before you order a sign."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "questions-if-you-sell-it-yourself",
@@ -203,7 +203,6 @@
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Forms, showings, and offer review are still yours if you sell without an agent.",
     "body": [
@@ -217,7 +216,8 @@
       "Write showing hours you can keep, and who locks up.",
       "Name who receives the first contract and who reads it with you.",
       "Have an attorney or agent review that contract before you sign it."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "read-the-whole-offer",
@@ -225,7 +225,6 @@
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Credits, dates, and contingencies change the money more than the headline price.",
     "body": [
@@ -239,7 +238,8 @@
       "Run the high price with its credit and the lower price without one through the calculator.",
       "List what you will repair, credit, or decline, and ask what each contingency allows.",
       "Save the marked copy in the offer file before you answer."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "compare-net-and-dates",
@@ -247,7 +247,6 @@
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Put each offer on one row and counter the gap in your net.",
     "body": [
@@ -261,7 +260,8 @@
       "Calculate the net on each row with the same payoff and costs.",
       "Counter the specific gap, or ask for more time in writing before the deadline.",
       "Recalculate after every counter and send the answer in writing."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "build-the-closing-folder-early",
@@ -269,7 +269,6 @@
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Collect payoff contacts, receipts, and a wire-check plan before you are under contract.",
     "body": [
@@ -283,7 +282,8 @@
       "Update the disclosure draft when a repair is finished and remove the stale page.",
       "Call a number you look up yourself to confirm wiring instructions before you send money.",
       "Request the payoff when you have a contract and a closing date, and note when the quote expires."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "walk-again-before-the-final-visit",
@@ -291,7 +291,6 @@
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Check the fixtures you promised to leave, and report anything that broke.",
     "body": [
@@ -305,7 +304,8 @@
       "Check the inclusion list in each room and do not remove an item you agreed to leave.",
       "Report anything that broke, in writing, before the visit.",
       "Leave remotes, keys, and codes where the contract says, and clear personal papers from the drawers."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "book-the-move-after-the-date-is-real",
@@ -313,7 +313,6 @@
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Wait for a contract date, then book the truck with a written backup plan.",
     "body": [
@@ -327,7 +326,8 @@
       "Get the mover's cancellation terms in writing, including a shift of a day or two.",
       "Measure the large pieces and price any carry the estimate leaves out.",
       "Pack a first-night box and keep it with you, along with the closing folder."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "label-boxes-by-room",
@@ -335,7 +335,6 @@
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-21",
     "queueOrder": 0,
     "summary": "Name the room on two sides of every box and keep a first-night box with you.",
     "body": [
@@ -349,7 +348,8 @@
       "Number the boxes and keep the list with you.",
       "Carry documents, keys, and the closing folder in the car, not on the truck.",
       "Check the numbers off as you unload, before the truck leaves."
-    ]
+    ],
+    "publishedOn": "2026-10-21"
   },
   {
     "slug": "replace-cracked-caulk-before-photos",
@@ -357,7 +357,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-24",
     "queueOrder": 1,
     "summary": "Cracked caulk shows up in close photos. Replace it while the repair list is still short.",
     "body": [
@@ -371,7 +370,8 @@
       "Remove the old bead and let the joint dry before you recaulk.",
       "Lay a thin line, and stop if the wall behind it is soft.",
       "Photograph the finished joint for the repair folder."
-    ]
+    ],
+    "publishedOn": "2026-10-24"
   },
   {
     "slug": "finish-the-entry-first",
@@ -379,7 +379,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-26",
     "queueOrder": 2,
     "summary": "The front door and entry are the first rooms a visitor stands in. Finish those before the back closets.",
     "body": [
@@ -393,14 +392,15 @@
       "Fix a stuck storm door and confirm the entry light works.",
       "Leave one mat, and clear the daily pile.",
       "Repeat that clear-out before every showing, not only before photos."
-    ]
+    ],
+    "publishedOn": "2026-10-26"
   },
   {
     "slug": "write-your-bottom-line-early",
     "title": "Write your bottom line before the first showing",
     "stage": "pricing",
-    "status": "published",
-    "updatedOn": "2026-10-30",
+    "status": "queued",
+    "updatedOn": "2026-10-21",
     "queueOrder": 3,
     "summary": "Write the lowest net you will accept, and do it before anyone asks.",
     "body": [
@@ -496,7 +496,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Press each smoke and carbon-monoxide alarm, and replace any battery that fails.",
     "body": [
@@ -510,7 +509,8 @@
       "Replace a weak battery with the size printed on the unit.",
       "Replace the unit if a fresh battery still produces silence, or if the printed date has passed.",
       "Test again the week of the first showings."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "clear-gutters-before-showings",
@@ -518,7 +518,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Empty the gutters and check that downspouts send water away from the foundation.",
     "body": [
@@ -532,7 +531,8 @@
       "Run a hose at the high end and watch where the water lands.",
       "Add a downspout extension if water sits by the wall.",
       "Write any leak or loose hanger on the repair list before you paint."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "tighten-loose-hardware",
@@ -540,7 +540,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Snug the hinges, handles, and cabinet pulls that rattle when someone opens a door.",
     "body": [
@@ -554,7 +553,8 @@
       "Tighten screws that move, and replace a spinning screw with a slightly longer one.",
       "Replace only pieces that are broken.",
       "Open each door once more before you call the job done."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "trace-a-stain-to-its-source",
@@ -562,7 +562,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Find the leak that made the stain, then repair that before you paint over the mark.",
     "body": [
@@ -576,7 +575,8 @@
       "Find the leak, or get the cause in writing, before you paint.",
       "Repair and dry the source, and save the invoice.",
       "Patch only after the source is dry, or disclose the stain instead."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "run-heat-and-cooling-before-showings",
@@ -584,7 +584,6 @@
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Turn each system on, listen for a short cycle, and change a dirty filter.",
     "body": [
@@ -598,7 +597,8 @@
       "Run the cooling until a vent is cool, if the house has it.",
       "Replace a dirty filter and write the size down.",
       "Put any system that will not start on the repair list before photo day."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "leave-a-clear-path-through-each-room",
@@ -606,7 +606,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Move chairs and baskets so a visitor can walk in, turn around, and see the floor.",
     "body": [
@@ -620,7 +619,8 @@
       "Move chairs, bins, and cords out of that line.",
       "Tape a sliding rug or roll it up for showings.",
       "Walk the path again with your hands at your sides."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "open-the-window-coverings-the-same-way",
@@ -628,7 +628,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Raise every shade to the same height so the light looks even from room to room.",
     "body": [
@@ -642,7 +641,8 @@
       "Remove a covering that will not hang straight, or replace it after you measure.",
       "Look for glare and dust the sills while the windows are open.",
       "Check the coverings again the morning of a showing, including from the sidewalk."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "put-pet-gear-away-before-showings",
@@ -650,7 +650,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Move bowls, beds, and litter out of sight, and air the rooms they sat in.",
     "body": [
@@ -664,7 +663,8 @@
       "Wipe the spot where a bowl sat.",
       "Move a litter box only to a room you are willing to have closed or cleaned.",
       "Put the gear back as soon as the showing ends."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "stop-after-one-simple-table-setting",
@@ -672,7 +672,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "A plain setting on the table is enough. Extra decor on every surface works against you.",
     "body": [
@@ -686,7 +685,8 @@
       "Use dishes you already own.",
       "Move extra chairs that block the walk through the room.",
       "Reset the same simple places after a meal."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "leave-closets-partly-empty",
@@ -694,7 +694,6 @@
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Take out enough clothes and boxes that a visitor can see the rod and the floor.",
     "body": [
@@ -708,7 +707,8 @@
       "Box what you will not use during showings and leave a gap.",
       "Fold linen into a few stacks, and clear a path in a utility closet.",
       "Confirm the door latches, and only photograph a closet you can read clearly."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "write-three-numbers-before-you-list",
@@ -716,7 +716,6 @@
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Write the list price, the net you hope for, and the net that would make you walk away.",
     "body": [
@@ -730,7 +729,8 @@
       "Write the net you hope for and the net where you would stop.",
       "Leave a blank for any cost you do not know yet.",
       "Keep that page with your offer notes and update it when a real number changes."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "list-credits-before-you-pick-a-price",
@@ -738,7 +738,6 @@
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Write the repairs and concessions you already expect, then see what they do to your net.",
     "body": [
@@ -752,7 +751,8 @@
       "Mark any amount that is still a placeholder until a bid arrives.",
       "Enter the credits in the calculator and read the net.",
       "Choose the list price only after that net is one you can accept."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "match-what-was-included-in-a-sale",
@@ -760,7 +760,6 @@
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Before you compare a sold price, write what that sale included and what yours includes.",
     "body": [
@@ -774,7 +773,8 @@
       "Write what each sale included or credited, and write the same items for your house.",
       "Drop a sale you cannot describe.",
       "Use those rows when you set the list price and when you read the first offer."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "rerun-the-net-after-each-bid",
@@ -782,7 +782,6 @@
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "When a written bid arrives, put that number in the calculator before you agree to the work.",
     "body": [
@@ -796,7 +795,8 @@
       "Compare the new net with your walk-away number.",
       "Skip the project, change the price, or change the walk-away number on purpose.",
       "Save the bid, what it includes, and the printout together."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "keep-price-notes-in-writing",
@@ -804,7 +804,6 @@
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "After each pricing talk, write the price, the net, and what you decided.",
     "body": [
@@ -818,7 +817,8 @@
       "Date the note and file it with your offer papers.",
       "Leave the net blank if you have not calculated it yet, then calculate it.",
       "Update your three numbers only when a note actually changes them."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "shoot-in-the-order-a-visitor-walks",
@@ -826,7 +826,6 @@
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Start at the street, then move through the house in the order someone would walk it.",
     "body": [
@@ -840,7 +839,8 @@
       "Move room to room in walking order and check each room off a card.",
       "Take the wide shot while you walk, and add detail shots after.",
       "Walk back out and reshoot any room that failed before you pack up."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "move-cars-before-the-photo-appointment",
@@ -848,7 +848,6 @@
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Clear the driveway and the curb in front of the house so the photo shows the property.",
     "body": [
@@ -862,7 +861,8 @@
       "Park them where they will not block someone else's drive.",
       "Roll bins out of the frame and coil the hose.",
       "Look once from the sidewalk before you shoot, then bring the bins back."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "close-lids-and-hide-trash-cans",
@@ -870,7 +870,6 @@
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Shut toilet lids, tuck trash cans into cabinets, and clear the edge of every tub.",
     "body": [
@@ -884,7 +883,8 @@
       "Empty a bin that smells, then move cans out of the frame.",
       "Stand in the doorway and check the corners the camera will see.",
       "Put the bins back after the photos if you still live there."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "take-one-wide-shot-and-one-detail",
@@ -892,7 +892,6 @@
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "For each main room, keep one photo that shows the whole room and one that shows a finished feature.",
     "body": [
@@ -906,7 +905,8 @@
       "Take one closer shot of something you finished, or skip the detail.",
       "Delete frames that repeat the same angle.",
       "Do not use a detail shot as a substitute for the wide shot."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "delete-blurry-frames-the-same-day",
@@ -914,7 +914,6 @@
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Review the set before you upload it, and drop any frame that is dark, tilted, or soft.",
     "body": [
@@ -928,7 +927,8 @@
       "Delete soft, dark, tilted, or reflected shots.",
       "Retake a room if the wide shot is not clean.",
       "Name the keepers by room and upload only that folder."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "price-the-hours-you-will-spend",
@@ -936,7 +936,6 @@
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Write the tasks you would take on, then estimate the hours before you decide to sell it yourself.",
     "body": [
@@ -950,7 +949,8 @@
       "Write the hours you can give it in a normal week.",
       "Hire out a task that does not fit the week.",
       "Read the hour list next to the commission calculator before you decide."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "decide-who-answers-buyer-questions",
@@ -958,7 +958,6 @@
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Name the person who will reply, and decide that replies go in writing.",
     "body": [
@@ -972,7 +971,8 @@
       "Write the price, the showing hours, and the facts you will say.",
       "Agree on the line you will use when someone asks for your lowest price.",
       "Log each call on the same sheet."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "learn-which-forms-you-must-use",
@@ -980,7 +980,6 @@
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Before you advertise, ask which seller forms your state expects and where to get them.",
     "body": [
@@ -994,7 +993,8 @@
       "Write who completes each page, and any case where a form applies.",
       "Complete the seller pages before you start showings.",
       "File the filled set in the closing folder and replace a page when a repair changes the answer."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "plan-showing-hours-before-you-advertise",
@@ -1002,7 +1002,6 @@
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Choose the days and hours you can leave the house, and write them down before the first call.",
     "body": [
@@ -1016,7 +1015,8 @@
       "Decide how a visitor gets in and who locks up.",
       "Put the clearing time inside those hours.",
       "Share the plan before the first request, and update it when your week changes."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "write-what-you-will-not-negotiate",
@@ -1024,7 +1024,6 @@
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Before the first call, list the terms you will discuss and the ones you will not.",
     "body": [
@@ -1038,7 +1037,8 @@
       "Keep the will-not list to one or two items, or to the net you will not go under.",
       "Read the list before you answer a call.",
       "Change a list only on purpose, then rerun the net if money moved."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "answer-an-offer-in-writing",
@@ -1046,7 +1046,6 @@
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Send a written yes, no, or counter, even when you already talked it through.",
     "body": [
@@ -1060,7 +1059,8 @@
       "Include price, credits, and dates, and leave out anything you have not decided.",
       "Check the sentence against your comparison row and rerun the net if it changed.",
       "Save a copy in the offer file the same day."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "split-price-from-the-closing-date",
@@ -1068,7 +1068,6 @@
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "When you counter, change the price on one line and the closing date on another.",
     "body": [
@@ -1082,7 +1081,8 @@
       "Pick a real date from a calendar, not a feeling about the month.",
       "Check the price against your net and the date against the move.",
       "Repeat both lines in the written counter or the acceptance."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "list-what-stays-before-you-sign",
@@ -1090,7 +1090,6 @@
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Write the appliances, fixtures, and window coverings that stay, and the items you will take.",
     "body": [
@@ -1104,7 +1103,8 @@
       "Write window coverings, rods, and mounts as their own lines.",
       "Copy the list into the form and attach it to the paper you sign.",
       "Remove the goes items before the final walk, or label them."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "ask-who-pays-for-requested-repairs",
@@ -1112,7 +1112,6 @@
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "When a buyer asks for a repair, write the cost and who pays it before you agree.",
     "body": [
@@ -1126,7 +1125,8 @@
       "Write who orders the work, who pays, and the amount.",
       "Rerun your net with that amount, and stop if it crosses your walk-away line.",
       "Put the choice in the written response and match the walk and the statement to it."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "save-every-counter-you-send",
@@ -1134,7 +1134,6 @@
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Keep a copy of each counter in one folder, in the order you sent them.",
     "body": [
@@ -1148,7 +1147,8 @@
       "Number the copies by date.",
       "Highlight only the lines that changed on the next version.",
       "Open the last saved copy before you send another."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "read-the-settlement-statement-when-it-arrives",
@@ -1156,7 +1156,6 @@
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Check the price, credits, and payoff on the statement the day you receive it.",
     "body": [
@@ -1170,7 +1169,8 @@
       "Circle lines that do not match the contract or that you cannot rebuild.",
       "Ask about those lines before closing day, with the signed page in hand.",
       "Carry the matching statement to the appointment."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "match-the-move-out-date-to-the-contract",
@@ -1178,7 +1178,6 @@
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Read the date you must be out, and book the move to finish before that day.",
     "body": [
@@ -1192,7 +1191,8 @@
       "Book the move to finish before that day.",
       "Change the booking only when a written amendment changes the date.",
       "Leave the last hour for keys and a final walk, not for loading."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "gather-keys-and-openers-in-one-envelope",
@@ -1200,7 +1200,6 @@
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Put every key, garage opener, and gate code in one labeled envelope before closing day.",
     "body": [
@@ -1214,7 +1213,8 @@
       "Copy a missing house key while you still have the original.",
       "Label one envelope with the address and put codes on a card inside.",
       "Carry the envelope to closing instead of packing it."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "check-your-name-against-your-id",
@@ -1222,7 +1222,6 @@
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Read the name on the deed papers and make sure it matches the identification you will bring.",
     "body": [
@@ -1236,7 +1235,8 @@
       "Compare it with the identification you will bring.",
       "Tell the closing office if the names differ, and bring what they ask for.",
       "Pack that identification with the closing folder, for each person who will sign."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "leave-utility-numbers-for-the-final-reading",
@@ -1244,7 +1244,6 @@
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Write the account numbers and schedule the final readings for the possession date.",
     "body": [
@@ -1258,7 +1257,8 @@
       "Write the account numbers and the confirmation numbers on one card.",
       "Match any shutoff to the date in the contract, and do not cut heat or lights early.",
       "Keep the card in the closing folder and a copy with you."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "measure-doors-before-you-book-a-truck",
@@ -1266,7 +1266,6 @@
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Measure the sofa, the mattress, and the narrowest doorway before you reserve a truck.",
     "body": [
@@ -1280,7 +1279,8 @@
       "Write the inches down and share them with the mover or use them yourself.",
       "Decide now what happens to anything that will not pass.",
       "Put the measurements on the same page as the truck reservation."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "pack-a-first-week-kitchen-box",
@@ -1288,7 +1288,6 @@
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Fill one box with the pan, mugs, soap, and towels you will want before the rest is unpacked.",
     "body": [
@@ -1302,7 +1301,8 @@
       "Tape a list to the lid and mark OPEN FIRST on two sides.",
       "Carry the box in your car, and tell the loaders it stays there.",
       "Open that box first, and leave the other boxes until you have used it."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "forward-the-mail-before-you-leave",
@@ -1310,7 +1310,6 @@
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "File the mail forward in time for it to start on your possession date.",
     "body": [
@@ -1324,7 +1323,8 @@
       "Ask the current fee and save the receipt with your closing papers.",
       "Update accounts that will not follow the forward.",
       "Check once after you arrive, and contact a sender directly if a piece is missing."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "photograph-empty-rooms-on-the-last-day",
@@ -1332,7 +1332,6 @@
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Take a photo of each empty room, plus the meter readings, before you lock the door.",
     "body": [
@@ -1346,7 +1345,8 @@
       "Photograph meter readings close enough to read.",
       "Include scratches or chips you want to remember, with something for scale.",
       "Save the set with your settlement papers."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   },
   {
     "slug": "carry-the-closing-papers-with-you",
@@ -1354,7 +1354,6 @@
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
-    "publishedOn": "2026-10-22",
     "queueOrder": 0,
     "summary": "Keep the signed settlement set in your car, not in a box on the truck.",
     "body": [
@@ -1368,6 +1367,7 @@
       "Add the utility card, the inclusion list, and the closing office number.",
       "Carry the folder in the front seat of one car, not on the truck.",
       "File it before you unpack, and call the same day if a page is missing."
-    ]
+    ],
+    "publishedOn": "2026-10-22"
   }
 ]
