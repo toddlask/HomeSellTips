@@ -21,21 +21,15 @@ npm run typecheck
 npm run build
 ```
 
-## Content schedule
+## Content
 
-`.github/workflows/publish-tip.yml` runs daily at 14:00 UTC. It publishes the next queued tip only when the newest published tip is at least two days old. It does not call a model and does not write new prose.
-
-`REVIEW_REQUIRED` unset or false publishes. Set the repository variable to `true` to append an open review item in `content/reviews.json` instead. Approve with:
+There is no scheduled publisher. Queued tips stay queued until a commit publishes them. Approve an open review with:
 
 ```bash
 npm run content:approve -- review-<slug>
 ```
 
-Then commit and push. Both hosts deploy the same git commit, so they cannot drift.
-
-Renewal reminders are drafted into `content/outbox.json` only. Email sending is hard-disabled. There is no provider and no send control.
-
-Do not add a Vercel cron for publishing. The GitHub Action is the only publisher.
+Then commit and push. Email sending is hard-disabled. There is no provider and no send control. Do not add a Vercel cron for publishing.
 
 ## Advertising
 

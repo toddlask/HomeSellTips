@@ -13,9 +13,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",
-    "content:publish": "tsx scripts/publish-next-tip.ts",
-    "content:approve": "tsx scripts/approve-review.ts",
-    "outbox:draft": "tsx scripts/draft-renewals.ts"
+    "content:approve": "tsx scripts/approve-review.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { tips } from "@/lib/catalog";
@@ -151,9 +151,9 @@ describe("ads, affiliates, and email", () => {
     expect(packageJson).not.toMatch(/nodemailer|resend|sendgrid|postmark|mailgun/i);
     const vercel = JSON.parse(readFileSync(resolve(process.cwd(), "vercel.json"), "utf8")) as { crons?: unknown };
     expect(vercel.crons).toBeUndefined();
-    const workflow = readFileSync(resolve(process.cwd(), ".github/workflows/publish-tip.yml"), "utf8");
-    expect(workflow).toContain('cron: "0 14 * * *"');
-    expect(workflow).not.toMatch(/openai|anthropic|llm/i);
+    expect(existsSync(resolve(process.cwd(), ".github/workflows/publish-tip.yml"))).toBe(false);
+    const ci = readFileSync(resolve(process.cwd(), ".github/workflows/ci.yml"), "utf8");
+    expect(ci).not.toMatch(/schedule:|cron:/);
     const source = walk(process.cwd())
       .map((file) => readFileSync(file, "utf8"))
       .join("\n");

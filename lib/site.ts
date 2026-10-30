@@ -134,7 +134,7 @@ ${tools}
 
 ## Content
 
-Tips are original and stored in the repository. A daily GitHub Action around 14:00 UTC publishes one queued tip only when the newest published tip is at least two days old. The job does not call a language model and does not invent text. If review is required, it records a review item in git instead of publishing.
+Tips are original and stored in the repository. There is no scheduled publisher, and no language model writes the tips.
 
 ## Advertising
 
