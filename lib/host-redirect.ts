@@ -1,4 +1,4 @@
-export const CANONICAL_ORIGIN = "https://helpfulideasforsellingyourhome.com";
+export const CANONICAL_ORIGIN = "https://www.helpfulideasforsellingyourhome.com";
 
 const REDIRECT_HOSTS = new Set(["homeselltips.vercel.app"]);
 

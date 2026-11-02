@@ -174,15 +174,15 @@ describe("search metadata", () => {
       process.env.VERCEL_ENV = "production";
       process.env.VERCEL_PROJECT_PRODUCTION_URL = "homeselltips.vercel.app";
       process.env.VERCEL_URL = "homeselltips-abc.vercel.app";
-      expect(getSiteUrl()).toBe("https://helpfulideasforsellingyourhome.com");
+      expect(getSiteUrl()).toBe("https://www.helpfulideasforsellingyourhome.com");
       process.env.VERCEL_ENV = "preview";
       expect(getSiteUrl()).toBe("https://homeselltips-abc.vercel.app");
       process.env.NEXT_PUBLIC_SITE_URL = "https://homeselltips.vercel.app/";
       expect(getSiteUrl()).toBe("https://homeselltips.vercel.app");
       expect(canonicalRedirect("www.helpfulideasforsellingyourhome.com", "/tips")).toBeNull();
       expect(canonicalRedirect("helpfulideasforsellingyourhome.com", "/tips")).toBeNull();
-      expect(canonicalRedirect("homeselltips.vercel.app", "/")).toBe("https://helpfulideasforsellingyourhome.com/");
-      expect(canonicalRedirect("homeselltips.vercel.app", "/tips")).toBe("https://helpfulideasforsellingyourhome.com/tips");
+      expect(canonicalRedirect("homeselltips.vercel.app", "/")).toBe("https://www.helpfulideasforsellingyourhome.com/");
+      expect(canonicalRedirect("homeselltips.vercel.app", "/tips")).toBe("https://www.helpfulideasforsellingyourhome.com/tips");
       expect(canonicalRedirect("homeselltips.vercel.app", "/google4f514a5b84ae4e70.html")).toBeNull();
       expect(canonicalRedirect("homeselltips-git-main-toddlask.vercel.app", "/tips")).toBeNull();
     } finally {
