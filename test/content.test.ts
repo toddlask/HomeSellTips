@@ -12,8 +12,6 @@ import { digestsMatch, tokenDigest } from "@/lib/admin-token";
 import {
   CONTENT_SECURITY_POLICY,
   GENERATED_OG_CACHE_CONTROL,
-  NETLIFY_GENERATED_OG_PATH,
-  NETLIFY_STATIC_IMAGE_PATHS,
   RESPONSE_HEADERS,
   STATIC_IMAGE_CACHE_CONTROL,
 } from "@/lib/csp";
@@ -35,7 +33,7 @@ function walk(dir: string): string[] {
   const files: string[] = [];
   for (const entry of entries) {
     const path = join(dir, entry);
-    if (entry === "node_modules" || entry === ".next" || entry === ".netlify" || entry === "test") {
+    if (entry === "node_modules" || entry === ".next" || entry === "test") {
       continue;
     }
     const stat = statSync(path);
@@ -149,30 +147,21 @@ describe("ads, affiliates, and email", () => {
     expect(source).not.toMatch(/https:\/\/api-m\.paypal\.com/);
   });
 
-  it("ships one content security policy on Vercel and Netlify", () => {
+  it("ships one content security policy on Vercel", () => {
     const vercel = JSON.parse(readFileSync(resolve(process.cwd(), "vercel.json"), "utf8")) as {
       headers: Array<{ headers: Array<{ key: string; value: string }> }>;
     };
     const vercelPolicy = vercel.headers[0]?.headers.find((header) => header.key === "Content-Security-Policy")?.value;
     expect(vercelPolicy).toBe(CONTENT_SECURITY_POLICY);
-    const netlify = readFileSync(resolve(process.cwd(), "netlify.toml"), "utf8");
-    expect(netlify).toContain(`Content-Security-Policy = "${CONTENT_SECURITY_POLICY}"`);
     expect(CONTENT_SECURITY_POLICY).toContain("default-src 'self'");
     expect(CONTENT_SECURITY_POLICY).toContain("https://pagead2.googlesyndication.com");
     expect(CONTENT_SECURITY_POLICY).toContain("https://fundingchoicesmessages.google.com");
     expect(CONTENT_SECURITY_POLICY).toContain("form-action 'self'");
     expect(CONTENT_SECURITY_POLICY).toMatch(/connect-src[^;]*https:\/\/formsubmit\.co/);
-    expect(netlify).toContain('NEXT_PUBLIC_SITE_URL = "https://homeselltips.vercel.app"');
-    expect(netlify).toContain('X-Robots-Tag = "noindex"');
     const vercelKeys = vercel.headers.flatMap((group) => group.headers.map((header) => header.key));
     expect(vercelKeys).not.toContain("X-Robots-Tag");
     expect(vercel.headers).toEqual(RESPONSE_HEADERS);
-    for (const path of NETLIFY_STATIC_IMAGE_PATHS) {
-      expect(netlify).toContain(`for = "${path}"`);
-    }
-    expect(netlify).toContain(`for = "${NETLIFY_GENERATED_OG_PATH}"`);
-    expect(netlify).toContain(`Cache-Control = "${STATIC_IMAGE_CACHE_CONTROL}"`);
-    expect(netlify).toContain(`Cache-Control = "${GENERATED_OG_CACHE_CONTROL}"`);
+    expect(existsSync(resolve(process.cwd(), "netlify.toml"))).toBe(false);
     expect(STATIC_IMAGE_CACHE_CONTROL).toBe("public, max-age=31536000, immutable");
     expect(GENERATED_OG_CACHE_CONTROL).toContain("s-maxage=2592000");
     expect(GENERATED_OG_CACHE_CONTROL).toContain("stale-while-revalidate=604800");

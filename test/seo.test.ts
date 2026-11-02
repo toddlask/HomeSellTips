@@ -8,7 +8,7 @@ import { tips } from "@/lib/catalog";
 import { checklistCrumbs, photoCreditCrumbs, stageCrumbs, stagesHubCrumbs, tipCrumbs, tipsHubCrumbs, toolCrumbs } from "@/lib/crumbs";
 import { aboutPageJsonLd, articleJsonLd, breadcrumbJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { ABOUT_DESCRIPTION, aboutWordCount, HUB_DESCRIPTIONS, INFO_DESCRIPTIONS, TOOL_DESCRIPTIONS } from "@/lib/page-copy";
-import { resolvedDocumentTitle, tipPageTitle } from "@/lib/page-meta";
+import { pageMetadata, resolvedDocumentTitle, tipPageTitle } from "@/lib/page-meta";
 import { stagePhoto } from "@/lib/photos";
 import { checklistDescription, stageDescription, stagePath, stageTitle } from "@/lib/stages";
 import { canonicalRedirect } from "@/lib/host-redirect";
@@ -77,14 +77,20 @@ describe("search metadata", () => {
     expect(home).toContain("SITE_NAME");
     expect(home).toContain('id="home-heading">Helpful Ideas for Selling Your Home');
     expect(home).toContain("Tips for selling your house, stage by stage.");
-    expect(home).toContain("Tips for Selling Your House: Helpful Ideas Before You List.");
+    const homeTitle = "Tips for Selling Your House: Helpful Ideas Before You List";
+    expect(home).toContain(homeTitle);
+    expect(home).not.toContain(`${homeTitle}.`);
     expect(home).toContain("absoluteTitle: true");
-    const homeTitle = resolvedDocumentTitle({
-      title: "Tips for Selling Your House: Helpful Ideas Before You List.",
+    expect(resolvedDocumentTitle({ title: homeTitle, path: "/", absoluteTitle: true })).toBe(homeTitle);
+    const homeMeta = pageMetadata({
+      title: homeTitle,
+      description: "Home title check.",
       path: "/",
       absoluteTitle: true,
     });
-    expect(homeTitle).toBe("Tips for Selling Your House: Helpful Ideas Before You List.");
+    expect(homeMeta.title).toEqual({ absolute: homeTitle });
+    expect(homeMeta.openGraph?.title).toBe(homeTitle);
+    expect(homeMeta.twitter?.title).toBe(homeTitle);
     expect(homeTitle.length).toBeLessThanOrEqual(60);
     expect(resolvedDocumentTitle({ title: "Ad and affiliate disclosure", path: "/disclosure" }).length).toBeLessThanOrEqual(60);
     expect(resolvedDocumentTitle({ title: "Home Sale Net Proceeds Calculator", path: "/tools/net-proceeds" })).toBe(

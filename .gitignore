@@ -3,7 +3,6 @@ node_modules
 public/og
 out
 .vercel
-.netlify
 .env
 .env.local
 .env.*.local

@@ -52,16 +52,6 @@ export const STATIC_IMAGE_SOURCES = [
 
 export const GENERATED_OG_SOURCE = "/og/tips/(.*)";
 
-export const NETLIFY_STATIC_IMAGE_PATHS = [
-  "/photos/*",
-  "/og.png",
-  "/favicon.ico",
-  "/favicon.svg",
-  "/apple-touch-icon.png",
-] as const;
-
-export const NETLIFY_GENERATED_OG_PATH = "/og/tips/*";
-
 export const RESPONSE_HEADERS: ResponseHeaderRule[] = [
   { source: "/(.*)", headers: SECURITY_HEADERS },
   ...STATIC_IMAGE_SOURCES.map((source) => cacheRule(source, STATIC_IMAGE_CACHE_CONTROL)),

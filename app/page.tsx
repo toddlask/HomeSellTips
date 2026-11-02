@@ -13,7 +13,7 @@ import { CALCULATOR_NOTE, getSiteUrl, publishedTips, SITE_NAME, TOOL_LINKS } fro
 import { STAGE_IDS } from "@/lib/types";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Tips for Selling Your House: Helpful Ideas Before You List.",
+  title: "Tips for Selling Your House: Helpful Ideas Before You List",
   description: HUB_DESCRIPTIONS.home,
   path: "/",
   absoluteTitle: true,
