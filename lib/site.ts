@@ -1,3 +1,4 @@
+import { CANONICAL_ORIGIN } from "@/lib/host-redirect";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import type { StageId, Tip } from "@/lib/types";
 import { STAGE_IDS } from "@/lib/types";
@@ -27,8 +28,11 @@ export function getSiteUrl(): string {
   if (configured) {
     return configured.replace(/\/$/, "");
   }
-  if (process.env.VERCEL_ENV === "production" && process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  if (process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  if (process.env.VERCEL_ENV === "production") {
+    return CANONICAL_ORIGIN;
   }
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;

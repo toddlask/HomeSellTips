@@ -8,6 +8,7 @@ import { ABOUT_DESCRIPTION, aboutWordCount, HUB_DESCRIPTIONS, INFO_DESCRIPTIONS,
 import { resolvedDocumentTitle, tipPageTitle } from "@/lib/page-meta";
 import { stagePhoto } from "@/lib/photos";
 import { checklistDescription, stageDescription, stagePath, stageTitle } from "@/lib/stages";
+import { canonicalRedirect } from "@/lib/host-redirect";
 import { getSiteUrl, llmsText, SITE_NAME, TOOL_LINKS } from "@/lib/site";
 import { tipKeyPhrase, tipMetaDescription } from "@/lib/tip-meta";
 import { tipShareImage } from "@/lib/tip-card";
@@ -162,6 +163,39 @@ describe("search metadata", () => {
       name: organization.name,
       url: organization.url,
     });
+  });
+
+  it("uses the custom domain on production and redirects only the old hosts", () => {
+    const keys = ["NEXT_PUBLIC_SITE_URL", "VERCEL_ENV", "VERCEL_URL", "VERCEL_PROJECT_PRODUCTION_URL", "URL"] as const;
+    const saved = new Map(keys.map((key) => [key, process.env[key]]));
+    try {
+      delete process.env.NEXT_PUBLIC_SITE_URL;
+      delete process.env.URL;
+      process.env.VERCEL_ENV = "production";
+      process.env.VERCEL_PROJECT_PRODUCTION_URL = "homeselltips.vercel.app";
+      process.env.VERCEL_URL = "homeselltips-abc.vercel.app";
+      expect(getSiteUrl()).toBe("https://helpfulideasforsellingyourhome.com");
+      process.env.VERCEL_ENV = "preview";
+      expect(getSiteUrl()).toBe("https://homeselltips-abc.vercel.app");
+      process.env.NEXT_PUBLIC_SITE_URL = "https://homeselltips.vercel.app/";
+      expect(getSiteUrl()).toBe("https://homeselltips.vercel.app");
+      expect(canonicalRedirect("www.helpfulideasforsellingyourhome.com", "/tips")).toBe(
+        "https://helpfulideasforsellingyourhome.com/tips",
+      );
+      expect(canonicalRedirect("homeselltips.vercel.app", "/")).toBe("https://helpfulideasforsellingyourhome.com/");
+      expect(canonicalRedirect("www.helpfulideasforsellingyourhome.com", "/google4f514a5b84ae4e70.html")).toBeNull();
+      expect(canonicalRedirect("homeselltips.vercel.app", "/google4f514a5b84ae4e70.html")).toBeNull();
+      expect(canonicalRedirect("homeselltips-git-main-toddlask.vercel.app", "/tips")).toBeNull();
+      expect(canonicalRedirect("helpfulideasforsellingyourhome.com", "/tips")).toBeNull();
+    } finally {
+      for (const [key, value] of saved) {
+        if (value === undefined) {
+          delete process.env[key];
+        } else {
+          process.env[key] = value;
+        }
+      }
+    }
   });
 
   it("links the hubs from breadcrumbs, the header, and llms.txt", () => {
