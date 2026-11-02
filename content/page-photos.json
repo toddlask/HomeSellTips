@@ -818,5 +818,35 @@
     "photographer": "Ann poan",
     "sourcePage": "https://www.pexels.com/photo/opened-notebook-with-pen-on-white-desk-5797900/",
     "page": "/tips"
+  },
+  {
+    "id": "seller-closing-costs",
+    "src": "/photos/seller-closing-costs.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Two people at a bright table, one holding a pen over a blank sheet of paper.",
+    "photographer": "Andrea Piacquadio",
+    "sourcePage": "https://www.pexels.com/photo/crop-businessman-giving-contract-to-woman-to-sign-3760067/",
+    "page": "/tips/seller-closing-costs"
+  },
+  {
+    "id": "realtor-commission-changes",
+    "src": "/photos/realtor-commission-changes.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Close view of hands holding US dollar bills, including a twenty and a fifty.",
+    "photographer": "Karolina Grabowska",
+    "sourcePage": "https://www.pexels.com/photo/crop-man-counting-dollar-banknotes-4386431/",
+    "page": "/tips/realtor-commission-changes"
+  },
+  {
+    "id": "selling-as-is-vs-fixing-up",
+    "src": "/photos/selling-as-is-vs-fixing-up.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A person painting an unfinished interior wall with a roller, beside a ladder and a paint tray.",
+    "photographer": "Tima Miroshnichenko",
+    "sourcePage": "https://www.pexels.com/photo/man-painting-the-wall-6474471/",
+    "page": "/tips/selling-as-is-vs-fixing-up"
   }
 ]

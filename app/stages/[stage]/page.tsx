@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AffiliateList } from "@/components/affiliate-list";
+import { InContentAd } from "@/components/ad-regions";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { StagePhoto } from "@/components/home-photo";
-import { InContentAd } from "@/components/ad-regions";
+import { NotAdviceNote } from "@/components/page-byline";
 import { affiliateOffers, offersForStage } from "@/lib/affiliates";
 import { tips } from "@/lib/catalog";
 import { stageCrumbs } from "@/lib/crumbs";
 import { parseStageId } from "@/lib/parse";
-import { stageDescription, stagePath, stageSummary, stageTitle } from "@/lib/stages";
+import { stageDescription, stageDocumentTitle, stageHeading, stageNeedsAdviceNote, stagePath, stageSummary } from "@/lib/stages";
 import { pageMetadata } from "@/lib/page-meta";
+import { CFPB_CLOSING, FBI_IC3 } from "@/lib/sources";
 import { tipsForStage } from "@/lib/site";
 import { STAGE_IDS, type StageId } from "@/lib/types";
 
@@ -27,10 +29,12 @@ export async function generateMetadata({ params }: { params: Promise<{ stage: st
   } catch {
     return { title: "Stage" };
   }
+  const documentTitle = stageDocumentTitle(stage);
   return pageMetadata({
-    title: stageTitle(stage),
+    title: documentTitle.title,
     description: stageDescription(stage),
     path: `/stages/${stage}`,
+    absoluteTitle: documentTitle.absoluteTitle,
   });
 }
 
@@ -47,8 +51,17 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
   return (
     <>
       <Breadcrumbs crumbs={stageCrumbs(stage)} />
-      <h1>{stageTitle(stage)}</h1>
+      <h1>{stageHeading(stage)}</h1>
       <p className="lede">{stageSummary(stage)}</p>
+      {stage === "closing" ? (
+        <p>
+          Seller closing costs come out of the price before you are paid. The{" "}
+          <a href={CFPB_CLOSING.href}>{CFPB_CLOSING.label}</a> explains the closing papers. Confirm any wire instructions
+          by phone, using a number you already have. Report a swapped instruction to the{" "}
+          <a href={FBI_IC3.href}>{FBI_IC3.label}</a>.
+        </p>
+      ) : null}
+      {stageNeedsAdviceNote(stage) ? <NotAdviceNote /> : null}
       <p className="no-print">
         <a href={`${stagePath(stage)}/checklist`}>Print the one-page checklist</a>
       </p>

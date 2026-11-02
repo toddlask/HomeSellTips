@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
+import { PageByline } from "@/components/page-byline";
 import { RoomBoard } from "@/components/room-board";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
@@ -15,6 +16,7 @@ export default function RoomsPage() {
   return (
     <>
       <h1>Room-by-room prep</h1>
+      <PageByline />
       <p className="lede">
         Open a room, tick the tasks, and leave. The checks stay in this browser. There is no account.
       </p>

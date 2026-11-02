@@ -138,7 +138,7 @@ ${tools}
 
 ## Content
 
-Tips are original and stored in the repository. There is no scheduled publisher, and no language model writes the tips.
+Tips are original and stored in the repository. There is no scheduled publisher. A language model may help draft a page, and a person reviews it before it is published.
 
 ## Advertising
 

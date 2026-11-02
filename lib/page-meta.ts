@@ -49,8 +49,9 @@ export function resolvedDocumentTitle(input: { title: string; path: string; abso
 export function pageMetadata(input: PageMetadataInput): Metadata {
   const description = input.ogDescription ?? input.description;
   const image = input.image ?? SHARE_IMAGE;
+  const documentTitle = resolvedDocumentTitle(input);
   const shared = {
-    title: input.title,
+    title: documentTitle,
     description,
     url: input.path,
   };
@@ -84,7 +85,7 @@ export function pageMetadata(input: PageMetadataInput): Metadata {
     openGraph,
     twitter: {
       card: "summary_large_image",
-      title: input.title,
+      title: documentTitle,
       description,
       images: [image.url],
     },

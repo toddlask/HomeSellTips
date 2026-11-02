@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CurbPhoto } from "@/components/home-photo";
+import { PageByline } from "@/components/page-byline";
 import { CURB_WINS } from "@/lib/curb";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
@@ -14,6 +15,7 @@ export default function CurbAppealPage() {
   return (
     <>
       <h1>Curb appeal quick wins</h1>
+      <PageByline />
       <p className="lede">
         Short jobs at the front of the house. The tag is a cost band, not a quote. $ is a hardware-store trip. $$ is
         materials for a weekend you do yourself. $$$ is a hired repair.

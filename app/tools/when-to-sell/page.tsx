@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
+import { PageByline } from "@/components/page-byline";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
 import { SEASON_MONTHS, SEASON_SOURCE, seasonMax } from "@/lib/season";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Best time to sell",
+  title: "Best Time to Sell a House: Season and Timing Guide",
   description: TOOL_DESCRIPTIONS.season,
   path: "/tools/when-to-sell",
+  absoluteTitle: true,
 });
 
 function formatSales(sales: number): string {
@@ -20,7 +22,8 @@ export default function WhenToSellPage() {
   const max = seasonMax(SEASON_MONTHS);
   return (
     <>
-      <h1>Best time to sell</h1>
+      <h1>Best time to sell a house</h1>
+      <PageByline />
       <p className="lede">
         These bars are closed US existing-home sales, not seasonally adjusted, from September 2025 through September
         2026. FRED publishes that span for this series. It is one year of closed sales, not a long-run seasonal index,

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { InContentAd } from "@/components/ad-regions";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { GlossText } from "@/components/gloss-text";
+import { RichText } from "@/components/gloss-text";
+import { PageByline } from "@/components/page-byline";
 import { PagePhoto } from "@/components/home-photo";
 import { JsonLd } from "@/components/json-ld";
 import { SaleWords } from "@/components/sale-words";
@@ -65,18 +66,19 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <TipJump />
       <Breadcrumbs crumbs={crumbs} />
       <h1>{tip.title}</h1>
+      <PageByline />
       <p className="lede">{tip.summary}</p>
       <PagePhoto photo={tipPhoto(tip.slug)} />
       {tip.body.map((paragraph) => (
         <p key={paragraph}>
-          <GlossText text={paragraph} />
+          <RichText text={paragraph} />
         </p>
       ))}
       <h2>What to do</h2>
       <ol className="steps">
         {tip.steps.map((step) => (
           <li key={step}>
-            <GlossText text={step} />
+            <RichText text={step} />
           </li>
         ))}
       </ol>

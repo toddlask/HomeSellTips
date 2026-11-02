@@ -131,6 +131,12 @@ const TIP_META = {
     "Photograph the empty rooms on the last day, plus the meter readings, and save the set with your settlement papers before you lock the door.",
   "carry-the-closing-papers-with-you":
     "Carry the closing papers with you in the car, not in a box on the truck, so the signed set and your identification stay where you can reach them.",
+  "seller-closing-costs":
+    "Seller closing costs: what sellers pay, from commission and payoff to title charges and credits, and how to estimate the net before you sign.",
+  "realtor-commission-changes":
+    "Realtor commission changes: what sellers should know before listing, including negotiable pay and a calculator that uses only your numbers.",
+  "selling-as-is-vs-fixing-up":
+    "Selling a house as is versus fixing it up is a written choice: list repairs, price what has to work, and compare the net if you leave the rest.",
 } as const satisfies Record<string, string>;
 
 export function tipMetaDescription(tip: Pick<Tip, "slug" | "summary" | "status">): string {

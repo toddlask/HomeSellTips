@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
+import { PageByline } from "@/components/page-byline";
 import { RoiForm } from "@/components/roi-form";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
@@ -16,6 +17,7 @@ export default function WhatToFixPage() {
   return (
     <>
       <h1>What to fix first</h1>
+      <PageByline />
       <p className="lede">
         The groups are safety and function, curb and entry, kitchen and baths, paint and floors, and work you may leave
         for the buyer. You supply the cost and the value.

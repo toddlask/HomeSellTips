@@ -13,7 +13,7 @@ import { CALCULATOR_NOTE, getSiteUrl, publishedTips, SITE_NAME, TOOL_LINKS } fro
 import { STAGE_IDS } from "@/lib/types";
 
 export const metadata: Metadata = pageMetadata({
-  title: `${SITE_NAME} · Before you list`,
+  title: "Tips for Selling Your House: Helpful Ideas Before You List.",
   description: HUB_DESCRIPTIONS.home,
   path: "/",
   absoluteTitle: true,
@@ -40,6 +40,7 @@ export default function HomePage() {
         <div className="hero-scrim" />
         <div className="wrap hero-copy">
           <h1 id="home-heading">Helpful Ideas for Selling Your Home</h1>
+          <p className="subhead">Tips for selling your house, stage by stage.</p>
           <p className="script">for the months before you list</p>
           <p className="lede">
             Plain steps for the months before you list, whether you hire an agent or sell the house yourself. The

@@ -1,5 +1,5 @@
 export const HUB_DESCRIPTIONS = {
-  home: "Practical tips for the months before you list a home in the United States, plus calculators that use only the numbers you enter.",
+  home: "Practical tips for selling your house, from repairs and staging to pricing, offers, closing and moving, with free calculators and checklists.",
   tips: "Published home-selling tips, from the newest note in the library. Each one is a short step for the months before you list, from prep through moving.",
   stages: "Eight home-selling stages, from prep and repairs through moving. Each stage has published tips and a one-page checklist you can print.",
   tools: "Calculators and checklists for a home sale. Every figure comes from what you type. The site does not fill in a typical rate or a local rule.",
@@ -7,13 +7,16 @@ export const HUB_DESCRIPTIONS = {
 
 export const TOOL_DESCRIPTIONS = {
   checklist: "A printable seller checklist for photos, paperwork, showings, offers, closing, and the move. Check a box on the screen, or print the page.",
-  commission: "Compare full-service and FSBO commission totals. Enter the sale price, the percents, and any flat fees. The site does not assume a rate.",
+  commission:
+    "Compare realtor commission costs for full service, FSBO with a buyer's agent, and FSBO paying neither, and see how each changes what you keep.",
   curb: "Small outside jobs before you list, each with a cost band and a time guess. The photos are credited Pexels images of houses and rooms.",
   myths: "Common claims about selling a house, each paired with a plain-language fact. The cards do not invent rates, averages, or local rules.",
-  proceeds: "Estimate the cash you keep from a home sale. Enter the price, mortgage payoff, commissions, closing costs, seller credits, and repairs.",
+  proceeds:
+    "Estimate what you'll walk away with after selling your home. Enter price, mortgage payoff, commission and closing costs to see your net proceeds.",
   rooms: "Check off prep tasks room by room before you list. Your progress stays in this browser. The page does not ask you to create an account.",
   fix: "Rank repair projects by the cost and the value you expect. HomeSellTips does not supply a return rate or a typical project cost.",
-  season: "A chart of monthly US existing-home sales from FRED series EXHOSLUSM495N. It shows one published year, not a forecast of your sale.",
+  season:
+    "See how the season, your local market and your own move date affect the best time to sell a house, plus a simple timing checklist to plan your listing.",
 } as const;
 
 export const INFO_DESCRIPTIONS = {
@@ -57,6 +60,13 @@ export const ABOUT_SECTIONS = [
   },
 ] as const;
 
+export const ABOUT_METHOD_HEADING = "How we write these tips";
+
+export const ABOUT_METHOD_BEFORE = "Sources for money and closing facts:";
+
+export const ABOUT_METHOD_AFTER =
+  "Each page is reviewed before publishing. A language model may help draft a page.";
+
 export const ABOUT_ADVERTISE_BEFORE = "If you want to ask about a labeled ad on the site, use the";
 
 export const ABOUT_ADVERTISE_LINK = "advertise page";
@@ -69,6 +79,16 @@ export function aboutWordCount(): number {
     ABOUT_TITLE,
     ABOUT_LEDE,
     ...ABOUT_SECTIONS.flatMap((section) => [section.heading, ...section.paragraphs]),
+    ABOUT_METHOD_HEADING,
+    ABOUT_METHOD_BEFORE,
+    "IRS Publication 523",
+    "the",
+    "CFPB",
+    "the",
+    "FBI IC3",
+    "and the",
+    "NAR settlement facts",
+    ABOUT_METHOD_AFTER,
     ABOUT_ADVERTISE_BEFORE,
     ABOUT_ADVERTISE_LINK,
     ABOUT_ADVERTISE_AFTER,

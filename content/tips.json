@@ -274,7 +274,7 @@
     "body": [
       "Start the folder before you have a buyer. Paper or digital, pick one home for it and do not split the documents across a counter and an inbox. Label each piece: payoff contact, association contact if you have one, warranty paperwork you plan to transfer, and receipts for repairs you are disclosing. A folder you can hand to someone is the point. A search through email is not a folder.",
       "Keep the disclosure draft in that folder and update it when a repair is finished. The version you sign should match the house on signing day. When you replace a page, date it and pull the old page out so you do not sign the stale one. The repair invoices sit behind the draft. If a buyer asks what you fixed, you are holding the answer instead of promising to send it later.",
-      "Ask the closing company how they send wire instructions, and write that answer in the folder. Plan to confirm any wiring instructions by calling a phone number you look up yourself, not a number that arrived only in an email. Read the amount and the account name back. This is a phone call, not a courtesy. Do it before you send money, including an earnest-money wire if that money is yours to send.",
+      "Ask the closing company how they send wire instructions, and write that answer in the folder. Plan to confirm any wiring instructions by calling a phone number you look up yourself, not a number that arrived only in an email. The [FBI IC3](https://www.ic3.gov/) takes reports when those instructions were swapped. Read the amount and the account name back. This is a phone call, not a courtesy. Do it before you send money, including an earnest-money wire if that money is yours to send.",
       "When you have a contract and a closing date, request the payoff and put the quote in the folder with the good-through date. A payoff that expires before closing needs a refresh. Set a reminder a few days ahead. The same folder should hold the inclusion list, the photo of the finished repairs, and the utility card once you make it. One home means that on closing morning you pick up one thing, not five."
     ],
     "steps": [
@@ -1369,5 +1369,71 @@
       "File it before you unpack, and call the same day if a page is missing."
     ],
     "publishedOn": "2026-10-22"
+  },
+  {
+    "slug": "seller-closing-costs",
+    "title": "Seller closing costs: what sellers pay",
+    "stage": "closing",
+    "status": "published",
+    "updatedOn": "2026-11-02",
+    "queueOrder": 0,
+    "summary": "Seller closing costs are the amounts taken from the sale price before the rest is paid to you.",
+    "body": [
+      "Seller closing costs are what you pay to finish the sale, and they are not the mortgage payoff. The payoff retires what you still owe the lender. Closing costs are the other lines on the seller side: the commission you agreed to, title and escrow charges, a transfer tax if your area charges one, prorated property taxes, association dues, and any credit you give the buyer. Those lines are not the same on every sale. Write the ones in this contract, with a dollar amount beside each, before you treat the sale price as cash you will take home.",
+      "Start from the contract and the title quote, not from a figure you heard about another house. Ask the closing company for a draft statement once you have a buyer and a date. Read the seller column. If a line has no plain explanation, circle it and ask what it is and who set it. Some charges follow the contract. Some are estimates that change on the day you sign. The [Consumer Financial Protection Bureau](https://www.consumerfinance.gov/owning-a-home/close/) explains how a closing works and which papers to read before you are asked to initial them.",
+      "Estimate the money you keep while the numbers are still drafts. Open the [net proceeds calculator](/tools/net-proceeds) and type the price, the payoff, the commission, the closing costs, any seller credit, and repairs you are still paying. The page uses only the figures you enter. When a later quote is higher, change that one cell and read the new result. Do this before you agree to a repair credit. The credit and the closing costs come out of the same pot, and a credit you accept in a hurry can drop the net under the line you already wrote down.",
+      "Two items get mixed up with the fee list. A wire of your proceeds should go to an account you confirmed by calling the closing office on a number you already have, not a number that appeared only in an email. The [FBI IC3](https://www.ic3.gov/) takes reports when those instructions were swapped. If you want to know whether a cost changes the gain you report, that is a tax question. Start with [IRS Publication 523](https://www.irs.gov/publications/p523), and ask a tax advisor about your own return. This page is not legal, tax, or financial advice."
+    ],
+    "steps": [
+      "List each seller closing cost from the contract and the title quote, with a dollar amount.",
+      "Ask about any line you cannot explain in plain words.",
+      "Type the figures into the net proceeds calculator, and update them when a quote changes.",
+      "Confirm wire instructions by phone, on a number you already have, before any money moves."
+    ],
+    "publishedOn": "2026-10-21"
+  },
+  {
+    "slug": "realtor-commission-changes",
+    "title": "Realtor commission changes: what sellers need to know",
+    "stage": "agent-vs-fsbo",
+    "status": "published",
+    "updatedOn": "2026-11-02",
+    "queueOrder": 0,
+    "summary": "Realtor commission changes are about where an offer of pay can be advertised, not a fee the law assigns to you.",
+    "body": [
+      "Realtor commission changes from the National Association of Realtors settlement are about where an offer of pay can be shown, and about what a buyer signs before a tour. They do not pick your fee. They do not require you to pay the broker who works with the buyer. Pay stays negotiable, and it is not set by law. The [National Association of Realtors settlement facts](https://www.nar.realtor/the-facts/what-the-nar-settlement-means-for-home-buyers-and-sellers) are the source for those points. Read them before you accept a sentence that says the fee is standard.",
+      "If the listing will be on a multiple listing service, that service cannot carry an offer to pay the buyer's broker. You can still choose, away from the listing service, to offer that pay. If you do, put the amount in writing before anyone promises it to a buyer. A buyer who tours with an agent that uses the listing service will have a written agreement with that agent first. The agreement has to state the agent's pay in a form you can calculate, and it has to say the pay is negotiable and not set by law. You do not sign that buyer agreement. The amount in it is still the cap on what that agent can collect from any source, including you.",
+      "Write your own choices before you list. One line for what you will pay the listing broker, as a dollar amount or as the rate you actually agreed to. One line for whether you will offer anything to the buyer's broker, and how much. One line for selling it yourself and paying neither. Then open the [realtor commission calculator](/tools/commission) and type those figures. The calculator does not fill in a rate. A blank cell is allowed. A number you made up so the page would look finished is not a plan you can take to a listing appointment.",
+      "Ask what work each fee covers: pricing, photos, showings, forms, and the offer. If a task is missing, ask who does it and what that piece costs on its own. Selling without a broker does not erase the jobs. It assigns them to you or to someone you hire for that piece. Compare the three totals, the hours, and the jobs, then decide. This page is not legal, tax, or financial advice. A listing agreement is a contract. Read it, and ask a lawyer if a clause is unclear."
+    ],
+    "steps": [
+      "Read the settlement facts before you treat any fee as required.",
+      "Write what you will pay a listing broker, and whether you will offer pay to a buyer's broker.",
+      "Type only those figures into the commission calculator.",
+      "Match each fee to the jobs it covers before you sign."
+    ],
+    "publishedOn": "2026-10-21"
+  },
+  {
+    "slug": "selling-as-is-vs-fixing-up",
+    "title": "Selling a house as is vs fixing up: how to decide",
+    "stage": "prep-and-repairs",
+    "status": "published",
+    "updatedOn": "2026-11-02",
+    "queueOrder": 0,
+    "summary": "Selling a house as is versus fixing it up is a money choice you can write down before you hire anyone.",
+    "body": [
+      "Selling a house as is versus fixing it up is a choice about this house, not a label you put on a sign. As is does not mean you stay quiet about what you know. You still decide which problems you will repair and which ones you will describe. Fixing up does not mean a new kitchen. It means a short list of work, each line with a price you can point to. Write both plans before you pick one, while you are not standing in a store aisle.",
+      "Walk the house once and sort every issue into three piles. The first pile is what has to work: a leak, heat or cooling that will not start, a loose step, a latch that does not catch. The second pile is what a buyer will see in a photo or on a first visit, such as a scuffed wall or a faucet that drips into the sink. The third pile is work you do not want to fund, with a sentence you are willing to put in the disclosure. Do not paint over a problem you have not stopped. A fresh coat on a damp wall is not a repair.",
+      "Price the first pile with written bids. A truly small job can be a hardware-store receipt instead of a contractor. Then open the [what to fix calculator](/tools/what-to-fix) and enter the cost you were quoted and the price change you honestly expect from doing the work. The page does not supply a return, and it does not know your buyer. If you cannot name a dollar change, leave that cell empty. A repair that costs more than any extra a buyer is likely to pay is a candidate to disclose instead of do. A repair that keeps the house from being shown, or that fails a test a visitor will actually try, is a candidate to do.",
+      "Compare two nets, not two moods. One net assumes the repairs are finished and the bids are spent. The other assumes you leave the work and offer a credit you would actually accept. Use the same payoff and the same commission in both, so the only difference is the work. If the repaired net is not higher by enough to cover the time and the hassle, leave the work and describe it. If a buyer later asks for that repair, you already have the bid. This page is not legal, tax, or financial advice. The disclosure form is a legal paper where you live. Ask the closing company which form you sign."
+    ],
+    "steps": [
+      "Sort each issue into fix, show, or disclose before you buy materials.",
+      "Get a written bid, or a receipt, before you decide a repair is worth doing.",
+      "Enter your cost in the what-to-fix calculator, and leave the value blank if you do not know it.",
+      "Compare the net with the work and the net without it before you hire."
+    ],
+    "publishedOn": "2026-10-21"
   }
 ]

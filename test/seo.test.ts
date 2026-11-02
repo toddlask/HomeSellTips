@@ -1,6 +1,9 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
+import { RichText } from "@/components/gloss-text";
 import { tips } from "@/lib/catalog";
 import { checklistCrumbs, photoCreditCrumbs, stageCrumbs, stagesHubCrumbs, tipCrumbs, tipsHubCrumbs, toolCrumbs } from "@/lib/crumbs";
 import { aboutPageJsonLd, articleJsonLd, breadcrumbJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
@@ -70,17 +73,49 @@ describe("search metadata", () => {
     expect(layout).toContain("<CookieConsent enabled={false} />");
     const home = readFileSync(resolve(process.cwd(), "app/page.tsx"), "utf8");
     expect(home).toContain("SITE_NAME");
-    expect(home).toContain("Before you list");
+    expect(home).toContain('id="home-heading">Helpful Ideas for Selling Your Home');
+    expect(home).toContain("Tips for selling your house, stage by stage.");
+    expect(home).toContain("Tips for Selling Your House: Helpful Ideas Before You List.");
     expect(home).toContain("absoluteTitle: true");
     const homeTitle = resolvedDocumentTitle({
-      title: `${SITE_NAME} · Before you list`,
+      title: "Tips for Selling Your House: Helpful Ideas Before You List.",
       path: "/",
       absoluteTitle: true,
     });
-    expect(homeTitle).toContain(SITE_NAME);
+    expect(homeTitle).toBe("Tips for Selling Your House: Helpful Ideas Before You List.");
     expect(homeTitle.length).toBeLessThanOrEqual(60);
     expect(resolvedDocumentTitle({ title: "Ad and affiliate disclosure", path: "/disclosure" }).length).toBeLessThanOrEqual(60);
-    expect(resolvedDocumentTitle({ title: "Net proceeds calculator", path: "/tools/net-proceeds" }).length).toBeLessThanOrEqual(60);
+    expect(resolvedDocumentTitle({ title: "Home Sale Net Proceeds Calculator", path: "/tools/net-proceeds" })).toBe(
+      "Home Sale Net Proceeds Calculator · HomeSellTips",
+    );
+    expect(
+      resolvedDocumentTitle({
+        title: "Realtor Commission Calculator: Agent vs FSBO Costs",
+        path: "/tools/commission",
+        absoluteTitle: true,
+      }).length,
+    ).toBeLessThanOrEqual(60);
+    expect(
+      resolvedDocumentTitle({
+        title: "Best Time to Sell a House: Season and Timing Guide",
+        path: "/tools/when-to-sell",
+        absoluteTitle: true,
+      }).length,
+    ).toBeLessThanOrEqual(60);
+    expect(
+      resolvedDocumentTitle({
+        title: "Selling a House Without a Realtor vs Using an Agent",
+        path: "/stages/agent-vs-fsbo",
+        absoluteTitle: true,
+      }).length,
+    ).toBeLessThanOrEqual(60);
+    expect(
+      resolvedDocumentTitle({
+        title: "Seller Closing Costs and Closing Checklist",
+        path: "/stages/closing",
+        absoluteTitle: true,
+      }).length,
+    ).toBeLessThanOrEqual(60);
     const toolsTitle = resolvedDocumentTitle({ title: "Seller calculators and checklists", path: "/tools" });
     const mythsTitle = resolvedDocumentTitle({ title: "Selling claims and the plain version", path: "/tools/myths" });
     expect(toolsTitle.length).toBeGreaterThanOrEqual(40);
@@ -248,11 +283,19 @@ describe("search metadata", () => {
     expect(engines).toContain('"node": "^22.12.0 || ^24.0.0 || >=26.0.0"');
     expect(readFileSync(resolve(process.cwd(), ".nvmrc"), "utf8").trim()).toBe("22");
     expect(readFileSync(resolve(process.cwd(), ".github/workflows/ci.yml"), "utf8")).toContain('node-version-file: ".nvmrc"');
+    const linked = renderToStaticMarkup(
+      createElement(RichText, {
+        text: "Use the [net proceeds calculator](/tools/net-proceeds) and [IRS Publication 523](https://www.irs.gov/publications/p523).",
+      }),
+    );
+    expect(linked).toContain('href="/tools/net-proceeds"');
+    expect(linked).toContain('href="https://www.irs.gov/publications/p523"');
+    expect(linked).toContain('rel="noreferrer"');
   });
 
   it("keeps every published tip in range and marks it revised", () => {
     const published = tips.filter((tip) => tip.status === "published");
-    expect(published).toHaveLength(59);
+    expect(published).toHaveLength(62);
     expect(published.some((tip) => tip.slug === "deep-clean-after-the-dusty-work")).toBe(true);
     for (const tip of published) {
       if (!tip.publishedOn) {
@@ -260,8 +303,15 @@ describe("search metadata", () => {
       }
       const words = `${tip.summary} ${tip.body.join(" ")} ${tip.steps.join(" ")}`.trim().split(/\s+/).filter(Boolean).length;
       expect(words).toBeGreaterThanOrEqual(300);
-      expect(words).toBeLessThanOrEqual(450);
+      expect(words).toBeLessThanOrEqual(550);
       expect(tip.publishedOn < tip.updatedOn).toBe(true);
+      if (
+        tip.slug === "seller-closing-costs" ||
+        tip.slug === "realtor-commission-changes" ||
+        tip.slug === "selling-as-is-vs-fixing-up"
+      ) {
+        expect(words).toBeGreaterThanOrEqual(400);
+      }
     }
   });
 });

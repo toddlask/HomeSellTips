@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
 import { MythDeck } from "@/components/myth-deck";
+import { PageByline } from "@/components/page-byline";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
@@ -15,6 +16,7 @@ export default function MythsPage() {
   return (
     <>
       <h1>Myth or fact</h1>
+      <PageByline />
       <p className="lede">Flip a card. These are practical corrections, not a promise about your sale.</p>
       <PagePhoto photo={pagePhoto("/tools/myths")} />
       <MythDeck />

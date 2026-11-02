@@ -50,6 +50,65 @@ export function stageSummary(stage: StageId): string {
   }
 }
 
+export function stageHeading(stage: StageId): string {
+  switch (stage) {
+    case "agent-vs-fsbo":
+      return "Selling a house without a realtor, or with an agent";
+    case "closing":
+      return "Closing: seller closing costs and checklist";
+    case "prep-and-repairs":
+    case "staging":
+    case "pricing":
+    case "listing-photos":
+    case "offers-and-negotiation":
+    case "moving":
+      return stageTitle(stage);
+    default: {
+      const exhaustive: never = stage;
+      return exhaustive;
+    }
+  }
+}
+
+export function stageDocumentTitle(stage: StageId): { title: string; absoluteTitle: boolean } {
+  switch (stage) {
+    case "agent-vs-fsbo":
+      return { title: "Selling a House Without a Realtor vs Using an Agent", absoluteTitle: true };
+    case "closing":
+      return { title: "Seller Closing Costs and Closing Checklist", absoluteTitle: true };
+    case "prep-and-repairs":
+    case "staging":
+    case "pricing":
+    case "listing-photos":
+    case "offers-and-negotiation":
+    case "moving":
+      return { title: stageTitle(stage), absoluteTitle: false };
+    default: {
+      const exhaustive: never = stage;
+      return exhaustive;
+    }
+  }
+}
+
+export function stageNeedsAdviceNote(stage: StageId): boolean {
+  switch (stage) {
+    case "pricing":
+    case "closing":
+      return true;
+    case "prep-and-repairs":
+    case "staging":
+    case "listing-photos":
+    case "agent-vs-fsbo":
+    case "offers-and-negotiation":
+    case "moving":
+      return false;
+    default: {
+      const exhaustive: never = stage;
+      return exhaustive;
+    }
+  }
+}
+
 export function stagePath(stage: StageId): string {
   return `/stages/${stage}`;
 }
@@ -65,11 +124,11 @@ export function stageDescription(stage: StageId): string {
     case "listing-photos":
       return "Use daylight, turn the lights on, and photograph the work you finished. These tips are about the pictures of this house, not filters or wide-angle tricks.";
     case "agent-vs-fsbo":
-      return "List the jobs in a sale, then decide who will do each one. The agent-or-FSBO tips name the work. They do not tell you which choice is better.";
+      return "Thinking of selling a house without a realtor? List every job in the sale (pricing, photos, showings, forms, offers) and decide who handles each one.";
     case "offers-and-negotiation":
       return "Read credits and dates with the price, and answer before a deadline passes. These tips are about reading the whole offer, not chasing a higher number.";
     case "closing":
-      return "Build the file early and check the house again before the final visit. Closing tips cover the folder, the statement, and the last walk-through.";
+      return "What to expect at closing as a seller: common seller closing costs, the documents to gather, wire-fraud safety and a final walkthrough checklist.";
     case "moving":
       return "Book the truck after the date is real, and label boxes by room. Moving tips cover the date, the labels, and what to leave for the next owner.";
     default: {

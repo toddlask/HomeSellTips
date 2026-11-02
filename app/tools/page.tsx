@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
+import { PageByline } from "@/components/page-byline";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
@@ -15,6 +16,7 @@ export default function ToolsIndexPage() {
   return (
     <>
       <h1>Tools</h1>
+      <PageByline />
       <p className="lede">{CALCULATOR_NOTE}</p>
       <PagePhoto photo={pagePhoto("/tools")} priority />
       <ul className="tool-grid">

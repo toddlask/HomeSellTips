@@ -29,10 +29,10 @@ export default function PrivacyPage() {
       <p>HomeSellTips uses Google AdSense.</p>
       <p>
         Google and its partners use cookies to serve ads based on your prior visits to this site and to other sites.
-        Google's advertising cookies let Google and its partners serve ads based on those visits.
+        Google&apos;s advertising cookies let Google and its partners serve ads based on those visits.
       </p>
       <p>
-        You can opt out of personalized ads at <a href="https://www.google.com/settings/ads">Google's ad settings</a>{" "}
+        You can opt out of personalized ads at <a href="https://www.google.com/settings/ads">Google&apos;s ad settings</a>{" "}
         and at <a href="https://www.aboutads.info">aboutads.info</a>.
       </p>
       <p>
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
         .
       </p>
       <p>
-        Visitors in the European Economic Area, the United Kingdom, and Switzerland are asked for consent. Google's
+        Visitors in the European Economic Area, the United Kingdom, and Switzerland are asked for consent. Google&apos;s
         certified consent message asks that question.
       </p>
       <h2>Advertise form</h2>
