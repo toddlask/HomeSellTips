@@ -5,7 +5,6 @@ import { tips } from "@/lib/catalog";
 import { CONTENT_EPOCH, isIsoDate, todayIso } from "@/lib/dates";
 import { affiliateOffers, AFFILIATE_DISCLOSURE } from "@/lib/affiliates";
 import { adsTxtBody, adsTxtLine } from "@/lib/ads";
-import { GET as adsTxtGet } from "@/app/ads.txt/route";
 import { STAGE_IDS, type Tip } from "@/lib/types";
 import { publicPaths } from "@/lib/site";
 import { deliverEmail, EMAIL_DELIVERY_ENABLED, planRenewalDrafts } from "@/lib/outbox";
@@ -118,23 +117,9 @@ describe("ads, affiliates, and email", () => {
     expect(renderToStaticMarkup(createElement(AffiliateList, { offers: [] }))).toBe("");
   });
 
-  it("does not serve an empty ads.txt and returns the publisher line when configured", () => {
-    const previous = process.env.ADSENSE_PUBLISHER_ID;
-    try {
-      delete process.env.ADSENSE_PUBLISHER_ID;
-      expect(adsTxtGet().status).toBe(404);
-      process.env.ADSENSE_PUBLISHER_ID = "ca-pub-123";
-      const response = adsTxtGet();
-      expect(response.status).toBe(200);
-      expect(response.headers.get("content-type")).toContain("text/plain");
-      return expect(response.text()).resolves.toBe("google.com, pub-123, DIRECT, f08c47fec0942fa0\n");
-    } finally {
-      if (previous === undefined) {
-        delete process.env.ADSENSE_PUBLISHER_ID;
-      } else {
-        process.env.ADSENSE_PUBLISHER_ID = previous;
-      }
-    }
+  it("publishes the AdSense ads.txt line", () => {
+    const body = readFileSync(resolve(process.cwd(), "public/ads.txt"), "utf8");
+    expect(body).toBe("google.com, pub-5777979915564775, DIRECT, f08c47fec0942fa0\n");
   });
 
   it("drafts renewal email and refuses to send it", () => {

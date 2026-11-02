@@ -12,6 +12,9 @@ import { adsenseClientId } from "@/lib/ads";
 import { getSiteUrl, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
+const ADSENSE_VERIFICATION_SRC =
+  "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5777979915564775";
+
 const bodyFont = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -73,6 +76,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${bodyFont.variable} ${displayFont.variable} ${scriptFont.variable}`}>
+      <head>
+        <script async src={ADSENSE_VERIFICATION_SRC} crossOrigin="anonymous" />
+      </head>
       <body>
         <a className="skip" href="#main">
           Skip to content
