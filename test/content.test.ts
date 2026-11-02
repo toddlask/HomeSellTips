@@ -159,6 +159,7 @@ describe("ads, affiliates, and email", () => {
     expect(netlify).toContain(`Content-Security-Policy = "${CONTENT_SECURITY_POLICY}"`);
     expect(CONTENT_SECURITY_POLICY).toContain("default-src 'self'");
     expect(CONTENT_SECURITY_POLICY).toContain("https://pagead2.googlesyndication.com");
+    expect(CONTENT_SECURITY_POLICY).toContain("https://fundingchoicesmessages.google.com");
     expect(CONTENT_SECURITY_POLICY).toContain("form-action 'self'");
     expect(CONTENT_SECURITY_POLICY).toMatch(/connect-src[^;]*https:\/\/formsubmit\.co/);
     expect(netlify).toContain('NEXT_PUBLIC_SITE_URL = "https://homeselltips.vercel.app"');

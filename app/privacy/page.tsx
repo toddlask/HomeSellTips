@@ -22,9 +22,28 @@ export default function PrivacyPage() {
       </p>
       <h2>Advertising</h2>
       <p>
-        Google AdSense scripts load only after you accept cookies and only when a publisher id is configured on the
-        server. If the id is missing, ad slots are not rendered. AdSense, when loaded, may set its own cookies. See the{" "}
-        <a href="/disclosure">ad and affiliate disclosure</a>.
+        Ad slots stay off unless a publisher id and a slot id are configured. The page head includes the AdSense script
+        Google uses to verify the site. See the <a href="/disclosure">ad and affiliate disclosure</a>.
+      </p>
+      <h2>Advertising and cookies</h2>
+      <p>HomeSellTips uses Google AdSense.</p>
+      <p>
+        Google and its partners use cookies to serve ads based on your prior visits to this site and to other sites.
+        Google's advertising cookies let Google and its partners serve ads based on those visits.
+      </p>
+      <p>
+        You can opt out of personalized ads at <a href="https://www.google.com/settings/ads">Google's ad settings</a>{" "}
+        and at <a href="https://www.aboutads.info">aboutads.info</a>.
+      </p>
+      <p>
+        <a href="https://policies.google.com/technologies/partner-sites">
+          How Google uses information from sites or apps that use our services
+        </a>
+        .
+      </p>
+      <p>
+        Visitors in the European Economic Area, the United Kingdom, and Switzerland are asked for consent. Google's
+        certified consent message asks that question.
       </p>
       <h2>Advertise form</h2>
       <p>

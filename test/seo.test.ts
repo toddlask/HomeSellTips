@@ -66,7 +66,8 @@ describe("search metadata", () => {
     const layout = readFileSync(resolve(process.cwd(), "app/layout.tsx"), "utf8");
     expect(layout).toContain('weight: "600"');
     expect(layout).not.toContain("italic");
-    expect(layout).toContain("adsenseClientId");
+    expect(layout).toContain("ca-pub-5777979915564775");
+    expect(layout).toContain("<CookieConsent enabled={false} />");
     const home = readFileSync(resolve(process.cwd(), "app/page.tsx"), "utf8");
     expect(home).toContain("SITE_NAME");
     expect(home).toContain("Before you list");

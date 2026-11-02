@@ -8,7 +8,6 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { HeaderSponsor } from "@/components/placement-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { adsenseClientId } from "@/lib/ads";
 import { getSiteUrl, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
@@ -93,7 +92,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <SiteFooter />
-        <CookieConsent enabled={adsenseClientId(process.env.ADSENSE_PUBLISHER_ID) !== null} />
+        {/* Stays off so it does not conflict with Google's certified consent message. Todd turns that message on in AdSense > Privacy & messaging. */}
+        <CookieConsent enabled={false} />
         <Analytics />
         <SpeedInsights />
       </body>
