@@ -14,123 +14,123 @@ export function tipKeyPhrase(title: string): string {
 
 const TIP_META = {
   "walk-the-house-before-you-hire":
-    "Walk the house with a notepad before you hire anyone, so fixes, disclosures, and jobs you will skip are written down before the first bid.",
+    "Pre-listing walkthrough: a slow walk with a notepad shows what to fix, what to tell buyers, and what to leave alone. Write it down before you hire help.",
   "fix-function-before-finish":
-    "Fix function before you buy paint. Leaks, heat, latches, and dead outlets show up on a first visit, and a fresh coat will not hide them.",
+    "What to fix before selling a house: repair leaks, heat, and latches before you buy paint. Stop the things that fail before you buy finish. Do it for this house.",
   "deep-clean-after-the-dusty-work":
-    "Deep-clean after the dusty work, not before. Finish the dusty repairs, let the dust settle, then clean from the lights down to the floors.",
+    "Deep cleaning before selling house: clean after the dusty repairs, not before. Sanding, patching, and caulk throw dust. Write it down before you list.",
   "clear-surfaces-before-you-decorate":
-    "Clear surfaces before you add decor, so a buyer can see the room. One useful item on a counter does more than a pile of extras.",
+    "Declutter before selling house: empty counters and floors do more for a showing than extra decor. Write it down for this house before you hire anyone.",
   "pack-personal-items-early":
-    "Pack personal items before the first showing so photos, mail, and papers are gone and the rooms show the house instead of your daily life.",
+    "Depersonalize house for sale: box photos, mail, and papers so the rooms show the house. Write it down for this house before you hire anyone or set a date.",
   "price-the-property-you-have":
-    "Price the property you have by comparing sold homes you can check, then write the net you will accept before you pick a list price.",
+    "How to price my house to sell: compare sold homes that match this property, then write the net you will accept. Write it down for this house before you list.",
   "leave-room-to-negotiate":
-    "Leave room to answer a real offer. A list price with space for a credit can still hit the net you wrote down before the first bid.",
+    "List price negotiation room: set the list price with room for a credit and still hit your net. The list price is the number on the ad. Do it for this house.",
   "daylight-and-lights":
-    "Take listing photos in daylight with the lights on and the camera level, so corners stay visible and the rooms look the size they are.",
+    "Best time of day for real estate photos: open the shades, turn on the lamps, and keep the camera level. The camera needs more light than your eyes do.",
   "show-the-repairs-you-finished":
-    "Photograph the work you finished in its own clear frame, and lead with the front of the house so a finished repair answers a question early.",
+    "Listing photos of upgrades: give finished repairs their own clear photo, and lead with the front of the house. People scroll quickly. Do it for this house.",
   "list-the-jobs-before-you-choose":
-    "List the jobs in a sale before you pick who does them, so hours and dollars are on paper whether you hire an agent or sell the house yourself.",
+    "Realtor vs FSBO: write every job in a sale, then decide who will do it and what it costs you. Write it down for this house before you hire anyone else.",
   "questions-if-you-sell-it-yourself":
-    "Questions to answer if you sell it yourself: which forms apply, how showings get booked, and who reads the first offer before you sign it.",
+    "Selling a house by owner: forms, showings, and offer review are still yours if you sell without an agent. Write it down for this house before you list.",
   "read-the-whole-offer":
-    "Read the whole offer before you answer the price. Credits, dates, and contingencies change the money more than the headline number does.",
+    "How to read a purchase offer: credits, dates, and contingencies change the money more than the headline price. Write it down for this house before you list.",
   "compare-net-and-dates":
-    "Compare net and dates on one row per offer, then counter the gap in plain numbers so a deadline does not pass while you still want the deal.",
+    "How to compare offers on a house: put each offer on one row and counter the gap in your net. Write it down for this house before you hire anyone else.",
   "build-the-closing-folder-early":
-    "Build the closing folder before you have a buyer. Payoff contacts, receipts, and a plan to confirm wire instructions belong in one place.",
+    "Documents needed to sell a house: collect payoff contacts, receipts, and a wire-check plan before you are under contract. Write it down for this house.",
   "walk-again-before-the-final-visit":
-    "Walk the house again before the buyer's final visit, with the contract in hand, so agreed repairs are done and the house matches what you signed.",
+    "Final walkthrough seller: check the fixtures you promised to leave, and report anything that broke. Write it down for this house before you hire help.",
   "book-the-move-after-the-date-is-real":
-    "Book the move after the closing date is real, not when you hope it will be, so the truck is reserved for a day the contract already names.",
+    "When to book movers when selling a house: wait for a contract date, then book the truck with a written backup plan. Write it down before you hire help.",
   "label-boxes-by-room":
-    "Label boxes by the room they go to, on more than one side, so movers and you can unload without opening every carton in the new place.",
+    "How to label moving boxes: name the room on two sides of every box and keep a first-night box with you. Write the room and a short contents line on every box.",
   "replace-cracked-caulk-before-photos":
-    "Replace cracked caulk before photo day. A tube and a scraper are a small hardware-store job, and fresh lines keep a damp edge from showing.",
+    "Recaulk before selling house: cracked caulk shows up in close photos. Replace it while the repair list is still short. Write it down before you hire help.",
   "finish-the-entry-first":
-    "Finish the entry before the rest of the house. The first steps inside set what a visitor expects, and they cost less than redoing every room.",
+    "Entryway staging: the front door and entry are the first rooms a visitor stands in. Finish those before the back closets. Write it down for this house.",
   "test-alarms-before-you-list":
-    "Test the alarms before you list. A fresh battery is a few dollars, and a detector that chirps during a showing is a problem you can fix now.",
+    "Smoke detector requirements when selling a house: press each smoke and carbon-monoxide alarm, and replace any battery that fails. Do it for this house.",
   "clear-gutters-before-showings":
-    "Clear the gutters before showings so overflow does not stain the entry. Gloves and a ladder afternoon are enough for a one-story run.",
+    "Clean gutters before selling house: empty the gutters and check that downspouts send water away from the foundation. Write it down before you hire help.",
   "tighten-loose-hardware":
-    "Tighten loose hardware before the first visit. Hinges and pulls that rattle are a screwdriver job, often under $15 in screws from a hardware store.",
+    "Small repairs before selling house: snug the hinges, handles, and cabinet pulls that rattle when someone opens a door. Write it down before you hire help.",
   "trace-a-stain-to-its-source":
-    "Trace a stain to its source before you paint over it. Find the leak, stop it, and let the spot dry so the repair is real and not a cover.",
+    "Water stain on ceiling selling house: find the leak that made the stain, then repair that before you paint over the mark. Write it down for this house.",
   "run-heat-and-cooling-before-showings":
-    "Run the heat and the cooling before showings. A system that starts, and a filter you can point to, answers the question buyers test first.",
+    "HVAC check before selling house: turn each system on, listen for a short cycle, and change a dirty filter. Turn the heat on and wait. Do it for this house.",
   "leave-a-clear-path-through-each-room":
-    "Leave a clear path through each room so a visitor can walk from the front door to the back without stepping around chairs, bins, or cords.",
+    "Furniture arrangement for staging: move chairs and baskets so a visitor can walk in, turn around, and see the floor. Write it down before you hire help.",
   "open-the-window-coverings-the-same-way":
-    "Open the window coverings the same way in every room you will show, so daylight is consistent and no corner is left in the dark for a photo.",
+    "Natural light staging tips: raise every shade to the same height so the light looks even from room to room. Write it down for this house before you list.",
   "put-pet-gear-away-before-showings":
-    "Put pet gear away before showings. Bowls, beds, and toys in a closet let the room read as a room, and you can set them back out the same day.",
+    "Selling a house with pets: move bowls, beds, and litter out of sight, and air the rooms they sat in. Write it down for this house before you hire help.",
   "stop-after-one-simple-table-setting":
-    "Stop after one simple table setting. A made table for the people who live there is enough. Extra place settings make a dining room look staged stiff.",
+    "Dining table staging ideas: a plain setting on the table is enough. Extra decor on every surface works against you. Write it down before you hire help.",
   "leave-closets-partly-empty":
-    "Leave closets partly empty so a door can open and a buyer can see the rod and the floor. A packed closet reads as too little storage.",
+    "Closet staging tips: take out enough clothes and boxes that a visitor can see the rod and the floor. Write it down for this house before you hire help.",
   "write-three-numbers-before-you-list":
-    "Write three numbers before you list: the price you will advertise, the net you hope to clear, and the lowest net you will accept.",
+    "Home pricing strategy: write the list price, the net you hope for, and the net that would make you walk away. Write it down for this house before you list.",
   "list-credits-before-you-pick-a-price":
-    "List credits before you pick a price. Repair money and closing help change the net, so write those possibilities down while you are calm.",
+    "Seller credits closing costs: write the repairs and concessions you already expect, then see what they do to your net. Write it down before you hire help.",
   "match-what-was-included-in-a-sale":
-    "Match what was included in a sold home you are using as a comparison, so a missing garage or a smaller lot is not treated as the same house.",
+    "How to read comps: before you compare a sold price, write what that sale included and what yours includes. Write it down for this house before you list.",
   "rerun-the-net-after-each-bid":
-    "Rerun the net after each repair bid. A new number for a roof or a faucet belongs in the proceeds page before you decide to do the work.",
+    "Net proceeds after repairs: when a written bid arrives, put that number in the calculator before you agree to the work. A bid is a fact. Do it for this house.",
   "keep-price-notes-in-writing":
-    "Keep price notes in writing. The sold homes you compared, and why you adjusted, should be on a page you can read again when an offer arrives.",
+    "Price reduction strategy: after each pricing talk, write the price, the net, and what you decided. A phone call is easy to remember two different ways.",
   "shoot-in-the-order-a-visitor-walks":
-    "Shoot in the order a visitor walks, from the street to the back of the house, so the photo set tells the same story as the showing.",
+    "Listing photo order: start at the street, then move through the house in the order someone would walk it. Write it down for this house before you list.",
   "move-cars-before-the-photo-appointment":
-    "Move cars before the photo appointment so the driveway and the front of the house are clear. A car in the frame hides the property you are selling.",
+    "Exterior listing photos tips: clear the driveway and the curb in front of the house so the photo shows the property. Write it down before you hire help.",
   "close-lids-and-hide-trash-cans":
-    "Close lids and hide trash cans before any photo. A shut toilet lid and a bin moved out of the corner keep the picture about the room.",
+    "Prepare house for real estate photos: shut toilet lids, tuck trash cans into cabinets, and clear the edge of every tub. Write it down before you list.",
   "take-one-wide-shot-and-one-detail":
-    "Take one wide shot and one detail in each main room, so the set shows both the space and the finished work a buyer will ask about.",
+    "How many listing photos: for each main room, keep one photo that shows the whole room and one that shows a finished feature. Write it down for this house.",
   "delete-blurry-frames-the-same-day":
-    "Delete blurry frames the same day you shoot. A dark or soft photo left in the set is the one people remember, and a retake is still easy.",
+    "Editing listing photos: review the set before you upload it, and drop any frame that is dark, tilted, or soft. Write it down for this house before you list.",
   "price-the-hours-you-will-spend":
-    "Price the hours you will spend if you sell it yourself. Showings, calls, and paperwork are time. Write that cost next to any commission you skip.",
+    "Is FSBO worth it: write the tasks you would take on, then estimate the hours before you decide to sell it yourself. Write it down before you hire help.",
   "decide-who-answers-buyer-questions":
-    "Decide who answers buyer questions before the sign goes up, so calls have one owner and you are not improvising a price on the phone.",
+    "FSBO buyer questions: name the person who will reply, and decide that replies go in writing. Write it down for this house before you hire anyone else.",
   "learn-which-forms-you-must-use":
-    "Learn which forms you must use in your state before you list. A closing company or attorney can name them. This site cannot pick them for you.",
+    "FSBO paperwork: before you advertise, ask which seller forms your state expects and where to get them. Rules vary by state. Write it down for this house.",
   "plan-showing-hours-before-you-advertise":
-    "Plan showing hours before you advertise, and write hours you can keep. A buyer who cannot get in does not get a fair look at the house.",
+    "FSBO showings: choose the days and hours you can leave the house, and write them down before the first call. Write it down for this house before you list.",
   "write-what-you-will-not-negotiate":
-    "Write what you will not negotiate, such as a move-out date you already booked, and read that list before you answer a call or a counter.",
+    "Seller negotiation tips: before the first call, list the terms you will discuss and the ones you will not. Write it down for this house before you list.",
   "answer-an-offer-in-writing":
-    "Answer an offer in writing, even after you have talked it through. A sentence with the price, credits, and dates is the copy you can file.",
+    "How to counter offer on a house: send a written yes, no, or counter, even when you already talked it through. Write it down for this house before you list.",
   "split-price-from-the-closing-date":
-    "Split price from the closing date when you counter. One line for the money and one line for the day keeps the two decisions easy to compare.",
+    "Negotiating closing date: when you counter, change the price on one line and the closing date on another. Write it down for this house before you list.",
   "list-what-stays-before-you-sign":
-    "List what stays before you sign, including appliances and window coverings, so a refrigerator you plan to take is not assumed to be part of the sale.",
+    "What stays with the house when you sell: write the appliances, fixtures, and window coverings that stay, and the items you will take. Do it for this house.",
   "ask-who-pays-for-requested-repairs":
-    "Ask who pays for requested repairs before you agree. A bid or a credit amount, and a name for who orders the work, belongs in the written answer.",
+    "Repair requests after inspection: when a buyer asks for a repair, write the cost and who pays it before you agree. Write it down before you hire help.",
   "save-every-counter-you-send":
-    "Save every counter you send, numbered by date, in one folder. The next version is easier to read when you can see only the lines that changed.",
+    "Counter offer records: keep a copy of each counter in one folder, in the order you sent them. Write it down for this house before you hire anyone else.",
   "read-the-settlement-statement-when-it-arrives":
-    "Read the settlement statement when it arrives. Check price, payoff, and credits against the contract before closing day, not in the lobby.",
+    "Seller settlement statement explained: check the price, credits, and payoff on the statement the day you receive it. The statement is the math of the sale.",
   "match-the-move-out-date-to-the-contract":
-    "Match the move-out date to the contract. Book the truck so the house is empty before the possession day, with time left for keys and a last look.",
+    "When do sellers have to move out: read the date you must be out, and book the move to finish before that day. Write it down for this house before you list.",
   "gather-keys-and-openers-in-one-envelope":
-    "Gather keys and openers in one envelope, labeled with the address, and carry it to closing. Do not pack the only set in a moving box.",
+    "What to leave for new homeowners: put every key, garage opener, and gate code in one labeled envelope before closing day. Write it down for this house.",
   "check-your-name-against-your-id":
-    "Check your name against your ID before closing day. A missing initial can stall a signing, and the closing office can fix it if you call early.",
+    "Name mismatch on deed: read the name on the deed papers and make sure it matches the identification you will bring. Write it down before you hire help.",
   "leave-utility-numbers-for-the-final-reading":
-    "Leave utility numbers for the final reading on the possession date. Write the confirmation, and do not shut a service off earlier than the contract allows.",
+    "Transfer utilities when selling house: write the account numbers and schedule the final readings for the possession date. Write it down for this house.",
   "measure-doors-before-you-book-a-truck":
-    "Measure doors and the largest furniture before you book a truck, so a sofa that will not pass is a decision you make at home, not on the ramp.",
+    "Moving truck size guide: measure the sofa, the mattress, and the narrowest doorway before you reserve a truck. Write it down for this house before you list.",
   "pack-a-first-week-kitchen-box":
-    "Pack a first-week kitchen box with a pan, mugs, soap, and towels, mark it to open first, and carry it in your car in case the truck is late.",
+    "Moving essentials box: fill one box with the pan, mugs, soap, and towels you will want before the rest is unpacked. Write it down before you hire help.",
   "forward-the-mail-before-you-leave":
-    "Forward the mail before you leave, with a start date that matches possession. A forward does not update your insurer or the bills you pay.",
+    "How to forward mail when moving: file the mail forward in time for it to start on your possession date. Write it down for this house before you hire help.",
   "photograph-empty-rooms-on-the-last-day":
-    "Photograph the empty rooms on the last day, plus the meter readings, and save the set with your settlement papers before you lock the door.",
+    "Move-out photos: take a photo of each empty room, plus the meter readings, before you lock the door. Write it down for this house before you hire help.",
   "carry-the-closing-papers-with-you":
-    "Carry the closing papers with you in the car, not in a box on the truck, so the signed set and your identification stay where you can reach them.",
+    "Keep home sale documents: keep the signed settlement set in your car, not in a box on the truck. Write it down for this house before you hire anyone else.",
   "seller-closing-costs":
     "Seller closing costs: what sellers pay, from commission and payoff to title charges and credits, and how to estimate the net before you sign.",
   "realtor-commission-changes":

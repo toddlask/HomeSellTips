@@ -1,7 +1,7 @@
 [
   {
     "slug": "walk-the-house-before-you-hire",
-    "title": "Walk the house before you hire anyone",
+    "title": "Pre-listing walkthrough",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -23,7 +23,7 @@
   },
   {
     "slug": "fix-function-before-finish",
-    "title": "Fix function before you spend on finish",
+    "title": "What to fix before selling a house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -45,7 +45,7 @@
   },
   {
     "slug": "clear-surfaces-before-you-decorate",
-    "title": "Clear surfaces before you add anything",
+    "title": "Declutter before selling house",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -67,7 +67,7 @@
   },
   {
     "slug": "pack-personal-items-early",
-    "title": "Pack personal items before the first showing",
+    "title": "Depersonalize house for sale",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -89,7 +89,7 @@
   },
   {
     "slug": "price-the-property-you-have",
-    "title": "Price the property you have",
+    "title": "How to price my house to sell",
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -111,7 +111,7 @@
   },
   {
     "slug": "leave-room-to-negotiate",
-    "title": "Leave room to answer a real offer",
+    "title": "List price negotiation room",
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -133,7 +133,7 @@
   },
   {
     "slug": "daylight-and-lights",
-    "title": "Take listing photos in daylight with the lights on",
+    "title": "Best time of day for real estate photos",
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -155,7 +155,7 @@
   },
   {
     "slug": "show-the-repairs-you-finished",
-    "title": "Photograph the work you finished",
+    "title": "Listing photos of upgrades",
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -177,7 +177,7 @@
   },
   {
     "slug": "list-the-jobs-before-you-choose",
-    "title": "List the jobs before you pick who does them",
+    "title": "Realtor vs FSBO",
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -199,7 +199,7 @@
   },
   {
     "slug": "questions-if-you-sell-it-yourself",
-    "title": "Questions to answer if you sell it yourself",
+    "title": "Selling a house by owner",
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -221,7 +221,7 @@
   },
   {
     "slug": "read-the-whole-offer",
-    "title": "Read the whole offer before you answer the price",
+    "title": "How to read a purchase offer",
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -243,7 +243,7 @@
   },
   {
     "slug": "compare-net-and-dates",
-    "title": "Compare net and dates before you counter",
+    "title": "How to compare offers on a house",
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -265,7 +265,7 @@
   },
   {
     "slug": "build-the-closing-folder-early",
-    "title": "Build the closing folder before you have a buyer",
+    "title": "Documents needed to sell a house",
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -287,7 +287,7 @@
   },
   {
     "slug": "walk-again-before-the-final-visit",
-    "title": "Walk the house again before the buyer’s final visit",
+    "title": "Final walkthrough seller",
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -309,7 +309,7 @@
   },
   {
     "slug": "book-the-move-after-the-date-is-real",
-    "title": "Book the move after the closing date is real",
+    "title": "When to book movers when selling a house",
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -331,7 +331,7 @@
   },
   {
     "slug": "label-boxes-by-room",
-    "title": "Label boxes by the room they go to",
+    "title": "How to label moving boxes",
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -353,7 +353,7 @@
   },
   {
     "slug": "replace-cracked-caulk-before-photos",
-    "title": "Replace cracked caulk before photo day",
+    "title": "Recaulk before selling house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -375,7 +375,7 @@
   },
   {
     "slug": "finish-the-entry-first",
-    "title": "Finish the entry before the rest of the house",
+    "title": "Entryway staging",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -473,7 +473,7 @@
   },
   {
     "slug": "deep-clean-after-the-dusty-work",
-    "title": "Deep-clean after the dusty work, not before",
+    "title": "Deep cleaning before selling house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-21",
@@ -492,7 +492,7 @@
   },
   {
     "slug": "test-alarms-before-you-list",
-    "title": "Test the alarms before you list",
+    "title": "Smoke detector requirements when selling a house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -514,7 +514,7 @@
   },
   {
     "slug": "clear-gutters-before-showings",
-    "title": "Clear the gutters before showings",
+    "title": "Clean gutters before selling house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -536,7 +536,7 @@
   },
   {
     "slug": "tighten-loose-hardware",
-    "title": "Tighten loose hardware before the first visit",
+    "title": "Small repairs before selling house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -558,7 +558,7 @@
   },
   {
     "slug": "trace-a-stain-to-its-source",
-    "title": "Trace a stain to its source",
+    "title": "Water stain on ceiling selling house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -580,7 +580,7 @@
   },
   {
     "slug": "run-heat-and-cooling-before-showings",
-    "title": "Run the heat and the cooling before showings",
+    "title": "HVAC check before selling house",
     "stage": "prep-and-repairs",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -602,7 +602,7 @@
   },
   {
     "slug": "leave-a-clear-path-through-each-room",
-    "title": "Leave a clear path through each room",
+    "title": "Furniture arrangement for staging",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -624,7 +624,7 @@
   },
   {
     "slug": "open-the-window-coverings-the-same-way",
-    "title": "Open the window coverings the same way",
+    "title": "Natural light staging tips",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -646,7 +646,7 @@
   },
   {
     "slug": "put-pet-gear-away-before-showings",
-    "title": "Put pet gear away before showings",
+    "title": "Selling a house with pets",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -668,7 +668,7 @@
   },
   {
     "slug": "stop-after-one-simple-table-setting",
-    "title": "Stop after one simple table setting",
+    "title": "Dining table staging ideas",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -690,7 +690,7 @@
   },
   {
     "slug": "leave-closets-partly-empty",
-    "title": "Leave closets partly empty",
+    "title": "Closet staging tips",
     "stage": "staging",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -712,7 +712,7 @@
   },
   {
     "slug": "write-three-numbers-before-you-list",
-    "title": "Write three numbers before you list",
+    "title": "Home pricing strategy",
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -734,7 +734,7 @@
   },
   {
     "slug": "list-credits-before-you-pick-a-price",
-    "title": "List credits before you pick a price",
+    "title": "Seller credits closing costs",
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -756,7 +756,7 @@
   },
   {
     "slug": "match-what-was-included-in-a-sale",
-    "title": "Match what was included in a sold home",
+    "title": "How to read comps",
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -778,7 +778,7 @@
   },
   {
     "slug": "rerun-the-net-after-each-bid",
-    "title": "Rerun the net after each repair bid",
+    "title": "Net proceeds after repairs",
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -800,7 +800,7 @@
   },
   {
     "slug": "keep-price-notes-in-writing",
-    "title": "Keep price notes in writing",
+    "title": "Price reduction strategy",
     "stage": "pricing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -822,7 +822,7 @@
   },
   {
     "slug": "shoot-in-the-order-a-visitor-walks",
-    "title": "Shoot in the order a visitor walks",
+    "title": "Listing photo order",
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -844,7 +844,7 @@
   },
   {
     "slug": "move-cars-before-the-photo-appointment",
-    "title": "Move cars before the photo appointment",
+    "title": "Exterior listing photos tips",
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -866,7 +866,7 @@
   },
   {
     "slug": "close-lids-and-hide-trash-cans",
-    "title": "Close lids and hide trash cans",
+    "title": "Prepare house for real estate photos",
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -888,7 +888,7 @@
   },
   {
     "slug": "take-one-wide-shot-and-one-detail",
-    "title": "Take one wide shot and one detail",
+    "title": "How many listing photos",
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -910,7 +910,7 @@
   },
   {
     "slug": "delete-blurry-frames-the-same-day",
-    "title": "Delete blurry frames the same day",
+    "title": "Editing listing photos",
     "stage": "listing-photos",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -932,7 +932,7 @@
   },
   {
     "slug": "price-the-hours-you-will-spend",
-    "title": "Price the hours you will spend",
+    "title": "Is FSBO worth it",
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -954,7 +954,7 @@
   },
   {
     "slug": "decide-who-answers-buyer-questions",
-    "title": "Decide who answers buyer questions",
+    "title": "FSBO buyer questions",
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -976,7 +976,7 @@
   },
   {
     "slug": "learn-which-forms-you-must-use",
-    "title": "Learn which forms you must use",
+    "title": "FSBO paperwork",
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -998,7 +998,7 @@
   },
   {
     "slug": "plan-showing-hours-before-you-advertise",
-    "title": "Plan showing hours before you advertise",
+    "title": "FSBO showings",
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1020,7 +1020,7 @@
   },
   {
     "slug": "write-what-you-will-not-negotiate",
-    "title": "Write what you will not negotiate",
+    "title": "Seller negotiation tips",
     "stage": "agent-vs-fsbo",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1042,7 +1042,7 @@
   },
   {
     "slug": "answer-an-offer-in-writing",
-    "title": "Answer an offer in writing",
+    "title": "How to counter offer on a house",
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1064,7 +1064,7 @@
   },
   {
     "slug": "split-price-from-the-closing-date",
-    "title": "Split price from the closing date",
+    "title": "Negotiating closing date",
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1086,7 +1086,7 @@
   },
   {
     "slug": "list-what-stays-before-you-sign",
-    "title": "List what stays before you sign",
+    "title": "What stays with the house when you sell",
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1108,7 +1108,7 @@
   },
   {
     "slug": "ask-who-pays-for-requested-repairs",
-    "title": "Ask who pays for requested repairs",
+    "title": "Repair requests after inspection",
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1130,7 +1130,7 @@
   },
   {
     "slug": "save-every-counter-you-send",
-    "title": "Save every counter you send",
+    "title": "Counter offer records",
     "stage": "offers-and-negotiation",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1152,7 +1152,7 @@
   },
   {
     "slug": "read-the-settlement-statement-when-it-arrives",
-    "title": "Read the settlement statement when it arrives",
+    "title": "Seller settlement statement explained",
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1174,7 +1174,7 @@
   },
   {
     "slug": "match-the-move-out-date-to-the-contract",
-    "title": "Match the move-out date to the contract",
+    "title": "When do sellers have to move out",
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1196,7 +1196,7 @@
   },
   {
     "slug": "gather-keys-and-openers-in-one-envelope",
-    "title": "Gather keys and openers in one envelope",
+    "title": "What to leave for new homeowners",
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1218,7 +1218,7 @@
   },
   {
     "slug": "check-your-name-against-your-id",
-    "title": "Check your name against your ID",
+    "title": "Name mismatch on deed",
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1240,7 +1240,7 @@
   },
   {
     "slug": "leave-utility-numbers-for-the-final-reading",
-    "title": "Leave utility numbers for the final reading",
+    "title": "Transfer utilities when selling house",
     "stage": "closing",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1262,7 +1262,7 @@
   },
   {
     "slug": "measure-doors-before-you-book-a-truck",
-    "title": "Measure doors before you book a truck",
+    "title": "Moving truck size guide",
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1284,7 +1284,7 @@
   },
   {
     "slug": "pack-a-first-week-kitchen-box",
-    "title": "Pack a first-week kitchen box",
+    "title": "Moving essentials box",
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1306,7 +1306,7 @@
   },
   {
     "slug": "forward-the-mail-before-you-leave",
-    "title": "Forward the mail before you leave",
+    "title": "How to forward mail when moving",
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1328,7 +1328,7 @@
   },
   {
     "slug": "photograph-empty-rooms-on-the-last-day",
-    "title": "Photograph the empty rooms on the last day",
+    "title": "Move-out photos",
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",
@@ -1350,7 +1350,7 @@
   },
   {
     "slug": "carry-the-closing-papers-with-you",
-    "title": "Carry the closing papers with you",
+    "title": "Keep home sale documents",
     "stage": "moving",
     "status": "published",
     "updatedOn": "2026-10-28",

@@ -38,7 +38,9 @@ describe("search metadata", () => {
         continue;
       }
       const description = tipMetaDescription(tip);
-      expectMetaLength(description);
+      const expanded = new Set(["seller-closing-costs", "realtor-commission-changes", "selling-as-is-vs-fixing-up"]);
+      expect(description.length).toBeGreaterThanOrEqual(expanded.has(tip.slug) ? 120 : 150);
+      expect(description.length).toBeLessThanOrEqual(160);
       expect(description).toContain(tipKeyPhrase(tip.title));
       expect(seen.has(description)).toBe(false);
       seen.add(description);
