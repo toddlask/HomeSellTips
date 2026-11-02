@@ -179,14 +179,12 @@ describe("search metadata", () => {
       expect(getSiteUrl()).toBe("https://homeselltips-abc.vercel.app");
       process.env.NEXT_PUBLIC_SITE_URL = "https://homeselltips.vercel.app/";
       expect(getSiteUrl()).toBe("https://homeselltips.vercel.app");
-      expect(canonicalRedirect("www.helpfulideasforsellingyourhome.com", "/tips")).toBe(
-        "https://helpfulideasforsellingyourhome.com/tips",
-      );
+      expect(canonicalRedirect("www.helpfulideasforsellingyourhome.com", "/tips")).toBeNull();
+      expect(canonicalRedirect("helpfulideasforsellingyourhome.com", "/tips")).toBeNull();
       expect(canonicalRedirect("homeselltips.vercel.app", "/")).toBe("https://helpfulideasforsellingyourhome.com/");
-      expect(canonicalRedirect("www.helpfulideasforsellingyourhome.com", "/google4f514a5b84ae4e70.html")).toBeNull();
+      expect(canonicalRedirect("homeselltips.vercel.app", "/tips")).toBe("https://helpfulideasforsellingyourhome.com/tips");
       expect(canonicalRedirect("homeselltips.vercel.app", "/google4f514a5b84ae4e70.html")).toBeNull();
       expect(canonicalRedirect("homeselltips-git-main-toddlask.vercel.app", "/tips")).toBeNull();
-      expect(canonicalRedirect("helpfulideasforsellingyourhome.com", "/tips")).toBeNull();
     } finally {
       for (const [key, value] of saved) {
         if (value === undefined) {

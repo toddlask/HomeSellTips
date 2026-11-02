@@ -1,9 +1,6 @@
 export const CANONICAL_ORIGIN = "https://helpfulideasforsellingyourhome.com";
 
-const REDIRECT_HOSTS = new Set([
-  "www.helpfulideasforsellingyourhome.com",
-  "homeselltips.vercel.app",
-]);
+const REDIRECT_HOSTS = new Set(["homeselltips.vercel.app"]);
 
 export const VERIFICATION_PATH = "/google4f514a5b84ae4e70.html";
 
