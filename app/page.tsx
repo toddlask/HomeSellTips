@@ -3,6 +3,7 @@ import { FaqList } from "@/components/faq-list";
 import { HomePhotoView } from "@/components/home-photo";
 import { InContentAd } from "@/components/ad-regions";
 import { JsonLd } from "@/components/json-ld";
+import { ZillowHomeBanner } from "@/components/zillow-banner";
 import { tips } from "@/lib/catalog";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
@@ -61,6 +62,7 @@ export default function HomePage() {
           </li>
         ))}
       </ul>
+      <ZillowHomeBanner />
       <section className="section-gap" id="stages" aria-labelledby="stages-heading">
         <h2 id="stages-heading" className="section-heading">
           By stage
