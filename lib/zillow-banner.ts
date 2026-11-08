@@ -20,3 +20,30 @@ export const ZILLOW_PAGE_BANNER: ZillowBannerArt = {
   height: 212,
   alt: "Advertisement. Zillow. Thinking about selling? Explore your local market.",
 };
+
+export const ZILLOW_FOOTER_BANNER: ZillowBannerArt = {
+  src: "/zillow-footer-banner-text-lowered.png",
+  width: 1024,
+  height: 80,
+  alt: "Advertisement. Zillow. Thinking about selling?",
+};
+
+const FOOTER_BANNER_ROOTS = [
+  "/about",
+  "/admin",
+  "/advertise",
+  "/disclosure",
+  "/photo-credits",
+  "/privacy",
+  "/stages",
+  "/tips",
+  "/tools",
+] as const;
+
+export function isFooterBannerPath(pathname: string): boolean {
+  const path = pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  if (path === "/") {
+    return true;
+  }
+  return FOOTER_BANNER_ROOTS.some((root) => path === root || path.startsWith(`${root}/`));
+}

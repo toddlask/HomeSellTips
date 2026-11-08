@@ -271,6 +271,7 @@ a:hover { color: #3f2618; }
 
 .zillow-banner-home { margin-top: 1.75rem; }
 .zillow-banner-home + .section-gap { margin-top: 1.15rem; }
+.zillow-banner-footer { margin: 0; min-width: 0; }
 
 .zillow-banner-note {
   position: absolute;

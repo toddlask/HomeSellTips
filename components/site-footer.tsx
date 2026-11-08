@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { ZillowFooterBanner } from "@/components/zillow-footer-banner";
 import { DISCLAIMER } from "@/lib/site";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="wrap footer-inner">
+        <ZillowFooterBanner />
         <p id="disclaimer" className="legal">
           {DISCLAIMER}
         </p>

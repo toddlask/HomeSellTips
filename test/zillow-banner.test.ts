@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { ZILLOW_HOME_BANNER, ZILLOW_HREF, ZILLOW_PAGE_BANNER } from "@/lib/zillow-banner";
+import { isFooterBannerPath, ZILLOW_FOOTER_BANNER, ZILLOW_HOME_BANNER, ZILLOW_HREF, ZILLOW_PAGE_BANNER } from "@/lib/zillow-banner";
 
 const root = process.cwd();
 
@@ -35,6 +35,10 @@ describe("Zillow banners", () => {
       width: ZILLOW_PAGE_BANNER.width,
       height: ZILLOW_PAGE_BANNER.height,
     });
+    expect(pngSize(resolve(root, "public/zillow-footer-banner-text-lowered.png"))).toEqual({
+      width: ZILLOW_FOOTER_BANNER.width,
+      height: ZILLOW_FOOTER_BANNER.height,
+    });
     expect(ZILLOW_HOME_BANNER.src).not.toBe(ZILLOW_PAGE_BANNER.src);
     const banner = readFileSync(resolve(root, "components/zillow-banner.tsx"), "utf8");
     expect(banner).toContain(`href={ZILLOW_HREF}`);
@@ -47,6 +51,7 @@ describe("Zillow banners", () => {
     expect(banner).toContain('maxWidth: "100%"');
     expect(ZILLOW_HOME_BANNER.alt.startsWith("Advertisement.")).toBe(true);
     expect(ZILLOW_PAGE_BANNER.alt.startsWith("Advertisement.")).toBe(true);
+    expect(ZILLOW_FOOTER_BANNER.alt.startsWith("Advertisement.")).toBe(true);
   });
 
   it("places the smaller banner only above the home stage section", () => {
@@ -94,5 +99,25 @@ describe("Zillow banners", () => {
     expect(css).toContain(".zillow-banner img");
     expect(css).toContain("object-fit: contain");
     expect(css).not.toMatch(/\.zillow-banner img[^}]*object-fit:\s*cover/);
+  });
+
+  it("places the footer banner immediately above the disclaimer on normal pages", () => {
+    const footer = readFileSync(resolve(root, "components/site-footer.tsx"), "utf8");
+    const bannerAt = footer.indexOf("<ZillowFooterBanner />");
+    const disclaimerAt = footer.indexOf('id="disclaimer"');
+    expect(bannerAt).toBeGreaterThan(0);
+    expect(bannerAt).toBeLessThan(disclaimerAt);
+    expect(footer).toContain("{DISCLAIMER}");
+    expect(footer).toContain('href="/"');
+    expect(isFooterBannerPath("/")).toBe(true);
+    expect(isFooterBannerPath("/tips/walk-the-house-before-you-hire")).toBe(true);
+    expect(isFooterBannerPath("/this-page-is-not-real")).toBe(false);
+    expect(isFooterBannerPath("/robots.txt")).toBe(false);
+    expect(isFooterBannerPath("/sitemap.xml")).toBe(false);
+    for (const file of pageFiles(resolve(root, "app"))) {
+      const rel = relative(resolve(root, "app"), file).replace(/\\/g, "/");
+      const route = rel === "page.tsx" ? "/" : `/${rel.replace(/\/page\.tsx$/, "")}`;
+      expect(isFooterBannerPath(route), route).toBe(true);
+    }
   });
 });

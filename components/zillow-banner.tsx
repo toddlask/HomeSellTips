@@ -1,6 +1,12 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { ZILLOW_HOME_BANNER, ZILLOW_HREF, ZILLOW_PAGE_BANNER, type ZillowBannerArt } from "@/lib/zillow-banner";
+import {
+  ZILLOW_FOOTER_BANNER,
+  ZILLOW_HOME_BANNER,
+  ZILLOW_HREF,
+  ZILLOW_PAGE_BANNER,
+  type ZillowBannerArt,
+} from "@/lib/zillow-banner";
 
 function ZillowBannerLink({
   art,
@@ -35,6 +41,10 @@ export function ZillowHomeBanner() {
 
 export function ZillowPageBanner() {
   return <ZillowBannerLink art={ZILLOW_PAGE_BANNER} className="zillow-banner zillow-banner-page" priority />;
+}
+
+export function ZillowFooterBannerArt() {
+  return <ZillowBannerLink art={ZILLOW_FOOTER_BANNER} className="zillow-banner zillow-banner-footer" />;
 }
 
 export function ZillowPageFrame({ children }: { children: ReactNode }) {
