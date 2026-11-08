@@ -109,6 +109,10 @@ describe("Zillow banners", () => {
     expect(bannerAt).toBeLessThan(disclaimerAt);
     expect(footer).toContain("{DISCLAIMER}");
     expect(footer).toContain('href="/"');
+    const css = readFileSync(resolve(root, "app/globals.css"), "utf8");
+    expect(css).toContain("padding: 2rem 0 2.4rem");
+    expect(css).toMatch(/\.footer-inner\s*\{[^}]*gap:\s*0\.8rem/);
+    expect(css).toContain(".zillow-banner-footer { margin: 0 0 calc(2rem - 0.8rem); min-width: 0; }");
     expect(isFooterBannerPath("/")).toBe(true);
     expect(isFooterBannerPath("/tips/walk-the-house-before-you-hire")).toBe(true);
     expect(isFooterBannerPath("/this-page-is-not-real")).toBe(false);
