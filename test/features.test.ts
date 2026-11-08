@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { CURB_WINS } from "@/lib/curb";
 import { splitGlossary } from "@/lib/glossary";
@@ -65,5 +65,13 @@ describe("seller tools", () => {
     const data = faqJsonLd(FAQ_ITEMS);
     expect(data["@type"]).toBe("FAQPage");
     expect(data.mainEntity).toHaveLength(FAQ_ITEMS.length);
+    const css = readFileSync(resolve(process.cwd(), "app/globals.css"), "utf8");
+    const summary = css.match(/\.faq-list summary\s*\{[^}]*\}/)?.[0] ?? "";
+    expect(summary).toContain("cursor: pointer");
+    expect(summary).toContain("width: 100%");
+    expect(css).not.toMatch(/\.faq-list details p\s*\{[^}]*cursor:/);
+    const list = readFileSync(resolve(process.cwd(), "components/faq-list.tsx"), "utf8");
+    expect(list).toContain("<summary>{item.question}</summary>");
+    expect(list).not.toContain("<a ");
   });
 });

@@ -500,6 +500,7 @@ caption { text-align: left; font-weight: 700; margin-bottom: 0.4rem; }
 .faq-list { padding: 0.2rem 0 0.4rem; }
 .faq-list details { border-top: 1px solid var(--line); padding: 0.55rem 0; }
 .faq-list details:first-of-type { border-top: 0; }
+.faq-list summary { width: 100%; cursor: pointer; }
 
 .steps, .related-list { padding-left: 1.2rem; }
 .steps li, .related-list li { margin: 0.3rem 0; }
