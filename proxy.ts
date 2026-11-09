@@ -1,13 +1,16 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { canonicalRedirect } from "@/lib/host-redirect";
+import { CONTENT_ROUTES, permanentRedirectTarget } from "@/lib/numbered-duplicate";
 
 export function proxy(request: NextRequest): NextResponse {
-  const target = canonicalRedirect(request.headers.get("host"), request.nextUrl.pathname);
+  const target = permanentRedirectTarget(
+    request.headers.get("host"),
+    request.nextUrl.pathname,
+    request.nextUrl.search,
+    CONTENT_ROUTES,
+  );
   if (!target) {
     return NextResponse.next();
   }
-  const destination = new URL(target);
-  destination.search = request.nextUrl.search;
-  return NextResponse.redirect(destination, 308);
+  return NextResponse.redirect(new URL(target, request.url), 308);
 }
