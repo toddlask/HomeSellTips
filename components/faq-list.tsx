@@ -1,19 +1,26 @@
-import { FAQ_ITEMS, faqJsonLd } from "@/lib/faq";
+import { RichText } from "@/components/gloss-text";
+import { FAQ_ITEMS, faqJsonLd, type FaqItem } from "@/lib/faq";
 
-export function FaqList() {
-  const jsonLd = faqJsonLd(FAQ_ITEMS);
+export function FaqListItems({ items, heading, group = "questions" }: { items: readonly FaqItem[]; heading: string; group?: string }) {
+  const jsonLd = faqJsonLd(items);
   return (
     <section className="section-gap" aria-labelledby="faq-heading">
-      <h2 id="faq-heading">Questions</h2>
+      <h2 id="faq-heading">{heading}</h2>
       <div className="faq-list">
-        {FAQ_ITEMS.map((item) => (
-          <details key={item.question} name="questions">
+        {items.map((item) => (
+          <details key={item.question} name={group}>
             <summary>{item.question}</summary>
-            <p>{item.answer}</p>
+            <p>
+              <RichText text={item.answer} />
+            </p>
           </details>
         ))}
       </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </section>
   );
+}
+
+export function FaqList() {
+  return <FaqListItems items={FAQ_ITEMS} heading="Questions" />;
 }

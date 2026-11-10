@@ -5,6 +5,8 @@ import { photoCreditCrumbs } from "@/lib/crumbs";
 import { INFO_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { parseStageId } from "@/lib/parse";
+import { topicTipBySlug } from "@/lib/round";
+import { parseTopicId, topicHeading } from "@/lib/topics";
 import { photoPlacements, type HomePhoto } from "@/lib/photos";
 import { stageTitle } from "@/lib/stages";
 import { TOOL_LINKS } from "@/lib/site";
@@ -28,12 +30,24 @@ function pageLabel(path: string): string {
   if (path === "/tools") {
     return "Tools";
   }
+  if (path === "/topics") {
+    return "Topics";
+  }
+  if (path.startsWith("/stages/") && path.endsWith("/guide")) {
+    return `${stageTitle(parseStageId(path.split("/")[2] ?? ""))} guide`;
+  }
   if (path.startsWith("/stages/")) {
     return stageTitle(parseStageId(path.slice("/stages/".length)));
   }
+  if (path.startsWith("/topics/") && path.endsWith("/guide")) {
+    return `${topicHeading(parseTopicId(path.split("/")[2] ?? ""))} guide`;
+  }
+  if (path.startsWith("/topics/")) {
+    return topicHeading(parseTopicId(path.split("/")[2] ?? ""));
+  }
   if (path.startsWith("/tips/")) {
     const slug = path.slice("/tips/".length);
-    return tips.find((tip) => tip.slug === slug)?.title ?? slug;
+    return tips.find((tip) => tip.slug === slug)?.title ?? topicTipBySlug(slug)?.title ?? slug;
   }
   return TOOL_LINKS.find((tool) => tool.href === path)?.title ?? path;
 }

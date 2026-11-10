@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/json-ld";
 import { SaleWords } from "@/components/sale-words";
 import { SourceList } from "@/components/source-list";
 import { BackToTop, TipJump } from "@/components/tip-jump";
+import { TopicTipArticle } from "@/components/topic-tip-article";
 import { tips } from "@/lib/catalog";
 import { tipCrumbs } from "@/lib/crumbs";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
@@ -18,10 +19,14 @@ import { tipPhoto } from "@/lib/photos";
 import { sourcesForStage } from "@/lib/page-sources";
 import { stageTitle } from "@/lib/stages";
 import { tipShareImage } from "@/lib/tip-card";
+import { publishedTopicTips, stageGuidePath, topicTipBySlug } from "@/lib/round";
 import { getSiteUrl, publishedTips, relatedTips, SITE_NAME } from "@/lib/site";
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return publishedTips(tips).map((tip) => ({ slug: tip.slug }));
+  return [
+    ...publishedTips(tips).map((tip) => ({ slug: tip.slug })),
+    ...publishedTopicTips().map((tip) => ({ slug: tip.slug })),
+  ];
 }
 
 export const dynamicParams = false;
@@ -30,7 +35,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const tip = publishedTips(tips).find((entry) => entry.slug === slug);
   if (!tip) {
-    return { title: "Tip" };
+    const topicTip = topicTipBySlug(slug);
+    if (!topicTip) {
+      return { title: "Tip" };
+    }
+    return pageMetadata({
+      title: tipPageTitle(topicTip.title),
+      description: topicTip.description,
+      path: `/tips/${topicTip.slug}`,
+      absoluteTitle: true,
+      openGraphType: "article",
+    });
   }
   return pageMetadata({
     title: tipPageTitle(tip.title),
@@ -46,7 +61,11 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   const { slug } = await params;
   const tip = publishedTips(tips).find((entry) => entry.slug === slug);
   if (!tip) {
-    notFound();
+    const topicTip = topicTipBySlug(slug);
+    if (!topicTip) {
+      notFound();
+    }
+    return <TopicTipArticle tip={topicTip} />;
   }
   const related = relatedTips(tips, tip);
   const origin = getSiteUrl();
@@ -70,6 +89,10 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <h1>{tip.title}</h1>
       <PageByline />
       <p className="lede">{tip.summary}</p>
+      <p>
+        This note is one task. The order for the whole stage is in the{" "}
+        <a href={stageGuidePath(tip.stage)}>{stageTitle(tip.stage)} guide</a>.
+      </p>
       <PagePhoto photo={tipPhoto(tip.slug)} />
       {tip.body.map((paragraph) => (
         <p key={paragraph}>

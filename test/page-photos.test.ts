@@ -2,6 +2,8 @@ import { statSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { tips } from "@/lib/catalog";
+import { publishedTopicTips, stageGuidePath } from "@/lib/round";
+import { topicGuidePath, topicPath, TOPIC_IDS } from "@/lib/topics";
 import { CURB_WINS } from "@/lib/curb";
 import { allPhotos, heroPhoto, pagePhoto } from "@/lib/photos";
 import { TOOL_LINKS } from "@/lib/site";
@@ -16,8 +18,14 @@ function coveredPaths(): string[] {
     .map((tip) => `/tips/${tip.slug}`);
   const stagePaths = STAGE_IDS.map((stage) => `/stages/${stage}`);
   const toolPaths = ["/tools", ...TOOL_LINKS.map((tool) => tool.href)];
-  const hubPaths = ["/tips", "/stages"];
-  return [...tipPaths, ...stagePaths, ...toolPaths, ...hubPaths];
+  const hubPaths = ["/tips", "/stages", "/topics"];
+  const guidePaths = [
+    ...STAGE_IDS.map((stage) => stageGuidePath(stage)),
+    ...TOPIC_IDS.map((topic) => topicPath(topic)),
+    ...TOPIC_IDS.map((topic) => topicGuidePath(topic)),
+  ];
+  const topicTipPaths = publishedTopicTips().map((tip) => `/tips/${tip.slug}`);
+  return [...tipPaths, ...stagePaths, ...toolPaths, ...hubPaths, ...guidePaths, ...topicTipPaths];
 }
 
 describe("page photos", () => {

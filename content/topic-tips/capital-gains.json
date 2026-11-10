@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "do-i-pay-capital-gains-tax-if-i-sell-my-house",
+    "topic": "capital-gains",
+    "title": "Do I pay capital gains tax if I sell my house",
+    "description": "Do I pay capital gains tax if I sell my house? Start with gain versus cash, then the tests in IRS Publication 523. Not tax advice.",
+    "summary": "Whether you owe tax depends on gain and whether you qualify to exclude it, not on the size of the wire.",
+    "body": [
+      "This is not tax advice. Do I pay capital gains tax if I sell my house is a question about gain, and [IRS Publication 523](https://www.irs.gov/publications/p523) is the publication that answers the federal version. The wire from the title company is what is left after the payoff and the costs. The IRS does not tax that wire. It looks at the sale price, the selling expenses the publication allows, and your basis. If you never write those three down, you cannot know whether a tax exists.",
+      "A main home can qualify for an exclusion. [IRS Topic No. 701](https://www.irs.gov/taxtopics/tc701) says you may exclude up to $250,000 of gain, or up to $500,000 if you file a joint return with your spouse, when you qualify. Qualifying is the ownership test and the use test: 24 months out of the 5 years ending on the sale, for owning and for living there as your main home. Failing either test, or having excluded another home in the prior two years, can mean the full exclusion is not available. A partial exclusion is a worksheet, not a guess you scale by the month.",
+      "Depreciation you claimed, a rental period, or a house that was never your main home can leave gain that the exclusion does not cover. Bring the closing statement and the purchase file to a tax advisor before you file and before you spend the proceeds. The guide on this topic walks the order. This page is only the yes-or-no question, and the honest answer is: sometimes, after the worksheet, and sometimes not.",
+      "Do not use an online tool that asks only for the sale price. Do not subtract the mortgage payoff and call the rest taxable. The payoff is a debt. Basis is the tax cost of the house. Those files live in different drawers. Keep both until you file, and keep the basis records for the period the IRS recordkeeping page describes for the year you dispose of property."
+    ],
+    "steps": [
+      "Read Publication 523 and Topic 701 before you treat the wire as spendable.",
+      "Write the sale price, the selling costs, and the basis from your purchase file.",
+      "Mark the months you owned the house and the months it was your main home.",
+      "Note any prior home sale exclusion in the last two years, and any depreciation.",
+      "Ask a tax advisor to run the worksheet before you file."
+    ]
+  },
+  {
+    "slug": "primary-residence-capital-gains-exclusion",
+    "topic": "capital-gains",
+    "title": "Primary residence capital gains exclusion",
+    "description": "The primary residence capital gains exclusion can cover up to $250,000, or $500,000 on some joint returns, if Publication 523's tests are met.",
+    "summary": "The exclusion is a cap you may use only when the ownership and use tests are met. It is not an automatic coupon.",
+    "body": [
+      "This is not tax advice. The primary residence capital gains exclusion is the rule in [IRS Topic No. 701](https://www.irs.gov/taxtopics/tc701) and [Publication 523](https://www.irs.gov/publications/p523): if you have a gain on your main home and you qualify, you may exclude up to $250,000 of that gain, or up to $500,000 if you file a joint return with your spouse. The publication's worksheets decide qualification. A conversation at a closing table does not.",
+      "Count ownership and use separately. You need at least 24 months of ownership in the 5 years ending on the sale, and at least 24 months of use as your main home in that same window. The months do not have to be the same months. They do have to sit inside those 5 years. Time in a house you owned but rented out does not count as use. Time you lived there before you were on the deed does not count as ownership.",
+      "The higher cap is not a bonus for being married. Topic 701 ties the $500,000 figure to a joint return with your spouse, and Publication 523 adds conditions for that higher exclusion. If you file a separate return, do not borrow the joint figure. If you already excluded gain on another main home during the two years before this sale, you generally cannot use the exclusion again yet.",
+      "Improvements that add to basis can shrink the gain before the exclusion even matters. Repairs that you deducted do not. Depreciation you were allowed to claim can remain outside the exclusion. Bring invoices, not a remodeled-kitchen story. The guide explains basis. This note is only the exclusion: who it is for, how large the cap is, and which tests gate it."
+    ],
+    "steps": [
+      "Confirm the house was your main home, not only a house you owned.",
+      "Count 24 months of ownership and 24 months of use inside the 5-year window.",
+      "Check whether you excluded gain on another home in the prior two years.",
+      "Use $250,000 unless a preparer confirms you meet the joint-return conditions for $500,000.",
+      "Keep the worksheet and the closing statement with your return."
+    ]
+  },
+  {
+    "slug": "selling-a-second-home-capital-gains",
+    "topic": "capital-gains",
+    "title": "Selling a second home capital gains",
+    "description": "Selling a second home capital gains usually misses the main-home exclusion. Publication 523 covers rentals, depreciation, and mixed use.",
+    "summary": "A second home does not inherit the main-home exclusion. Dates of use and any depreciation decide how the gain is reported.",
+    "body": [
+      "This is not tax advice. Selling a second home capital gains is a different worksheet from a main home. [Publication 523](https://www.irs.gov/publications/p523) allows an exclusion when the house was your main home and you meet the tests. A cabin, a rental, or a house you never lived in does not become a main home because you owned it for a long time. If you are selling the house you actually live in, use the exclusion note instead of this one.",
+      "Mixed use is the messy middle. People move out, rent the house, and move back. Publication 523 explains nonqualified use and how it can limit the exclusion even when you also meet the 24-month tests. It also explains that depreciation you claimed for a rental period is not excluded with the rest of the gain. Bring the dates you moved and the depreciation from the returns you filed. Do not reconstruct the rent year from a text message.",
+      "Basis still starts somewhere. For a house you bought, it starts with cost plus capital improvements. For a house you inherited, the inherited-house topic and the publication's date-of-death rule are the starting point, not this page. Selling expenses reduce the amount realized. A mortgage payoff does not. Run the gain with a preparer, then decide what to do with the cash. State tax may treat the same sale differently. This page is federal reading only.",
+      "If you hoped the exclusion would cover a vacation house because you stayed there in the summers, count the months it was your main home. Summers are not automatically 24 months. If the count fails, the gain is reported. Partial exclusions exist for some situations the publication lists. They are not a do-it-yourself fraction of $250,000."
+    ],
+    "steps": [
+      "Write whether this house was ever your main home, with move-in and move-out dates.",
+      "Gather depreciation you claimed on any rental or business use.",
+      "List capital improvements separately from repairs.",
+      "Read the nonqualified-use section of Publication 523 with a preparer.",
+      "Ask about state tax. This note does not cover it."
+    ]
+  },
+  {
+    "slug": "how-long-to-keep-records-after-selling-a-house",
+    "topic": "capital-gains",
+    "title": "How long to keep records after selling a house",
+    "description": "How long to keep records after selling a house follows the IRS recordkeeping page and Publication 523's list of basis and sale papers.",
+    "summary": "Keep the closing statement and the basis file through the period the IRS describes for the year you dispose of the property.",
+    "body": [
+      "This is not tax advice. How long to keep records after selling a house is answered by the IRS, not by a round number a neighbor likes. Read [How long should I keep records?](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) for the period that applies after you dispose of property. Read [Publication 523](https://www.irs.gov/publications/p523) for what the home-sale file should contain. Together they beat a shoebox you empty on moving day.",
+      "The sale file needs the closing statement, the contract, and the figures for commissions and other selling costs you claimed. The basis file needs the purchase closing papers, receipts for capital improvements, and any depreciation schedules. If you inherited the house, add the date-of-death value and the estate papers the publication mentions. If you throw out the basis file because the buyer has moved in, you cannot defend the gain later.",
+      "Store a copy that does not ride on the moving truck. The moving guide says the same thing about the closing folder. A photo of a receipt is useful only if you can still read the amount and the date of the work. Paper plus a second copy in cloud storage you control is enough. You do not need a special binder brand.",
+      "Do not keep records forever because a blog said seven years, and do not shred them at the curb because the wire arrived. Follow the IRS page for the year of the sale, and keep basis support until that period runs. If a preparer tells you your facts need a longer hold, follow the preparer. This note will not invent a number of years. If you later sell another house, the old file still matters only for the year you already closed. Label the folder with the address so it is not mixed into the next purchase. The next house starts a new basis file on the day you buy it."
+    ],
+    "steps": [
+      "Read the IRS recordkeeping page for property you have sold.",
+      "Put the closing statement and the basis receipts in one folder.",
+      "Add depreciation records and any date-of-death appraisal.",
+      "Keep a copy off the moving truck.",
+      "Ask your preparer before you destroy the folder."
+    ]
+  }
+]

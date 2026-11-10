@@ -1,4 +1,5 @@
 import { CANONICAL_ORIGIN } from "@/lib/host-redirect";
+import { ROUND_UPDATED_ON, roundPaths } from "@/lib/round";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import type { StageId, Tip } from "@/lib/types";
 import { STAGE_IDS } from "@/lib/types";
@@ -94,13 +95,14 @@ export function publicPaths(tips: readonly Tip[]): SitemapEntry[] {
   }));
   for (const stage of STAGE_IDS) {
     const stageTips = tipsForStage(tips, stage);
-    const lastModified = stageTips.map((tip) => tip.updatedOn).toSorted().at(-1) ?? "2026-10-21";
+    const lastModified = [...stageTips.map((tip) => tip.updatedOn), ROUND_UPDATED_ON].toSorted().at(-1) ?? ROUND_UPDATED_ON;
     entries.push({ path: stagePath(stage), lastModified });
-    entries.push({ path: `${stagePath(stage)}/checklist`, lastModified });
+    entries.push({ path: `${stagePath(stage)}/checklist`, lastModified: stageTips.map((tip) => tip.updatedOn).toSorted().at(-1) ?? "2026-10-21" });
   }
   for (const tip of publishedTips(tips)) {
     entries.push({ path: `/tips/${tip.slug}`, lastModified: tip.updatedOn });
   }
+  entries.push(...roundPaths());
   return entries;
 }
 

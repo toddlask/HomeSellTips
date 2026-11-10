@@ -32,3 +32,33 @@ export const NAR_SETTLEMENT = {
   href: "https://www.nar.realtor/the-facts/what-the-nar-settlement-means-for-home-buyers-and-sellers",
   label: "National Association of Realtors settlement facts",
 } as const;
+
+export const IRS_TOPIC_701 = {
+  href: "https://www.irs.gov/taxtopics/tc701",
+  label: "IRS Topic No. 701, Sale of your home",
+} as const;
+
+export const IRS_RECORDKEEPING = {
+  href: "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records",
+  label: "IRS recordkeeping guidance",
+} as const;
+
+export const CFPB_REVERSE_MORTGAGE = {
+  href: "https://www.consumerfinance.gov/consumer-tools/reverse-mortgages/",
+  label: "CFPB reverse mortgage guide",
+} as const;
+
+export const TREC_HOME = {
+  href: "https://www.trec.texas.gov/",
+  label: "Texas Real Estate Commission",
+} as const;
+
+export const TREC_SELLER_DISCLOSURE = {
+  href: "https://www.trec.texas.gov/forms/sellers-disclosure-notice",
+  label: "TREC Seller's Disclosure Notice",
+} as const;
+
+export const TREC_CONTRACTS = {
+  href: "https://www.trec.texas.gov/agency-information/contracts",
+  label: "TREC contracts and forms",
+} as const;

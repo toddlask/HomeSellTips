@@ -545,7 +545,7 @@
     "width": 1200,
     "height": 800,
     "alt": "Clock hanging on the wall above a wooden door.",
-    "photographer": "Gülru Sude",
+    "photographer": "G\u00fclru Sude",
     "sourcePage": "https://www.pexels.com/photo/view-of-a-clock-hanging-above-the-door-in-a-room-14538885/",
     "page": "/tips/price-the-hours-you-will-spend"
   },
@@ -715,7 +715,7 @@
     "width": 1200,
     "height": 800,
     "alt": "Alarm clock and a passport cover on a wooden table.",
-    "photographer": "Лев Рогожников",
+    "photographer": "\u041b\u0435\u0432 \u0420\u043e\u0433\u043e\u0436\u043d\u0438\u043a\u043e\u0432",
     "sourcePage": "https://www.pexels.com/photo/an-alarm-clock-on-a-wooden-table-10380840/",
     "page": "/tips/check-your-name-against-your-id"
   },
@@ -848,5 +848,475 @@
     "photographer": "Tima Miroshnichenko",
     "sourcePage": "https://www.pexels.com/photo/man-painting-the-wall-6474471/",
     "page": "/tips/selling-as-is-vs-fixing-up"
+  },
+  {
+    "id": "round-19344325",
+    "src": "/photos/round-19344325.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Elegant modern house exterior with large windows under clear blue sky.",
+    "photographer": "Mido Makasardi",
+    "sourcePage": "https://www.pexels.com/photo/exterior-of-a-building-19344325/",
+    "page": "/topics"
+  },
+  {
+    "id": "round-3958954",
+    "src": "/photos/round-3958954.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A row of modern suburban homes with garages, driveways, and landscaped lawns in daylight.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/white-and-blue-wooden-house-3958954/",
+    "page": "/stages/prep-and-repairs/guide"
+  },
+  {
+    "id": "round-12445995",
+    "src": "/photos/round-12445995.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary suburban house featuring large glass windows and a spacious deck in a lush outdoor setting.",
+    "photographer": "Robert So",
+    "sourcePage": "https://www.pexels.com/photo/wooden-house-with-a-backyard-12445995/",
+    "page": "/stages/staging/guide"
+  },
+  {
+    "id": "round-16974648",
+    "src": "/photos/round-16974648.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Low angle view of a white traditional house facade with green leaves, capturing tranquility and simplicity.",
+    "photographer": "Nefise Ersan",
+    "sourcePage": "https://www.pexels.com/photo/low-angle-shot-of-a-white-house-16974648/",
+    "page": "/stages/pricing/guide"
+  },
+  {
+    "id": "round-1438832",
+    "src": "/photos/round-1438832.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Luxury modern homes reflecting on a peaceful, clear lake during daylight, showcasing architectural beauty.",
+    "photographer": "Frans van Heerden",
+    "sourcePage": "https://www.pexels.com/photo/white-single-story-houses-beside-body-of-water-1438832/",
+    "page": "/stages/listing-photos/guide"
+  },
+  {
+    "id": "round-18078684",
+    "src": "/photos/round-18078684.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Modern house exterior featuring balconies and a vibrant facade in Istanbul, Turkey.",
+    "photographer": "Cemrecan Yurtman",
+    "sourcePage": "https://www.pexels.com/photo/facade-of-a-house-18078684/",
+    "page": "/stages/agent-vs-fsbo/guide"
+  },
+  {
+    "id": "round-30580640",
+    "src": "/photos/round-30580640.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Front view of twin modern houses with a symmetrical architectural design under a cloudy sky.",
+    "photographer": "Karolina K",
+    "sourcePage": "https://www.pexels.com/photo/modern-twin-houses-with-symmetrical-design-30580640/",
+    "page": "/stages/offers-and-negotiation/guide"
+  },
+  {
+    "id": "round-4832530",
+    "src": "/photos/round-4832530.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary two-story suburban home with a spacious driveway and lawn.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/white-and-gray-house-under-the-blue-sky-4832530/",
+    "page": "/stages/closing/guide"
+  },
+  {
+    "id": "round-36712685",
+    "src": "/photos/round-36712685.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Vibrantly colored urban buildings under clear blue sky, highlighting architectural styles.",
+    "photographer": "Lin Htet Tun",
+    "sourcePage": "https://www.pexels.com/photo/colorful-urban-architecture-against-blue-sky-36712685/",
+    "page": "/stages/moving/guide"
+  },
+  {
+    "id": "round-1974596",
+    "src": "/photos/round-1974596.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary minimalist home exterior with lush landscaping and open driveway.",
+    "photographer": "Julia Kuzenkov",
+    "sourcePage": "https://www.pexels.com/photo/white-and-brown-house-1974596/",
+    "page": "/topics/capital-gains"
+  },
+  {
+    "id": "round-15422346",
+    "src": "/photos/round-15422346.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary house facade with geometric design elements and landscaping.",
+    "photographer": "Dextar Studio",
+    "sourcePage": "https://www.pexels.com/photo/geometrical-house-seen-through-fence-15422346/",
+    "page": "/topics/mortgage-payoff"
+  },
+  {
+    "id": "round-17560638",
+    "src": "/photos/round-17560638.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Vibrant red house in Reykjavik highlights Icelandic urban architecture.",
+    "photographer": "Norbert Velescu",
+    "sourcePage": "https://www.pexels.com/photo/house-by-street-17560638/",
+    "page": "/topics/inherited-house"
+  },
+  {
+    "id": "round-16631149",
+    "src": "/photos/round-16631149.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Modern white building exterior with large windows and minimalist design in an urban setting.",
+    "photographer": "Axel Sandoval",
+    "sourcePage": "https://www.pexels.com/photo/windows-and-white-walls-in-building-16631149/",
+    "page": "/topics/foundation"
+  },
+  {
+    "id": "round-36557808",
+    "src": "/photos/round-36557808.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Peaceful suburban house with brick facade and garden view in Cisarua, West Java.",
+    "photographer": "el jusuf",
+    "sourcePage": "https://www.pexels.com/photo/charming-suburban-brick-house-in-cisarua-36557808/",
+    "page": "/topics/pre-listing-inspection"
+  },
+  {
+    "id": "round-10628468",
+    "src": "/photos/round-10628468.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Exterior view of a modern single-story family home with a driveway and front yard.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/white-house-under-blue-sky-10628468/",
+    "page": "/topics/texas"
+  },
+  {
+    "id": "round-33213827",
+    "src": "/photos/round-33213827.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A modern white house on a hillside in Lachin, Azerbaijan beneath a cloudy sky. Tranquil and scenic.",
+    "photographer": "Fakhri Baghirov",
+    "sourcePage": "https://www.pexels.com/photo/modern-house-on-hill-with-cloudy-sky-in-azerbaijan-33213827/",
+    "page": "/topics/capital-gains/guide"
+  },
+  {
+    "id": "round-18078682",
+    "src": "/photos/round-18078682.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A classic white house facade with shutters surrounded by greenery, set against a blue sky.",
+    "photographer": "Cemrecan Yurtman",
+    "sourcePage": "https://www.pexels.com/photo/trees-in-front-of-a-house-18078682/",
+    "page": "/topics/mortgage-payoff/guide"
+  },
+  {
+    "id": "round-36777845",
+    "src": "/photos/round-36777845.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A modern two-story suburban house with a large driveway and garage.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/modern-suburban-two-story-home-with-garage-36777845/",
+    "page": "/topics/inherited-house/guide"
+  },
+  {
+    "id": "round-31602311",
+    "src": "/photos/round-31602311.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Lovely red brick suburban house with a well-maintained lawn under a bright blue sky.",
+    "photographer": "JAELEN KEMPSON",
+    "sourcePage": "https://www.pexels.com/photo/charming-red-brick-suburban-home-in-daylight-31602311/",
+    "page": "/topics/foundation/guide"
+  },
+  {
+    "id": "round-17365410",
+    "src": "/photos/round-17365410.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Three-story green house with balconies surrounded by trees in Istanbul, Turkey.",
+    "photographer": "Kaan ALTUN",
+    "sourcePage": "https://www.pexels.com/photo/house-with-balconies-17365410/",
+    "page": "/topics/pre-listing-inspection/guide"
+  },
+  {
+    "id": "round-3958958",
+    "src": "/photos/round-3958958.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A modern two-story family home with a garage and landscaped yard in a suburban setting.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/white-and-blue-wooden-house-3958958/",
+    "page": "/topics/texas/guide"
+  },
+  {
+    "id": "round-4529496",
+    "src": "/photos/round-4529496.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Newly built modern suburban house with a neat front yard and driveway.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/a-house-with-a-lawn-4529496/",
+    "page": "/tips/do-i-pay-capital-gains-tax-if-i-sell-my-house"
+  },
+  {
+    "id": "round-4030036",
+    "src": "/photos/round-4030036.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A beautiful two-story suburban house with a well-maintained lawn and elegant facade, showcasing classic architectural design.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/photo-of-a-house-4030036/",
+    "page": "/tips/primary-residence-capital-gains-exclusion"
+  },
+  {
+    "id": "round-27258292",
+    "src": "/photos/round-27258292.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary house with a sloped roof against a clear blue sky, showcasing modern architecture.",
+    "photographer": "Oswald Tenorio",
+    "sourcePage": "https://www.pexels.com/photo/a-close-up-of-a-house-with-a-blue-sky-27258292/",
+    "page": "/tips/selling-a-second-home-capital-gains"
+  },
+  {
+    "id": "round-8583638",
+    "src": "/photos/round-8583638.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A modern suburban detached house with a spacious driveway under a bright blue sky.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/view-of-modern-suburban-detached-house-with-driveway-8583638/",
+    "page": "/tips/how-long-to-keep-records-after-selling-a-house"
+  },
+  {
+    "id": "round-26595553",
+    "src": "/photos/round-26595553.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Charming brick house with gable roof surrounded by lush greenery under a clear blue sky.",
+    "photographer": "Wolf Art",
+    "sourcePage": "https://www.pexels.com/photo/modern-mansion-facade-26595553/",
+    "page": "/tips/can-you-sell-a-house-with-foundation-problems"
+  },
+  {
+    "id": "round-6342356",
+    "src": "/photos/round-6342356.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary house nestled in a sunlit rocky outdoor setting, perfect for architecture lovers.",
+    "photographer": "ROMAN ODINTSOV",
+    "sourcePage": "https://www.pexels.com/photo/exterior-of-a-modern-style-house-in-a-desert-6342356/",
+    "page": "/tips/do-you-have-to-disclose-foundation-issues"
+  },
+  {
+    "id": "round-14930288",
+    "src": "/photos/round-14930288.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A picturesque red house surrounded by greenery in an urban setting in Istanbul, Turkey.",
+    "photographer": "Mahmoud Yahyaoui",
+    "sourcePage": "https://www.pexels.com/photo/view-of-a-red-house-seen-from-the-bosporus-in-istanbul-turkey-14930288/",
+    "page": "/tips/how-to-sell-a-house-with-foundation-problems"
+  },
+  {
+    "id": "round-7601163",
+    "src": "/photos/round-7601163.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary suburban home with landscaped lawn, located in Youngsville, NC.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/paved-walkway-on-lawn-7601163/",
+    "page": "/tips/foundation-issues-in-texas"
+  },
+  {
+    "id": "round-12081268",
+    "src": "/photos/round-12081268.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A low angle view of a modern house facade in Banjarmasin, Indonesia, featuring wooden roof accents and lush greenery.",
+    "photographer": "Ari Ansyari",
+    "sourcePage": "https://www.pexels.com/photo/residential-building-facade-and-a-tree-12081268/",
+    "page": "/tips/selling-an-inherited-house-taxes"
+  },
+  {
+    "id": "round-30211366",
+    "src": "/photos/round-30211366.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Stylish modern white house exterior with palm trees and spacious outdoor patio.",
+    "photographer": "Kristina Kino",
+    "sourcePage": "https://www.pexels.com/photo/modern-white-house-with-palm-trees-and-patio-30211366/",
+    "page": "/tips/selling-a-house-in-a-trust-after-death"
+  },
+  {
+    "id": "round-323781",
+    "src": "/photos/round-323781.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Contemporary house in Poole featuring a striking mix of stone and wood facade with large windows.",
+    "photographer": "Expect Best",
+    "sourcePage": "https://www.pexels.com/photo/facade-of-modern-building-against-clear-sky-323781/",
+    "page": "/tips/selling-parents-house-after-death"
+  },
+  {
+    "id": "round-17568045",
+    "src": "/photos/round-17568045.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Luxurious home featuring a spacious patio and swimming pool.",
+    "photographer": "Vincent Rivaud",
+    "sourcePage": "https://www.pexels.com/photo/house-with-swimming-pool-17568045/",
+    "page": "/tips/probate-sale-of-a-house"
+  },
+  {
+    "id": "round-3571200",
+    "src": "/photos/round-3571200.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Elegant view of suburban townhouses showcasing diverse architectural styles.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/photo-of-houses-during-daytime-3571200/",
+    "page": "/tips/step-up-in-basis-inherited-house"
+  },
+  {
+    "id": "round-9402593",
+    "src": "/photos/round-9402593.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Compact brick house with distinct red door and blue sky, captured in daylight.",
+    "photographer": "Joaquin Carfagna",
+    "sourcePage": "https://www.pexels.com/photo/concrete-houses-under-blue-sky-9402593/",
+    "page": "/tips/what-is-a-pre-listing-inspection"
+  },
+  {
+    "id": "round-7710011",
+    "src": "/photos/round-7710011.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A charming modern suburban home with a stone facade and a neatly maintained lawn.",
+    "photographer": "Get Lost Mike",
+    "sourcePage": "https://www.pexels.com/photo/white-and-brown-concrete-house-under-blue-sky-7710011/",
+    "page": "/tips/pre-listing-inspection-cost"
+  },
+  {
+    "id": "round-5524165",
+    "src": "/photos/round-5524165.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A beautifully lit Victorian-style house surrounded by a lush garden at twilight, showcasing classic architecture.",
+    "photographer": "Clay Elliot",
+    "sourcePage": "https://www.pexels.com/photo/brown-concrete-house-near-green-grass-field-5524165/",
+    "page": "/tips/pre-listing-inspection-checklist"
+  },
+  {
+    "id": "round-4832506",
+    "src": "/photos/round-4832506.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A modern suburban home with a spacious driveway and two-car garage in a clear sky setting.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/clear-sky-over-house-4832506/",
+    "page": "/tips/is-a-pre-listing-inspection-worth-it"
+  },
+  {
+    "id": "round-2953947",
+    "src": "/photos/round-2953947.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "stock photo of brick house, brick wall, building exterior",
+    "photographer": "Edward Eyer",
+    "sourcePage": "https://www.pexels.com/photo/brick-house-brick-wall-building-exterior-china-2953947/",
+    "page": "/tips/how-a-mortgage-payoff-works-when-selling"
+  },
+  {
+    "id": "round-10628470",
+    "src": "/photos/round-10628470.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "A row of modern suburban townhouses with clean driveways and blue sky backdrop.",
+    "photographer": "Curtis Adams",
+    "sourcePage": "https://www.pexels.com/photo/home-exterior-in-a-suburban-area-10628470/",
+    "page": "/tips/selling-before-the-mortgage-is-paid-off"
+  },
+  {
+    "id": "round-32515479",
+    "src": "/photos/round-32515479.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Elegant facade of a London townhouse with white windows and intricate ironwork.",
+    "photographer": "Merve Orhan",
+    "sourcePage": "https://www.pexels.com/photo/classic-london-brick-townhouse-with-white-windows-32515479/",
+    "page": "/tips/selling-a-house-to-buy-another"
+  },
+  {
+    "id": "round-2371974",
+    "src": "/photos/round-2371974.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Brick house with angled yellow roof and cozy patio against blue sky. Ideal for home design concepts.",
+    "photographer": "Athena Sandrini",
+    "sourcePage": "https://www.pexels.com/photo/brick-house-2371974/",
+    "page": "/tips/selling-a-house-with-a-reverse-mortgage"
+  },
+  {
+    "id": "round-14661213",
+    "src": "/photos/round-14661213.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Charming white houses in Nazar\u00e9, Portugal, under clear skies, surrounded by green fields.",
+    "photographer": "Daria Voronkov",
+    "sourcePage": "https://www.pexels.com/photo/white-houses-near-green-trees-14661213/",
+    "page": "/tips/texas-seller-disclosure"
+  },
+  {
+    "id": "round-28586238",
+    "src": "/photos/round-28586238.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Charming stone house with colorful garden against a dramatic cloudy sky. Perfect for serene lifestyle themes.",
+    "photographer": "Jonathan Borba",
+    "sourcePage": "https://www.pexels.com/photo/stone-house-with-vibrant-garden-and-cloudy-sky-28586238/",
+    "page": "/tips/cost-of-selling-a-house-in-texas"
+  },
+  {
+    "id": "round-36584758",
+    "src": "/photos/round-36584758.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Vibrant yellow and green houses with lush foliage and ivy creating a serene outdoor aesthetic.",
+    "photographer": "Fadime Arslanalp",
+    "sourcePage": "https://www.pexels.com/photo/colorful-houses-with-overgrown-ivy-wall-36584758/",
+    "page": "/tips/seller-closing-costs-texas"
+  },
+  {
+    "id": "round-33350023",
+    "src": "/photos/round-33350023.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Charming suburban house featuring a double garage and lush garden, ideal for real estate listings.",
+    "photographer": "Mingyang LIU",
+    "sourcePage": "https://www.pexels.com/photo/suburban-house-with-double-garage-and-greenery-33350023/",
+    "page": "/tips/selling-a-house-in-texas-without-a-realtor"
+  },
+  {
+    "id": "round-40181514",
+    "src": "/photos/round-40181514.webp",
+    "width": 1200,
+    "height": 800,
+    "alt": "Elegant entrance of a residential building in Edinburgh, Scotland.",
+    "photographer": "Ahmet Hilmi Ermi\u015f",
+    "sourcePage": "https://www.pexels.com/photo/charming-residential-entrance-in-edinburgh-40181514/",
+    "page": "/tips/steps-to-selling-a-house-in-texas"
   }
 ]

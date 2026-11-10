@@ -5,13 +5,15 @@ import { InContentAd } from "@/components/ad-regions";
 import { JsonLd } from "@/components/json-ld";
 import { ZillowHomeBanner } from "@/components/zillow-banner";
 import { tips } from "@/lib/catalog";
+import { allGuides, publishedTopicTips, ROUND_UPDATED_ON, stageGuidePath } from "@/lib/round";
+import { topicGuidePath, topicHeading, topicPath, topicSummary, TOPIC_IDS, type TopicId } from "@/lib/topics";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
-import { heroPhoto, stagePhoto } from "@/lib/photos";
+import { heroPhoto, pagePhoto, stagePhoto } from "@/lib/photos";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { pageMetadata } from "@/lib/page-meta";
 import { CALCULATOR_NOTE, getSiteUrl, publishedTips, SITE_NAME, TOOL_LINKS } from "@/lib/site";
-import { STAGE_IDS } from "@/lib/types";
+import { STAGE_IDS, type StageId } from "@/lib/types";
 
 export const metadata: Metadata = pageMetadata({
   title: "Tips for Selling Your House: Helpful Ideas Before You List",
@@ -27,7 +29,26 @@ const features = [
 ] as const;
 
 export default function HomePage() {
-  const latest = publishedTips(tips)
+  const latest = [
+    ...publishedTips(tips).map((tip) => ({
+      href: `/tips/${tip.slug}`,
+      title: tip.title,
+      summary: tip.summary,
+      updatedOn: tip.updatedOn,
+    })),
+    ...publishedTopicTips().map((tip) => ({
+      href: `/tips/${tip.slug}`,
+      title: tip.title,
+      summary: tip.summary,
+      updatedOn: tip.updatedOn,
+    })),
+    ...allGuides().map((guide) => ({
+      href: guide.kind === "stage" ? stageGuidePath(guide.id as StageId) : topicGuidePath(guide.id as TopicId),
+      title: guide.h1,
+      summary: guide.description,
+      updatedOn: ROUND_UPDATED_ON,
+    })),
+  ]
     .toSorted((left, right) => right.updatedOn.localeCompare(left.updatedOn) || left.title.localeCompare(right.title))
     .slice(0, 6);
 
@@ -95,6 +116,22 @@ export default function HomePage() {
           ))}
         </ul>
       </section>
+      <section className="section-gap" id="topics" aria-labelledby="topics-heading">
+        <h2 id="topics-heading" className="section-heading">
+          Topics
+        </h2>
+        <ul className="photo-grid">
+          {TOPIC_IDS.map((topic) => (
+            <li key={topic}>
+              <a className="photo-card" href={topicPath(topic)}>
+                <HomePhotoView photo={pagePhoto(topicPath(topic))} />
+                <h3>{topicHeading(topic)}</h3>
+                <p>{topicSummary(topic)}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
       <InContentAd />
       <section className="section-gap" aria-labelledby="updated-guides">
         <h2 id="updated-guides" className="section-heading">
@@ -102,8 +139,8 @@ export default function HomePage() {
         </h2>
         <ul className="card-grid">
           {latest.map((tip) => (
-            <li key={tip.slug}>
-              <a className="card" href={`/tips/${tip.slug}`}>
+            <li key={tip.href}>
+              <a className="card" href={tip.href}>
                 <h3>{tip.title}</h3>
                 <p>{tip.summary}</p>
               </a>

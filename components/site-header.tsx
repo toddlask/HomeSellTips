@@ -5,6 +5,7 @@ const navLinks = [
   ["/", "Home"],
   ["/tips", "Tips"],
   ["/stages", "Stages"],
+  ["/topics", "Topics"],
   ["/tools", "Tools"],
   ["/advertise", "Advertise"],
 ] as const;

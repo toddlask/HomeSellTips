@@ -13,6 +13,7 @@ import { sourcesForStage } from "@/lib/page-sources";
 import { parseStageId } from "@/lib/parse";
 import { stageDescription, stageDocumentTitle, stageHeading, stageNeedsAdviceNote, stagePath, stageSummary } from "@/lib/stages";
 import { pageMetadata } from "@/lib/page-meta";
+import { stageGuide, stageGuidePath } from "@/lib/round";
 import { CFPB_CLOSING, FBI_IC3 } from "@/lib/sources";
 import { tipsForStage } from "@/lib/site";
 import { STAGE_IDS, type StageId } from "@/lib/types";
@@ -49,6 +50,7 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
     notFound();
   }
   const stageTips = tipsForStage(tips, stage);
+  const guide = stageGuide(stage);
   const offers = offersForStage(stage, affiliateOffers());
   return (
     <>
@@ -68,6 +70,12 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
         <a href={`${stagePath(stage)}/checklist`}>Print the one-page checklist</a>
       </p>
       <StagePhoto stage={stage} />
+      <article className="panel">
+        <h2>
+          <a href={stageGuidePath(stage)}>{guide.h1}</a>
+        </h2>
+        <p>{guide.description}</p>
+      </article>
       {stageTips.length === 0 ? (
         <p className="panel">No published tips in this stage yet.</p>
       ) : (

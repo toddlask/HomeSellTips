@@ -39,6 +39,7 @@ const FOOTER_BANNER_ROOTS = [
   "/privacy",
   "/terms",
   "/stages",
+  "/topics",
   "/tips",
   "/tools",
 ] as const;
