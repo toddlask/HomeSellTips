@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AffiliateList } from "@/components/affiliate-list";
+import { SourceList } from "@/components/source-list";
 import { InContentAd } from "@/components/ad-regions";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { StagePhoto } from "@/components/home-photo";
@@ -8,6 +9,7 @@ import { NotAdviceNote } from "@/components/page-byline";
 import { affiliateOffers, offersForStage } from "@/lib/affiliates";
 import { tips } from "@/lib/catalog";
 import { stageCrumbs } from "@/lib/crumbs";
+import { sourcesForStage } from "@/lib/page-sources";
 import { parseStageId } from "@/lib/parse";
 import { stageDescription, stageDocumentTitle, stageHeading, stageNeedsAdviceNote, stagePath, stageSummary } from "@/lib/stages";
 import { pageMetadata } from "@/lib/page-meta";
@@ -80,6 +82,7 @@ export default async function StagePage({ params }: { params: Promise<{ stage: s
           ))}
         </ul>
       )}
+      <SourceList sources={sourcesForStage(stage)} />
       <InContentAd />
       <AffiliateList offers={offers} />
     </>

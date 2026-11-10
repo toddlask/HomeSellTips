@@ -1,14 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { PrintButton } from "@/components/print-button";
 import { formatUsd, parseMoney } from "@/lib/money";
 import { netOfItem, rankFixItems, roiBucketLabel, ROI_PRESETS } from "@/lib/roi";
+import { FIX_EXAMPLE } from "@/lib/tool-examples";
 import { ROI_BUCKETS, type RoiItem } from "@/lib/types";
 
 type Entry = { cost: string; expectedValue: string };
 
 export function RoiForm() {
-  const [entries, setEntries] = useState<Record<string, Entry>>({});
+  const [entries, setEntries] = useState<Record<string, Entry>>({
+    leak: { cost: String(FIX_EXAMPLE.cost), expectedValue: String(FIX_EXAMPLE.expectedValue) },
+  });
 
   function update(id: string, key: keyof Entry, value: string) {
     setEntries((current) => {
@@ -40,7 +44,7 @@ export function RoiForm() {
   return (
     <div>
       <p className="note">
-        Type a cost and the value you expect for any row. The rank uses your value minus your cost. Nothing here assumes a return.
+        The leak row starts with a worked example. Replace it, and type a cost and the value you expect for any other row. The rank uses your value minus your cost. Nothing here assumes a return.
       </p>
       {ROI_BUCKETS.map((bucket) => (
         <fieldset key={bucket} className="panel">
@@ -76,7 +80,10 @@ export function RoiForm() {
         </fieldset>
       ))}
       {invalid ? <p role="alert">Use zero or a positive number for cost and expected value.</p> : null}
-      <div id="roi-ranking" className="panel" aria-live="polite">
+      <div id="roi-ranking" className="panel print-result" aria-live="polite">
+        <h2>What this result means</h2>
+        <p>A higher remainder is your value minus your cost. It is not a promise that a buyer will pay that value.</p>
+        <PrintButton label="Print this result" />
         <h2>Ranked by your numbers</h2>
         {ranked.length === 0 ? (
           <p>Enter a cost and your own expected value to rank a repair.</p>

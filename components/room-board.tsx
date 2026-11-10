@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
+import { PrintButton } from "@/components/print-button";
 import { ROOM_PREP, roomTaskIds } from "@/lib/rooms";
 
 const STORAGE_KEY = "homeselltips-room-prep";
@@ -65,9 +66,13 @@ export function RoomBoard() {
 
   return (
     <div className="room-board">
-      <p className="room-progress" role="status">
-        {done} of {total} tasks checked. Saved in this browser only.
-      </p>
+      <div className="print-result">
+        <h2>What this result means</h2>
+        <p className="room-progress" role="status">
+          {done} of {total} tasks checked. Saved in this browser only. A printed copy lists every room.
+        </p>
+        <PrintButton label="Print this result" />
+      </div>
       <ul className="room-list">
         {ROOM_PREP.map((room) => {
           const roomDone = room.tasks.filter((task) => saved[task.id]).length;
@@ -86,8 +91,7 @@ export function RoomBoard() {
                   {roomDone} of {room.tasks.length}
                 </span>
               </button>
-              {open ? (
-                <ul id={`${room.id}-tasks`} className="checklist">
+              <ul id={`${room.id}-tasks`} className={open ? "checklist" : "checklist room-tasks-closed"}>
                   {room.tasks.map((task) => (
                     <li key={task.id}>
                       <label>
@@ -103,7 +107,6 @@ export function RoomBoard() {
                     </li>
                   ))}
                 </ul>
-              ) : null}
             </li>
           );
         })}

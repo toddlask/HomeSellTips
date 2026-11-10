@@ -26,7 +26,7 @@ export default function PrivacyPage() {
         Google uses to verify the site. See the <a href="/disclosure">ad and affiliate disclosure</a>.
       </p>
       <h2>Advertising and cookies</h2>
-      <p>HomeSellTips uses Google AdSense.</p>
+      <p>HomeSellTips uses Google AdSense, which is third-party advertising.</p>
       <p>
         Google and its partners use cookies to serve ads based on your prior visits to this site and to other sites.
         Google&apos;s advertising cookies let Google and its partners serve ads based on those visits.
@@ -51,6 +51,11 @@ export default function PrivacyPage() {
         optional budget, and message to FormSubmit (formsubmit.co) from your browser. FormSubmit delivers that inquiry by
         email. The page checks the fields before sending them. It does not create an account from the form.
       </p>
+      <h2>Contact form</h2>
+      <p>
+        The form at <a href="/contact">/contact</a> sends your name, email, and message through the same delivery path.
+        It does not publish your email on the site, and it does not add you to a mailing list.
+      </p>
       <h2>Analytics</h2>
       <p>
         HomeSellTips uses Vercel Web Analytics. It is cookieless and collects anonymous page views. Vercel Speed
@@ -58,8 +63,8 @@ export default function PrivacyPage() {
       </p>
       <h2>Email</h2>
       <p>
-        Renewal notes, when drafted, stay in an admin outbox in the repository. Those notes are not emailed. The only
-        message the site forwards is the advertise inquiry described above.
+        Renewal notes, when drafted, stay in an admin outbox in the repository. Those notes are not emailed. The site
+        forwards the advertise inquiry and the contact message described above.
       </p>
     </>
   );

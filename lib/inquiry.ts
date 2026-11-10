@@ -86,3 +86,34 @@ export function inquiryProblem(input: InquiryInput, now: number): InquiryProblem
 export function inquiryError(input: InquiryInput, now: number): string | null {
   return inquiryProblem(input, now)?.message ?? null;
 }
+
+export type ContactInput = {
+  name: string;
+  email: string;
+  message: string;
+  honey: string;
+  startedAt: number;
+};
+
+export function contactProblem(input: ContactInput, now: number): InquiryProblem | null {
+  const name = input.name.trim();
+  const email = input.email.trim();
+  const message = input.message.trim();
+  if (input.honey.trim()) {
+    return { field: null, message: "That submission was rejected." };
+  }
+  if (!name || name.length > INQUIRY_LIMITS.name) {
+    return { field: "name", message: "Enter your name." };
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > INQUIRY_LIMITS.email) {
+    return { field: "email", message: "Enter a valid email." };
+  }
+  if (!message || message.length > INQUIRY_LIMITS.message) {
+    return { field: "message", message: "Enter a message." };
+  }
+  const waited = now - input.startedAt;
+  if (!Number.isFinite(input.startedAt) || waited < MIN_WAIT_MS || waited > MAX_WAIT_MS) {
+    return { field: null, message: "Wait a moment and send it again." };
+  }
+  return null;
+}

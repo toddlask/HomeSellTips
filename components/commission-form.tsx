@@ -2,20 +2,22 @@
 
 import { useState } from "react";
 import { MoneyField } from "@/components/money-field";
+import { PrintButton } from "@/components/print-button";
 import { commissionComparison, formatUsd, hasInvalidMoney, parseMoney } from "@/lib/money";
+import { COMMISSION_EXAMPLE } from "@/lib/tool-examples";
 
 type FieldId = "price" | "listingPercent" | "buyerPercent" | "listingFlat" | "buyerFlat";
 
-const emptyValues: Record<FieldId, string> = {
-  price: "",
-  listingPercent: "",
-  buyerPercent: "",
-  listingFlat: "",
-  buyerFlat: "",
+const exampleValues: Record<FieldId, string> = {
+  price: String(COMMISSION_EXAMPLE.price),
+  listingPercent: String(COMMISSION_EXAMPLE.listingPercent),
+  buyerPercent: String(COMMISSION_EXAMPLE.buyerPercent),
+  listingFlat: String(COMMISSION_EXAMPLE.listingFlat),
+  buyerFlat: String(COMMISSION_EXAMPLE.buyerFlat),
 };
 
 export function CommissionForm() {
-  const [values, setValues] = useState(emptyValues);
+  const [values, setValues] = useState(exampleValues);
 
   function update(id: FieldId, value: string) {
     setValues((current) => ({ ...current, [id]: value }));
@@ -52,7 +54,10 @@ export function CommissionForm() {
 
   return (
     <div className="panel">
-      <p className="note">Enter the price and the rates you are actually considering. A rate can be zero.</p>
+      <p className="note">
+        The fields start with a worked example. Replace them with the price and rates you are considering. A rate can
+        be zero.
+      </p>
       <div className="form-grid">
         <MoneyField id="price" label="Sale price" value={values.price} onChange={(value) => update("price", value)} />
         <MoneyField
@@ -82,7 +87,13 @@ export function CommissionForm() {
       </div>
       {invalid ? <p role="alert">Use zero or a positive number in each field.</p> : null}
       {result ? (
-        <div id="commission-result" aria-live="polite">
+        <div id="commission-result" className="print-result" aria-live="polite">
+          <h2>What this result means</h2>
+          <p>
+            Full service adds both commissions. FSBO paying the buyer agent drops the listing side. FSBO paying
+            neither leaves commission at zero and does not remove your other closing costs.
+          </p>
+          <PrintButton label="Print this result" />
           <table>
             <caption>Commission from your inputs</caption>
             <tbody>

@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
 import { PageByline } from "@/components/page-byline";
 import { RoomBoard } from "@/components/room-board";
+import { ToolGuide } from "@/components/tool-guide";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
+import { ROOMS_GUIDE } from "@/lib/tool-guides";
 
 export const metadata: Metadata = pageMetadata({
   title: "Room-by-room prep",
@@ -21,6 +23,7 @@ export default function RoomsPage() {
         Open a room, tick the tasks, and leave. The checks stay in this browser. There is no account.
       </p>
       <PagePhoto photo={pagePhoto("/tools/rooms")} />
+      <ToolGuide steps={ROOMS_GUIDE.steps} example={ROOMS_GUIDE.example} assumptions={ROOMS_GUIDE.assumptions} />
       <RoomBoard />
     </>
   );

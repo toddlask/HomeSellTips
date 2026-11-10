@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
 import { NetProceedsForm } from "@/components/net-proceeds-form";
 import { PageByline } from "@/components/page-byline";
+import { SourceList } from "@/components/source-list";
+import { ToolGuide } from "@/components/tool-guide";
+import { sourcesForTool } from "@/lib/page-sources";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
 import { CALCULATOR_NOTE } from "@/lib/site";
+import { PROCEEDS_GUIDE } from "@/lib/tool-guides";
 
 export const metadata: Metadata = pageMetadata({
   title: "Home Sale Net Proceeds Calculator",
@@ -24,7 +28,9 @@ export default function NetProceedsPage() {
       </p>
       <PagePhoto photo={pagePhoto("/tools/net-proceeds")} />
       <p className="note">{CALCULATOR_NOTE}</p>
+      <ToolGuide steps={PROCEEDS_GUIDE.steps} example={PROCEEDS_GUIDE.example()} assumptions={PROCEEDS_GUIDE.assumptions} />
       <NetProceedsForm />
+      <SourceList sources={sourcesForTool("/tools/net-proceeds")} />
     </>
   );
 }

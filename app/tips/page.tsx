@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { SourceList } from "@/components/source-list";
 import { PagePhoto } from "@/components/home-photo";
 import { tips } from "@/lib/catalog";
 import { tipsHubCrumbs } from "@/lib/crumbs";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
+import { HUB_SOURCES } from "@/lib/page-sources";
 import { stageTitle } from "@/lib/stages";
 import { publishedTips } from "@/lib/site";
 
@@ -41,6 +43,7 @@ export default function TipsIndexPage() {
           ))}
         </ul>
       )}
+      <SourceList sources={HUB_SOURCES} />
     </>
   );
 }

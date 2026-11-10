@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { SourceList } from "@/components/source-list";
 import { PagePhoto } from "@/components/home-photo";
 import { stagesHubCrumbs } from "@/lib/crumbs";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
+import { HUB_SOURCES } from "@/lib/page-sources";
 import { stagePath, stageSummary, stageTitle } from "@/lib/stages";
 import { STAGE_IDS } from "@/lib/types";
 
@@ -31,6 +33,7 @@ export default function StagesIndexPage() {
           </li>
         ))}
       </ul>
+      <SourceList sources={HUB_SOURCES} />
     </>
   );
 }

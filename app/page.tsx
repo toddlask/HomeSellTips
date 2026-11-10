@@ -29,7 +29,7 @@ const features = [
 export default function HomePage() {
   const latest = publishedTips(tips)
     .toSorted((left, right) => right.updatedOn.localeCompare(left.updatedOn) || left.title.localeCompare(right.title))
-    .slice(0, 4);
+    .slice(0, 6);
 
   const origin = getSiteUrl();
   return (
@@ -53,6 +53,22 @@ export default function HomePage() {
             </a>
           </p>
         </div>
+      </section>
+      <section className="section-gap" id="tools" aria-labelledby="tools-heading">
+        <h2 id="tools-heading" className="section-heading">
+          Tools
+        </h2>
+        <p className="section-note">{CALCULATOR_NOTE} Each one starts with an example you can replace.</p>
+        <ul className="tool-grid">
+          {TOOL_LINKS.map((tool) => (
+            <li key={tool.href}>
+              <a className="card" href={tool.href}>
+                <h3>{tool.title}</h3>
+                <p>{tool.text}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
       <ul className="feature-row bleed">
         {features.map(([title, text]) => (
@@ -79,26 +95,10 @@ export default function HomePage() {
           ))}
         </ul>
       </section>
-      <section className="section-gap" id="tools" aria-labelledby="tools-heading">
-        <h2 id="tools-heading" className="section-heading">
-          Tools
-        </h2>
-        <p className="section-note">{CALCULATOR_NOTE}</p>
-        <ul className="tool-grid">
-          {TOOL_LINKS.map((tool) => (
-            <li key={tool.href}>
-              <a className="card" href={tool.href}>
-                <h3>{tool.title}</h3>
-                <p>{tool.text}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
       <InContentAd />
-      <section className="section-gap" aria-labelledby="latest-heading">
-        <h2 id="latest-heading" className="section-heading">
-          From the library
+      <section className="section-gap" aria-labelledby="updated-guides">
+        <h2 id="updated-guides" className="section-heading">
+          Recently updated guides
         </h2>
         <ul className="card-grid">
           {latest.map((tip) => (

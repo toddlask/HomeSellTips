@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
 import { PageByline } from "@/components/page-byline";
+import { SourceList } from "@/components/source-list";
+import { TimingForm } from "@/components/timing-form";
+import { ToolGuide } from "@/components/tool-guide";
+import { sourcesForTool } from "@/lib/page-sources";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
 import { SEASON_MONTHS, SEASON_SOURCE, seasonMax } from "@/lib/season";
+import { TIMING_GUIDE } from "@/lib/tool-guides";
 
 export const metadata: Metadata = pageMetadata({
   title: "Best Time to Sell a House: Season and Timing Guide",
@@ -30,10 +35,12 @@ export default function WhenToSellPage() {
         and it does not say what your home will sell for.
       </p>
       <PagePhoto photo={pagePhoto("/tools/when-to-sell")} />
+      <ToolGuide steps={TIMING_GUIDE.steps} example={TIMING_GUIDE.example()} assumptions={TIMING_GUIDE.assumptions} />
+      <TimingForm />
       <figure className="season-chart">
         <figcaption>
           Existing-home sales, number of units. Source: National Association of Realtors, via{" "}
-          <a href={SEASON_SOURCE}>FRED series EXHOSLUSM495N</a>. Table last updated October 13, 2026.
+          <a href={SEASON_SOURCE}>FRED series EXHOSLUSM495N</a>.
         </figcaption>
         <table>
           <thead>
@@ -61,6 +68,7 @@ export default function WhenToSellPage() {
         A buyer who closes in June went under contract earlier. Use the chart as context, then price this house from
         comps you can check.
       </p>
+      <SourceList sources={sourcesForTool("/tools/when-to-sell")} />
     </>
   );
 }

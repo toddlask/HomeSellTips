@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { MoneyField } from "@/components/money-field";
+import { PrintButton } from "@/components/print-button";
 import { commissionAmount, formatUsd, hasInvalidMoney, netProceeds, parseMoney } from "@/lib/money";
+import { PROCEEDS_EXAMPLE } from "@/lib/tool-examples";
 
 const fields = [
   ["salePrice", "Sale price"],
@@ -18,20 +20,20 @@ const fields = [
 
 type FieldId = (typeof fields)[number][0];
 
-const emptyValues: Record<FieldId, string> = {
-  salePrice: "",
-  mortgagePayoff: "",
-  listingPercent: "",
-  listingFlat: "",
-  buyerPercent: "",
-  buyerFlat: "",
-  closingCosts: "",
-  sellerCredits: "",
-  repairCosts: "",
+const exampleValues: Record<FieldId, string> = {
+  salePrice: String(PROCEEDS_EXAMPLE.salePrice),
+  mortgagePayoff: String(PROCEEDS_EXAMPLE.mortgagePayoff),
+  listingPercent: String(PROCEEDS_EXAMPLE.listingPercent),
+  listingFlat: String(PROCEEDS_EXAMPLE.listingFlat),
+  buyerPercent: String(PROCEEDS_EXAMPLE.buyerPercent),
+  buyerFlat: String(PROCEEDS_EXAMPLE.buyerFlat),
+  closingCosts: String(PROCEEDS_EXAMPLE.closingCosts),
+  sellerCredits: String(PROCEEDS_EXAMPLE.sellerCredits),
+  repairCosts: String(PROCEEDS_EXAMPLE.repairCosts),
 };
 
 export function NetProceedsForm() {
-  const [values, setValues] = useState(emptyValues);
+  const [values, setValues] = useState(exampleValues);
 
   function update(id: FieldId, value: string) {
     setValues((current) => ({ ...current, [id]: value }));
@@ -84,7 +86,7 @@ export function NetProceedsForm() {
   return (
     <div className="panel">
       <p className="note" id="proceeds-help">
-        Blank fields count as zero. Percents and dollar amounts both come from what you type.
+        The fields start with a worked example. Replace every number with yours. A blank field counts as zero.
       </p>
       <div className="form-grid">
         {fields.map(([id, label]) => (
@@ -93,7 +95,13 @@ export function NetProceedsForm() {
       </div>
       {invalid ? <p role="alert">Use zero or a positive number in each field.</p> : null}
       {result ? (
-        <div id="proceeds-result" className="result-panel" aria-live="polite">
+        <div id="proceeds-result" className="result-panel print-result" aria-live="polite">
+          <h2>What this result means</h2>
+          <p>
+            Estimated proceeds are the sale price minus payoff, commissions, closing costs, credits, and repairs. This
+            is an estimate from these entries, not a closing statement.
+          </p>
+          <PrintButton label="Print this result" />
           <table>
             <caption>Line items</caption>
             <tbody>

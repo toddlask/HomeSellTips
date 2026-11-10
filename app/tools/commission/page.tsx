@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import { CommissionForm } from "@/components/commission-form";
 import { PagePhoto } from "@/components/home-photo";
 import { PageByline } from "@/components/page-byline";
+import { SourceList } from "@/components/source-list";
+import { ToolGuide } from "@/components/tool-guide";
+import { sourcesForTool } from "@/lib/page-sources";
 import { TOOL_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
 import { pagePhoto } from "@/lib/photos";
 import { NAR_SETTLEMENT } from "@/lib/sources";
 import { CALCULATOR_NOTE } from "@/lib/site";
+import { COMMISSION_GUIDE } from "@/lib/tool-guides";
 
 export const metadata: Metadata = pageMetadata({
   title: "Realtor Commission Calculator: Agent vs FSBO Costs",
@@ -30,7 +34,13 @@ export default function CommissionPage() {
       </p>
       <PagePhoto photo={pagePhoto("/tools/commission")} />
       <p className="note">{CALCULATOR_NOTE}</p>
+      <ToolGuide
+        steps={COMMISSION_GUIDE.steps}
+        example={COMMISSION_GUIDE.example()}
+        assumptions={COMMISSION_GUIDE.assumptions}
+      />
       <CommissionForm />
+      <SourceList sources={sourcesForTool("/tools/commission")} />
     </>
   );
 }

@@ -23,7 +23,13 @@ export const INFO_DESCRIPTIONS = {
   advertise:
     "Send an advertising inquiry from your browser. HomeSellTips reads the note and replies by email. The form does not create an account.",
   privacy:
-    "How HomeSellTips saves a consent choice in this browser, when optional ad scripts can load, and what the advertise form sends. No accounts.",
+    "How HomeSellTips saves a consent choice in this browser, when optional ad scripts can load, and what the advertise and contact forms send. No accounts.",
+  terms:
+    "Terms for using HomeSellTips. The pages are general information, not legal, financial, tax, or real-estate advice. Calculators use your numbers.",
+  contact:
+    "Send a general note to HomeSellTips. The form does not publish your email, does not create an account, and does not start a mailing list.",
+  editorial:
+    "How HomeSellTips researches, reviews, and updates its pages, including the use of AI drafting tools and the sources those pages cite.",
   disclosure:
     "How HomeSellTips labels sponsored placements and display ads, when affiliate links stay off, and why a commission does not change your price.",
   credits:

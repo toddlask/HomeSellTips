@@ -9,7 +9,7 @@ export default function ToolsLayout({ children }: { children: ReactNode }) {
     <>
       <ZillowPageBanner />
       <Breadcrumbs crumbs={toolCrumbs()} linkLast />
-      {children}
+      <div className="tool-sheet">{children}</div>
       <NotAdviceNote />
     </>
   );

@@ -477,6 +477,10 @@ input, select, textarea {
 }
 
 .form-grid { display: grid; gap: 0.2rem 0.8rem; }
+.form-grid input, .form-grid select { width: 100%; max-width: 100%; }
+.room-tasks-closed { display: none; }
+.source-list ul { padding-left: 1.2rem; }
+.tool-sheet { min-width: 0; }
 @media (min-width: 40rem) {
   .form-grid { grid-template-columns: 1fr 1fr; }
   .feature-row { flex-wrap: nowrap; }
@@ -693,6 +697,12 @@ button.term-word {
 
 @media print {
   .no-print, .site-header, .announce, .cookie-banner, .ad-slot, .placement, .hero, .band, .feature-row, .zillow-banner { display: none !important; }
+  .tool-sheet .stage-photo, .tool-sheet .tool-guide, .tool-sheet .curb-card img, .tool-sheet .photo-credit { display: none !important; }
+  .room-tasks-closed { display: block !important; }
+  .print-result { break-inside: avoid; }
+  .myth-inner, .myth.is-flipped .myth-inner, .myth-back { transform: none !important; }
+  .myth-face, .myth-back { position: static !important; display: block !important; }
+  .myth button { display: none !important; }
   body { background: white; color: black; }
   a { color: black; text-decoration: none; }
 }

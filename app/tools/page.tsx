@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { PagePhoto } from "@/components/home-photo";
+import { SourceList } from "@/components/source-list";
 import { PageByline } from "@/components/page-byline";
 import { HUB_DESCRIPTIONS } from "@/lib/page-copy";
 import { pageMetadata } from "@/lib/page-meta";
+import { sourcesForTool } from "@/lib/page-sources";
 import { pagePhoto } from "@/lib/photos";
 import { CALCULATOR_NOTE, TOOL_LINKS } from "@/lib/site";
 
@@ -29,6 +31,7 @@ export default function ToolsIndexPage() {
           </li>
         ))}
       </ul>
+      <SourceList sources={sourcesForTool("/tools")} />
     </>
   );
 }

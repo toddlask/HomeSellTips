@@ -1,9 +1,9 @@
 "use client";
 
-export function PrintButton() {
+export function PrintButton({ label = "Print this checklist" }: { label?: string }) {
   return (
     <button type="button" className="no-print" onClick={() => window.print()}>
-      Print this checklist
+      {label}
     </button>
   );
 }

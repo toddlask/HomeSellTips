@@ -7,6 +7,7 @@ import { PageByline } from "@/components/page-byline";
 import { PagePhoto } from "@/components/home-photo";
 import { JsonLd } from "@/components/json-ld";
 import { SaleWords } from "@/components/sale-words";
+import { SourceList } from "@/components/source-list";
 import { BackToTop, TipJump } from "@/components/tip-jump";
 import { tips } from "@/lib/catalog";
 import { tipCrumbs } from "@/lib/crumbs";
@@ -14,6 +15,7 @@ import { articleJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 import { tipMetaDescription } from "@/lib/tip-meta";
 import { pageMetadata, tipPageTitle } from "@/lib/page-meta";
 import { tipPhoto } from "@/lib/photos";
+import { sourcesForStage } from "@/lib/page-sources";
 import { stageTitle } from "@/lib/stages";
 import { tipShareImage } from "@/lib/tip-card";
 import { getSiteUrl, publishedTips, relatedTips, SITE_NAME } from "@/lib/site";
@@ -83,6 +85,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
         ))}
       </ol>
       <SaleWords />
+      <SourceList sources={sourcesForStage(tip.stage)} />
       {related.length > 0 ? (
         <section aria-labelledby="related-tips">
           <h2 id="related-tips">More from {stageTitle(tip.stage)}</h2>

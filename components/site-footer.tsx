@@ -33,7 +33,16 @@ export function SiteFooter() {
             <a href="/privacy">Privacy</a>
           </li>
           <li>
-            <a href="/disclosure">Ad and affiliate disclosure</a>
+            <a href="/terms">Terms</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+          <li>
+            <a href="/editorial-policy">Editorial policy</a>
+          </li>
+          <li>
+            <a href="/disclosure">Disclosure</a>
           </li>
           <li>
             <a href="/advertise">Advertise</a>

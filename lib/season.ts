@@ -28,3 +28,17 @@ export const SEASON_MONTHS: readonly SeasonMonth[] = [
 export function seasonMax(months: readonly SeasonMonth[]): number {
   return months.reduce((max, month) => (month.sales > max ? month.sales : max), 0);
 }
+
+export function busiestMonth(months: readonly SeasonMonth[]): SeasonMonth {
+  return months.reduce((best, month) => (month.sales > best.sales ? month : best));
+}
+
+export function timingReading(input: { moveDateFixed: boolean; houseReady: boolean }): string {
+  if (input.moveDateFixed) {
+    return "A fixed move date decides the listing window. Finish the prep you still need, then list in time for that date. The chart shows national closed sales, not the price this house will bring.";
+  }
+  if (!input.houseReady) {
+    return "Finish the work that has to be done before you list. The chart is context for when sales have closed nationally. It is not a reason to skip a repair or to pick a price.";
+  }
+  return "The house is ready and the move date can move. Use the taller bars as context for when more sales closed in this span, then price this house from comps you can check.";
+}
