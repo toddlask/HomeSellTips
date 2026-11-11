@@ -75,6 +75,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+      <ZillowHomeBanner />
       <section className="section-gap" id="tools" aria-labelledby="tools-heading">
         <h2 id="tools-heading" className="section-heading">
           Tools
@@ -99,7 +100,6 @@ export default function HomePage() {
           </li>
         ))}
       </ul>
-      <ZillowHomeBanner />
       <section className="section-gap" id="stages" aria-labelledby="stages-heading">
         <h2 id="stages-heading" className="section-heading">
           By stage

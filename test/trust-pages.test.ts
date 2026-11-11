@@ -73,9 +73,9 @@ describe("tools and trust pages", () => {
     const header = readFileSync(resolve(process.cwd(), "components/site-header.tsx"), "utf8");
     expect(header).not.toContain("/photo-credits");
     const home = readFileSync(resolve(process.cwd(), "app/page.tsx"), "utf8");
-    expect(home.indexOf('id="home-heading"')).toBeLessThan(home.indexOf('id="tools"'));
-    expect(home.indexOf('id="tools"')).toBeLessThan(home.indexOf("<ZillowHomeBanner />"));
-    expect(home.indexOf("<ZillowHomeBanner />")).toBeLessThan(home.indexOf('id="stages"'));
+    expect(home.indexOf('id="home-heading"')).toBeLessThan(home.indexOf("<ZillowHomeBanner />"));
+    expect(home.indexOf("<ZillowHomeBanner />")).toBeLessThan(home.indexOf('id="tools"'));
+    expect(home.indexOf('id="tools"')).toBeLessThan(home.indexOf('id="stages"'));
     expect(home).toContain("Recently updated guides");
     expect(home).toContain("updatedOn");
     expect(home).not.toContain("updatedOn}");

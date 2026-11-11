@@ -54,12 +54,14 @@ describe("Zillow banners", () => {
     expect(ZILLOW_FOOTER_BANNER.alt.startsWith("Advertisement.")).toBe(true);
   });
 
-  it("places the smaller banner only above the home stage section", () => {
+  it("places the smaller banner between the hero and the tools section", () => {
     const home = readFileSync(resolve(root, "app/page.tsx"), "utf8");
     const bannerAt = home.indexOf("<ZillowHomeBanner />");
+    const toolsAt = home.indexOf('id="tools"');
     const stagesAt = home.indexOf('id="stages"');
-    expect(bannerAt).toBeGreaterThan(0);
-    expect(bannerAt).toBeLessThan(stagesAt);
+    expect(bannerAt).toBeGreaterThan(home.indexOf('id="home-heading"'));
+    expect(bannerAt).toBeLessThan(toolsAt);
+    expect(toolsAt).toBeLessThan(stagesAt);
     expect(home).toContain('id="home-heading">Helpful Ideas for Selling Your Home');
     expect(home).not.toContain("ZillowPageBanner");
     expect(home).not.toContain(ZILLOW_PAGE_BANNER.src);
